@@ -1,0 +1,11 @@
+C:\git\CSharp\Lesson_3\Task5\Task5\obj\Debug\netcoreapp2.0\Task5.csprojResolveAssemblyReference.cache
+C:\git\CSharp\Lesson_3\Task5\Task5\obj\Debug\netcoreapp2.0\Task5.csproj.CoreCompileInputs.cache
+C:\git\CSharp\Lesson_3\Task5\Task5\obj\Debug\netcoreapp2.0\Task5.AssemblyInfoInputs.cache
+C:\git\CSharp\Lesson_3\Task5\Task5\obj\Debug\netcoreapp2.0\Task5.AssemblyInfo.cs
+C:\git\CSharp\Lesson_3\Task5\Task5\bin\Debug\netcoreapp2.0\Task5.deps.json
+C:\git\CSharp\Lesson_3\Task5\Task5\bin\Debug\netcoreapp2.0\Task5.runtimeconfig.json
+C:\git\CSharp\Lesson_3\Task5\Task5\bin\Debug\netcoreapp2.0\Task5.runtimeconfig.dev.json
+C:\git\CSharp\Lesson_3\Task5\Task5\bin\Debug\netcoreapp2.0\Task5.dll
+C:\git\CSharp\Lesson_3\Task5\Task5\bin\Debug\netcoreapp2.0\Task5.pdb
+C:\git\CSharp\Lesson_3\Task5\Task5\obj\Debug\netcoreapp2.0\Task5.dll
+C:\git\CSharp\Lesson_3\Task5\Task5\obj\Debug\netcoreapp2.0\Task5.pdb
