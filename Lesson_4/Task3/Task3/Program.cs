@@ -14,24 +14,50 @@ namespace Task3
                 то выводится соответствующее сообщение. 
             */
 
+
             int num;
+            string userEntered="", result;
+
+            while (userEntered!="exit") { 
+           
             
-          //  string result;
+           Console.WriteLine("Enter any number from 0 to 100 to check interval");
+            
+           userEntered = Console.ReadLine();
 
-            Console.WriteLine("Enter any number from 0 to 100 to check interval");
+           bool isNumber = Int32.TryParse(userEntered, out num);
 
-          //  if (num=Convert.ToInt16(Console.ReadLine()) {
+            if (!isNumber)
+            {
+                result = "Not a number entered. Try again";
+            }
+            else if (num > 0 && num < 14)
+            {
+
+                result = "[0 - 14]";
+
+            } else if (num > 15 && num < 35)
+            {
+
+                result = "[15 - 35]";
+
+            } else if (num > 36 && num < 50)
+            {
+                result = "[36 - 50]";
+            } else if (num > 51 && num < 100)
+            {
+                result = "[50 - 100]";
+            } else
+            {
+                result = "Number is not in diapason of 1 - 100";
+            }
+
+
+            Console.WriteLine(result);
+            
 
             }
-          
-
-            Console.WriteLine(num);
-            Console.ReadKey();
-                        
-           
-
-
-
+            
 
         }
     }
