@@ -1,0 +1,11 @@
+C:\git\CSharp\Lesson_7\Lesson_7\Task_3\obj\Debug\netcoreapp2.0\Task_3.csproj.CoreCompileInputs.cache
+C:\git\CSharp\Lesson_7\Lesson_7\Task_3\obj\Debug\netcoreapp2.0\Task_3.AssemblyInfoInputs.cache
+C:\git\CSharp\Lesson_7\Lesson_7\Task_3\obj\Debug\netcoreapp2.0\Task_3.AssemblyInfo.cs
+C:\git\CSharp\Lesson_7\Lesson_7\Task_3\bin\Debug\netcoreapp2.0\Task_3.deps.json
+C:\git\CSharp\Lesson_7\Lesson_7\Task_3\bin\Debug\netcoreapp2.0\Task_3.runtimeconfig.json
+C:\git\CSharp\Lesson_7\Lesson_7\Task_3\bin\Debug\netcoreapp2.0\Task_3.runtimeconfig.dev.json
+C:\git\CSharp\Lesson_7\Lesson_7\Task_3\bin\Debug\netcoreapp2.0\Task_3.dll
+C:\git\CSharp\Lesson_7\Lesson_7\Task_3\bin\Debug\netcoreapp2.0\Task_3.pdb
+C:\git\CSharp\Lesson_7\Lesson_7\Task_3\obj\Debug\netcoreapp2.0\Task_3.dll
+C:\git\CSharp\Lesson_7\Lesson_7\Task_3\obj\Debug\netcoreapp2.0\Task_3.pdb
+C:\git\CSharp\Lesson_7\Lesson_7\Task_3\obj\Debug\netcoreapp2.0\Task_3.csprojResolveAssemblyReference.cache
