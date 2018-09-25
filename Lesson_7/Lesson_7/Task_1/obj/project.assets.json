@@ -664,20 +664,17 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\ritak\\.nuget\\packages\\": {},
+    "C:\\Users\\mkolosok\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackagesFallback\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
-    "restoreSettings": {
-      "hideWarningsAndErrors": true
-    },
     "restore": {
       "projectUniqueName": "C:\\git\\CSharp\\Lesson_7\\Lesson_7\\Task_1\\Task_1.csproj",
       "projectName": "Task_1",
       "projectPath": "C:\\git\\CSharp\\Lesson_7\\Lesson_7\\Task_1\\Task_1.csproj",
-      "packagesPath": "C:\\Users\\ritak\\.nuget\\packages\\",
+      "packagesPath": "C:\\Users\\mkolosok\\.nuget\\packages\\",
       "outputPath": "C:\\git\\CSharp\\Lesson_7\\Lesson_7\\Task_1\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
@@ -685,7 +682,7 @@
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\ritak\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\mkolosok\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.Fallback.config"
       ],
