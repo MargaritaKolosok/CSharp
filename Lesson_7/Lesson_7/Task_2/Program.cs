@@ -2,7 +2,7 @@
 
 namespace Task_2
 {
-    class Program
+    internal class Program
     {
         static void Main(string[] args)
         {
@@ -21,27 +21,20 @@ namespace Task_2
             decimal sum, currency, result;
 
             decimal CurrencyConverter(decimal val1, decimal val2)
-
             {
                 return val1 * val2;
-
             }
 
-            Console.Write("amount of money = ");
+            Console.Write("Amount of money = ");
             sum = Convert.ToDecimal(Console.ReadLine());
 
             Console.Write("Currency exchange = ");
             currency = Convert.ToDecimal(Console.ReadLine());
 
-
             result = CurrencyConverter(sum, currency);
 
             Console.WriteLine("Sum by currency is = {0:C2}", result);
             Console.ReadKey();
-
-
-
-
         }
     }
 }

@@ -16,15 +16,14 @@ namespace Task_1
                     
              */
 
-            int value_1, value_2; var result = 0;
+            int value_1, value_2;
+            var result = 0;
             string @operator;
 
             Console.Write("Value1 = ");
             value_1 = Int32.Parse(Console.ReadLine());
 
             Console.Write("Operator:");
-
-
             @operator = Convert.ToString(Console.ReadLine());
 
             Console.Write("Value2 = ");
@@ -39,10 +38,8 @@ namespace Task_1
                     }
                 case "-":
                     {
-
                         result = Sub(value_1, value_2);
                         break;
-
                     }
                 case "*":
                     {
@@ -56,14 +53,9 @@ namespace Task_1
                     }
             }
 
-
-
-
             int Add(int operand_1, int operand_2)
             {
-
                 return operand_1 + operand_2;
-
             }
 
             int Sub(int operand_1, int operand_2)
@@ -80,9 +72,7 @@ namespace Task_1
             {
                 if (operand_2 != 0)
                 {
-
                     return operand_1 / operand_2;
-
                 }
                 else
                 {
@@ -90,14 +80,8 @@ namespace Task_1
                 }
 
             }
-
-
-
             Console.WriteLine("Result = {0}", result);
             Console.ReadKey();
-
-
-
         }
     }
 }

@@ -8,3 +8,4 @@ C:\git\CSharp\Lesson_7\Lesson_7\Task_2\obj\Debug\netcoreapp2.0\Task_2.AssemblyIn
 C:\git\CSharp\Lesson_7\Lesson_7\Task_2\obj\Debug\netcoreapp2.0\Task_2.AssemblyInfo.cs
 C:\git\CSharp\Lesson_7\Lesson_7\Task_2\obj\Debug\netcoreapp2.0\Task_2.dll
 C:\git\CSharp\Lesson_7\Lesson_7\Task_2\obj\Debug\netcoreapp2.0\Task_2.pdb
+C:\git\CSharp\Lesson_7\Lesson_7\Task_2\obj\Debug\netcoreapp2.0\Task_2.csprojResolveAssemblyReference.cache

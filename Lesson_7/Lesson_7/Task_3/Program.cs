@@ -4,7 +4,6 @@ namespace Task_3
 {
     class Program
     {
-
         /*
                  * 
                  * Используя Visual Studio, создайте проект по шаблону Console Application.  
@@ -18,37 +17,29 @@ namespace Task_3
 
 
         */
-
         static string IsSimple(int val)
         {
             string result;
-
             int divisionsNumber = 0;
 
             for (int i = 1; i <= Math.Abs(val); i++)
             {
                 if ((Math.Abs(val) % i) == 0)
                 {
-
                     divisionsNumber++;
                 }
             }
 
             if (divisionsNumber == 2)
             {
-
                result = "Simple";
-
             }
             else
             {
                result = "Not Simple";
             }
-
             return result;
-
         }
-
 
         static string IsPositive(int val)
         {
@@ -56,22 +47,17 @@ namespace Task_3
 
             if (val > 0)
             {
-
                 result = "Positive ";
-
             }
             else
             {
                 result = "Negative";
             }
-
-                return result;
-
+            return result;
         }
 
         static void Main(string[] args)
         {
-       
             Console.WriteLine("Enter number for analysis:");
             int num = Convert.ToInt32(Console.ReadLine());
 
@@ -79,8 +65,6 @@ namespace Task_3
             Console.WriteLine(IsSimple(num));
 
             Console.ReadKey();
-
         }
-
     }
 }
