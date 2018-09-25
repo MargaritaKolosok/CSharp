@@ -39,10 +39,11 @@ namespace Task_3
 
                result = "Simple";
 
-            } else
-                {
-                    result = "Not Simple";
-                }
+            }
+            else
+            {
+               result = "Not Simple";
+            }
 
             return result;
 
@@ -58,10 +59,11 @@ namespace Task_3
 
                 result = "Positive ";
 
-            } else
-                {
-                    result = "Negative";
-                }
+            }
+            else
+            {
+                result = "Negative";
+            }
 
                 return result;
 
@@ -75,6 +77,7 @@ namespace Task_3
 
             Console.WriteLine(IsPositive(num));
             Console.WriteLine(IsSimple(num));
+
             Console.ReadKey();
 
         }
