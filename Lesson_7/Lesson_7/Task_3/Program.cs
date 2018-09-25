@@ -49,7 +49,7 @@ namespace Task_3
         }
 
 
-        static string NumberAnalysis(int val)
+        static string IsPositive(int val)
         {
             string result;
 
@@ -73,7 +73,7 @@ namespace Task_3
             Console.WriteLine("Enter number for analysis:");
             int num = Convert.ToInt32(Console.ReadLine());
 
-            Console.WriteLine(NumberAnalysis(num));
+            Console.WriteLine(IsPositive(num));
             Console.WriteLine(IsSimple(num));
             Console.ReadKey();
 
