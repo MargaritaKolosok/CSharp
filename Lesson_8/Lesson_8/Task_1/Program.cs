@@ -20,21 +20,21 @@ namespace Task_1
 {
     class Program
     {
-        static void CheckCredit(decimal debtSum, int counterPay)
+        static void CheckCredit(int debtSum, int counterPay)
         {
-            decimal Amount()
+            int Amount()
             {
                 Console.WriteLine("User bays to bank:");
-                decimal amount = Convert.ToDecimal(Console.ReadLine());
+                int amount = Convert.ToInt32(Console.ReadLine());
                 return amount;
             }
       
-            decimal transaction = Amount();
+            int transaction = Amount();
 
-            if (debtSum <= transaction || debtSum == 0)
+            if (debtSum <= transaction)
             {
                 debtSum = transaction - debtSum;
-                Console.WriteLine("Debt Summ is: {0:C}, THERE IS NO DEBT!", debtSum, counterPay);
+                Console.WriteLine("You have overpaid: {0:C}, THERE IS NO DEBT!", debtSum, counterPay);
             }
             else if (debtSum != 0 && counterPay != 0)
             {
@@ -42,11 +42,7 @@ namespace Task_1
                 counterPay--;
                 Console.WriteLine("Debt Summ is: {0:C}, month to pay left: {1}", debtSum, counterPay);
                 CheckCredit(debtSum, counterPay);
-            }
-            else if (debtSum <= 0 && counterPay != 0)
-            {
-                Console.WriteLine("Debt Summ is: {0:C}, THERE IS NO DEBT!", debtSum, counterPay);
-            }
+            }  
             else
             {
                 Console.WriteLine("Debt Summ is: {0:C}, overdue loan {1}", debtSum, counterPay);
@@ -55,7 +51,7 @@ namespace Task_1
 
         static void Main(string[] args)
         {
-            decimal debt = 700;
+            int debt = 700;
             int counter = 7;
             
             CheckCredit(debt, counter);
