@@ -18,31 +18,35 @@ namespace Task_1
     {
         
         //, out int min, out int sum, out int average, out int[] oddNum
-        static void CreateArray(int arrayLength, out int max)
+        static void CreateArray(int arrayLength, out int[] array)
         {
-            Random rand = new Random();
-            int[] array = new int [arrayLength];
-            
-            for (int i=0; i<array.Length; i++)
-            {
-                array[i] = rand.Next();
-                Console.WriteLine(array[i]);
-               
-            }
-            
+            //Random rand = new Random();
+            int[] userArray = new int [arrayLength];
+
+
+                for (int i=0; i<userArray.Length; i++)
+                {
+                  userArray[i] = i*2;
+                //  Console.WriteLine(userArray[i]);
+                
+                }
+
+                array = userArray;
+
+
         }
 
         static void Main(string[] args)
         {
 
-            //int[] array;
+            int[] arrayWrite;
             int arrLength;
-            int max;
+           // int max;
 
             Console.WriteLine("Enter array lenght:");
             arrLength = Convert.ToInt32(Console.ReadLine());
 
-            CreateArray(arrLength);
+            CreateArray(arrLength, out int[] array);
 
             Console.WriteLine();
             Console.ReadKey();
