@@ -42,6 +42,53 @@ namespace Task_1_1
                                 
         }
 
+        static int EvenNum(int[] array, out int evenNum)
+        {
+            evenNum = 0;
+
+            for (int i=0; i<array.Length; i++)
+            {
+                if (IsEven(array[i]))
+                {
+                    evenNum++;
+                }
+            }
+            return evenNum;
+        }
+
+        static bool IsEven(int Num)
+        {
+            bool result = false;
+           
+                if (Num % 2 != 0)
+                {
+                   result = true;
+                }
+                else
+                {
+                    result = false;
+                }
+
+            return result;
+        }
+
+        static void CreateEvenArray(int[] array, ref int evenNum, out int[] myEvenArray)
+        {
+            int[] evenArray = new int[evenNum];
+            int j = 0;
+            for (int i=0; i<array.Length; i++)
+            {
+                if (IsEven(array[i]))
+                {
+                    evenArray[j] = array[i];
+                    j++;
+                }
+                
+            }
+            myEvenArray = evenArray;
+        }
+        
+
         static void Main(string[] args)
         {
                                    
@@ -58,7 +105,9 @@ namespace Task_1_1
 
             // Check min, max, avarage, Sum numbers in the array
 
-           ArrayAnalysis(myArray, out int maxValue, out int minValue, out int avarageValue, out int SumValue);
+            ArrayAnalysis(myArray, out int maxValue, out int minValue, out int avarageValue, out int SumValue);
+          //  EvenArray(myArray, out int[] evenArray1);
+
 
             // Show Array that was Created
             for (int i=0; i<myArray.Length; i++)
@@ -68,6 +117,15 @@ namespace Task_1_1
 
             // Array Analysis result
             Console.WriteLine("Array MAX element {0}, Array MIN element {1}, Array AVARAGE {2}, Sum of elements {3}", maxValue, minValue, avarageValue, SumValue);
+
+            Console.WriteLine("Even numbers in array {0}", EvenNum(myArray, out int evenNumbers));
+            CreateEvenArray(myArray, ref evenNumbers, out int[] myEvenArray);
+
+            for (int i = 0; i < myEvenArray.Length; i++)
+            {
+                Console.WriteLine("Array EVEN element {0}", myEvenArray[i]);
+            }
+
             Console.ReadKey();
         }
     }
