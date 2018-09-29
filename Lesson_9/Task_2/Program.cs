@@ -19,6 +19,7 @@ namespace Task_2
          */
     class Program
     {
+        // Create array with set Length, set random values
         static int[] CreateArray(int[] array, int arrLength)
         {
             for (int i = 0; i < array.Length; i++)
@@ -29,6 +30,7 @@ namespace Task_2
             return array;
         }
 
+        // Reverse array and return reversed array
        static int[] MyReverse(int[] array, out int[] myReverseArray)
         {
             int[] reverseArray = new int[array.Length];

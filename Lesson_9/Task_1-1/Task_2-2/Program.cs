@@ -17,6 +17,7 @@ namespace Task_2_2
          */
     class Program
     {
+        // Create array
         static int[] CreateArray(int[] array, int arrLength)
         {
             for (int i = 0; i < array.Length; i++)
@@ -26,7 +27,7 @@ namespace Task_2_2
 
             return array;
         }
-
+                
        static int[] SubArray(int[] array, int index, int count, out int[] mySubArray)
         {
             int j = 0;
