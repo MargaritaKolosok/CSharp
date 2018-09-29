@@ -4,7 +4,8 @@ namespace Task_1_1
 {
     
     class Program
-    {
+    {   
+        // Create First Array with set by User arrLength, and random values
         static int[] CreateArray(int[] array, int arrLength)
         {
             for (int i=0; i<array.Length; i++)
@@ -15,6 +16,7 @@ namespace Task_1_1
             return array;
         }
 
+        // Check max, min, avarage, Sum of elements of the array
         static void ArrayAnalysis(int[] array, out int max, out int min, out int avarage, out int SumEl)
         {
             max = 0;
@@ -41,7 +43,7 @@ namespace Task_1_1
             avarage = Sum / array.Length;
                                 
         }
-
+        // Check number of even numbers in the array
         static int EvenNum(int[] array, out int evenNum)
         {
             evenNum = 0;
@@ -55,7 +57,7 @@ namespace Task_1_1
             }
             return evenNum;
         }
-
+        // Check is array elements value Even
         static bool IsEven(int Num)
         {
             bool result = false;
@@ -72,6 +74,7 @@ namespace Task_1_1
             return result;
         }
 
+        // Create new Even array with length equal to its even elements. Save even elements of the array to even array
         static void CreateEvenArray(int[] array, ref int evenNum, out int[] myEvenArray)
         {
             int[] evenArray = new int[evenNum];
@@ -95,20 +98,15 @@ namespace Task_1_1
             Console.WriteLine("Enter number of array elements:");
 
             // User enters Number of Array elements
-
-            int arrLength = Convert.ToInt32(Console.ReadLine());
+               int arrLength = Convert.ToInt32(Console.ReadLine());
 
             // Create myArray
-
             int[] myArray = new int [arrLength];
             myArray = CreateArray(myArray, arrLength);
 
             // Check min, max, avarage, Sum numbers in the array
-
             ArrayAnalysis(myArray, out int maxValue, out int minValue, out int avarageValue, out int SumValue);
-          //  EvenArray(myArray, out int[] evenArray1);
-
-
+          
             // Show Array that was Created
             for (int i=0; i<myArray.Length; i++)
             {
