@@ -34,22 +34,23 @@ namespace Task_2_2
 
             for (int i=0; i<array.Length; i++)
             {
-                if (i >= index && i < count)
+                if (i >= index && i < index + count )
                 {
                     subArray[j] = array[i];
+                 
                     j++;
                 }
-                else if (i<count && i>=array.Length)
+            }
+
+            for (int i=0; i<subArray.Length; i++)
+            {
+                if (subArray[i] == 0)
                 {
                     subArray[i] = 1;
-                    j++;
-
                 }
-                
             }
             mySubArray = subArray;
             return mySubArray;
-
         }
     
 
@@ -77,7 +78,6 @@ namespace Task_2_2
             {
                 Console.Write("{0}, ", mySubArray[i]);
             }
-            
             Console.ReadKey();
         }
     }
