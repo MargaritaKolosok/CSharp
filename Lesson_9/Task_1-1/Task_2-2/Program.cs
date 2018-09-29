@@ -31,19 +31,21 @@ namespace Task_2_2
         {
             int j = 0;
             int[] subArray = new int[count];
-            for (int i=index; i<count; i++)
+
+            for (int i=0; i<array.Length; i++)
             {
-                if (i >= index && i < array.Length)
+                if (i >= index && i < count)
                 {
                     subArray[j] = array[i];
-                    
+                    j++;
                 }
-                else if (i<count)
+                else if (i<count && i>=array.Length)
                 {
-                    subArray[j] = 1;
-                    
+                    subArray[i] = 1;
+                    j++;
+
                 }
-                j++;
+                
             }
             mySubArray = subArray;
             return mySubArray;
