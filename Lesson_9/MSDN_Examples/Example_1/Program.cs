@@ -31,6 +31,13 @@ namespace Example_1
             System.Array.Copy(InitialArray, ObjectArray, 3);
             PrintValues(InitialArray);
             PrintValues(ObjectArray);
+            Console.WriteLine(InitialArray.GetLowerBound(0));
+           // int[] ReversedArray = new int[5];
+            
+            Array.Reverse(InitialArray);
+           //   ReversedArray = InitialArray;
+            Console.WriteLine("Reverse array:");
+            PrintValues(InitialArray);
             Console.ReadKey();
 
         }
