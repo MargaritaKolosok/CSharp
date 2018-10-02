@@ -31,7 +31,7 @@ namespace Task_2
         }
 
         // Reverse array and return reversed array
-       static void MyReverse(int[] array, out int[] myReverseArray)
+       static int[] MyReverse(int[] array, out int[] myReverseArray)
         {
             int[] reverseArray = new int[array.Length];
             int j = array.Length - 1;
@@ -40,7 +40,8 @@ namespace Task_2
                 reverseArray[j] = array[i];
                 j--;
             }
-            myReverseArray = reverseArray;           
+            myReverseArray = reverseArray;
+            return myReverseArray;
         }
 
         static void Main(string[] args)
