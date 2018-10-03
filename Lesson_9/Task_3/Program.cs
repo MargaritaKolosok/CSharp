@@ -29,7 +29,8 @@ namespace Task_3
             int[] tempArray = new int [array.Length];
             tempArray = array;
             Array.Resize(ref array, array.Length +1);
-            tempArray.CopyTo(array,1);
+            Array.Copy(tempArray, 0, array, 1, tempArray.Length);
+            //tempArray.CopyTo(array,1);
             array.SetValue(elem, 0);
         }
 
