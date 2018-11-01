@@ -20,10 +20,15 @@ namespace Task_2
     class Program
     {
         static void Main(string[] args)
-        {
+        {            
             Building house = new Building();
-            house.Area = 500;
-            house.Person = 20;
+
+            Console.WriteLine("Enter Area");
+            house.Area = Convert.ToInt32(Console.ReadLine());
+
+            Console.WriteLine("Enter Anumber of persons");
+            house.Person = Convert.ToInt32(Console.ReadLine());
+
             house.CountArea();
 
             Console.ReadKey();
