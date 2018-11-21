@@ -17,12 +17,16 @@ using System.Threading.Tasks;
 
 class Book
 {
-    public Book(string Author)
-    {
-        Author BookAuthor = new Author();
-        BookAuthor.SetAuthorName = Author;
-        BookAuthor.Show();
+    public Author myAuthor;
 
+    public Book(Author Author)
+    {
+        this.myAuthor = Author;
+      
+    }
+    public void Show()
+    {
+        myAuthor.Show();
     }
 }
 
@@ -33,15 +37,16 @@ class Book
 
 class Author
 {
-    private string BookAuthor;
-    public string SetAuthorName
-{
-        set { BookAuthor = value; }
-}
+    private string authorName;
+   
+    public Author(string authorName) {
+             this.authorName = authorName; 
+    }
+
     public void Show()
     {
         Console.BackgroundColor = ConsoleColor.Red;
-        Console.WriteLine(BookAuthor);
+        Console.WriteLine(authorName);
     }
     
    
@@ -57,7 +62,9 @@ namespace LFRCTask3
     {
         static void Main(string[] args)
         {
-            Book myBook = new Book("Gilbert Shild");
+            Author newAuthor = new Author("Gilbert");
+            Book myBook = new Book(newAuthor);
+            myBook.Show();
             Console.ReadKey();
         }
     }
