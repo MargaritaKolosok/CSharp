@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{20ADAD04-7F46-439F-B564-9C38694E4BCA}</ProjectGuid>
+    <ProjectGuid>{9BAEF078-8D8B-453B-B7DE-EB68668EB917}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>Book</RootNamespace>
-    <AssemblyName>Book</AssemblyName>
+    <RootNamespace>PointFigure</RootNamespace>
+    <AssemblyName>PointFigure</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
