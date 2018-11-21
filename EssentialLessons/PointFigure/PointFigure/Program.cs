@@ -58,10 +58,29 @@ class Figure
         this.point2 = point2;
         this.point3 = point3;
     }
+    public Figure(Point point1, Point point2, Point point3, Point point4)
+    {
+        this.point1 = point1;
+        this.point2 = point2;
+        this.point3 = point3;
+        this.point3 = point4;
+    }
+    public Figure(Point point1, Point point2, Point point3, Point point4, Point point5)
+    {
+        this.point1 = point1;
+        this.point2 = point2;
+        this.point3 = point3;
+        this.point3 = point4;
+        this.point3 = point5;
+    }
     public double LengthSide(Point A, Point B)
     {
         sideLendth = Math.Sqrt(Math.Pow((point2.X - point1.X), 2) + Math.Pow((point2.Y - point1.Y), 2));
         return sideLendth;
+    }
+    public void PerimeterCalculator()
+    {
+                    
     }
 }
 namespace PointFigure
@@ -73,9 +92,13 @@ namespace PointFigure
             Point point1 = new Point(1,2);
             Point point2 = new Point(4, 6);
             Point point3 = new Point(2, 5);
+            Point point4 = new Point(6, 17);
+            Point point5 = new Point(7, 9);
 
             Console.WriteLine("X is {0}, y is {1}", point1.X, point1.Y);
+
             Figure Triangle = new Figure(point1, point2, point3);
+            
             Console.WriteLine(Triangle.LengthSide(point1, point2)); 
             Console.ReadKey();
             
