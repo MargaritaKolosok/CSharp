@@ -50,7 +50,7 @@ class Point
 class Figure
 {
     private Point point1, point2, point3, point4, point5;
-    private double sideLendth1, sideLendth2, sideLendth3, sideLendth4, sideLendth5;
+    private double sideLendth;
     
     public Figure(Point point1, Point point2, Point point3)
     {
@@ -60,8 +60,8 @@ class Figure
     }
     public double LengthSide(Point A, Point B)
     {
-        sideLendth1 = Math.Sqrt(Math.Pow((point2.X - point1.X), 2) + Math.Pow((point2.Y - point1.Y), 2));
-        return sideLendth1;
+        sideLendth = Math.Sqrt(Math.Pow((point2.X - point1.X), 2) + Math.Pow((point2.Y - point1.Y), 2));
+        return sideLendth;
     }
 }
 namespace PointFigure
