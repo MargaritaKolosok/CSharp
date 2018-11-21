@@ -49,10 +49,19 @@ class Point
 
 class Figure
 {
-    public Point point1, point2, point3, point4, point5;
+    private Point point1, point2, point3, point4, point5;
+    private double sideLendth1, sideLendth2, sideLendth3, sideLendth4, sideLendth5;
+    
     public Figure(Point point1, Point point2, Point point3)
     {
-
+        this.point1 = point1;
+        this.point2 = point2;
+        this.point3 = point3;
+    }
+    public double LengthSide(Point A, Point B)
+    {
+        sideLendth1 = Math.Sqrt(Math.Pow((point2.X - point1.X), 2) + Math.Pow((point2.Y - point1.Y), 2));
+        return sideLendth1;
     }
 }
 namespace PointFigure
@@ -62,8 +71,12 @@ namespace PointFigure
         static void Main(string[] args)
         {
             Point point1 = new Point(1,2);
-            
+            Point point2 = new Point(4, 6);
+            Point point3 = new Point(2, 5);
+
             Console.WriteLine("X is {0}, y is {1}", point1.X, point1.Y);
+            Figure Triangle = new Figure(point1, point2, point3);
+            Console.WriteLine(Triangle.LengthSide(point1, point2)); 
             Console.ReadKey();
             
         }
