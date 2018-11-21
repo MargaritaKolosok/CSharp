@@ -18,22 +18,34 @@ using System.Threading.Tasks;
 class Book
 {
     public Author myAuthor;
+    public Title myTitle;
 
-    public Book(Author Author)
+    public Book(Author Author, Title Title)
     {
         this.myAuthor = Author;
+        this.myTitle = Title;
       
     }
     public void Show()
     {
         myAuthor.Show();
+        myTitle.Show();
     }
 }
 
-//class Title
-//{
-
-//}
+class Title
+{
+    private string bookTitle;
+    public Title(string bookTitle)
+        {
+        this.bookTitle = bookTitle;
+        }
+     public void Show()
+        {
+        Console.BackgroundColor = ConsoleColor.Red;
+        Console.WriteLine(bookTitle);
+        }
+}
 
 class Author
 {
@@ -45,7 +57,7 @@ class Author
 
     public void Show()
     {
-        Console.BackgroundColor = ConsoleColor.Red;
+        Console.BackgroundColor = ConsoleColor.Blue;
         Console.WriteLine(authorName);
     }
     
@@ -63,7 +75,8 @@ namespace LFRCTask3
         static void Main(string[] args)
         {
             Author newAuthor = new Author("Gilbert");
-            Book myBook = new Book(newAuthor);
+            Title newTitle = new Title("C#");
+            Book myBook = new Book(newAuthor, newTitle);
             myBook.Show();
             Console.ReadKey();
         }
