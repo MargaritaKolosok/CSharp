@@ -19,17 +19,20 @@ class Book
 {
     public Author myAuthor;
     public Title myTitle;
+    public Content myContent;
 
-    public Book(Author Author, Title Title)
+    public Book(Author Author, Title Title, Content Content)
     {
         this.myAuthor = Author;
         this.myTitle = Title;
+        this.myContent = Content;
       
     }
     public void Show()
     {
         myAuthor.Show();
         myTitle.Show();
+        myContent.Show();
     }
 }
 
@@ -63,10 +66,20 @@ class Author
     
    
 }
-//class Content
-//{
+class Content
+{
+    private string bookContent;
+    public Content(string bookContent)
+    {
+        this.bookContent = bookContent;
+    }
 
-//}
+    public void Show()
+    {
+        Console.BackgroundColor = ConsoleColor.Cyan;
+        Console.WriteLine(bookContent);
+    }
+}
 
 namespace LFRCTask3
 {
@@ -76,7 +89,9 @@ namespace LFRCTask3
         {
             Author newAuthor = new Author("Gilbert");
             Title newTitle = new Title("C#");
-            Book myBook = new Book(newAuthor, newTitle);
+            Content newContent = new Content("Создать класс Book.Создать классы Title, Author и Content, каждый из которых должен содержать одно строковое поле и метод void Show().");
+
+            Book myBook = new Book(newAuthor, newTitle, newContent);
             myBook.Show();
             Console.ReadKey();
         }
