@@ -45,25 +45,22 @@ class Figure
 {
 
     private double sideLendth;
-    private int sideNumber;
+    public int sideNumber;
 
-    public Figure(int sideNumber)
-    {
-        this.sideNumber = sideNumber;
-    }
+    
+        public Figure(int sideNumber)
+        {
+            this.sideNumber = sideNumber;
+        }
+    
+    
 
-    public int SideNumber
-    {
-        get { return sideNumber; }
-    }
+    Point[] pointArray = new Point[3]; // Sidenumber ???
 
-    // Sidenumber ???
-
-    Point[] pointArray = new Point[sideNumber];
- 
     public void setPointValues()
     {
-        
+       
+
         for (int i = 0; i < sideNumber; i++)
         {
             int x, y;
@@ -75,7 +72,7 @@ class Figure
 
             pointArray[i] = new Point(x, y);
         }
-    
+        
     }
     
     public double LengthSide(Point A, Point B)
@@ -107,13 +104,13 @@ namespace PointFigure
  public class Program
     {
         static void Main(string[] args)
-        {
-           
-           int sideNumber;
+        {           
+            int sideNumber;
             Console.Write("Enter number of sides in the Figure:");
             sideNumber = Convert.ToInt32(Console.ReadLine());
 
             Figure myFigure = new Figure(sideNumber);
+              
             myFigure.setPointValues();
 
            Console.WriteLine("Perimeter of the Figure sides is equal to {0}", myFigure.PerimeterCalculator());
