@@ -96,6 +96,11 @@ class Figure
             {
                 perimeter += LengthSide();
             }
+            else
+            {
+                perimeter += LengthSide();
+            }
+           
         }
 
     }
@@ -106,15 +111,7 @@ namespace PointFigure
     {
         static void Main(string[] args)
         {
-            /*
-            Point point1 = new Point(1, 2);
-            Point point2 = new Point(4, 6);
-            Point point3 = new Point(2, 5);
-            Point point4 = new Point(6, 17);
-            Point point5 = new Point(7, 9);
-
-    */
-
+           
             int sideNumber;
             Console.Write("Enter number of sides in the Figure:");
             sideNumber = Convert.ToInt32(Console.ReadLine());
@@ -124,7 +121,7 @@ namespace PointFigure
 
             Console.WriteLine(Triangle.SideNumber);
 
-           // Console.WriteLine(Triangle.LengthSide(point1, point2));
+           
             Console.ReadKey();
 
         }
