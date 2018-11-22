@@ -43,11 +43,9 @@ class Point
 
 class Figure
 {
-    
+
     private double sideLendth;
     private int sideNumber;
-
-    
 
     public Figure(int sideNumber)
     {
@@ -59,11 +57,13 @@ class Figure
         get { return sideNumber; }
     }
 
-    public Point[] pointArray = new Point[SideNumber]; // Sidenumber ???
+    // Sidenumber ???
 
+    Point[] pointArray = new Point[sideNumber];
+ 
     public void setPointValues()
     {
-       
+        
         for (int i = 0; i < sideNumber; i++)
         {
             int x, y;
