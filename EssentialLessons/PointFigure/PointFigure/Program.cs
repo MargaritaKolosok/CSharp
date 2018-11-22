@@ -24,8 +24,7 @@ using System.Threading.Tasks;
 class Point
 {
     private int x, y;
-  //  string figureName;
-
+ 
     public int X
     {
         get { return x; }
@@ -34,14 +33,7 @@ class Point
     {
         get { return y; }
     }
-    /*    public string FigureName
-        {
-            get
-            {
-                return figureName;
-            }
-        }
-    */
+
     public Point(int x, int y)
     {
         this.x = x;
