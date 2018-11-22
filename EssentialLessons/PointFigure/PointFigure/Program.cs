@@ -55,19 +55,23 @@ class Figure
     private double sideLendth;
     private int sideNumber;
 
+    
+
     public Figure(int sideNumber)
     {
         this.sideNumber = sideNumber;
     }
+
     public int SideNumber
     {
         get { return sideNumber; }
     }
-        
+
+    public Point[] pointArray = new Point[SideNumber]; // Sidenumber ???
+
     public void setPointValues()
     {
-        Point[] pointArray = new Point[sideNumber];
-
+       
         for (int i = 0; i < sideNumber; i++)
         {
             int x, y;
@@ -79,7 +83,7 @@ class Figure
 
             pointArray[i] = new Point(x, y);
         }
-       
+    
     }
     
     public double LengthSide(Point A, Point B)
@@ -87,39 +91,40 @@ class Figure
         sideLendth = Math.Sqrt(Math.Pow((B.X - A.X), 2) + Math.Pow((B.Y - A.Y), 2));
         return sideLendth;
     }
-    public void PerimeterCalculator()
+    public double PerimeterCalculator()
     {
         double perimeter = 0;
         for (int i=0; i<sideNumber; i++)
         {
             if (i == sideNumber - 1)
             {
-                perimeter += LengthSide();
+             perimeter += LengthSide(pointArray[0], pointArray[sideNumber-1]);
             }
             else
             {
-                perimeter += LengthSide();
+               perimeter += LengthSide(pointArray[i],pointArray[i+1]);
             }
            
         }
 
+        return perimeter;
     }
 }
 namespace PointFigure
 {
-    class Program
+ public class Program
     {
         static void Main(string[] args)
         {
            
-            int sideNumber;
+           int sideNumber;
             Console.Write("Enter number of sides in the Figure:");
             sideNumber = Convert.ToInt32(Console.ReadLine());
 
-            Figure Triangle = new Figure(sideNumber);
-            Triangle.setPointValues();
+            Figure myFigure = new Figure(sideNumber);
+            myFigure.setPointValues();
 
-            Console.WriteLine(Triangle.SideNumber);
+           Console.WriteLine("Perimeter of the Figure sides is equal to {0}", myFigure.PerimeterCalculator());
 
            
             Console.ReadKey();
