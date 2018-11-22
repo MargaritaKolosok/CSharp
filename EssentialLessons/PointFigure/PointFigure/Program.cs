@@ -60,7 +60,7 @@ class Figure
     }
     public int SideNumber
     {
-        get { return sideNumber;  }
+        get { return sideNumber; }
     }
 
     /*
@@ -90,7 +90,7 @@ class Figure
     {
         Point[] pointArray = new Point[sideNumber];
 
-        for (int i=0; i<sideNumber; i++)
+        for (int i = 0; i < sideNumber; i++)
         {
             int x, y;
             Console.WriteLine("Enter X for Point {0}", i);
@@ -101,7 +101,9 @@ class Figure
 
             pointArray[i] = new Point(x, y);
         }
+       
     }
+    
     public double LengthSide(Point A, Point B)
     {
         sideLendth = Math.Sqrt(Math.Pow((point2.X - point1.X), 2) + Math.Pow((point2.Y - point1.Y), 2));
@@ -109,6 +111,14 @@ class Figure
     }
     public void PerimeterCalculator()
     {
+        double perimeter = 0;
+        for (int i=0; i<sideNumber; i++)
+        {
+            if (i == sideNumber - 1)
+            {
+                perimeter += LengthSide();
+            }
+        }
 
     }
 }
