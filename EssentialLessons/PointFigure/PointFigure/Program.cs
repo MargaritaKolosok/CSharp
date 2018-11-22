@@ -52,10 +52,8 @@ class Figure
         {
             this.sideNumber = sideNumber;
         }
-    
-    
-
-    Point[] pointArray = new Point[3]; // Sidenumber ???
+       
+    List<Point> points = new List<Point>();
 
     public void setPointValues()
     {
@@ -69,8 +67,8 @@ class Figure
 
             Console.WriteLine("Enter Y for Point {0}", i);
             y = Convert.ToInt32(Console.ReadLine());
-
-            pointArray[i] = new Point(x, y);
+                        
+            points.Add(new Point(x, y));
         }
         
     }
@@ -82,7 +80,10 @@ class Figure
     }
     public double PerimeterCalculator()
     {
+        Point[] pointArray = points.ToArray();
+
         double perimeter = 0;
+
         for (int i=0; i<sideNumber; i++)
         {
             if (i == sideNumber - 1)
