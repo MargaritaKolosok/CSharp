@@ -6,19 +6,40 @@ using System.Threading.Tasks;
 
 class Sallary
 {
-    public int baseSallary = 32000;
+    private int baseSallary = 32000;
     double sallary, tax, experience;
+    private string position;
+    private double coeficient = 0.1;
 
-    public Sallary(double experience)
+    public Sallary(double experience, string position)
     {
         this.experience = experience;
+        this.position = position;
     }
 
     public double SallarySize
     {
         get {
-            sallary = baseSallary * 0.2 * experience;
+            switch (position)
+            {
+                case "QA":
+                    coeficient = 0.3;
+                    break;
+                case "MANAGER":
+                    coeficient = 0.45;
+                    break;
+                case "PROGRAMMER":
+                    coeficient = 0.66;
+                    break;
+                default:
+                    coeficient = 0.15;
+                    break;
+
+            }
+
+            sallary = baseSallary * experience * coeficient;
             return sallary;
+
             }               
     }
 
@@ -26,7 +47,7 @@ class Sallary
     {
        get
         {
-            tax = (sallary / 100) * 25;
+            tax = (sallary / 100) * 5.5;
             return tax;
         }
     }
@@ -48,10 +69,10 @@ class Employee
         Console.Write("Experience years:");
         double experience = Convert.ToInt32(Console.ReadLine());
 
-       // Console.Write("Position:");
-       // string position = Convert.ToString(Console.ReadLine());
+        Console.Write("Position:");
+        string position = Convert.ToString(Console.ReadLine());
 
-        Sallary sallary = new Sallary(experience);
+        Sallary sallary = new Sallary(experience, position);
         Console.WriteLine("Sallary: {0}, Tax: {1}", sallary.SallarySize, sallary.TaxSize);
     }       
 }
