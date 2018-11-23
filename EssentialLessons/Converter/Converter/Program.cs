@@ -36,17 +36,18 @@ class Converter
     {
         return uah / rubRate;
     }
+
     public double ConvertFromUsd(double usd)
     {
-        return usd / usdRate;
+        return usd * usdRate;
     }
     public double ConvertFromEur(double eur)
     {
-        return eur / eurRate;
+        return eur * eurRate;
     }
     public double ConvertFromRub(double rub)
     {
-        return rub / rubRate;
+        return rub * rubRate;
     }
 }
 
@@ -59,7 +60,8 @@ namespace ConverterExc
         {
             Converter myExchange = new Converter(27.98, 32.66, 2.37);
             
-            Console.WriteLine(myExchange.ConvertToUsd(200));
+            Console.WriteLine(myExchange.ConvertToUsd(280));
+            Console.WriteLine(myExchange.ConvertFromUsd(200));
             Console.ReadKey();
 
 
