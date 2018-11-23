@@ -25,20 +25,17 @@ class Invoice
         this.account = account;
         this.customer = customer;
         this.provider = provider;
-
     }
 
     public void CountPrice()
     {
         Console.WriteLine("Enter Price of the article");
-        int quantity = Convert.ToInt32(Console.ReadLine());
-               
+        int quantity = Convert.ToInt32(Console.ReadLine());               
 
         NDS countNDS = new NDS(quantity , account);
         Console.WriteLine("Customer {0} has made order of article with price {1}$ / 1ent by Provider {2}. Price to Pay:", customer, account, provider);
         Console.WriteLine("Price with NDS = {0}", countNDS.CountWithNds());
-        Console.WriteLine("Price with NDS = {0}", countNDS.CountWithoutNds());              
-
+        Console.WriteLine("Price with NDS = {0}", countNDS.CountWithoutNds());
     }    
 }
 
@@ -71,8 +68,7 @@ namespace InvoiceJob
         {
             Invoice myInvoice = new Invoice(14, "Rita", "New Balance");
             myInvoice.CountPrice();
-            Console.ReadKey();                
-
+            Console.ReadKey(); 
         }
     }
 }
