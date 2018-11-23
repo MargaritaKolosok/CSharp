@@ -27,7 +27,7 @@ class Employee
     public double CountSallary(string position, int experience)
     {
         double sallary;
-        double baseSallary = 28000;
+        double baseSallary = 32000;
         if (position == "QA")
         {
             sallary = (experience + 0.1) * 0.2 * baseSallary;
@@ -61,6 +61,10 @@ class Employee
     }
             
 }
+class Sallary
+{
+
+}
 
 namespace EmployeeSallary
 {
@@ -72,9 +76,10 @@ namespace EmployeeSallary
             double emSallary = John.CountSallary("QA", 4);
            
 
-            John.CountTax(emSallary);
+            
 
             John.getInfo();
+            John.CountTax(emSallary);
 
 
             Console.ReadKey();
