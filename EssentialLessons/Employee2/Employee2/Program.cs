@@ -16,12 +16,12 @@ class Sallary
 
     public double SallarySize
     {
-    get {
+        get {
             sallary = baseSallary * 0.2 * experience;
             return sallary;
-        }
-               
+            }               
     }
+
     public double TaxSize
     {
        get
@@ -30,9 +30,7 @@ class Sallary
             return tax;
         }
     }
-  
-
-}
+  }
 
 class Employee
 {
@@ -40,9 +38,10 @@ class Employee
 
     public Employee(string name, string surname)
         {
-        this.name = name;
-        this.surname = surname;
+            this.name = name;
+            this.surname = surname;
         }
+
     public void CountTaxes()
     {
         Console.WriteLine("Hello {0}, please enter year of experience and Position enter ", name);
@@ -53,12 +52,8 @@ class Employee
        // string position = Convert.ToString(Console.ReadLine());
 
         Sallary sallary = new Sallary(experience);
-       
-
         Console.WriteLine("Sallary: {0}, Tax: {1}", sallary.SallarySize, sallary.TaxSize);
-    }
-    
-    
+    }       
 }
 
 namespace Employee2
@@ -70,7 +65,6 @@ namespace Employee2
             Employee John = new Employee("John", "Smith");
             John.CountTaxes();
             Console.ReadKey();
-
         }
     }
 }
