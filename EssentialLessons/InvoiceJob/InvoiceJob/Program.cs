@@ -18,10 +18,7 @@ class Invoice
 {
     readonly int account;
     readonly string  customer;
-    readonly string provider;
-
-    private string article;
-    private int quantity;
+    readonly string provider;      
 
     public Invoice(int account, string customer, string provider)
     {
@@ -38,6 +35,7 @@ class Invoice
                
 
         NDS countNDS = new NDS(quantity , account);
+        Console.WriteLine("Customer {0} has made order of article with price {1}$ / 1ent by Provider {2}. Price to Pay:", customer, account, provider);
         Console.WriteLine("Price with NDS = {0}", countNDS.CountWithNds());
         Console.WriteLine("Price with NDS = {0}", countNDS.CountWithoutNds());              
 
@@ -46,8 +44,8 @@ class Invoice
 
 class NDS
 {
-    int quantity;
-    double price;
+   private int quantity;
+   private double price;
 
     public NDS(int quantity, double price)
     {
@@ -73,8 +71,7 @@ namespace InvoiceJob
         {
             Invoice myInvoice = new Invoice(14, "Rita", "New Balance");
             myInvoice.CountPrice();
-            Console.ReadKey();
-                
+            Console.ReadKey();                
 
         }
     }
