@@ -34,7 +34,6 @@ class Sallary
                 default:
                     coeficient = 0.15;
                     break;
-
             }
 
             sallary = baseSallary * experience * coeficient;
