@@ -16,13 +16,7 @@ using System.Threading.Tasks;
 class Employee
 {
     private string name, surname;
-    public double Tax, Sallary;
-
-    public Tax()
-        {
-         get {return  tax; }
-
-        }
+  //  public double Tax, Sallary;
 
 
     public Employee(string name, string surname)
@@ -55,15 +49,15 @@ class Employee
         return sallary;
 
     }
-    public double CountTax(double x)
+    public void CountTax(double sallary)
     {
-        return (x / 100) * 5.5;
+        Console.WriteLine((sallary / 100) * 5.5); 
     }
 
 
     public void getInfo()
     {
-        Console.WriteLine("Employee {0} {1} has sallary {2}. Tax from sallary is {3}", name, surname);
+        Console.WriteLine("Employee {0} {1} has sallary", name, surname);
     }
             
 }
@@ -76,7 +70,11 @@ namespace EmployeeSallary
         {
             Employee John = new Employee("John", "Smith");
             double emSallary = John.CountSallary("QA", 4);
-            double emTax = John.CountTax(emSallary);
+           
+
+            John.CountTax(emSallary);
+
+            John.getInfo();
 
 
             Console.ReadKey();
