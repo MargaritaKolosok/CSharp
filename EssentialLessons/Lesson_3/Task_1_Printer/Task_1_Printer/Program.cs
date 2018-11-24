@@ -18,15 +18,15 @@ class Printer
 {
     public void Print(string value)
     {
-        string[] color = new string[]{ "Gray", "Red" , "Blue"};
+        string[] color = new string[]{ "Green", "Red" , "Blue"};
         Random random = new Random();
         
-        string randomColor = color[random.Next(0,2)];
+        string randomColor = color[random.Next(0,3)];
 
         switch (randomColor)
         {
-            case "Gray":
-                Console.BackgroundColor = ConsoleColor.Gray;
+            case "Green":
+                Console.BackgroundColor = ConsoleColor.Green;
                 break;
             case "Red":
                Console.BackgroundColor= ConsoleColor.Red;
@@ -45,9 +45,9 @@ class Printer
 }
 class Copy : Printer
 {
-    public Copy(string value)
+    public void Print(string value)        
     {
-        
+        Console.WriteLine(value);
     }
 }
 namespace Task_1_Printer
@@ -56,6 +56,15 @@ namespace Task_1_Printer
     {
         static void Main(string[] args)
         {
+            Copy myCopy = new Copy();
+            // Print Method from Copy class
+            myCopy.Print("Value to Print");
+            // Print Method from Base Print Class
+            Printer anotherCopy = myCopy;
+            anotherCopy.Print("Copy from another copy");
+                
+            Console.ReadKey();
+
         }
     }
 }
