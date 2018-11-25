@@ -19,6 +19,11 @@ class ClassRoom
 
 class Pupil
 {
+    public void Study()
+    {
+
+    }
+
     public void Read()
     {
 
