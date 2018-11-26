@@ -30,7 +30,7 @@ class ClassRoom
             note = Convert.ToInt32(Console.ReadLine());
 
             switch (note)
-            {
+            {               
                 case 3:
                     pupils[i] = new BadPupil();
                     pupils[i].Name = name;
@@ -56,11 +56,8 @@ class ClassRoom
             pupil.Read();
             pupil.Write();
             pupil.Study();
-        }
-       
-    }
-  
-      
+        }       
+    }      
 }
 
 public class Pupil
@@ -98,7 +95,6 @@ class ExcelentPupil : Pupil
     {   
         Console.WriteLine("Can Study very well");
     }
-
     public override void Read()
     {
         Console.WriteLine("Can Read very well");
@@ -112,6 +108,7 @@ class ExcelentPupil : Pupil
         Console.WriteLine("Can Relax very well");
     }
 }
+
 class GoodPupil : Pupil
 {
     public override void Study()
@@ -153,6 +150,7 @@ class BadPupil : Pupil
         Console.WriteLine("Can Relax very bad");
     }
 }
+
 namespace Task2_ClassTasks
 {
     class Program
