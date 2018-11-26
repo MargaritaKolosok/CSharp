@@ -14,7 +14,16 @@
 
 class ClassRoom
 {
+    int numOfPupils;
+    public ClassRooom(int numOfPupils)
+    {
+        List<Pupil> pupils = new List<Pupil>();
 
+        for (int i=0; i<numOfPupils; i++)
+        {
+            pupils.Add = new Pupil();
+        }
+    }
 }
 
 class Pupil
