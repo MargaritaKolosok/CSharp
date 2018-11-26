@@ -14,17 +14,13 @@
      */
 
 class ClassRoom
-{
-   // int numOfPupils=4;
-
+{   
     public ClassRoom(int num)
     {
         string name;
         int note;
-       
-     //  List<Pupil> pupils = new List<Pupil>();
-        Pupil[] pupils = new Pupil[num];
 
+        Pupil[] pupils = new Pupil[num];
         
         for (int i = 0; i<num; i++)
         {
@@ -50,12 +46,10 @@ class ClassRoom
                 default:
                     pupils[i] = new GoodPupil();
                     pupils[i].Name = name;
-                    break;
-                    
+                    break;                    
             }
-
-
         }
+
         foreach (Pupil pupil in pupils)
         {
             Console.WriteLine(pupil.Name);
