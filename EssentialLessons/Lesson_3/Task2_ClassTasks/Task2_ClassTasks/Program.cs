@@ -166,10 +166,6 @@ namespace Task2_ClassTasks
         static void Main(string[] args)
         {
             ClassRoom myClass = new ClassRoom(3);       
-            
-
-
-
             Console.ReadKey();
         }
     }
