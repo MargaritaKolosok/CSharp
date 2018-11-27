@@ -25,7 +25,7 @@ class Coordinates
 }
 class Vehicle
 {
-    Coordinates coordinate;
+   // Coordinates coordinate;
    private double price;
    private double speed;
    private DateTime year;
@@ -49,6 +49,12 @@ class Vehicle
     {
         Console.WriteLine("{0}, {1}, {2}", year, price, speed);
     }
+    public Vehicle(double speed, DateTime year, double price)
+    {
+        this.speed = speed;
+        this.year = year;
+        this.price = price;
+    }
 
 }
 
@@ -57,6 +63,27 @@ class Plane : Vehicle
     double height;
     int passangers;
 
+    public double Height
+    {
+        set => height = value;
+        get => height;
+    }
+
+    public int Passangers
+    {
+        set => passangers = value;
+        get => passangers;
+    }
+    public Plane(double height, int passangers, double speed, DateTime year, double price)
+        :base(speed, year, price)
+        {
+        this.height = height;
+        this.passangers = passangers;
+        }
+    public void ShowInfo2()        
+    {
+        Console.WriteLine("Height is {0}, Passengers are {1}", height, passangers);
+    }
 }
 
 namespace Task_3_Ship
@@ -65,10 +92,8 @@ namespace Task_3_Ship
     {
         static void Main(string[] args)
         {
-            Plane myPlane = new Plane();
-            myPlane.Price = 100000000;
-            myPlane.Speed = 200;
-            myPlane.Year = 2002;
+            Plane myPlane = new Plane(100000,221,800,2002,1000);
+            
             myPlane.ShowInfo();
             Console.ReadKey();
 
