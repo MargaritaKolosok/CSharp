@@ -23,12 +23,13 @@ class Coordinates
         this.y = y;
     }
 }
+
 class Vehicle
 {
-   // Coordinates coordinate;
+    // Coordinates coordinate;
    private double price;
    private double speed;
- //  private DateTime year;
+    // private DateTime year;
 
     public double Price
         {
@@ -53,10 +54,9 @@ class Vehicle
     public Vehicle(double speed, double price)
     {
         this.speed = speed;
-     //   this.year = year;
+     // this.year = year;
         this.price = price;
     }
-
 }
 
 class Plane : Vehicle
@@ -75,12 +75,14 @@ class Plane : Vehicle
         set => passangers = value;
         get => passangers;
     }
+
     public Plane(double height, int passangers, double speed, double price)
         :base(speed, price)
         {
         this.height = height;
         this.passangers = passangers;
         }
+
     public override void ShowInfo()        
     {
         base.ShowInfo();
@@ -98,7 +100,6 @@ namespace Task_3_Ship
             
             myPlane.ShowInfo();
             Console.ReadKey();
-
         }
     }
 }
