@@ -22,15 +22,24 @@ class Coordinates
         this.x = x;
         this.y = y;
     }
+    public double X
+        {
+             get { return x; }
+        }
+    public double Y
+    {
+        get { return y; }
+    }
+    
 }
 
 class Vehicle
 {
-    // Coordinates coordinate;
+   public Coordinates coordinate;
    private double price;
    private double speed;
    private string year;
-   
+
 
     public double Price
         {
@@ -57,6 +66,10 @@ class Vehicle
         this.speed = speed;
         this.year = year;
         this.price = price;
+    }
+    public void Coordinates()
+    {
+
     }
 }
 
@@ -91,9 +104,28 @@ class Plane : Vehicle
     }
 }
 
-class Ship
+class Ship : Vehicle
 {
+    private int passangers;
+    public Coordinates shipCoordinate;
 
+    public int Passangers
+    {
+        set { passangers = value; }
+        get { return passangers; }
+    }
+        
+    public Ship(int passangers, double speed, string year, double price)
+        : base(speed, year, price)
+    {
+        this.passangers = passangers;
+    }
+    public override void ShowInfo()
+    {
+        base.ShowInfo();
+        Console.WriteLine("Passangers {0}, Coordinate X {1}, Y {2}", passangers, position.
+            );
+    }
 }
 
 namespace Task_3_Ship
@@ -105,6 +137,11 @@ namespace Task_3_Ship
             Plane myPlane = new Plane(100000,221,800, "2002", 1000);
 
             myPlane.ShowInfo();
+
+            Ship myShip = new Ship(10000, 21, "2018", 100);
+            Coordinates shipCoordinates = new Coordinates(18.2738732, 67.2382);
+            
+
             Console.ReadKey();
         }
     }
