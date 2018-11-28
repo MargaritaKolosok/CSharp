@@ -30,6 +30,10 @@ class Coordinates
     {
         get { return y; }
     }
+    public void Show()
+    {
+        Console.WriteLine("Coordinates: {0}, {1}", X, Y);
+    }
     
 }
 
@@ -107,8 +111,7 @@ class Plane : Vehicle
 class Ship : Vehicle
 {
     private int passangers;
-    public Coordinates shipCoordinate;
-
+   
     public int Passangers
     {
         set { passangers = value; }
@@ -123,8 +126,7 @@ class Ship : Vehicle
     public override void ShowInfo()
     {
         base.ShowInfo();
-        Console.WriteLine("Passangers {0}, Coordinate X {1}, Y {2}", passangers, position.
-            );
+        Console.WriteLine("Passangers {0}", passangers);
     }
 }
 
@@ -140,8 +142,9 @@ namespace Task_3_Ship
 
             Ship myShip = new Ship(10000, 21, "2018", 100);
             Coordinates shipCoordinates = new Coordinates(18.2738732, 67.2382);
-            
-
+            myShip.ShowInfo();
+            shipCoordinates.Show();
+             
             Console.ReadKey();
         }
     }
