@@ -29,7 +29,8 @@ class Vehicle
     // Coordinates coordinate;
    private double price;
    private double speed;
-    // private DateTime year;
+   private string year;
+   
 
     public double Price
         {
@@ -41,20 +42,20 @@ class Vehicle
         get { return speed; }
         set { speed = value; }
     }
- /*   public DateTime Year
+    public string Year
     {
-        get { return Convert.ToDateTime(year); }
+        get { return year; }
         set { year = value; }
     }
-    */
+    
     public virtual void ShowInfo()
     {
         Console.WriteLine("{0}, {1}", price, speed);
     }
-    public Vehicle(double speed, double price)
+    public Vehicle(double speed, string year, double price)
     {
         this.speed = speed;
-     // this.year = year;
+        this.year = year;
         this.price = price;
     }
 }
@@ -76,8 +77,8 @@ class Plane : Vehicle
         get => passangers;
     }
 
-    public Plane(double height, int passangers, double speed, double price)
-        :base(speed, price)
+    public Plane(double height, int passangers, double speed, string year, double price)
+        :base(speed, year, price)
         {
         this.height = height;
         this.passangers = passangers;
@@ -90,14 +91,19 @@ class Plane : Vehicle
     }
 }
 
+class Ship
+{
+
+}
+
 namespace Task_3_Ship
 {
     class Program
     {
         static void Main(string[] args)
         {
-            Plane myPlane = new Plane(100000,221,800,1000);
-            
+            Plane myPlane = new Plane(100000,221,800, "2002", 1000);
+
             myPlane.ShowInfo();
             Console.ReadKey();
         }
