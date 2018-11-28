@@ -62,18 +62,14 @@ class Vehicle
     
     public virtual void ShowInfo()
     {
-        Console.WriteLine("{0}, {1}", price, speed);
+        Console.WriteLine("Price: {0}, Speed: {1}, Year: {2}", price, speed, year);
     }
     public Vehicle(double speed, string year, double price)
     {
         this.speed = speed;
         this.year = year;
         this.price = price;
-    }
-    public void Coordinates()
-    {
-
-    }
+    }   
 }
 
 class Plane : Vehicle
@@ -118,7 +114,7 @@ class Ship : Vehicle
     }
         
     public Ship(int passangers, double speed, string year, double price)
-        : base(speed, year, price)
+        :base(speed, year, price)
     {
         this.passangers = passangers;
     }
@@ -128,7 +124,15 @@ class Ship : Vehicle
         Console.WriteLine("Passangers {0}", passangers);
     }
 }
+class Car : Vehicle
+{
+    public Car(double speed, string year, double price)
+        : base(speed, year, price)
+    {
 
+    }
+
+}
 namespace Task_3_Ship
 {
     class Program
@@ -143,6 +147,10 @@ namespace Task_3_Ship
             Coordinates shipCoordinates = new Coordinates(18.2738732, 67.2382);
             myShip.ShowInfo();
             shipCoordinates.Show();
+
+            Car myCar = new Car(240, "2018", 189892);
+            myCar.ShowInfo();
+
              
             Console.ReadKey();
         }
