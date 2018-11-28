@@ -39,7 +39,6 @@ class Coordinates
 
 class Vehicle
 {
-   public Coordinates coordinate;
    private double price;
    private double speed;
    private string year;
