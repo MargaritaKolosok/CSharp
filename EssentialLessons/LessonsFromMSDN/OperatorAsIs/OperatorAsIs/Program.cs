@@ -11,6 +11,10 @@ class Child : Person
 {
     int Age;
 }
+class Flower
+{
+    string Name;
+}
 namespace OperatorAsIs
 {
     class Program
@@ -21,6 +25,8 @@ namespace OperatorAsIs
             Console.WriteLine("Test is string {0}", test is string);
             Child Mikky = new Child();
             Console.WriteLine("Child is Person {0}", Mikky is Person);
+            Flower rose = new Flower();
+            Console.WriteLine("Is Flower a Person {0}", rose is Person);
             Console.ReadKey();
         }
     }
