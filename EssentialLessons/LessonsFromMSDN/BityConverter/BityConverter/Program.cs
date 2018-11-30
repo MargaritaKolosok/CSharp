@@ -7,32 +7,37 @@ using System.Threading.Tasks;
 /*
  * 
 килобайт	КБайт (KБ)	1024 байта
-мегабит	мбит (мб)	1 000 килобит
+
 мегабайт	МБайт (МБ)	1024 килобайта
-гигабит	гбит (гб)	1 000 мегабит
+
 гигабайт	ГБайт (ГБ)	1024 мегабайта
-терабит	тбит (тб)	1 000 гигабит
+
 терабайт	ТБайт (ТБ)	1024 гигабайта
      */
 class Bite
 {
-    private long bite;
-    public long BiteNum
+   // private long bite;
+    public double bite
     {
-        set => bite = value;
-        get => bite;
+        set;
+        get;
     }
     public Bite(long bite)
     {
-        BiteNum = bite;
+        this.bite = bite;
     }
     public void ConvertToKB()
     {
-        Console.WriteLine("B {0} in KB {1}", BiteNum, BiteNum / 1024);
+        Console.WriteLine("Bite {0} in KB {1}", bite, bite / 1024);
     }
-
-   
-   
+    public void ConvertToMB()
+    {
+        Console.WriteLine("Bite {0} in KB {1}", bite, (bite / 1024) / 1024);
+    }
+    public void ConvertToGB()
+    {
+        Console.WriteLine("Bite {0} in KB {1}", bite, ((bite / 1024) / 1024)/ 1024);
+    }
 }
 
 namespace BityConverter
@@ -43,6 +48,8 @@ namespace BityConverter
         {
             Bite muBite = new Bite(1024);
             muBite.ConvertToKB();
+            muBite.ConvertToMB();
+            muBite.ConvertToGB();
             Console.ReadLine();
         }
     }
