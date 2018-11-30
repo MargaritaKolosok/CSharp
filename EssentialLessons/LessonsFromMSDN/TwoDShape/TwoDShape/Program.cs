@@ -27,7 +27,7 @@ abstract class TwoDShape
     public abstract double Area();
     public void ShowDimmensions()
     {
-        Console.WriteLine("Width {0}, Height {1}", Width, Height);
+        Console.WriteLine("Width {0}, Height {1}, Area: {2}", Width, Height, this.Area());
     }
 }
 class Triangle : TwoDShape
@@ -43,6 +43,19 @@ class Triangle : TwoDShape
         return Width * Height / 2;
     }
 }
+class Parallellogram : TwoDShape
+{
+    private string name;
+    public Parallellogram(double w, double h, string name) : base(w, h)
+    {
+        this.name = name;
+    }
+    public override double Area()
+    {
+        return Width * Height;
+    }
+
+}
 namespace TwoDShapeN
 {
     class Program
@@ -53,6 +66,10 @@ namespace TwoDShapeN
             
             Console.WriteLine("Triangle Area is {0}", myTriangle.Area());
             myTriangle.ShowDimmensions();
+
+            Parallellogram myPar = new Parallellogram(9.7,2.3,"Parallellogram figure");
+            myPar.ShowDimmensions();
+
             Console.ReadKey();
         }
     }
