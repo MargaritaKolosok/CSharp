@@ -25,6 +25,10 @@ abstract class TwoDShape
 
     }
     public abstract double Area();
+    public void ShowDimmensions()
+    {
+        Console.WriteLine("Width {0}, Height {1}", Width, Height);
+    }
 }
 class Triangle : TwoDShape
 {
@@ -46,8 +50,9 @@ namespace TwoDShapeN
         static void Main(string[] args)
         {
             Triangle myTriangle = new Triangle(8.0,7.5, "Triangle" );
-            double area = myTriangle.Area();
-            Console.WriteLine("Triangle Area is {0}, Width is {1}, Height is {2}", area, myTriangle.Width,myTriangle.Height);
+            
+            Console.WriteLine("Triangle Area is {0}", myTriangle.Area());
+            myTriangle.ShowDimmensions();
             Console.ReadKey();
         }
     }
