@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27428.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RoundDimmension", "RoundDimmension\RoundDimmension.csproj", "{0372C0D0-9888-40A6-ADF2-B9DA19B74D3D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0372C0D0-9888-40A6-ADF2-B9DA19B74D3D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0372C0D0-9888-40A6-ADF2-B9DA19B74D3D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0372C0D0-9888-40A6-ADF2-B9DA19B74D3D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0372C0D0-9888-40A6-ADF2-B9DA19B74D3D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {3BBF8F9A-45BC-4BFD-91F3-DB81656F2241}
+	EndGlobalSection
+EndGlobal
