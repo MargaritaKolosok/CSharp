@@ -55,7 +55,8 @@ namespace InterfaceNum
             {
                 Console.WriteLine(myNum.GetNext());
             }
-
+            ISeria obj = myNum;
+            Console.WriteLine(obj.GetNext());
             Console.ReadKey();
         }
     }
