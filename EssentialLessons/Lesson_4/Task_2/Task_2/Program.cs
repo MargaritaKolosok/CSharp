@@ -10,6 +10,13 @@ AbstractHandler.
 
 abstract class AbstractHandler
 {
+    protected string fileName;
+
+    public AbstractHandler(string fileName)
+    {
+        this.fileName = fileName;
+    }
+ 
    public abstract void Open();
    public abstract void Create();
    public abstract void Change();
@@ -17,6 +24,11 @@ abstract class AbstractHandler
 }
 class XMLHandler : AbstractHandler
 {
+    public XMLHandler(string fileName)
+        :base(fileName)
+    {
+
+    }
     public override void Open()
     {
         Console.WriteLine("XML Opened");
@@ -37,6 +49,11 @@ class XMLHandler : AbstractHandler
 
 class TXTHandler : AbstractHandler
 {
+    public TXTHandler(string fileName)
+        : base(fileName)
+    {
+
+    }
     public override void Open()
     {
         Console.WriteLine("TXT Opened");
@@ -57,6 +74,10 @@ class TXTHandler : AbstractHandler
 
 class DOCHandler : AbstractHandler
 {
+    public DOCHandler(string fileName)
+        : base(fileName)
+    {
+    }
     public override void Open()
     {
         Console.WriteLine("DOC Opened");
@@ -76,42 +97,57 @@ class DOCHandler : AbstractHandler
 }
 class Redactor 
 {
-    public AbstractHandler ChooseFile(string file)
+    AbstractHandler doc;
+
+    public void ChooseFile(string file)
     {
         string formatFile = "";
-        int s = file.IndexOf('.');
-        formatFile = file.Substring(s);
+        int index = file.IndexOf('.');
+        formatFile = file.Substring(index);
+        string fileName = file; 
 
-        AbstractHandler doc;
+        
 
         switch (formatFile)
         {
-            
-
-            case "txt":
+            case ".txt":
                 {
-                    doc = new TXTHandler();
+                    doc = new TXTHandler(fileName);
                     break;
                 }
-            case "xml":
+            case ".xml":
                 {
-                    doc = new XMLHandler();
+                    doc = new XMLHandler(fileName);
                     break;
                 }
-            case "doc":
+            case ".doc":
                 {
-                    doc = new DOCHandler();
+                    doc = new DOCHandler(fileName);
                     break;
                 }
             default:
                 {
-                    doc = new DOCHandler();
+                    Console.WriteLine("Unknown format");
                     break;
                 }
-                
         }
-        return doc;
-
+        
+    }
+    public void Open()
+    {
+        doc.Open();
+    }
+    public void Change()
+    {
+        doc.Change();
+    }
+    public void Save()
+    {
+        doc.Save();
+    }
+    public void Create()
+    {
+        doc.Create();
     }
 }
 namespace Task_2
@@ -120,7 +156,15 @@ namespace Task_2
     {
         static void Main(string[] args)
         {
-            
+            Redactor redactor = new Redactor();
+            redactor.ChooseFile("file.txt");
+            redactor.Open();
+            redactor.Change();
+            redactor.Save();
+            redactor.Create();
+            Console.ReadKey();
+
+
         }
     }
 }
