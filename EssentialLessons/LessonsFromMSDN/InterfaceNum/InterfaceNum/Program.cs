@@ -4,8 +4,9 @@ public interface ISeria
 {
     int GetNext();
     void Reset();
-    void setStart(int x);
+    void SetStart(int x);
 }
+
 class TwoD : ISeria
 {
     int start, num;
@@ -19,7 +20,7 @@ class TwoD : ISeria
         num += 2;
         return num;
     }
-    public void setStart(int x)
+    public void SetStart(int x)
     {
         num = x;
     }
@@ -41,19 +42,21 @@ namespace InterfaceNum
                 Console.WriteLine(myNum.GetNext());
             }
 
-            myNum.setStart(100);
+            myNum.SetStart(100);
+
             for (int i = 0; i < 10; i++)
             {
                 Console.WriteLine(myNum.GetNext());
             }
+
             myNum.Reset();
+
             for (int i = 0; i < 10; i++)
             {
                 Console.WriteLine(myNum.GetNext());
             }
+
             Console.ReadKey();
-
-
         }
     }
 }
