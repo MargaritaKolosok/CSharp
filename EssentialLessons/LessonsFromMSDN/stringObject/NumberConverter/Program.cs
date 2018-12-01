@@ -8,13 +8,13 @@ namespace NumberConverter
         {
             string[] digits = { "нoль", "один", "два", "три", "четыре", "пять", "шесть", "семь", "восемь", "девять" };
 
+            Console.WriteLine("Введите число для конвертации в буквенное представление:");
             int num = Convert.ToInt32(Console.ReadLine());
-
-            int stringLength = (num.ToString()).Length;
+           
             string newString = "";
             string stringNum = num.ToString();
           
-             for(int i=0; i<stringLength; i++)
+             for(int i=0; i<stringNum.Length; i++)
               {
                 int c = int.Parse(Convert.ToString(stringNum[i]));
                 newString += digits[c] + " ";
