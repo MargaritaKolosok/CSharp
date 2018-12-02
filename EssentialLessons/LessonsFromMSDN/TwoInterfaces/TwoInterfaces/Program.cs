@@ -35,10 +35,9 @@ namespace TwoInterfaces
     {
         static void Main(string[] args)
         {
-            myClass myNum = new myClass();
-            
-            myNum.MethA(3);
-            myNum.MethB(3);
+            myClass myNum = new myClass();            
+            Console.WriteLine(myNum.MethA(3));
+            Console.WriteLine(myNum.MethB(3));
             Console.ReadKey();
         }
     }
