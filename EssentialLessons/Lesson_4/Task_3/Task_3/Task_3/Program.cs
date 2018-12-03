@@ -26,6 +26,32 @@ interface IRecordable
 }
 class Player : IPlayable, IRecordable
 {
+    public void Play()
+    {
+        Console.WriteLine("Start Playing");
+    }
+    public void Record()
+    {
+        Console.WriteLine("Start Recording");
+    }
+
+    void IPlayable.Pause()
+    {
+        Console.WriteLine("Pause Playing");
+    }
+    void IPlayable.Stop()
+    {
+        Console.WriteLine("Stop Playing");
+    }
+    void IRecordable.Pause()
+    {
+        Console.WriteLine("Pause Recording");
+    }
+    void IRecordable.Stop()
+    {
+        Console.WriteLine("Stop Recording");
+    }
+
 
 }
 namespace Task_3
