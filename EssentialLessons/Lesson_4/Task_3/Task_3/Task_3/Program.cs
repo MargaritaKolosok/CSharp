@@ -24,6 +24,7 @@ interface IRecordable
     void Pause();
     void Stop();
 }
+
 class Player : IPlayable, IRecordable
 {
     public void Play()
@@ -34,7 +35,6 @@ class Player : IPlayable, IRecordable
     {
         Console.WriteLine("Start Recording");
     }
-
     void IPlayable.Pause()
     {
         Console.WriteLine("Pause Playing");
@@ -51,9 +51,8 @@ class Player : IPlayable, IRecordable
     {
         Console.WriteLine("Stop Recording");
     }
-
-
 }
+
 namespace Task_3
 {
     class Program
@@ -71,7 +70,6 @@ namespace Task_3
             myPlayer1.Pause();
 
             Console.ReadKey();
-
         }
     }
 }
