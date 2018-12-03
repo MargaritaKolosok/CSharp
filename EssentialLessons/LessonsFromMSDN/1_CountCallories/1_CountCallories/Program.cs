@@ -19,12 +19,25 @@ Edit и выводить результаты в компонент Memo.
 граммах
 Вычислить общую калорийность
 продукта 
+
+создать класс-потомок с дополнительным полем, указанным в
+индивидуальном задании (табл. 11.4, столб 2).
+Реализовать в классе-потомке методы:
+- конструктор;
+- функцию обработки данных, указанную в индивидуальном задании (табл
+11.4, столб 3).
+ Создать проект для демонстрации работы: ввод и вывод информации об
+объектах: классе-родителе и классе-потомке.
+
+Количество витамина С в 1
+грамме продукта
+Количество витамина С в продукте
  
      */
 class Product
 {
-    private double weight;
-    private int callories;
+    protected double weight;
+    protected int callories;
     public string Name { get; set; }
     public double W
     {
@@ -45,12 +58,35 @@ class Product
     {
         return weight / 100 * callories;
     }
-    public void ShowInfo()
+    public virtual void ShowInfo()
     {
         Console.WriteLine("Product {0} has {1} weight and {2} callories.", Name, weight, CountCallories()  );
     }
     public Product()
     {
+    }
+}
+class Vitamin : Product
+{
+    public double VitaminC {get; set;}
+       
+
+    public Vitamin(string name, double weight, int callories, double vitaminC)
+        :base(name,weight,callories)
+    {
+        VitaminC = vitaminC;
+        Name = name;
+        this.weight = weight;        
+        this.callories = callories;
+    }
+    private double CountVitamin()
+    {
+        return weight / 1000 * VitaminC;
+    }
+    public override void ShowInfo()
+    {
+        base.ShowInfo();
+        Console.WriteLine("Product {0} has Vitamins {1}.", Name, CountVitamin());
     }
 }
 namespace _1_CountCallories
@@ -69,6 +105,9 @@ namespace _1_CountCallories
 
             Bread.ShowInfo();
             Milk.ShowInfo();
+
+            Vitamin Lemon = new Vitamin("Lemon", 240, 66, 0.45);
+            Lemon.ShowInfo();
 
             Console.ReadKey();
         }
