@@ -37,17 +37,17 @@ class Product
     }
     public Product(string name, double weight, int callories)
     {
-        this.Name = name;
+        Name = name;
         this.weight = weight;
         this.callories = callories;
     }
-    public double countCallories()
+    public double CountCallories()
     {
         return weight / 100 * callories;
     }
     public void ShowInfo()
     {
-        Console.WriteLine("Product {0} has {1} weight and {2} callories.", Name, weight, countCallories()  );
+        Console.WriteLine("Product {0} has {1} weight and {2} callories.", Name, weight, CountCallories()  );
     }
     public Product()
     {
@@ -60,12 +60,12 @@ namespace _1_CountCallories
         static void Main(string[] args)
         {
             Product Milk = new Product("Milk", 200, 34);
-            Console.WriteLine(Milk.countCallories());
+            Console.WriteLine(Milk.CountCallories());
             Product Bread = new Product();
             Bread.Name = "Baton";
             Bread.W = 300;
             Bread.C = 87;
-            Console.WriteLine(Bread.countCallories());
+            Console.WriteLine(Bread.CountCallories());
 
             Bread.ShowInfo();
             Milk.ShowInfo();
