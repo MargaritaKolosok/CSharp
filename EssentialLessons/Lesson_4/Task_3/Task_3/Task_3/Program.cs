@@ -60,6 +60,18 @@ namespace Task_3
     {
         static void Main(string[] args)
         {
+            Player myPlayer = new Player();
+
+            myPlayer.Play();            
+            (myPlayer as IRecordable).Record();
+            myPlayer.Record();
+            (myPlayer as IPlayable).Stop();
+
+            IRecordable myPlayer1 = new Player();
+            myPlayer1.Pause();
+
+            Console.ReadKey();
+
         }
     }
 }
