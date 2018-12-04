@@ -68,6 +68,11 @@ namespace _2_Computer
     {
         static void Main(string[] args)
         {
+            ComputerBase Comp1 = new ComputerBase("Intel 5", 2.2, 4);
+            Computer Comp2 = new Computer("Intel 7", 2.2, 4, 500);
+            Console.WriteLine("Comp1 Quality: {0}", Comp1.Quality());
+            Console.WriteLine("Comp2 Quality: {0}", Comp2.Quality());
+            Console.ReadKey();
         }
     }
 }
