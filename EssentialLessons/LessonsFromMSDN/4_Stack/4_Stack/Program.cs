@@ -42,9 +42,7 @@ namespace _4_Stack
     {
         static void Main(string[] args)
         {
-            Stack myStack = new Stack(6);
-           
-        
+            Stack myStack = new Stack(6);          
             myStack.Push(1);
             myStack.Push(2);
             myStack.Push(3);
