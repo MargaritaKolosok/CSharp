@@ -107,6 +107,7 @@ namespace _1_CountCallories
             Milk.ShowInfo();
 
             Vitamin Lemon = new Vitamin("Lemon", 240, 66, 0.45);
+            Console.WriteLine(Lemon.CountCallories()); 
             Lemon.ShowInfo();
 
             Console.ReadKey();
