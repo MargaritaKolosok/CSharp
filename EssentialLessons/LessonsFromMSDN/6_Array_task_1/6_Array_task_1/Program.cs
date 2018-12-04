@@ -11,15 +11,16 @@ class ArrayCreator
     {
         arr = new int[numOfEl];
     }
+
     public void AddRandomElements()
     {
         Random random = new Random();
         for (int i=0; i<arr.Length; i++)
-        {
-            
+        {            
             arr[i] = random.Next(1,100);
         }
     }
+
     private int Average()
     {
         int sum = 0;
@@ -29,12 +30,14 @@ class ArrayCreator
         }
         return sum / arr.Length;
     }
+
     public void Show()
     {
         for (int i = 0; i < arr.Length; i++)
         {           
             Console.WriteLine(arr[i]);
         }
+
         Console.WriteLine("Average num in array: {0}", Average());
     }
 }
