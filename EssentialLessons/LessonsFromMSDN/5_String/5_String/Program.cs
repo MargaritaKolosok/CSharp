@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 class MyString
 {
     private string mystring;
+
     public MyString(string mystring)
     {
         this.mystring = mystring;
@@ -35,13 +36,17 @@ namespace _5_String
         static void Main(string[] args)
         {
             MyString testString = new MyString("Hello");
+
             testString.Add("my");
             testString.Add("Friend!");
             Console.WriteLine(testString.ShowString());
+
             testString.DeleteWord("my");
             Console.WriteLine(testString.ShowString());
+
             testString.DeleteWord("XXX");
             Console.WriteLine(testString.ShowString());
+
             Console.ReadKey();
         }
     }
