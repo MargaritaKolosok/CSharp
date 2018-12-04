@@ -31,23 +31,16 @@ class Coordinate: Quarter
 
         if (X < 0)
         {
-            if (Y < 0)
-            {
-                result = 3;
-            }
-            if (Y>0) result = 2;
+            if (Y < 0) result = 3;            
+            if (Y > 0) result = 2;
         }
-        else if (X>0)
+
+        else if (X > 0)
         {
-            if (Y > 0)
-            {
-                result = 1;
-            }
-            else
-            {
-                result = 4;
-            }
+            if (Y > 0) result = 1;            
+            if(Y < 0) result = 4;            
         }
+
         return result;
     }
     public void Show()
@@ -70,6 +63,10 @@ namespace _7_PointCoordinat
             myCoordinate.Y = -7;
             myCoordinate.Show();
             myCoordinate.X = -3;
+            myCoordinate.Show();
+
+            myCoordinate.X = 0;
+            myCoordinate.Y = 0;
             myCoordinate.Show();
             Console.ReadKey();
         }
