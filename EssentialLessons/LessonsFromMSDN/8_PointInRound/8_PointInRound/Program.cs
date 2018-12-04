@@ -34,7 +34,7 @@ class Round : RoundFigure
 
     private bool isInRound()
     {
-        bool result = ((Math.Pow((X-0),2) + Math.Pow((Y-0),2))<=(Math.Pow(radius,2)));
+        bool result = ((Math.Pow((X-a),2) + Math.Pow((Y-b),2))<=(Math.Pow(radius,2)));
         return result;      
         
     }
@@ -52,6 +52,8 @@ namespace _8_PointInRound
         {
             Round myRound = new Round(5,0,2);
             myRound.Show();
+            Round myRound1 = new Round(1, 2, 5);
+            myRound1.Show();
             Console.ReadKey();
         }
     }
