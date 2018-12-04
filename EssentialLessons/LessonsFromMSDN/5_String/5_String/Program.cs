@@ -40,6 +40,8 @@ namespace _5_String
             Console.WriteLine(testString.ShowString());
             testString.DeleteWord("my");
             Console.WriteLine(testString.ShowString());
+            testString.DeleteWord("XXX");
+            Console.WriteLine(testString.ShowString());
             Console.ReadKey();
         }
     }
