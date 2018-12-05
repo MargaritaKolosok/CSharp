@@ -20,15 +20,19 @@ class Fractions
         this.num = num;        
     }
     
-    public double GetPart()
+     double GetPart()
     {
         part = (double)num - Math.Truncate(num);
         return part;
     }
-    public int GetWhole()
+     int GetWhole()
     {
         whole = (int)((double)num - part);
         return whole;
+    }
+    public void ShowParts(Fractions ob)
+    {
+        Console.WriteLine("Whole: {0}, Part {1}",  ob.GetWhole(), ob.GetPart());
     }
 }
 namespace _11_Fractions
@@ -38,8 +42,9 @@ namespace _11_Fractions
         static void Main(string[] args)
         {
             Fractions myF = new Fractions(107.6372);
-            Console.WriteLine(myF.GetWhole());
-            Console.WriteLine(myF.GetPart());
+            // Console.WriteLine(myF.GetWhole());
+            // Console.WriteLine(myF.GetPart());
+            myF.ShowParts(myF);
             Console.WriteLine();
             Console.ReadKey();
         }
