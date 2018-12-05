@@ -22,13 +22,14 @@ class Number
     public bool IsEndsOn(int i)
     {
       string numStr = num.ToString();
-      int last = Convert.ToInt32(numStr.AsEnumerable().Last().ToString());            
+   // int last = Convert.ToInt32(numStr.AsEnumerable().Last().ToString());    
+      int last = num % 10;
       return (last == i);        
     }
-//    public void ShowInfo()
-//    {
-//      Console.WriteLine("Num: {0}, isEven: {1}, IsEndsOn {2}", num, isEven(), );
-//   }
+    public void ShowInfo(int i)
+    {
+     Console.WriteLine("Num: {0}, isEven: {1}, IsEndsOn {2}", num, IsEven(), IsEndsOn(i));
+   }
 }
 namespace _9_NumberCheck
 {
@@ -40,6 +41,9 @@ namespace _9_NumberCheck
             Number num2 = new Number(6);
             Console.WriteLine("Num 1 is Even? {0}, has 3 in the end {1}", num1.IsEven(), num1.IsEndsOn(3));
             Console.WriteLine("Num 2 is Even? {0} has 3 in the end {1}", num2.IsEven(), num2.IsEndsOn(3));
+            Console.WriteLine("--",50);
+            num1.ShowInfo(3);
+            num2.ShowInfo(3);
             Console.ReadKey();
         }
     }
