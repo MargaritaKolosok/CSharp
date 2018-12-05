@@ -30,9 +30,9 @@ class Fractions
         whole = (int)((double)num - part);
         return whole;
     }
-    public void ShowParts(Fractions ob)
+    public void ShowParts()
     {
-        Console.WriteLine("Whole: {0}, Part {1}",  ob.GetWhole(), ob.GetPart());
+        Console.WriteLine("Whole: {0}, Part {1}",  this.GetWhole(), this.GetPart());
     }
 }
 namespace _11_Fractions
@@ -41,11 +41,8 @@ namespace _11_Fractions
     {
         static void Main(string[] args)
         {
-            Fractions myF = new Fractions(107.6372);
-            // Console.WriteLine(myF.GetWhole());
-            // Console.WriteLine(myF.GetPart());
-            myF.ShowParts(myF);
-            Console.WriteLine();
+            Fractions myF = new Fractions(107.6372);            
+            myF.ShowParts();            
             Console.ReadKey();
         }
     }
