@@ -4,8 +4,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-
-
 namespace _12_CountSum
 {
 
@@ -16,6 +14,7 @@ namespace _12_CountSum
             int sum = 0;
             min = arr[0]++;
             max = arr[0]++;
+
             for (int i = 0; i < arr.Length; i++)
             {               
                 sum += arr[i];
@@ -26,8 +25,7 @@ namespace _12_CountSum
                 if (arr[i]> max)
                 {
                     max = arr[i];
-                }
-                    
+                }                    
             }
             return sum;
         }
@@ -37,8 +35,7 @@ namespace _12_CountSum
             int[] arr = {1,2,3,4,5,6,7,8,9,88,676 };
             Console.WriteLine("Sum of array is {0}", CountSum(arr, out int a, out int b));
             Console.WriteLine("Max is {0}, min is {1}", b, a);
-            Console.ReadKey();
-           
+            Console.ReadKey();           
         }
     }
 }
