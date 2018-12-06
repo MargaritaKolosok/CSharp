@@ -5,6 +5,8 @@ VisualStudioVersion = 15.0.27428.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "13_MinC=ValParams", "13_MinC=ValParams\13_MinC=ValParams.csproj", "{DCF89AB2-6008-4B83-A1C5-38CC40F094F0}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PowAndSqrt", "PowAndSqrt\PowAndSqrt.csproj", "{8B116A4A-E918-4DD0-A985-3D4D89835831}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{DCF89AB2-6008-4B83-A1C5-38CC40F094F0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DCF89AB2-6008-4B83-A1C5-38CC40F094F0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DCF89AB2-6008-4B83-A1C5-38CC40F094F0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8B116A4A-E918-4DD0-A985-3D4D89835831}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8B116A4A-E918-4DD0-A985-3D4D89835831}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8B116A4A-E918-4DD0-A985-3D4D89835831}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8B116A4A-E918-4DD0-A985-3D4D89835831}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
