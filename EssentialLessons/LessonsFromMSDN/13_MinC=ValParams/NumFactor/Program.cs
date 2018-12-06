@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+
 class Factor
 {
     public List<int> Factors(int num, out int factors)
@@ -17,6 +18,7 @@ class Factor
                 j++;
             }
         }
+
         factors = j;
         return factorArray;
     }
@@ -32,11 +34,9 @@ namespace NumFactor
             foreach (int x in myList)
             {
                 Console.WriteLine(x);
-            }
-           
+            }           
             Console.WriteLine("Factors = {0}", factors);
             Console.ReadKey();
-
         }
     }
 }
