@@ -12,10 +12,18 @@ namespace _13_ObInitil
 {
     class Program
     {
+        static bool IsAdult(int baseAge, int age)
+        {
+            if (age > baseAge)
+                return true;
+            return false;
+        }
         static void Main(string[] args)
         {
             Person Rita = new Person { Name="Rita", age=26 };
+            
             Console.WriteLine(Rita.age);
+            Console.WriteLine(IsAdult(baseAge: 18, age: 26));
             Console.ReadKey();
         }
     }
