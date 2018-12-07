@@ -43,6 +43,28 @@ class myArr
             Console.WriteLine("Elemets array index {0} = {1}", x, arr[x]);
         }
     }
+    public void Min()
+    {
+        min = arr[0];
+        for (int i = 0; i < arr.Length; i++)
+        {
+            if (arr[i] <= min)
+            {
+                min = arr[i];
+            }
+                
+        }
+        Console.WriteLine("Min value is {0}", min);
+    }
+    public void Avr(out int sum)
+    {
+        sum = 0;
+        for (int i = 0; i < arr.Length; i++)
+        {
+            sum += arr[i];
+        }
+        Console.WriteLine("Avarage value is {0}", sum / arr.Length);
+    }
 
 
 }
@@ -53,8 +75,13 @@ namespace Task_2
         static void Main(string[] args)
         {
             myArr my = new myArr(10);
-            my.Max();
+            
             my.ShowElemets();
+            my.Avr(out int summa);
+            my.Max();
+            my.Min();
+            Console.WriteLine("Summa {0}", summa);
+                
             Console.ReadKey();
         }
     }
