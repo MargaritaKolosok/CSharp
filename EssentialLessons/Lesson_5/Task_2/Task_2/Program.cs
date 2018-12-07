@@ -25,7 +25,8 @@ class myArr
         }     
     }
 
-    int max, min, sum, average;
+    int max, min;
+
     public void Max()
     {
         max = arr[0];
@@ -36,13 +37,15 @@ class myArr
         }
         Console.WriteLine("Max value is {0}", max);
     }
+
     public void ShowElemets()
     {
-        foreach (int x in arr)
+        for (int i = 0; i < arr.Length; i++)
         {
-            Console.WriteLine("Elemets array index {0} = {1}", x, arr[x]);
+            Console.WriteLine("Elemets array index {0} = {1}", i, arr[i]);
         }
     }
+
     public void Min()
     {
         min = arr[0];
@@ -51,9 +54,9 @@ class myArr
             if (arr[i] <= min)
             {
                 min = arr[i];
-            }
-                
+            }                
         }
+
         Console.WriteLine("Min value is {0}", min);
     }
     public void Avr(out int sum)
@@ -63,6 +66,7 @@ class myArr
         {
             sum += arr[i];
         }
+
         Console.WriteLine("Avarage value is {0}", sum / arr.Length);
     }
 
