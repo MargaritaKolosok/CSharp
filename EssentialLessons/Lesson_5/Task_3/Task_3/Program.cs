@@ -12,8 +12,12 @@ namespace Task_3
         {
             MyMatrix matrix = new MyMatrix(5);
             matrix.ShowMatrix();
-            Console.ReadKey();
+            Console.WriteLine("-", 20);
+            MyMatrix matrix2;
+            matrix2 = MyMatrix.Copy(matrix, 8);
+            matrix2.ShowMatrix();
 
+            Console.ReadKey();
         }
     }
 }
