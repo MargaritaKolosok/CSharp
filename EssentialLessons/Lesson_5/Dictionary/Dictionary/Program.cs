@@ -45,7 +45,6 @@ class Translator
                 return string.Format("No such index");
             }
         }
-
     }
 
     public int this[string word]
@@ -58,8 +57,8 @@ class Translator
                 {
                     return i;
                 }
-
             }
+
             return -1;
         }
     }
