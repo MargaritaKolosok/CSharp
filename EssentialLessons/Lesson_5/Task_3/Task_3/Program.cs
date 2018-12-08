@@ -11,6 +11,7 @@ namespace Task_3
         static void Main(string[] args)
         {
             MyMatrix matrix = new MyMatrix(5);
+          //  Console.WriteLine(matrix[0,0]); 
             matrix.ShowMatrix();
             Console.WriteLine("-", 20);
             MyMatrix matrix2;

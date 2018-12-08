@@ -43,7 +43,7 @@ namespace Task_3
             }
         }
 
-        int this[int i, int j]
+      protected int this[int i, int j]
         {
             get { return matrix[i][j]; }           
         }
@@ -52,10 +52,20 @@ namespace Task_3
         {
             MyMatrix mat = new MyMatrix(x);
 
-        //    for (int i=0; i<x; i++)
-        //    {
+            int rowB;
 
-         //   }
+            rowB = (mat.matrix.Length < m.matrix.Length)? mat.matrix.Length : m.matrix.Length;
+            
+
+            for (int i=0; i<rowB; i++)
+            {
+                int columnB = (mat.matrix[i].Length < m.matrix[i].Length ) ? mat.matrix[i].Length : m.matrix[i].Length;
+
+                for (int j=0; j<columnB; j++)
+                {                    
+                    mat.matrix[i][j] = m.matrix[i][j];
+                }
+            }
 
             return mat;
         }
