@@ -10,10 +10,11 @@ namespace Task_3
     {
         static void Main(string[] args)
         {
-            MyMatrix matrix = new MyMatrix(5);
-          //  Console.WriteLine(matrix[0,0]); 
+            MyMatrix matrix = new MyMatrix(5);          
             matrix.ShowMatrix();
+
             Console.WriteLine("-", 20);
+
             MyMatrix matrix2;
             matrix2 = MyMatrix.Copy(matrix, 8);
             matrix2.ShowMatrix();

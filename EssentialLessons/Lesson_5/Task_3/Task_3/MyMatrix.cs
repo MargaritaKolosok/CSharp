@@ -50,12 +50,9 @@ namespace Task_3
 
        public static MyMatrix Copy(MyMatrix m, int x)
         {
-            MyMatrix mat = new MyMatrix(x);
+            MyMatrix mat = new MyMatrix(x);          
 
-            int rowB;
-
-            rowB = (mat.matrix.Length < m.matrix.Length)? mat.matrix.Length : m.matrix.Length;
-            
+            int rowB = (mat.matrix.Length < m.matrix.Length)? mat.matrix.Length : m.matrix.Length;            
 
             for (int i=0; i<rowB; i++)
             {
