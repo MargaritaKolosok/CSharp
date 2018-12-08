@@ -10,7 +10,10 @@ namespace Task_3
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            MyMatrix matrix = new MyMatrix(5);
+            matrix.ShowMatrix();
+            Console.ReadKey();
+
         }
     }
 }
