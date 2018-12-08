@@ -14,22 +14,17 @@ namespace Task_4
 
         public Store(int n)
         {
-            storeArr = new Article[n];
+            storeArr = new Article[n];               
+        }
 
-            for (int i=0; i<n; i++)
+        public void AddArticle(Article value, int index)
+        {
+            if (index >= 0 && index < storeArr.Length)
             {
-                Console.WriteLine("Введите имя товара {0}", i);
-                string name = Convert.ToString(Console.ReadLine());
-                storeArr[i].Product = name;
-
-                Console.WriteLine("Введите магазин {0}", i);
-                string shop  = Convert.ToString(Console.ReadLine());
-                storeArr[i].Shop = shop;
-
-                Console.WriteLine("Введите цену товара {0}", i);
-                double price = Convert.ToDouble(Console.ReadLine());
-                storeArr[i].Price = price;
-            }       
+                storeArr[index] = value;
+            }
+            else { Console.WriteLine("Попытка записи за пределами массива.");  }
+                
         }
 
         public string this[string product]
