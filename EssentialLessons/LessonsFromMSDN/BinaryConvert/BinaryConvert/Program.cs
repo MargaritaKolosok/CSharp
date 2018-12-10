@@ -64,6 +64,8 @@ namespace BinaryConvert
             Console.WriteLine(b.ConvertToInt());
             Binary c = new Binary("10100djkhs0101");
             Console.WriteLine(c.ConvertToInt());
+            string t = "lkjjk";
+           
             Console.ReadKey();
         }
     }
