@@ -16,6 +16,19 @@ static class String
         }
         return result;
     }
+
+    public static string NumbersInString(this string str)
+    {
+        string result = "";
+        foreach (char ch in str)
+        {
+            if (int.TryParse(ch.ToString(), out int num))
+            {
+                result += num;
+            }
+        }
+        return result;
+    }
 }
 namespace _14_ExtendString
 {
@@ -25,7 +38,10 @@ namespace _14_ExtendString
         {
             string test = "Hello my dear frieds";
             Console.WriteLine(test.Revert());
-            
+
+            string test2 = "Hello1 my2 dear3 frieds777";
+            Console.WriteLine(test2.NumbersInString());
+
             Console.ReadKey();
         }
     }
