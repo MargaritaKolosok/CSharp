@@ -16,30 +16,27 @@ class Binary
     public Binary(string binary)
     {
         this.binary = binary;
+    }   
 
-    }
-    public string BinaryNum
-    {
-       get { return binary; }
-    }
-
-    static public bool IsBinary(string str)
+    bool IsBinary(string str)
     {
         int ok = 0;
         for (int i=0; i<str.Length; i++)
         {
             if (int.TryParse(str[i].ToString(), out int result))
             {
-                if (result==1 || result==0) { ok++; }
+                if (result==1 || result==0)
+                {
+                    ok++;
+                }
             }
-            else { return false; }
 
+            else
+            {
+                return false;
+            }
         }
-        if (ok == str.Length)
-        {
-            return true;
-        }
-        else { return false; }
+            return  (ok == str.Length)?  true : false;            
     }
 
     public int ConvertToInt()
@@ -49,7 +46,11 @@ class Binary
         {
             result = Convert.ToInt32(binary, 2);
         }
-        else { result = 0; }
+        else
+        {
+            Console.WriteLine("Is not binary number");
+            result = 0;
+        }
         return result;
     }
 }
@@ -58,15 +59,11 @@ namespace BinaryConvert
     class Program
     {
         static void Main(string[] args)
-        {
-            
-            Console.WriteLine(Binary.IsBinary("10903940"));
-
-            
-            Console.WriteLine(Binary.IsBinary("101010101111"));
-            Console.WriteLine(Binary.IsBinary("101010ksjd1111"));
+        {           
             Binary b = new Binary("101001010101");
             Console.WriteLine(b.ConvertToInt());
+            Binary c = new Binary("10100djkhs0101");
+            Console.WriteLine(c.ConvertToInt());
             Console.ReadKey();
         }
     }
