@@ -29,6 +29,19 @@ static class String
         }
         return result;
     }
+    public static int getAge(this OwnClass ob)
+    {
+        return ob.Age;
+    }
+}
+class OwnClass
+{
+    public int Age;
+    public OwnClass(int age)
+    {
+        Age = age;
+    }
+
 }
 namespace _14_ExtendString
 {
@@ -40,7 +53,10 @@ namespace _14_ExtendString
             Console.WriteLine(test.Revert());
 
             string test2 = "Hello1 my2 dear3 frieds777";
-            Console.WriteLine(test2.NumbersInString());
+            Console.WriteLine(test2.NumbersInString());            
+
+            OwnClass ob = new OwnClass(18);
+            Console.WriteLine(ob.getAge());
 
             Console.ReadKey();
         }
