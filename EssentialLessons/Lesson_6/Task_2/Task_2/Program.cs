@@ -8,21 +8,17 @@
 
 class Book
 {
-    string book = "";
-    public Book(string str)
-    {
-        if (book!="")
-        {
-            book +=" /n" + str;
-        }
-        book = str;
-    }
-}
-static class FindAndReplaceManager
-{
     public void FindNext(string str)
     {
-
+        Console.WriteLine("Find text: {0}", str);
+    }
+}
+static class FindAndReplace
+{
+    public static void FindNext(string str)
+    {
+        Book b = new Book();
+        b.FindNext(str);
     }
 }
 namespace Task_2
@@ -31,7 +27,9 @@ namespace Task_2
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            FindAndReplace.FindNext("book");
+            Console.ReadKey();
+
         }
     }
 }
