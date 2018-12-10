@@ -37,6 +37,23 @@ class Matrix
             Console.WriteLine();
         }
     }
+    public void Count()
+    {
+        int star = 0, plus = 0;
+        foreach (string str in arr)
+        {
+            if (str == "*")
+            {
+                star++;
+            }
+            else
+            {
+                plus++;
+            }            
+        }
+
+        Console.WriteLine("Starts: {0}, plus {1}", star, plus);
+    }
 }
 
 namespace RandomSymbolMatrix
@@ -47,6 +64,7 @@ namespace RandomSymbolMatrix
         {
             Matrix mat = new Matrix(3,4);
             mat.Show();
+            mat.Count();
             Console.ReadKey();
         }
     }
