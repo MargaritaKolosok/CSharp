@@ -16,11 +16,12 @@ namespace Masky
             {
                 if (i < (cc.Length - 4))
                 {
-                    result += cc[i];
+                    char ch = (Convert.ToChar(cc[i]) == ' ') ? ' ' : '#';
+                    result += ch;
                 }
                 else
                 {
-                    result += '#';
+                    result += cc[i];
                 }
             }
             return result;
@@ -28,7 +29,7 @@ namespace Masky
 
         static void Main(string[] args)
         {
-            Console.WriteLine(Maskify("1727272727272772727272"));
+            Console.WriteLine(Maskify("1727 2727 2727 2772"));
             Console.ReadKey();
         }
     }
