@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-u
+
 /*
 Требуется: Описать структуру с именем Train, содержащую следующие поля: название пункта
 назначения, номер поезда, время отправления.
@@ -14,50 +14,72 @@ u
 вывести соответствующее сообщение). 
  * 
  */
-class Schedule
+struct Train
 {
-    private Train[] trains;
+    string city;
+    int number;
+    DateTime time;
 
-    public void AddTrain(int num)
+    public Train(string city, int number, DateTime time)
     {
-        trains = new Train[num];
-
-        for (int i=0; i<num; i++)
-        { 
-            Train t = new Train();
-            Console.WriteLine("City:");
-            t.City = Console.ReadLine();
-            Console.WriteLine("Number:");
-            t.Number = Convert.ToInt32(Console.ReadLine());
-            Console.WriteLine("Time:");
-            t.Time = Convert.ToDouble(Console.ReadLine());
-            trains[i] = t;
-        }
-        
+        this.city = city;
+        this.number = number;
+        this.time = time;
     }
-    
-  
+
+    public string City
+    {
+        get { return city; }
+    }
+    public int Number
+    {
+        get { return number; }
+
+    }
+    public DateTime Time
+    {
+        get { return time; }
+    }
 }
-static class Trains
-    {
-    public static int GetTrain(this Train[] trains, int num)
-    {
+
+static class Schedule
+{
+   public static void AddTrains(Train[] trains)
+    {       
         for (int i=0; i<trains.Length; i++)
+        {             
+            Console.WriteLine("City:");
+            string City = Console.ReadLine();
+
+            Console.WriteLine("Number:");
+            int Number = Convert.ToInt32(Console.ReadLine());
+
+            Console.WriteLine("Time:");
+            DateTime Time = Convert.ToDateTime(Console.ReadLine());
+
+            trains[i] = new Train(City, Number, Time);
+        }        
+    }
+    public static int GetTrain(this Schedule schedule, int num)
+    {
+        for (int i = 0; i < schedule.trains.Length; i++)
         {
-            if (trains[i].Number == num)
+            if (schedule.trains[i].Number == num)
             {
                 return i;
             }
             else
             {
                 Console.WriteLine("No such train number");
-                
+
             }
         }
         return 0;
-
     }
+
+
 }
+
 
 
 namespace Task_2
@@ -66,12 +88,12 @@ namespace Task_2
     {
         static void Main(string[] args)
         {
-            Trains[] trains = new Trains[2];
+            Train[] trains = new Train[2];
 
-            Schedule my = new Schedule(trains);
+            Schedule my = new Schedule();
+            my.AddTrains(trains);
 
-            my.AddTrain(3);
-            my.GetTrain(35);
+            my.GetTrain(33);
             Console.ReadKey();
         }
     }
