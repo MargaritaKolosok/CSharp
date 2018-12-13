@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+u
 /*
 Требуется: Описать структуру с именем Train, содержащую следующие поля: название пункта
 назначения, номер поезда, время отправления.
@@ -13,13 +14,6 @@ using System.Threading.Tasks;
 вывести соответствующее сообщение). 
  * 
  */
-struct Train
-{
-    public string City;
-    public int Number;
-    public double Time;
-    
-}
 class Schedule
 {
     private Train[] trains;
@@ -72,7 +66,10 @@ namespace Task_2
     {
         static void Main(string[] args)
         {
-            Schedule my = new Schedule();
+            Trains[] trains = new Trains[2];
+
+            Schedule my = new Schedule(trains);
+
             my.AddTrain(3);
             my.GetTrain(35);
             Console.ReadKey();
