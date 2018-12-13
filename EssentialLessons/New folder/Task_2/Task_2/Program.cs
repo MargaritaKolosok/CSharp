@@ -27,6 +27,7 @@ class Schedule
     public void AddTrain(int num)
     {
         trains = new Train[num];
+
         for (int i=0; i<num; i++)
         { 
             Train t = new Train();
@@ -45,10 +46,22 @@ class Schedule
 }
 static class Trains
     {
-    public static Train GetTrain(this List<Train> list)
+    public static int GetTrain(this Train[] trains, int num)
     {
-        Train t = new Train();
-        return t;
+        for (int i=0; i<trains.Length; i++)
+        {
+            if (trains[i].Number == num)
+            {
+                return i;
+            }
+            else
+            {
+                Console.WriteLine("No such train number");
+                
+            }
+        }
+        return 0;
+
     }
 }
 
@@ -61,6 +74,7 @@ namespace Task_2
         {
             Schedule my = new Schedule();
             my.AddTrain(3);
+            my.GetTrain(35);
             Console.ReadKey();
         }
     }
