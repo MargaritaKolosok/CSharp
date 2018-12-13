@@ -55,29 +55,26 @@ static class Schedule
             int Number = Convert.ToInt32(Console.ReadLine());
 
             Console.WriteLine("Time:");
-            DateTime Time = Convert.ToDateTime(Console.ReadLine());
+            var d = Console.ReadLine();
+            DateTime Time = DateTime.Parse(d);
 
             trains[i] = new Train(City, Number, Time);
         }        
     }
-    public static int GetTrain(this Schedule schedule, int num)
+    public static void GetTrain(this Train[] trains, int num)
     {
-        for (int i = 0; i < schedule.trains.Length; i++)
+        for (int i = 0; i < trains.Length; i++)
         {
-            if (schedule.trains[i].Number == num)
+            if (trains[i].Number == num)
             {
-                return i;
+                Console.WriteLine("Train with number {0} was found", trains[i].Number);
             }
             else
             {
                 Console.WriteLine("No such train number");
-
             }
-        }
-        return 0;
+        }       
     }
-
-
 }
 
 
@@ -88,12 +85,11 @@ namespace Task_2
     {
         static void Main(string[] args)
         {
-            Train[] trains = new Train[2];
+            Train[] trains = new Train[1];
 
-            Schedule my = new Schedule();
-            my.AddTrains(trains);
-
-            my.GetTrain(33);
+            Schedule.AddTrains(trains);
+            Schedule.GetTrain(trains, 33);
+            
             Console.ReadKey();
         }
     }
