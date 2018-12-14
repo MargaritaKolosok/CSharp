@@ -69,6 +69,31 @@ static class Schedule
             trains[i] = new Train(city, number, time);
         }
     }
+
+    public static void ShowAll(this Train[] trains)
+    {
+        for (int i = 0; i < trains.Length; i++)
+        {
+            trains[i].Show();
+        }
+    }
+
+    public static void SortByNum(this Train[] trains)
+    {        
+        for (int i=0; i< trains.Length; i++)
+        {           
+
+            for (int j = 0; j < trains.Length; j++)
+            {                
+                if (trains[i].Number < trains[j].Number )
+                {
+                    Train A = trains[i];
+                    trains[i] = trains[j];
+                    trains[j] = A;
+                }
+            }
+        }
+    }
 }
 
 namespace Task_2_1
@@ -80,6 +105,10 @@ namespace Task_2_1
             Train[] trains = new Train[2];
             Schedule.AddTrains(trains);
             Schedule.GetTrainByNum(trains, 33);
+
+            Schedule.SortByNum(trains);
+            Schedule.ShowAll(trains);
+
             Console.ReadKey();
         }
     }
