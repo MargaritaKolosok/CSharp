@@ -81,19 +81,31 @@ static class Schedule
     public static void SortByNum(this Train[] trains)
     {        
         for (int i=0; i< trains.Length; i++)
-        {           
+        {
 
             for (int j = 0; j < trains.Length; j++)
-            {                
-                if (trains[i].Number < trains[j].Number )
-                {
-                    Train A = trains[i];
-                    trains[i] = trains[j];
-                    trains[j] = A;
-                }
-            }
+                {                
+                    if (trains[i].Number < trains[j].Number )
+                    {
+                        Train A = trains[i];
+                        trains[i] = trains[j];
+                        trains[j] = A;
+                    }
+                 }
         }
     }
+/*
+    public static void SortByCity(this Train[] trains)
+    {
+        string[] cities = new string[trains.Length];
+
+        for (int i = 0; i < trains.Length; i++)
+        {
+            cities[i] = trains[i].City;           
+        }
+        
+    }
+*/
 }
 
 namespace Task_2_1
