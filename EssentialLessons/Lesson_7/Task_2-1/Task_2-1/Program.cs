@@ -39,12 +39,11 @@ static class Schedule
             if (trains[i].Number == num)
             {
                 trains[i].Show();
-            }
-            else
-            {
-                Console.WriteLine("No such Train exist!");
-            }
+                return;
+            }        
         }
+
+        Console.WriteLine("No such Train exist!");
     }
 
     public static void Show(this Train train)
@@ -54,6 +53,7 @@ static class Schedule
 
     public static void AddTrains(this Train[] trains)
     {
+
         for (int i=0; i<trains.Length; i++)
         {
             Console.WriteLine("Enter city destination:");
@@ -64,6 +64,9 @@ static class Schedule
 
             Console.WriteLine("Enter date:");
             var d = Console.ReadLine();
+
+            DateTime time = (DateTime.TryParse(d, out DateTime result))? result : DateTime.Now;
+            trains[i] = new Train(city, number, time);
         }
     }
 }
@@ -74,6 +77,10 @@ namespace Task_2_1
     {
         static void Main(string[] args)
         {
+            Train[] trains = new Train[2];
+            Schedule.AddTrains(trains);
+            Schedule.GetTrainByNum(trains, 33);
+            Console.ReadKey();
         }
     }
 }
