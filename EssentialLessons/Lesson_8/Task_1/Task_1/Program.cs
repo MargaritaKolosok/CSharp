@@ -7,10 +7,42 @@
  * */
 static class MyClass
 {
-    enum colors {Blue, Red, Green, White};
+    enum Colors {Blue, Red, Green, White};
+
     static public void Print(string str, int color)
     {
-        
+        switch (color)
+        {
+            case (int)Colors.Blue:
+                {
+                    Console.BackgroundColor = ConsoleColor.Blue;
+                    break;
+                }
+            case (int)Colors.Red:
+                {
+                    Console.BackgroundColor = ConsoleColor.Red;
+                    break;
+                }
+            case (int)Colors.Green:
+                {
+                    Console.BackgroundColor = ConsoleColor.Green;
+                    break;
+                }
+            case (int)Colors.White:
+                {
+                    Console.BackgroundColor = ConsoleColor.White;
+                    Console.ForegroundColor = ConsoleColor.Magenta;
+                    break;
+                }
+            default:
+                {
+                    Console.BackgroundColor = ConsoleColor.Black;
+                    break;
+                }
+        }
+
+        Console.WriteLine(str);
+
     }
 
 }
@@ -22,7 +54,9 @@ namespace Task_1
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            string str = "Hello world";
+            MyClass.Print(str, 3);
+            Console.ReadKey();
         }
     }
 }
