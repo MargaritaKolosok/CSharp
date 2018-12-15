@@ -10,15 +10,27 @@ static class CountDays
     {
         if (DateTime.TryParse(str, out DateTime Birthday))
         {
-            DateTime today = DateTime.Now;
-            TimeSpan DaysToBirthday = today - Birthday;
+            DateTime now = DateTime.Now;
+            TimeSpan DaysToBirthday;
+            DateTime B = new DateTime(now.Year, Birthday.Month, Birthday.Day);
+
+            if (B < now)
+            {
+                B = new DateTime(now.Year + 1, Birthday.Month, Birthday.Day);
+                DaysToBirthday = B - now;
+
+            }
+            else
+            {
+                DaysToBirthday = B - now;
+            }
+
             Console.WriteLine("Days left to Birthday {0}", DaysToBirthday);
         }
         else
         {
             Console.WriteLine("Not valid Day entered!");
-        }
-       
+        }        
     }
 }
 
