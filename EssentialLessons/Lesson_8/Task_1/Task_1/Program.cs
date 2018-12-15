@@ -7,7 +7,7 @@
  * */
 static class MyClass
 {
-    enum Colors {Blue, Red, Green, White};
+    enum Colors { Blue, Red, Green, White };
 
     static public void Print(string str, int color)
     {
@@ -42,9 +42,7 @@ static class MyClass
         }
 
         Console.WriteLine(str);
-
     }
-
 }
 
 
