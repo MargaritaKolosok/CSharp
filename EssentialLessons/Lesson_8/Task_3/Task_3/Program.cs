@@ -13,16 +13,10 @@ class Accauntant
    public bool AskForBonus(Jobs worker, int hours)
     {
         bool result;
-        if (worker == 0)
-        {
-            Console.WriteLine("Not such worker!");
-            result = false;
-        }
-        else
-        {
+      
             if ((int)worker < hours)
             {
-                Console.WriteLine("Worker {0} should get extra money", worker);
+                Console.WriteLine("Worker {0} should get extra money for extra {1} hours", worker, hours - (int)worker);
                 result = true;
             }
             else
@@ -30,7 +24,7 @@ class Accauntant
                 Console.WriteLine("Worker {0} should not get extra money", worker);
                 result = false;
             }
-        }
+        
         return result;
     }
 }
@@ -45,6 +39,7 @@ namespace Task_3
             Console.WriteLine(my.AskForBonus(Jobs.Progremmer, 56));
             Console.WriteLine(my.AskForBonus(Jobs.Progremmer, 23));
             Console.WriteLine(my.AskForBonus(Jobs.QA, 23));
+            Console.WriteLine(my.AskForBonus(Jobs.Manager, 100));
             Console.ReadKey();
         }
     }
