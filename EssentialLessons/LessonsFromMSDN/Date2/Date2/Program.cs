@@ -13,7 +13,7 @@ namespace Date2
             DateTime now = DateTime.Now;
             TimeSpan daysToNewYear;
 
-            DateTime NewYear = new DateTime(now.Year, 1, 1);
+            DateTime NewYear = new DateTime(now.Year, 1, 1);           
 
             if (now > NewYear)
             {
@@ -21,10 +21,10 @@ namespace Date2
                 daysToNewYear = NewYear - now;
             }
             else
-            {
+            {                
                 daysToNewYear = NewYear - now;
             }
-            Console.WriteLine(" daysToNewYear {0}", daysToNewYear.Days);
+            Console.WriteLine("Days To New Year {0}", daysToNewYear.Days);
             Console.ReadKey();
         }
     }
