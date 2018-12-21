@@ -28,6 +28,11 @@ namespace MinNMax
             Console.WriteLine("Min = {0}, max = {1}", min, max);
             return result;
         }
+
+        public static int[] MinMax2(this int[] lst)
+        {
+            return new int[] { lst.Min(), lst.Max()};
+        }
     }
 
     class Program
@@ -37,6 +42,13 @@ namespace MinNMax
             int[] arr = new int[] { 3,2,-1,56,7,8,90,32,1,2,4,7};
             CheckMinMax.MinMax(arr);
             Console.WriteLine(CheckMinMax.MinMax(arr));
+            int[] result = new int[2];
+            result = CheckMinMax.MinMax2(arr);
+            for (int i=0; i<result.Length; i++)
+            {
+                Console.WriteLine(result[i]);
+            }
+
             Console.ReadKey();
         }
     }
