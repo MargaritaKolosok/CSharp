@@ -13,25 +13,21 @@ namespace MAxValueSeq
     {
         public void GetMax(string str)
         {
-            // int max = Convert.ToInt32(str.Substring(0, 4));
-            // Console.WriteLine(str.Substring(0, 4));
-            int j = 4;
-
+            int max = Convert.ToInt32(str.Substring(0, 5));
+          
             for (int i = 1; i <= str.Length - 5; i++)
             {
-                //int num1 = Convert.ToInt32(str.Substring(i, (int)(i + 4)));
-                Console.WriteLine(str.Substring(i, j));
+                int num1 = Convert.ToInt32(str.Substring(i, 5));
+                Console.WriteLine(str.Substring(i, 5));                
                 
-                
-               // if (max < num1)
-              //  {
-               //     max = num1;
-               // }
+               if (max < num1)
+                  {
+                     max = num1;
+                  }
             }
 
-           // Console.WriteLine("Max sequence is {0}", max);
-            //return max;
-
+            Console.WriteLine("Max sequence is {0}", max);
+            
         }
     }
     class Program
