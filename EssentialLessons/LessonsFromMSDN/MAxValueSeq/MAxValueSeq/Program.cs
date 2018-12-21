@@ -9,23 +9,27 @@ using System.Threading.Tasks;
 
 namespace MAxValueSeq
 {
-   public static class MyExtensions
+   public class MyExtensions
     {
-        public static void GetMax(this string str)
+        public void GetMax(string str)
         {
-            int max = Convert.ToInt32(str.Substring(0, 4));
-            Console.WriteLine(max);
-            
+            // int max = Convert.ToInt32(str.Substring(0, 4));
+            // Console.WriteLine(str.Substring(0, 4));
+            int j = 4;
+
             for (int i = 1; i <= str.Length - 5; i++)
             {
-                int num1 = Convert.ToInt32(str.Substring(i, (int)(i + 4)));
-                if (max < num1)
-                {
-                    max = num1;
-                }
+                //int num1 = Convert.ToInt32(str.Substring(i, (int)(i + 4)));
+                Console.WriteLine(str.Substring(i, j));
+                
+                
+               // if (max < num1)
+              //  {
+               //     max = num1;
+               // }
             }
 
-            Console.WriteLine("Max sequence is {0}", max);
+           // Console.WriteLine("Max sequence is {0}", max);
             //return max;
 
         }
@@ -35,7 +39,9 @@ namespace MAxValueSeq
         static void Main(string[] args)
         {
             string str = "7316717653133062491922511967442657443";
-            str.GetMax();
+            MyExtensions my = new MyExtensions();
+            my.GetMax(str);
+            
             Console.ReadKey();
         }
     }
