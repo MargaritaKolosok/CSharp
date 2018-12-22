@@ -7,10 +7,8 @@ namespace Task_1
         public delegate int PerformCalculation(int a, int b, int c);
 
         public static int Calculation(int a, int b, int c)
-        {
-            int result = (a + b + c) / 3;
-            
-            return result;
+        {            
+            return (a + b + c) / 3;
         }
 
         static void Main(string[] args)
