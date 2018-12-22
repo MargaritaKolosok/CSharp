@@ -1,44 +1,50 @@
 ﻿using System;
-public delegate int myDelegate(Num[] arr);
-
-public delegate int Num();
 
 namespace Task_3
-{   
+{
+    
+
     class Program
     {
-        public static int Random1()
-        {
-            Random random = new Random();
-            return random.Next(1,10);
-        }
-        public static int Random2()
-        {
-            Random random = new Random();
-            return random.Next(1, 10);
-        }
-        public static int Random3()
-        {
-            Random random = new Random();
-            return random.Next(1, 10);
-        }
+        public delegate double myDelegate(Num[] arr);
+        public delegate int Num();
 
-        public static int Avarage(int[] arr)
-        {
-            int sum = 0;
-            for (int i=0; i<arr.Length; i++)
-            {
-                sum += arr[i];
-            }
-            return sum / arr.Length;
+        static Random random = new Random();
+
+        public static int GetRandom()
+        {            
+            return random.Next(1,100);
         }
 
         static void Main(string[] args)
         {
-            Num[] num = new Num[] { Random1, Random2, Random3 };
-            
-            myDelegate my = Avarage(num);
+            Num[] arr = new Num[10];
 
+            for (int i = 0; i < arr.Length; i++)
+            {
+                arr[i] = delegate { return new Num(GetRandom).Invoke(); };
+            }
+
+            myDelegate del = delegate (Num[] c)
+            {
+                double sum = 0;
+                for (int i = 0; i < c.Length; i++)
+                {
+                    sum += c[i].Invoke();
+                }
+
+                return sum / c.Length;
+            };
+
+            for (int i = 0; i < arr.Length; i++)
+            {
+                Console.WriteLine(arr[i].Invoke());
+            }
+
+            Console.WriteLine("Avarage is {0}", del(arr));
+            Console.ReadKey();
+
+            
 
         }
     }
