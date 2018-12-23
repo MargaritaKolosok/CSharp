@@ -22,7 +22,7 @@ namespace Task_3
 
             for (int i = 0; i < arr.Length; i++)
             {
-                arr[i] = delegate { return new Num(GetRandom).Invoke(); };
+                arr[i] = () => new Num(GetRandom).Invoke(); 
             }
 
             myDelegate del = delegate (Num[] c)
