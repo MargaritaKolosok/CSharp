@@ -19,18 +19,24 @@ namespace ArrayT1
             
         }
 
+        static void ShowArray(int[,] array)
+        {
+            for (int i=0; i<array.GetLength(0); i++)
+            {
+                for (int j=0; j<array.GetLength(1); j++)
+                {
+                    Console.Write(array[i,j]);
+                    Console.Write(' ');
+                }
+                Console.WriteLine();
+            }
+        }
+
         static void Main(string[] args)
         {
             
             int[,] arr = ArrayGenerator(5, 5);
-            for (int i = 0; i < arr.Length; i++)
-            {
-                for (int j = 0; j < arr.Length; j++)
-                {
-                    Console.Write(arr[i,j]);
-                }
-                Console.WriteLine();
-            }
+            
             Console.ReadKey();
 
         }
