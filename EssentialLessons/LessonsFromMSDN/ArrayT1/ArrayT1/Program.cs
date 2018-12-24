@@ -29,15 +29,20 @@ namespace ArrayT1
                 for (int j = 0; j < array.GetLength(1); j++)
                 {
                     sum += array[i, j];
+                    
                 }
+
+                Console.WriteLine(sum);
+
                 if (max < sum)
-                {
-                    max = sum;
-                    row = i;
+                    {
+                        max = sum;
+                        row = i;
+                    }
                 }
+
+                return max;
             }
-            return sum;
-        }
         }
     class Program
     {
