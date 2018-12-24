@@ -16,7 +16,7 @@ namespace SingleInArray
    {
         public static int Stray(int[] array)
         {
-            int uniq = array[0];
+            int unic = array[0];
 
             for (int i=0; i < array.Length; i++)
             {
@@ -34,12 +34,12 @@ namespace SingleInArray
 
                     else
                     {
-                        uniq = array[i];
+                        unic = array[i];
                     }
                 }
             }
 
-            return uniq;
+            return unic;
         }
             
         
