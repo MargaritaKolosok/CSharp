@@ -16,10 +16,12 @@ namespace SingleInArray
                     {
                         continue;
                     }
+
                     if (array[i] == array[j])
                     {
                         break;
                     }
+
                     else
                     {
                         uniq = array[i];
@@ -28,7 +30,6 @@ namespace SingleInArray
             }
 
             return uniq;
-
         }
             
         
