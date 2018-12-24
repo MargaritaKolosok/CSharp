@@ -16,6 +16,28 @@ namespace ArrayT1
                     Console.WriteLine();
                 }
             }
+
+        public static int MaxRowSum(this int[,] array, out int row)
+        {
+            int max = 0, sum =0;
+            row = 0;
+            
+            for (int i = 0; i < array.GetLength(0); i++)
+            {
+                sum = 0;
+
+                for (int j = 0; j < array.GetLength(1); j++)
+                {
+                    sum += array[i, j];
+                }
+                if (max < sum)
+                {
+                    max = sum;
+                    row = i;
+                }
+            }
+            return sum;
+        }
         }
     class Program
     {
@@ -40,7 +62,8 @@ namespace ArrayT1
             
             int[,] arr = ArrayGenerator(5, 5);
             arr.ShowArray();
-            
+            Console.WriteLine("Max sum is {0}, in the Row number {1}", arr.MaxRowSum(out int row), row);
+                        
             Console.ReadKey();
 
         }
