@@ -1,8 +1,8 @@
 ﻿using System;
 
 namespace ArrayT1
-{
-    public static class ExtentionArrayMethod
+{   
+    static class ExtentionArrayMethod
         {
             public static void ShowArray(this int[,] array)
             {
@@ -67,7 +67,7 @@ namespace ArrayT1
             
             int[,] arr = ArrayGenerator(5, 5);
             arr.ShowArray();
-            Console.WriteLine("Max sum is {0}, in the Row number {1}", arr.MaxRowSum(out int row), row);
+            Console.WriteLine("Max sum is {0}, in the Row number {1}", arr.MaxRowSum(out int row), row);            
                         
             Console.ReadKey();
 
