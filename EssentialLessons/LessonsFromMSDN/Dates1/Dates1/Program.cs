@@ -37,12 +37,25 @@ class Person
 
 }
 
+static class ExtensionMethods
+{
+    static 
+}
+
 namespace Dates1
 {
     class Program
     {
         static void Main(string[] args)
         {
+            DateTime day = new DateTime(1992,06,18);
+            
+            Person me = new Person("Rita", day, "+398298938938");
+            Console.WriteLine(me.Birthday);
+            Console.WriteLine(me.Name);
+            Console.WriteLine(me.Phone);
+
+            Console.ReadKey();
         }
     }
 }
