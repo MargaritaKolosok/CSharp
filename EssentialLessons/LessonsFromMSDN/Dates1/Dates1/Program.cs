@@ -42,11 +42,13 @@ public static class ExtensionMethods
     public static TimeSpan DaysToBirthday(this DateTime birthday)
     {
         DateTime now = DateTime.Now;
-        if (now.Date > birthday.Date)
-        {
-            return  now.Date - (birthday).Date;
+        DateTime birth = new DateTime(now.Year, birthday.Month, birthday.Day);
+        if (now > birth)
+        {            
+            DateTime birth2 = new DateTime(now.Year+1, birthday.Month, birthday.Day);
+            return  now.Date - birth2.Date;
         }
-         return now.Date - (birthday).Date;
+         return (now.Date - birth.Date);
     }
 }
 
@@ -56,7 +58,7 @@ namespace Dates1
     {
         static void Main(string[] args)
         {
-            DateTime day = new DateTime(1992,06,18);
+            DateTime day = new DateTime(1992,06,28);
             
             Person me = new Person("Rita", day, "+398298938938");
             Console.WriteLine(me.Birthday);
