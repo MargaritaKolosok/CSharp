@@ -37,9 +37,17 @@ class Person
 
 }
 
-static class ExtensionMethods
+public static class ExtensionMethods
 {
-    static 
+    public static TimeSpan DaysToBirthday(this DateTime birthday)
+    {
+        DateTime now = DateTime.Now;
+        if (now.Date > birthday.Date)
+        {
+            return  now.Date - (birthday).Date;
+        }
+         return now.Date - (birthday).Date;
+    }
 }
 
 namespace Dates1
@@ -54,6 +62,9 @@ namespace Dates1
             Console.WriteLine(me.Birthday);
             Console.WriteLine(me.Name);
             Console.WriteLine(me.Phone);
+
+            Console.WriteLine(day.DaysToBirthday());
+            
 
             Console.ReadKey();
         }
