@@ -11,26 +11,32 @@ namespace delegate2
     
     class Program
     {
-        delegate string StrMethod(string str);
-
-        class DelegateTest
-        {
+        public delegate string StrMethod(string str);
+       
             static string Reverce(string str)
             {
                 string text = "";
+                int j = str.Length-1;
 
-                for (int i = str.Length - 1; i == 0; i--)
+            for (int i=0; i< str.Length; i++)
                 {
-                    text += str[i];
+                    text += str[j];
+                    j--;
                 }
                 return text;
             }
-        }
+       
 
         static void Main(string[] args)
         {
-           // DelegateTest test = new DelegateTest();
+           
             StrMethod MakeReverce = new StrMethod(Reverce);
+            string text = "Hello world!";
+
+            Console.WriteLine(MakeReverce(text));
+            Console.ReadKey();
         }
+
+        
     }
 }
