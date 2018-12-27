@@ -8,6 +8,13 @@ using System.Threading.Tasks;
 
 namespace delegate2
 {
+    class Str
+    {
+        public string ReplaceSpaces(string str)
+        {
+            return str.Replace(' ', '-');
+        }
+    }
     
     class Program
     {
@@ -45,6 +52,11 @@ namespace delegate2
             Console.WriteLine(text);
 
             MakeReverce = (string str) => { return str.Replace('l', 'L'); };
+            Console.WriteLine(MakeReverce(text));
+
+            Str strOb = new Str();
+
+            MakeReverce = strOb.ReplaceSpaces;
             Console.WriteLine(MakeReverce(text));
             Console.ReadKey();
         }
