@@ -11,9 +11,9 @@ namespace delegate2
     
     class Program
     {
-        public delegate string StrMethod(ref string str);
+        public delegate string StrMethod(string str);
        
-            static string Reverce(ref string str)
+            static string Reverce(string str)
             {
                 string text = "";
                 int j = str.Length-1;
@@ -26,13 +26,10 @@ namespace delegate2
                 return text;
             }
 
-        static string UpperCase(ref string str)
+        static string UpperCase(string str)
         {
             return str.ToUpper();
-
         }
-        
-       
 
         static void Main(string[] args)
         {
@@ -40,10 +37,15 @@ namespace delegate2
             StrMethod MakeReverce = new StrMethod(Reverce);
             string text = "Hello world!";
 
-            Console.WriteLine(MakeReverce(ref text));
+            //text = MakeReverce(text);
+            Console.WriteLine(MakeReverce(text));
 
             MakeReverce = UpperCase;
-            Console.WriteLine(MakeReverce(ref text));
+            Console.WriteLine(MakeReverce(text));
+            Console.WriteLine(text);
+
+            MakeReverce = (string str) => { return str.Replace('l', 'L'); };
+            Console.WriteLine(MakeReverce(text));
             Console.ReadKey();
         }
 
