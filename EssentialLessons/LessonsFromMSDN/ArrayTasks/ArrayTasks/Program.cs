@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 например, слово `БОБ').
  * 
  * */
-
+delegate void ShowArray(string[] array);
 static class ExtendedMethods
 {
     public static bool IsPolindrom(string[] array)
@@ -45,8 +45,21 @@ static class ExtendedMethods
     {
         Array.Reverse(array);
         return array;
-    }    
+    }
+
+    
 }
+class Ex
+{
+    public static void ShowArr(string[] array)
+    {
+        for (int i = 0; i < array.Length; i++)
+        {
+            Console.WriteLine(array[i]);
+        }
+    }
+}
+
 
 namespace ArrayTasks
 {
@@ -61,6 +74,11 @@ namespace ArrayTasks
 
             myArray.Revert();
             myArray.Show();
+
+            Console.WriteLine();
+            ShowArray ShowArrayNow = Ex.ShowArr;
+
+            ShowArrayNow(myArray);
             
             Console.ReadKey();
         }
