@@ -22,9 +22,7 @@ static class ExtendedMethods
         }
 
         Array.Reverse(revertArray);
-       // revertArray.Show();
-        
-       
+              
         if (revertArray == array)
         {
             return true;
@@ -33,7 +31,6 @@ static class ExtendedMethods
         {
             return false;
         }       
-
     }
 
     public static void Show(this string[] array)
@@ -44,8 +41,13 @@ static class ExtendedMethods
         }
     }
 
-    
+    public static string[] Revert(this string[] array)
+    {
+        Array.Reverse(array);
+        return array;
+    }    
 }
+
 namespace ArrayTasks
 {
     class Program
@@ -54,6 +56,10 @@ namespace ArrayTasks
         {
             string[] myArray = { "Hello", "my", "World" };
             Console.WriteLine(ExtendedMethods.IsPolindrom(myArray));
+
+            myArray.Show();
+
+            myArray.Revert();
             myArray.Show();
             
             Console.ReadKey();
