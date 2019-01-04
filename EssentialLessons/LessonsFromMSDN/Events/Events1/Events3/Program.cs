@@ -52,11 +52,25 @@ namespace Events3
             Console.WriteLine(message);
         }
     }
+    /*
+    class AccountEventsArgs
+    {
+        public string Message { get; }
+        public int Sum { get; }
+
+        public AccountEventsArgs(string message, int sum)
+        {
+            Message = message;
+            Sum = sum;
+        }
+    }
+    */
     class Program
     {
         static void Main(string[] args)
         {
             Account myAccount = new Account(2000);
+
             myAccount.MoneyAdded += Message.ShowMessage;
             myAccount.MoneyTaken += Message.ShowMessage;
 
@@ -65,10 +79,11 @@ namespace Events3
 
             myAccount.Put(200);
             Console.WriteLine(myAccount.CurrentSum);
+
             myAccount.Take(1200);
             Console.WriteLine(myAccount.CurrentSum);
-            Console.ReadKey();
 
+            Console.ReadKey();
 
         }
     }
