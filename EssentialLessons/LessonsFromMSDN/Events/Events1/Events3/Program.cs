@@ -52,19 +52,7 @@ namespace Events3
             Console.WriteLine(message);
         }
     }
-    /*
-    class AccountEventsArgs
-    {
-        public string Message { get; }
-        public int Sum { get; }
-
-        public AccountEventsArgs(string message, int sum)
-        {
-            Message = message;
-            Sum = sum;
-        }
-    }
-    */
+   
     class Program
     {
         static void Main(string[] args)
