@@ -20,7 +20,15 @@ namespace Events2
 
             if (str == "stop")
             {
-                StopWord();
+                if (StopWord != null)
+                {
+                    StopWord();
+                }
+                else
+                {
+                    Console.WriteLine("StopWord event is null, without subscriptions");
+                }
+               
             }
             else
             {
@@ -50,6 +58,7 @@ namespace Events2
             KeyPressed key = new KeyPressed();
             S s = new S();
             U u = new U();
+            key.GetWord();
 
             key.StopWord += s.Handler1;
             key.UppercaseWord += u.Handler2;
@@ -59,7 +68,6 @@ namespace Events2
             key.GetWord();
 
             Console.ReadKey();
-
 
         }
     }
