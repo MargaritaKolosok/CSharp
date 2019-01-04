@@ -9,14 +9,16 @@ namespace Events1
     class Counter
     {
         public delegate void MethodContainer();
+
+        public event MethodContainer OnCount;
         
         public void Count()
         {
             for (int i=0; i<100; i++)
             {
-                if (i=-50)
+                if (i==50)
                 {
-
+                    OnCount();
                 }
             }
         }
@@ -39,6 +41,17 @@ namespace Events1
     {
         static void Main(string[] args)
         {
+            Counter myCount = new Counter();
+            Handler_1 handler1 = new Handler_1();
+            Handler_2 handler2 = new Handler_2();
+
+            myCount.OnCount += handler1.Message;
+            myCount.OnCount += handler2.Message;
+
+            myCount.Count();
+
+            Console.ReadKey();
+
         }
     }
 }
