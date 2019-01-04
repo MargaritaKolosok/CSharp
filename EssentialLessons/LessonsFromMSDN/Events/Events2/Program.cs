@@ -44,9 +44,9 @@ namespace Events2
         }
     }
 
-    class S
+    static class S
     {
-        public void Handler1()
+        public static void Handler1()
         {
             Console.WriteLine("Stop word written");
         }
@@ -65,12 +65,12 @@ namespace Events2
         static void Main(string[] args)
         {
             KeyPressed key = new KeyPressed();
-            S s = new S();
+          
             U u = new U();
 
             key.GetWord();
 
-            key.StopWord += s.Handler1;
+            key.StopWord += S.Handler1;
             key.UppercaseWord += u.Handler2;
 
             key.GetWord();
