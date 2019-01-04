@@ -32,7 +32,15 @@ namespace Events2
             }
             else
             {
-                UppercaseWord(str);
+                if (UppercaseWord != null)
+                {
+                    UppercaseWord(str);
+                }
+                else
+                {
+                    Console.WriteLine("UpperCaseWord event has no subscriptions to any Methods");
+                }
+               
             }
         }
     }
