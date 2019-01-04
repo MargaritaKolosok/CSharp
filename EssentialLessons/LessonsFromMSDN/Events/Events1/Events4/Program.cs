@@ -19,7 +19,7 @@ namespace Events4
     }
     class Account
     {
-        public delegate void AccountHandler(object sender, AccountEventArgs e);
+        public delegate void AccountHandler(object sender, AccountEventArgs accountEventArgs);
 
         public event AccountHandler Added;
         public event AccountHandler Taken;
@@ -56,10 +56,10 @@ namespace Events4
 
     static class Message
     {
-        public static void ShowMessage(object sender, AccountEventArgs e)
+        public static void ShowMessage(object sender, AccountEventArgs accountEventArgs)
         {
-            Console.WriteLine($"Transaction {e.Sum}");
-            Console.WriteLine(e.Message);
+            Console.WriteLine($"Transaction {accountEventArgs.Sum}");
+            Console.WriteLine(accountEventArgs.Message);
 
         }
     }
@@ -71,8 +71,13 @@ namespace Events4
             Account myAccount = new Account(2000);
             myAccount.Added += Message.ShowMessage;
             myAccount.Taken += Message.ShowMessage;
+
             myAccount.Put(200);
+            Console.WriteLine(myAccount.ShowSum);
+
             myAccount.Take(600);
+            Console.WriteLine(myAccount.ShowSum);
+
             Console.ReadKey();
         }
     }
