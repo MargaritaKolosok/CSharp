@@ -39,11 +39,11 @@ namespace Events2
                 else
                 {
                     Console.WriteLine("UpperCaseWord event has no subscriptions to any Methods");
-                }
-               
+                }               
             }
         }
     }
+
     class S
     {
         public void Handler1()
@@ -51,6 +51,7 @@ namespace Events2
             Console.WriteLine("Stop word written");
         }
     }
+
     class U
     {
         public void Handler2(string str)
@@ -66,6 +67,7 @@ namespace Events2
             KeyPressed key = new KeyPressed();
             S s = new S();
             U u = new U();
+
             key.GetWord();
 
             key.StopWord += s.Handler1;
