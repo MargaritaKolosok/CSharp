@@ -33,8 +33,9 @@ namespace Events3
 
         public void Take(int sum)
         {
-            if (this.sum > sum)
+            if (this.sum >= sum)
             {
+                this.sum -= sum;
                 MoneyTaken?.Invoke($"Sum get from account {sum}");
             }
             else
@@ -44,10 +45,31 @@ namespace Events3
         }
 
     }
+    class Message
+    {
+        public static void ShowMessage(string message)
+        {
+            Console.WriteLine(message);
+        }
+    }
     class Program
     {
         static void Main(string[] args)
         {
+            Account myAccount = new Account(2000);
+            myAccount.MoneyAdded += Message.ShowMessage;
+            myAccount.MoneyTaken += Message.ShowMessage;
+
+
+            Console.WriteLine(myAccount.CurrentSum);
+
+            myAccount.Put(200);
+            Console.WriteLine(myAccount.CurrentSum);
+            myAccount.Take(1200);
+            Console.WriteLine(myAccount.CurrentSum);
+            Console.ReadKey();
+
+
         }
     }
 }
