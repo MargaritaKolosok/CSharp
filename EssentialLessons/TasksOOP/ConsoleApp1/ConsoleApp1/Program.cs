@@ -37,7 +37,14 @@ namespace ConsoleApp1
             {
                 if (value > 0)
                 {
-                    price = value;
+                    if (BookName.Contains("Программирование"))
+                    {
+                        price = value * 2;
+                    }
+                    else
+                    {
+                        price = value;
+                    }                       
                 }
                 else
                 {
@@ -55,9 +62,9 @@ namespace ConsoleApp1
         }
         public Book(string bookName, int pages, double price)
         {
-            this.bookName = bookName;
-            this.pages = pages;
-            this.price = price;
+            BookName = bookName;
+            Pages = pages;
+            Price = price;
         }
         public double PagePrice()
         {
@@ -74,9 +81,10 @@ namespace ConsoleApp1
 
         public void ShowInfo()
         {
-            Console.WriteLine("Book Name is {0}", bookName);
-            Console.WriteLine("Number of pages {0}", pages);
-            Console.WriteLine("Price: {0}", price);
+            Console.WriteLine("Book Name is {0}", BookName);
+            Console.WriteLine("Number of pages {0}", Pages);
+            Console.WriteLine("Price: {0}", Price);
+            Console.WriteLine("Page Price: {0}", PagePrice());
         }
 
     }
@@ -85,11 +93,11 @@ namespace ConsoleApp1
         static void Main(string[] args)
         {
             Book myBook = new Book();
-           
-            Console.WriteLine(myBook.PagePrice());
-
-            Book myBook2 = new Book("Программирование C#", 200, 700.50);
-            Console.WriteLine(myBook2.PagePrice());
+            myBook.ShowInfo();
+            Console.WriteLine();
+            Book myBook2 = new Book("Программирование C#", 200, 740);
+            myBook2.ShowInfo();
+            Console.WriteLine((myBook2.BookName).Contains("Программирование"));
 
             Console.ReadKey();
         }
