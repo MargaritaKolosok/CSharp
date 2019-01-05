@@ -57,8 +57,8 @@ namespace ConsoleApp1
         public Book()
         {
             bookName = "";
-            pages = 1;
-            price = 1;
+            pages = 0;
+            price = 0;
         }
         public Book(string bookName, int pages, double price)
         {
@@ -68,15 +68,24 @@ namespace ConsoleApp1
         }
         public double PagePrice()
         {
-            if (BookName.Contains("Программирование"))
+            if (pages != 0 && price != 0)
             {
-                return (price / pages) * 2;
+                if (BookName.Contains("Программирование"))
+                {
+                    return (price / pages) * 2;
+                }
+                else
+                {
+                    return price / pages;
+                }
             }
             else
             {
-                return price / pages;
+                 Console.WriteLine("Pages or Price is 0");
+                return 0;
             }
-            
+
+
         }
 
         public void ShowInfo()
@@ -94,10 +103,16 @@ namespace ConsoleApp1
         {
             Book myBook = new Book();
             myBook.ShowInfo();
+
             Console.WriteLine();
+
             Book myBook2 = new Book("Программирование C#", 200, 740);
             myBook2.ShowInfo();
-            Console.WriteLine((myBook2.BookName).Contains("Программирование"));
+           
+            Console.WriteLine();
+
+            Book myBook3 = new Book("Программирование C#", -200, -740);
+            myBook3.ShowInfo();
 
             Console.ReadKey();
         }
