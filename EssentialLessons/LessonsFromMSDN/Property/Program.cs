@@ -4,12 +4,23 @@ namespace Property
 {
     class PropertyAccess
     {
-        int prop = 0;
+        int prop;
 
+        public PropertyAccess()
+        {
+            prop = 0;
+        }
+        
         public int Property
             {
-            get { return prop; }
-            private set { prop = value; }
+            get
+            {
+                return prop;
+            }
+            private set
+            {
+                prop = value;
+            }
             }
         public void IncrementProperty()
         {
