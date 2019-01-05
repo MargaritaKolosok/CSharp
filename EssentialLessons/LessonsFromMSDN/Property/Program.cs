@@ -34,6 +34,7 @@ namespace Property
         {
             PropertyAccess prop = new PropertyAccess();
             Console.WriteLine(prop.Property);
+
             prop.IncrementProperty();
             prop.IncrementProperty();
             prop.IncrementProperty();
