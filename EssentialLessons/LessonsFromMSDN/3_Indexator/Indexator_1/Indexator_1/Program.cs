@@ -30,7 +30,7 @@ namespace Indexator_1
             Actor actor = new Actor();
             Console.WriteLine(actor[1]);
             Console.WriteLine(actor[3]);
-            Console.WriteLine(actor[5]);
+            Console.WriteLine(actor[6]);
             Console.ReadKey();
         }
     }
