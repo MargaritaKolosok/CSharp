@@ -39,7 +39,8 @@ namespace Exceptions_2
                     }
                     else
                     {
-                        throw new Exception();
+                        Exception exc = new Exception();
+                        throw new Exception("My exc", exc);
                     }
                 }
                 catch(ExceptB exc)
