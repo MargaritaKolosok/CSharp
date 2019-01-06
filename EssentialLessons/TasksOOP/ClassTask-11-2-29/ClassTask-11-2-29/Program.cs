@@ -6,7 +6,7 @@ namespace ClassTask_11_2_29
     {
         protected double height;
         protected double width;
-        public double length;
+        protected double length;
 
         public Room(double height, double width, double length)
         {
@@ -45,7 +45,12 @@ namespace ClassTask_11_2_29
     {
         static void Main(string[] args)
         {
-            
+            Office office = new Office(12, 5, 10, 3, 0.12);
+            Console.WriteLine($"CeilingArea {office.CeilingArea()}");
+            Console.WriteLine($"Walls Area {office.WallsArea()}");
+           
+            Console.WriteLine($"Amount of Paint needed {office.CountAmountOfPaint()}");
+            Console.ReadKey();
         }
     }
 }
