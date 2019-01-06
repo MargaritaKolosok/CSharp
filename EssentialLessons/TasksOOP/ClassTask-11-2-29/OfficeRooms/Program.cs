@@ -4,9 +4,22 @@ namespace OfficeRooms
 {
     class Room
     {
-        public double height;
-        public double width;
-        public double length;
+         double height;
+         double width;
+         double length;
+
+        public double Height
+        {
+            get { return height; }
+        }
+        public double Width
+        {
+            get { return width; }
+        }
+        public double Length
+        {
+            get { return length; }
+        }
 
         public Room(double height, double width, double length)
         {
@@ -63,9 +76,9 @@ namespace OfficeRooms
         {
             for (int i =0; i < RoomsArray.Length; i++)
             {
-                Console.WriteLine(RoomsArray[i].height);
-                Console.WriteLine(RoomsArray[i].width);
-                Console.WriteLine(RoomsArray[i].length);
+                Console.WriteLine(RoomsArray[i].Height);
+                Console.WriteLine(RoomsArray[i].Width);
+                Console.WriteLine(RoomsArray[i].Length);
             }
         }
     }
