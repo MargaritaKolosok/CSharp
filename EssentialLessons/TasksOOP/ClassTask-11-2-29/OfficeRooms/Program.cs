@@ -35,6 +35,10 @@ namespace OfficeRooms
         {
             return 2 * (height * length) + 2 * (width * height);
         }
+        public void Show()
+        {
+            Console.WriteLine($"Room Height {Height},Room Width {Width}, Room Length {Length}");
+        }
     }
     class Office
     {
@@ -80,12 +84,7 @@ namespace OfficeRooms
                 Console.WriteLine(RoomsArray[i].Width);
                 Console.WriteLine(RoomsArray[i].Length);
             }
-        }
-
-        public void ShowRoom()
-        {
-            
-        }
+        }        
 
         public Room this[int x]
             {
@@ -101,7 +100,7 @@ namespace OfficeRooms
         {
             Office office = new Office(2, 0.12);
             office.ShowRoomsInfo();
-            office[1]
+            office[1].Show();
             Console.ReadKey();
         }
     }
