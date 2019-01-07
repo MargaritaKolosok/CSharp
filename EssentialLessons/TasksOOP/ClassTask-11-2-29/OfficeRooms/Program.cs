@@ -36,8 +36,8 @@ namespace OfficeRooms
             return 2 * (height * length) + 2 * (width * height);
         }
         public void Show()
-        {
-            Console.WriteLine($"Room Height {Height},Room Width {Width}, Room Length {Length}");
+        {           
+          Console.WriteLine($"Room Height {Height},Room Width {Width}, Room Length {Length}");            
         }
     }
     static class Extention
@@ -101,10 +101,24 @@ namespace OfficeRooms
 
         public Room this[int x]
             {
-              get
+                get
                 {
-                    return RoomsArray[x];
-                } 
+                    try
+                    {
+                        Room r;
+                        r = RoomsArray[x];
+                        return r;
+                    }
+                    catch (NullReferenceException)
+                    {
+                        return null;
+                    }
+                    catch (IndexOutOfRangeException)
+                    {
+                        return null;
+                    }             
+              
+                }
             }
     }
     class Program
@@ -113,8 +127,10 @@ namespace OfficeRooms
         {
             Office office = new Office(2, 0.12);
             office.ShowRoomsInfo();
+          //  office[2].Show();
+            office[0].Show();
             office[1].Show();
-            office[2].Show();
+            
             Console.ReadKey();
         }
     }
