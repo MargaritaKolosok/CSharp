@@ -81,6 +81,19 @@ namespace OfficeRooms
                 Console.WriteLine(RoomsArray[i].Length);
             }
         }
+
+        public void ShowRoom()
+        {
+            
+        }
+
+        public Room this[int x]
+            {
+              get
+                {
+                    return RoomsArray[x];
+                } 
+            }
     }
     class Program
     {
@@ -88,6 +101,7 @@ namespace OfficeRooms
         {
             Office office = new Office(2, 0.12);
             office.ShowRoomsInfo();
+            office[1]
             Console.ReadKey();
         }
     }
