@@ -40,12 +40,23 @@ namespace OfficeRooms
             Console.WriteLine($"Room Height {Height},Room Width {Width}, Room Length {Length}");
         }
     }
+    static class Extention
+    {
+        public static void ShowRoomCeilingArea(this Room[] array)
+        {
+            for (int i = 0; i < array.Length; i++)
+            {
+                Console.WriteLine("Ceiling area for room {0}", i);
+                Console.WriteLine(array[i].CeilingArea());
+            }
+        }
+    }
     class Office
     {
         int room;
         double paintAmount;
 
-        Room[] RoomsArray;
+        Room[] RoomsArray;       
 
         public Office(int room, double paintAmount)
         {
@@ -80,10 +91,12 @@ namespace OfficeRooms
         {
             for (int i =0; i < RoomsArray.Length; i++)
             {
-                Console.WriteLine(RoomsArray[i].Height);
-                Console.WriteLine(RoomsArray[i].Width);
-                Console.WriteLine(RoomsArray[i].Length);
-            }
+                Console.WriteLine($"Room {i} Height {RoomsArray[i].Height}");
+                Console.WriteLine($"Room {i} Width {RoomsArray[i].Width}");
+                Console.WriteLine($"Room {i} Length {RoomsArray[i].Length}");
+            }         
+
+            RoomsArray.ShowRoomCeilingArea();              
         }        
 
         public Room this[int x]
@@ -101,6 +114,7 @@ namespace OfficeRooms
             Office office = new Office(2, 0.12);
             office.ShowRoomsInfo();
             office[1].Show();
+            office[2].Show();
             Console.ReadKey();
         }
     }
