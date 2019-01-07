@@ -116,7 +116,7 @@ namespace OfficeRooms
                     catch (IndexOutOfRangeException)
                     {
                         return null;
-                    }             
+                    }           
               
                 }
             }
