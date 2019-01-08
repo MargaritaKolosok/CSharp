@@ -104,18 +104,18 @@ namespace OfficeRooms
                 get
                 {
                     try
-                    {
-                        Room r;
-                        r = RoomsArray[x];
-                        return r;
+                    {                      
+                        return RoomsArray[x];
                     }
                     catch (NullReferenceException)
                     {
-                        return null;
+                        Console.WriteLine("NullReferenceException");
+                        return new Room(0,0,0);
                     }
                     catch (IndexOutOfRangeException)
                     {
-                        return null;
+                        Console.WriteLine("IndexOutOfRangeException");
+                        return new Room(0,0,0);
                     }           
               
                 }
@@ -127,7 +127,7 @@ namespace OfficeRooms
         {
             Office office = new Office(2, 0.12);
             office.ShowRoomsInfo();
-          //  office[2].Show();
+            office[2].Show();
             office[0].Show();
             office[1].Show();
             
