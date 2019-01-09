@@ -44,9 +44,12 @@ namespace Delegates_2
         {
             MyDelegate my = NumOfSumbols;
             MyDelegate my2 = IndexofSumbol;
+            MyDelegate my3 = (char x, string str) => { return str.LastIndexOf(x); };
 
             Console.WriteLine(my2('H', "Hello world"));
             Console.WriteLine(my('l', "Hello world"));
+            Console.WriteLine(my3('0', "Hello world"));
+            Console.WriteLine(my3('d', "Hello world"));
             Console.ReadKey();
         }
     }
