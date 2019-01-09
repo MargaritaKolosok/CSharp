@@ -46,6 +46,8 @@ namespace Params
 
             MyEvent();
 
+            MyEvent.Invoke();
+
             Console.ReadKey();
             
         }
