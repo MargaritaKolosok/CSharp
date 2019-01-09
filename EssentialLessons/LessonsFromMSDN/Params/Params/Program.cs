@@ -41,21 +41,21 @@ namespace Params
         {
             myDelegate Summa = new myDelegate(Sum);
             int[] array = { 1,2,3,4,5,6,7,8,4};
-            Console.WriteLine(Summa(array));
 
-            myDelegate2 myD2 = new myDelegate2(Message);
             myDelegate myD = new myDelegate(Sum);
-
-            MyEvent += myD2;
-
-            MyEvent();
-
-            MyEvent.Invoke();
-
             ParamsEvent += myD;
-            
+
             Console.WriteLine(ParamsEvent(array));
 
+
+            myDelegate2 myD2 = new myDelegate2(Message);
+            myDelegate2 myD3 = new myDelegate2(Message);            
+
+            MyEvent += myD2;
+            MyEvent += myD3;
+
+            MyEvent();
+           
             Console.ReadKey();
             
         }
