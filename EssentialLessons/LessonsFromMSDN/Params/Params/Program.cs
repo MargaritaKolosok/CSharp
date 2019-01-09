@@ -18,6 +18,9 @@ namespace Params
     {
         public static event myDelegate2 MyEvent;
 
+        public static event myDelegate ParamsEvent;
+
+        
         static void Message()
         {
             Console.WriteLine("Message from Static method");
@@ -41,12 +44,17 @@ namespace Params
             Console.WriteLine(Summa(array));
 
             myDelegate2 myD2 = new myDelegate2(Message);
+            myDelegate myD = new myDelegate(Sum);
 
             MyEvent += myD2;
 
             MyEvent();
 
             MyEvent.Invoke();
+
+            ParamsEvent += myD;
+            
+            Console.WriteLine(ParamsEvent(array));
 
             Console.ReadKey();
             
