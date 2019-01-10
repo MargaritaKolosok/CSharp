@@ -19,8 +19,7 @@ namespace Events_2
 {
     public delegate int MyDeelegate(int x);
 
-    
-    class myClass
+    class Program
     {
         public static int[] Method(int[] array, MyDeelegate ob)
         {
@@ -33,11 +32,31 @@ namespace Events_2
 
             return Arr;
         }
-    }
-    class Program
-    {
+
+        public static int Pow2(int x)
+        {
+            return x * x;
+        }
+
+       
         static void Main(string[] args)
         {
+
+            MyDeelegate Pow = Pow2;
+
+            int[] myArray = { 1,2,3,4,5,6,7,8,9};
+
+            int[] newArray = new int[myArray.Length];
+
+            newArray = Method(myArray, Pow);
+
+            for (int i=0; i<myArray.Length; i++)
+            {
+                Console.WriteLine(newArray[i]);
+            }
+
+            Console.ReadKey();
+            
         }
     }
 }
