@@ -37,11 +37,9 @@ namespace Events_2
         {
             return x * x;
         }
-
        
         static void Main(string[] args)
         {
-
             MyDeelegate Pow = Pow2;
 
             int[] myArray = { 1,2,3,4,5,6,7,8,9};
@@ -55,8 +53,7 @@ namespace Events_2
                 Console.WriteLine(newArray[i]);
             }
 
-            Console.ReadKey();
-            
+            Console.ReadKey();            
         }
     }
 }
