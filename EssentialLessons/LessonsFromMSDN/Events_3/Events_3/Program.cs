@@ -35,10 +35,13 @@ namespace Events_3
 
         static void Main(string[] args)
         {
-            Test2 my = new Test2();
+            Test my = new Test2();
+            Test my2 = new Test();
             MyDelegate test = my.Message;
             test();
             Console.WriteLine();
+            test += my2.Message;
+            test();
             Console.ReadKey();
         }
     }
