@@ -16,7 +16,7 @@ namespace ConsoleTest
             do
             {
                 keypress = Console.ReadKey();
-                Console.WriteLine($"Key {keypress} was clicked");
+                Console.WriteLine($" > Key {keypress.KeyChar} was clicked");
 
                 if ((ConsoleModifiers.Alt & keypress.Modifiers) !=0)
                 {
