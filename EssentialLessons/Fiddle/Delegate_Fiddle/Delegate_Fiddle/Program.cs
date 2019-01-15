@@ -46,10 +46,14 @@ namespace Delegate_Fiddle
                 }
             };
 
+            MathPow anonim3 = (int x) => { return x * 2; };
+
             Console.WriteLine(anonimMethod1(4));
 
             Console.WriteLine(anonim2(10));
             Console.WriteLine(anonim2(-10));
+
+            Console.WriteLine(anonim3(3));
 
             Console.WriteLine();
             Console.ReadKey();
