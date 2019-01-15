@@ -31,7 +31,7 @@ namespace Task1
             {
                 Console.WriteLine("Good Evening");
             }
-            else
+            if (hour >= (int)Days.Night && hour <= (int)Days.Morning)
             {
                 Console.WriteLine("Good Night");
             }
