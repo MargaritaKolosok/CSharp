@@ -8,15 +8,35 @@ namespace Task1
 {
     class Program
     {
+        enum Days : int { Morning = 5, Afternoon = 12, Evening = 15, Night = 23};
+
         static void Main(string[] args)
-        {
+        {           
+
             DateTime date = new DateTime(2019, 6, 6);
             TimeSpan timeSpan = new TimeSpan();
             DateTime now = DateTime.Now;
 
-            timeSpan = date - now;
+            int hour = DateTime.Now.Hour;
 
-            Console.WriteLine(timeSpan.Days);
+            if (hour >= (int)Days.Morning && hour <= (int)Days.Afternoon)
+            {
+                Console.WriteLine("Good morning");
+            }
+            if (hour >= (int)Days.Afternoon && hour <= (int)Days.Evening)
+            {
+                Console.WriteLine("Good Afternoon");
+            }
+            if (hour >= (int)Days.Evening && hour <= (int)Days.Night)
+            {
+                Console.WriteLine("Good Evening");
+            }
+            else
+            {
+                Console.WriteLine("Good Night");
+            }
+            
+            Console.WriteLine();
 
             Console.ReadKey();
         }
