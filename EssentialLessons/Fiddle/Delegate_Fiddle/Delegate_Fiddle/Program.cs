@@ -32,6 +32,26 @@ namespace Delegate_Fiddle
             pow2 += Pow3;
             Console.WriteLine(pow2(2));
 
+            MathPow anonimMethod1 = new MathPow(delegate(int x) { return (int)Math.Pow(x,4); }); // Anonimus
+
+            MathPow anonim2 = delegate (int x)
+            {
+                if (x > 0)
+                {
+                    return x * x;
+                }
+                else
+                {
+                    return 0;
+                }
+            };
+
+            Console.WriteLine(anonimMethod1(4));
+
+            Console.WriteLine(anonim2(10));
+            Console.WriteLine(anonim2(-10));
+
+            Console.WriteLine();
             Console.ReadKey();
            
         }
