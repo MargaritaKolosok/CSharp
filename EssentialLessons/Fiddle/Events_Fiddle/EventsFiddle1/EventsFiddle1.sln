@@ -5,6 +5,8 @@ VisualStudioVersion = 15.0.27130.2036
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EventsFiddle1", "EventsFiddle1\EventsFiddle1.csproj", "{F95C9F82-FA80-494D-8A4F-C663AE579CD4}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EventsFiddle2", "EventsFiddle2\EventsFiddle2.csproj", "{607A80C1-2F77-4484-9994-D2CEB18258F4}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{F95C9F82-FA80-494D-8A4F-C663AE579CD4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F95C9F82-FA80-494D-8A4F-C663AE579CD4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F95C9F82-FA80-494D-8A4F-C663AE579CD4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{607A80C1-2F77-4484-9994-D2CEB18258F4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{607A80C1-2F77-4484-9994-D2CEB18258F4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{607A80C1-2F77-4484-9994-D2CEB18258F4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{607A80C1-2F77-4484-9994-D2CEB18258F4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
