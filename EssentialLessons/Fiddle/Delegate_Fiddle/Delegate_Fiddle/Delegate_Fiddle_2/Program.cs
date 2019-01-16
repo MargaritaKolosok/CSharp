@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 namespace Delegate_Fiddle_2
 {
     delegate Delegate2 Delegate1();
+
     delegate int Delegate2(int x);    
 
     class Program
