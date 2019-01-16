@@ -33,9 +33,10 @@ namespace EventsFiddle1
             MyClass instance = new MyClass();
 
             instance.MyEvent += new EventDelegate(Handler1); // подписка на событие
-            instance.MyEvent += new EventDelegate(Handler2);
+            instance.MyEvent += Handler2;
 
-            instance.MyEvent += new EventDelegate(delegate () { Console.WriteLine("Inline delegate"); });
+            instance.MyEvent += delegate () { Console.WriteLine("Inline delegate"); };
+
             instance.InvokeEvent();
             Console.ReadKey();
         }
