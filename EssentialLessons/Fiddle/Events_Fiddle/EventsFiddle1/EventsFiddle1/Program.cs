@@ -10,13 +10,34 @@ namespace EventsFiddle1
 
     public class MyClass
     {
-        public event EventDelegate myEvent = null;
+        public event EventDelegate MyEvent = null;
+
+        public void InvokeEvent()
+        {
+            MyEvent.Invoke();
+        }
     }
     class Program
     {
+        static private void Handler1()
+        {
+            Console.WriteLine("Handler1");
+        }
+        static private void Handler2()
+        {
+            Console.WriteLine("Handler2");
+        }
+
         static void Main(string[] args)
         {
-            
+            MyClass instance = new MyClass();
+
+            instance.MyEvent += new EventDelegate(Handler1); // подписка на событие
+            instance.MyEvent += new EventDelegate(Handler2);
+
+            instance.MyEvent += new EventDelegate(delegate () { Console.WriteLine("Inline delegate"); });
+            instance.InvokeEvent();
+            Console.ReadKey();
         }
     }
 }
