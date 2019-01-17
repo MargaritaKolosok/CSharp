@@ -59,6 +59,13 @@ namespace EventsFiddle3
             baseClass.VisibleEvent += Method;
             baseClass.RunEvent();
 
+            Console.WriteLine();
+
+            DerivedClass derivedClass = new DerivedClass();            
+           
+            derivedClass.VisibleEvent += Method;
+            derivedClass.RunEvent();
+
             Console.ReadKey();
 
 
