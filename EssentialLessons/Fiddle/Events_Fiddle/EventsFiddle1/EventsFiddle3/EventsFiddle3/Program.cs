@@ -26,7 +26,7 @@ namespace EventsFiddle3
 
         public void RunEvent()
         {
-            MyEvent();
+            MyEvent?.Invoke();           
         }
     }
     class DerivedClass : BaseClass
@@ -36,10 +36,11 @@ namespace EventsFiddle3
             add
             {
                 MyEvent += delegate() { Console.WriteLine("From derived class"); };
+                MyEvent += value;
             }
             remove
             {
-                MyEvent -= null;
+                MyEvent -= value;
             }
         }
     }
@@ -61,14 +62,11 @@ namespace EventsFiddle3
 
             Console.WriteLine();
 
-            DerivedClass derivedClass = new DerivedClass();            
-           
+            DerivedClass derivedClass = new DerivedClass();         
             derivedClass.VisibleEvent += Method;
             derivedClass.RunEvent();
 
             Console.ReadKey();
-
-
         }
     }
 }
