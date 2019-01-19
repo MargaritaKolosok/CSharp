@@ -34,7 +34,7 @@ namespace EventsFiddle4
                 }            
         }       
 
-        public event Contact ContactAdded
+        event Contact ContactAdded
         {
             add
             {
@@ -46,7 +46,7 @@ namespace EventsFiddle4
             }
         }
 
-        public event Contact ContactDeleted
+        event Contact ContactDeleted
         {
             add
             {
@@ -57,29 +57,31 @@ namespace EventsFiddle4
                 deleteContact -= value;
             }
         }
-    }
-    
-    class Program
-    {
-        public static void ContactMethod(string str)
+        public ContactBook()
+        {
+            ContactAdded += ContactMethod;
+            ContactDeleted += ContactMethod2;
+        }
+        static void ContactMethod(string str)
         {
             Console.BackgroundColor = ConsoleColor.Red;
             Console.WriteLine(str);
         }
 
-        public static void ContactMethod2(string str)
+        static void ContactMethod2(string str)
         {
             Console.BackgroundColor = ConsoleColor.Blue;
             Console.WriteLine(str);
         }
 
+    }
+
+    class Program
+    {      
         
         static void Main(string[] args)
         {
-            ContactBook book = new ContactBook();
-
-            book.ContactAdded += ContactMethod;
-            book.ContactDeleted += ContactMethod2;
+            ContactBook book = new ContactBook();            
 
             book.AddToList("Greta");
             book.AddToList("John");
