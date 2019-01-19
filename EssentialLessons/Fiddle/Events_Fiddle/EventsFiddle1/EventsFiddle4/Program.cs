@@ -59,12 +59,10 @@ namespace EventsFiddle4
                 Console.WriteLine(str);
             }
         }
-
     }
 
     class Program
-    {      
-        
+    {              
         static void Main(string[] args)
         {
             ContactBook book = new ContactBook();            
