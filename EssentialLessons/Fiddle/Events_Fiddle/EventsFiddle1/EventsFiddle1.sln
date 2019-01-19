@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EventsFiddle1", "EventsFidd
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EventsFiddle2", "EventsFiddle2\EventsFiddle2.csproj", "{607A80C1-2F77-4484-9994-D2CEB18258F4}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EventsFiddle4", "EventsFiddle4\EventsFiddle4.csproj", "{AD57B499-437E-4C15-8C41-2BCDEB2A2374}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{607A80C1-2F77-4484-9994-D2CEB18258F4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{607A80C1-2F77-4484-9994-D2CEB18258F4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{607A80C1-2F77-4484-9994-D2CEB18258F4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AD57B499-437E-4C15-8C41-2BCDEB2A2374}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AD57B499-437E-4C15-8C41-2BCDEB2A2374}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AD57B499-437E-4C15-8C41-2BCDEB2A2374}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AD57B499-437E-4C15-8C41-2BCDEB2A2374}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
