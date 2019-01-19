@@ -24,7 +24,7 @@ namespace EventsFiddle4
         public void DeleteFromList(string str)
         {            
                 if (Book.Contains(str))
-                {
+                {                    
                     Book.Remove(str);
                     deleteContact?.Invoke($"Contact {str} deleted from the list");
                 }
@@ -32,8 +32,7 @@ namespace EventsFiddle4
                 {
                     deleteContact?.Invoke($"Contact {str} does not exist in the list");
                 }            
-        }
-        
+        }       
 
         public event Contact ContactAdded
         {
@@ -51,7 +50,7 @@ namespace EventsFiddle4
         {
             add
             {
-                deleteContact -= value;
+                deleteContact += value;
             }
             remove
             {
@@ -91,8 +90,6 @@ namespace EventsFiddle4
             book.DeleteFromList("Sammy");
 
             Console.ReadKey();
-
-
         }
     }
 }
