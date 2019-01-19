@@ -12,13 +12,13 @@ namespace EventsFiddle4
     {
         List<string> Book = new List<string>();
 
-        event Contact contactAdded;
-        event Contact deleteContact;
+        event Contact ContactAdded;
+        event Contact ContactDeleted;
 
         public void AddToList(string str)
         {
             Book.Add(str);
-            contactAdded?.Invoke($"Contact {str} was added to the list");
+            ContactAdded?.Invoke($"Contact {str} was added to the list");
         }
 
         public void DeleteFromList(string str)
@@ -26,42 +26,20 @@ namespace EventsFiddle4
                 if (Book.Contains(str))
                 {                    
                     Book.Remove(str);
-                    deleteContact?.Invoke($"Contact {str} deleted from the list");
+                    ContactDeleted?.Invoke($"Contact {str} deleted from the list");
                 }
                 else
                 {
-                    deleteContact?.Invoke($"Contact {str} does not exist in the list");
+                    ContactDeleted?.Invoke($"Contact {str} does not exist in the list");
                 }            
-        }       
-
-        event Contact ContactAdded
-        {
-            add
-            {
-                contactAdded += value;
-            }  
-            remove
-            {
-                contactAdded -= value;
-            }
-        }
-
-        event Contact ContactDeleted
-        {
-            add
-            {
-                deleteContact += value;
-            }
-            remove
-            {
-                deleteContact -= value;
-            }
-        }
+        }    
+                
         public ContactBook()
         {
             ContactAdded += ContactMethod;
             ContactDeleted += ContactMethod2;
         }
+
         static void ContactMethod(string str)
         {
             Console.BackgroundColor = ConsoleColor.Red;
@@ -72,6 +50,14 @@ namespace EventsFiddle4
         {
             Console.BackgroundColor = ConsoleColor.Blue;
             Console.WriteLine(str);
+        }
+
+        public void ShowAll()
+        {
+            foreach (string str in Book)
+            {
+                Console.WriteLine(str);
+            }
         }
 
     }
@@ -90,6 +76,8 @@ namespace EventsFiddle4
 
             book.DeleteFromList("Sam");
             book.DeleteFromList("Sammy");
+
+            book.ShowAll();
 
             Console.ReadKey();
         }
