@@ -11,12 +11,32 @@ namespace EventsFiddle4
     class ContactBook
     {
         List<string> Book;
+
+        event Contact contactAdded;
+        event Contact deleteContact;
+
         public void AddToList(string str)
         {
             Book.Add(str);
+            contactAdded?.Invoke("$Contact {str} was added to the list");
         }
-        event Contact contactAdded;
-        event Contact deleteContact;
+
+        public void DeleteFromList(string str)
+        {
+            foreach(string s in Book)
+            {
+                if (Book.Contains(str))
+                {
+                    Book.Remove(str);
+                    deleteContact?.Invoke("$Contact {str} deleted from the list");
+                }
+                else
+                {
+                    deleteContact?.Invoke("$Contact {str} does not exist in the list");
+                }
+            }
+        }
+        
 
         public event Contact ContactAdded
         {
@@ -26,13 +46,16 @@ namespace EventsFiddle4
             }  
             remove
             {
-
+                contactAdded -= value;
             }
         }
 
         public event Contact ContactDeleted
         {
-            add { }
+            add
+            {
+                deleteContact -= value;
+            }
             remove
             {
                 deleteContact -= value;
