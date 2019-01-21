@@ -61,12 +61,21 @@ namespace EventsFiddle4
     {
         static void Message(object sender, AccountEventArgs e)
         {
-            Console.WriteLine("$ Sum of transaction {e.Sum}",e.Sum);
+            Console.WriteLine("Sum of transaction {0}",e.Sum);
             Console.WriteLine(e.Message);
         }
 
         static void Main(string[] args)
         {
+            Account myAccount = new Account(2000);
+            myAccount.MoneyAdded += Message;
+            myAccount.MoneyTaken += Message;
+
+
+            myAccount.Put(200);
+            myAccount.Take(1000);
+
+            Console.ReadKey();
         }
     }
 }
