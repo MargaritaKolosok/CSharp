@@ -40,18 +40,19 @@ namespace EventsFiddle4
         public void Put(int sum)
         {
             this.sum += sum;
-            MoneyAdded?.Invoke(this, new AccountEventArgs("$You Added {sum} on your account", sum));
+            MoneyAdded?.Invoke(this, new AccountEventArgs($"You Added {sum} on your account", sum));
         }
+
         public void Take(int sum)
         {
             if (this.sum >= sum)
             {
                 this.sum -= sum;
-                MoneyTaken?.Invoke(this, new AccountEventArgs("$You've taken {sum} from your account", sum));
+                MoneyTaken?.Invoke(this, new AccountEventArgs($"You've taken {sum} from your account", sum));
             }
             else
             {
-                MoneyTaken?.Invoke(this, new AccountEventArgs("$You've have not enough money on the conto. Current sum on conto is {sum}", sum));
+                MoneyTaken?.Invoke(this, new AccountEventArgs($"You've have not enough money on the conto. Current sum on conto is {sum}", sum));
             }
         }
 
@@ -70,7 +71,6 @@ namespace EventsFiddle4
             Account myAccount = new Account(2000);
             myAccount.MoneyAdded += Message;
             myAccount.MoneyTaken += Message;
-
 
             myAccount.Put(200);
             myAccount.Take(1000);
