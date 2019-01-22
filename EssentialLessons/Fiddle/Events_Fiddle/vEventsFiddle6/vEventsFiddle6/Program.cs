@@ -18,14 +18,12 @@ namespace vEventsFiddle6
             get;
             set;
         }
-    }
-
-    
+    }    
 
     class Counter
     {
        private int threshold;
-       private int total=0;
+       private int total = 0;
 
         public Counter(int threshold)
         {
@@ -40,12 +38,13 @@ namespace vEventsFiddle6
                 ThresholdReachedEventArgs args = new ThresholdReachedEventArgs();
                 args.Threshold = threshold;
                 args.TimeReached = DateTime.Now;
+                OnThresholdReached(args);
             }
         }
         protected virtual void OnThresholdReached(ThresholdReachedEventArgs e)
         {
             EventHandler<ThresholdReachedEventArgs> handler = ThresholdReached;
-            ThresholdReached?.Invoke(this, e);
+            handler?.Invoke(this, e);
         }
 
         public event EventHandler<ThresholdReachedEventArgs> ThresholdReached;
@@ -57,7 +56,7 @@ namespace vEventsFiddle6
         {
             Console.WriteLine(sender);
             Console.WriteLine($"{e.Threshold} was reached at {e.TimeReached}");
-            Environment.Exit(0);
+           // Environment.Exit(0);
         }
 
         static void Main(string[] args)
@@ -72,10 +71,7 @@ namespace vEventsFiddle6
                 Console.WriteLine("Adding 1");
                 counter.Add(1);
             }
-
-
             Console.ReadKey();
-
         }
     }
 }
