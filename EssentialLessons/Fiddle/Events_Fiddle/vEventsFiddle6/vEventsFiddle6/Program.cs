@@ -55,8 +55,7 @@ namespace vEventsFiddle6
         static void MethodThresholdReached(object sender, ThresholdReachedEventArgs e)
         {
             Console.WriteLine(sender);
-            Console.WriteLine($"{e.Threshold} was reached at {e.TimeReached}");
-           // Environment.Exit(0);
+            Console.WriteLine($"{e.Threshold} was reached at {e.TimeReached}");           
         }
 
         static void Main(string[] args)
