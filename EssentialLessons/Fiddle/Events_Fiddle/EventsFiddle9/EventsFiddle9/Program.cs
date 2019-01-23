@@ -46,10 +46,7 @@ namespace EventsFiddle9
     {
         double radius;
 
-        double CircleArea(double radius)
-        {
-            return (3.14 * radius * radius);
-        }
+        double CircleArea(double radius) => 3.14 * radius * radius;
 
         public Circle(double radius)
         {
@@ -61,6 +58,14 @@ namespace EventsFiddle9
         {
             this.radius = radius;
             area = CircleArea(radius);
+        }
+        protected override void OnShapeChanged(ShapeEventArgs e)
+        {
+            base.OnShapeChanged(e);
+        }
+        public override void Draw()
+        {
+            Console.WriteLine("Circle drawn");
         }
     }
     class Program
