@@ -58,6 +58,7 @@ namespace EventsFiddle9
         {
             this.radius = radius;
             area = CircleArea(radius);
+            OnShapeChanged(new ShapeEventArgs(area));
         }
         protected override void OnShapeChanged(ShapeEventArgs e)
         {
@@ -70,12 +71,42 @@ namespace EventsFiddle9
     }
     public class ShapeContainer
     {
+        List<Shape> shapeList;
 
+        public ShapeContainer()
+        {
+            shapeList = new List<Shape>();
+        }
+
+        public void AddShape(Shape shape)
+        {
+            shapeList.Add(shape);
+            shape.ShapeChanged += Shape_ShapeChanged;
+        }
+
+        private void Shape_ShapeChanged(object sender, ShapeEventArgs e)
+        {
+            Shape shape = (Shape)sender;
+            Console.WriteLine($"Event fires. Shape area is {e.NewArea}");
+            shape.Draw();
+        }
     }
     class Program
     {
         static void Main(string[] args)
         {
+            Circle circle1 = new Circle(34);
+            Circle circle2 = new Circle(3);
+
+            ShapeContainer shapeContainr = new ShapeContainer();
+
+            shapeContainr.AddShape(circle1);
+            shapeContainr.AddShape(circle2);
+
+            circle1.Update(23);
+            circle2.Update(2);
+
+            Console.ReadKey();
         }
     }
 }
