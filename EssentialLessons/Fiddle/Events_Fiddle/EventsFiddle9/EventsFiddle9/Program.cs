@@ -58,7 +58,8 @@ namespace EventsFiddle9
         {
             this.radius = radius;
             area = CircleArea(radius);
-            OnShapeChanged(new ShapeEventArgs(area));
+            ShapeEventArgs args = new ShapeEventArgs(area);
+            OnShapeChanged(args);
         }
         protected override void OnShapeChanged(ShapeEventArgs e)
         {
