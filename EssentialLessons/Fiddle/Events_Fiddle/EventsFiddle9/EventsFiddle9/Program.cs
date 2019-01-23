@@ -68,6 +68,10 @@ namespace EventsFiddle9
             Console.WriteLine("Circle drawn");
         }
     }
+    public class ShapeContainer
+    {
+
+    }
     class Program
     {
         static void Main(string[] args)
