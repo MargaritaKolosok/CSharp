@@ -27,17 +27,18 @@ namespace EventsFiddle_8
 
             for (int i=0; i<3; i++)
             {
+                CustomEventArgs args = new CustomEventArgs();
+
                 Console.WriteLine($"Try #{tries} Enter num:");
-                userNum = int.Parse(Console.ReadLine());
+                userNum = int.Parse(Console.ReadLine());                
 
                 if (numToGuess == userNum)
-                {
-                    CustomEventArgs args = new CustomEventArgs();
+                {                    
                     OnNumberGuessed(args);
                 }
-                if (tries >= 3 && numToGuess != userNum)
-                {
-                    CustomEventArgs args = new CustomEventArgs();
+
+                else if (tries > 3 && numToGuess != userNum)
+                {                   
                     OnLose(args);
                 }
 
@@ -50,9 +51,9 @@ namespace EventsFiddle_8
                 e.Tries = tries;
                 e.Num = userNum;
 
-                GameFinished?.Invoke(this, e);                         
-              
+                GameFinished?.Invoke(this, e);                           
             }
+
             void OnLose(CustomEventArgs e)
             {
                 e.Message = "You lose";
@@ -72,11 +73,11 @@ namespace EventsFiddle_8
             Console.WriteLine($"Num in Mind {e.Num}");
             Console.WriteLine($"Tries: {e.Tries}");
         }
+
         static void Main(string[] args)
         {
             GuessNum guess = new GuessNum();
             guess.GameFinished += HandleCustomEvent;
-
             guess.Start();
 
             Console.ReadKey();
