@@ -37,8 +37,7 @@ namespace EventsFiddle9
         protected virtual void OnShapeChanged(ShapeEventArgs e)
         {
             EventHandler<ShapeEventArgs> handler = ShapeChanged;
-            handler?.Invoke(this, e);
-           
+            handler?.Invoke(this, e);           
         }
     }
 
@@ -68,6 +67,32 @@ namespace EventsFiddle9
         public override void Draw()
         {
             Console.WriteLine("Circle drawn");
+        }
+    }
+    class Rectangle : Shape
+    {
+        private double width;
+        private double height;
+
+        public Rectangle(double width, double height)
+        {
+            this.width = width;
+            this.height = height;
+            area = width * height;
+        }
+
+        public override void Draw()
+        {
+            Console.WriteLine("Rectangle drawn");
+        }
+        protected override void OnShapeChanged(ShapeEventArgs e)
+        {
+            base.OnShapeChanged(e);
+        }
+        public void Update(double width, double height)
+        {
+            ShapeEventArgs args = new ShapeEventArgs(width * height);
+            OnShapeChanged(args);
         }
     }
     public class ShapeContainer
@@ -103,6 +128,11 @@ namespace EventsFiddle9
 
             shapeContainr.AddShape(circle1);
             shapeContainr.AddShape(circle2);
+
+            Rectangle r1 = new Rectangle(4,3);
+            shapeContainr.AddShape(r1);
+
+            r1.Update(5,5);
 
             circle1.Update(23);
             circle2.Update(2);
