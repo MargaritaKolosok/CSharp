@@ -17,12 +17,78 @@ namespace EventsFiddle10
 
     public class Shape : IDrawingObject, IShape
     {
+        event EventHandler PreDrawEvent;
+        event EventHandler PostDrawnEvent;
 
+        object objectLock = new Object();
+
+        event EventHandler IDrawingObject.OnDrawn
+        {
+            add
+            {
+                lock (objectLock)
+                {
+                    PreDrawEvent += value;
+                }
+            }
+            remove
+            {
+                lock (objectLock)
+                {
+                    PreDrawEvent -= value;
+                }
+            }
+        }
+
+        event EventHandler IShape.OnDrawn
+        {
+            add
+            {
+                lock (objectLock)
+                {
+                    PostDrawnEvent += value;
+                }
+            }
+            remove
+            {
+                lock (objectLock)
+                {
+                    PostDrawnEvent -= value;
+                }
+            }
+        }
+
+        public void Draw()
+        {
+            PreDrawEvent?.Invoke(this, EventArgs.Empty);
+            Console.WriteLine("Drawing a shape");
+
+            PostDrawnEvent?.Invoke(this, EventArgs.Empty);
+        }
+    }
+    public class Subscriber1
+    {
+        public Subscriber1(Shape shape)
+        {
+            IDrawingObject s = (IDrawingObject)shape;
+            s.OnDrawn += S_OnDrawn;
+        }
+
+        private void S_OnDrawn(object sender, EventArgs e)
+        {
+            Console.WriteLine("Sub1 received the IDrawingObject event");
+        }
     }
     class Program
     {
         static void Main(string[] args)
         {
+            Shape shape = new Shape();
+            Subscriber1 sub1 = new Subscriber1(shape);
+
+            shape.Draw();
+
+            Console.ReadKey();
         }
     }
 }
