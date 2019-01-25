@@ -79,13 +79,29 @@ namespace EventsFiddle10
             Console.WriteLine("Sub1 received the IDrawingObject event");
         }
     }
+    public class Subscriber2
+    {
+        public Subscriber2(Shape shape)
+        {
+            IShape s = (IShape)shape;
+            s.OnDrawn += S_OnDrawn;
+        }
+
+        private void S_OnDrawn(object sender, EventArgs e)
+        {
+            Console.WriteLine("Subscriber 2 received IShape event");
+        }
+    }
     class Program
     {
         static void Main(string[] args)
         {
             Shape shape = new Shape();
             Subscriber1 sub1 = new Subscriber1(shape);
+            Subscriber2 sub2 = new Subscriber2(shape);
 
+            shape.Draw();
+            Console.WriteLine();
             shape.Draw();
 
             Console.ReadKey();
