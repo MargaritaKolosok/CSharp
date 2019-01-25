@@ -12,9 +12,7 @@ using System.Threading.Tasks;
 namespace Task_1
 {
     class MyClass<T> where T: new ()
-    {        
-        T variable;    
-
+    {              
         public static T FactoryMethod()
         {
             return new T();
@@ -25,8 +23,10 @@ namespace Task_1
         static void Main(string[] args)
         {
             int i = MyClass<int>.FactoryMethod();
+            long l = MyClass<long>.FactoryMethod();
 
-            Console.WriteLine(i.GetType().Name);           
+            Console.WriteLine(i.GetType().Name);
+            Console.WriteLine(l.GetType().Name);
 
             Console.ReadKey();
 
