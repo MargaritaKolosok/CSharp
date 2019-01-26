@@ -31,6 +31,15 @@ namespace Task2
             Console.WriteLine($"Array length is {strArray.Count}");
             Console.WriteLine($"Array contains 1? {strArray.Contains("1")}");
             Console.WriteLine($"Array contains 4? {strArray.Contains("4")}");
+
+            Random t = new Random();
+            for (int i=0; i<10; i++)
+            {
+                strArray.Add(Convert.ToString(t.Next(100)));
+            }
+
+            Console.WriteLine(strArray.Count);
+            Console.WriteLine(strArray.ToString());
             Console.ReadKey();
         }
     }

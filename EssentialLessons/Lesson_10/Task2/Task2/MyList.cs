@@ -48,6 +48,21 @@ namespace Task2
             return myList.Contains(element);
         }
 
-        
+        public void Clear()
+        {
+            myList = new T[0];
+        }
+
+        public override string ToString()
+        {
+            string result = "";
+            for (int i=0; i<myList.Length;i++)
+            {
+                result += myList[i] + " ";
+            }
+            return result;
+        }
+
+
     }
 }
