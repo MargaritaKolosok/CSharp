@@ -27,10 +27,15 @@ namespace Task3
             myDictionary.Add("cat", "кот");
             myDictionary.Add("hourse", "лошадь");
 
-            Console.WriteLine(myDictionary.Count);
+            Console.WriteLine($"Number of elements in Dictionary is {myDictionary.Count}");
 
             Console.WriteLine(myDictionary["cow"]);
             Console.WriteLine(myDictionary["cowsss"]);
+
+            myDictionary.Remove("cow");
+            Console.WriteLine(myDictionary["cow"]);
+            myDictionary.Remove("cow");
+            Console.WriteLine(myDictionary["cow"]);
 
             Console.ReadKey();
            

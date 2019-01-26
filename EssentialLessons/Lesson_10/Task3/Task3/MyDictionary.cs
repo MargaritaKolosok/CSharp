@@ -28,8 +28,7 @@ namespace Task3
                 {
                     Console.WriteLine("No such key exists");
                     return value;
-                }
-                
+                }                
             }
         }
 
@@ -39,6 +38,10 @@ namespace Task3
             {                
                 return myDictionary.Count;
             }            
-        }          
+        }
+        public void Remove(TKey key)
+        {            
+            myDictionary.Remove(key);            
+        }
     }
 }
