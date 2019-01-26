@@ -12,6 +12,6 @@ namespace Task2
        T this[int index] { get; }
         int Count { get; }
       //  void Clear();
-      //  bool Contains(T element);
+        bool Contains(T element);
     }
 }

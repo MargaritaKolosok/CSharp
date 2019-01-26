@@ -29,6 +29,8 @@ namespace Task2
             Console.WriteLine(strArray[1]);
             Console.WriteLine(strArray[2]);
             Console.WriteLine($"Array length is {strArray.Count}");
+            Console.WriteLine($"Array contains 1? {strArray.Contains("1")}");
+            Console.WriteLine($"Array contains 4? {strArray.Contains("4")}");
             Console.ReadKey();
         }
     }

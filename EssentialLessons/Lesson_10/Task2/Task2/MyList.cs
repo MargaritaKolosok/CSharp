@@ -9,8 +9,7 @@ namespace Task2
     class MyList<T> : IMyList<T>
     {
         T[] myList;
-        int countElements = 0;
-
+        
         public MyList()
         {
             myList = new T[0];
@@ -42,6 +41,11 @@ namespace Task2
             {
                 return myList.Length;
             }
+        }
+
+        public bool Contains(T element)
+        {
+            return myList.Contains(element);
         }
 
         
