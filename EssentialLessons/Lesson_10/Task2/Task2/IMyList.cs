@@ -8,10 +8,10 @@ namespace Task2
 {
     interface IMyList<T>
     {
-        void Add(T element);
-        T this[int index] { get; }
-        int Count { get; }
-        void Clear();
-        bool Contains(T element);
+       void Add(T element);
+       T this[int index] { get; }
+      //  int Count { get; }
+      //  void Clear();
+      //  bool Contains(T element);
     }
 }
