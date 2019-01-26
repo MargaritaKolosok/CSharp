@@ -17,30 +17,30 @@ namespace Task2
         }
 
         public void Add(T element)
-        {
-            countElements++;
+        {            
             T[] temp = new T[myList.Length];            
 
             myList.CopyTo(temp,0);
 
-            myList = new T[countElements];
+            myList = new T[temp.Length+1];
             temp.CopyTo(myList, 0);
-            myList[countElements - 1] = element;
+            myList[myList.Length - 1] = element;
                         
         }
 
        public T this[int index]
         {
             get
+            {                
+             return myList[index];              
+            }
+        }
+
+        public int Count
+        {
+            get
             {
-               // if (index >= 0 && index < myList.Length)
-               // {
-                    return myList[index];
-               // }
-              //  else
-              //  {
-                    
-              //  }
+                return myList.Length;
             }
         }
 

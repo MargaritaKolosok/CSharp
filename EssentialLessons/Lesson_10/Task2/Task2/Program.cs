@@ -28,7 +28,7 @@ namespace Task2
             Console.WriteLine(strArray[0]);
             Console.WriteLine(strArray[1]);
             Console.WriteLine(strArray[2]);
-
+            Console.WriteLine($"Array length is {strArray.Count}");
             Console.ReadKey();
         }
     }
