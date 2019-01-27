@@ -19,6 +19,23 @@ namespace Task4
     {
         static void Main(string[] args)
         {
+            MyList<int> MyList = new MyList<int>();
+            Random random = new Random();
+            for (int i=0; i<10; i++)
+            {                
+                MyList.Add(random.Next(1,100));
+            }
+
+            Console.WriteLine(MyList.Count);
+            int[] myArray = new int[MyList.Count];
+            myArray = Extention.GetArray(MyList);
+
+            for (int i = 0; i < 10; i++)
+            {
+                Console.Write(myArray[i] + " ");
+            } 
+
+            Console.ReadKey();
         }
     }
 }

@@ -6,7 +6,9 @@ using System.Threading.Tasks;
 
 namespace Task4
 {
-    class IMyList
+    interface IMyList<T>
     {
+        void Add(T item);
+        int Count { get; }
     }
 }
