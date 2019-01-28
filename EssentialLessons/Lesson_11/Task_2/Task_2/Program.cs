@@ -13,11 +13,13 @@ using System.Threading.Tasks;
  */
 namespace Task_2
 {
-    interface Car
+    interface IMyList<T>
     {        
-        void Add(string Name, int Year);
-        Car this[int index] { get; }
-        int Count { get; }        
+        void Add(T item);
+        T this[int index] { get; }
+        int Count { get; }
+        void Clear();
+        bool Contains(T item);
     }
 
     class CarCollection<T> where T : Car
