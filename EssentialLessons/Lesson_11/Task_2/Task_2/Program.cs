@@ -13,7 +13,7 @@ using System.Threading.Tasks;
  */
 namespace Task_2
 {
-    interface IMyList<T>
+    public interface IMyList<T>
     {        
         void Add(T item);
         T this[int index] { get; }
@@ -22,9 +22,15 @@ namespace Task_2
         bool Contains(T item);
     }
 
-    class CarCollection<T> where T : Car
+    public class MyList<T> : IMyList<T>
     {
-        List<T> CarList = new List<T>();
+
+    }
+
+    class CarCollection<T> : MyList<T>
+    {
+        List<string> CarNames = new List<string>();
+        List<int> CarYear = new List<int>();
         public void Add(string Name, int Year)
         {
            
