@@ -13,60 +13,67 @@ using System.Threading.Tasks;
  */
 namespace Task_2
 {
-    public interface IMyList<T>
-    {        
-        void Add(T item);
-        T this[int index] { get; }
-        int Count { get; }
-        void Clear();
-        bool Contains(T item);
+    
     }
+public interface IMyList<T>
+{
+    void Add(T item);
+    T this[int index] { get; }
+    int Count { get; }
+    void Clear();
+    bool Contains(T item);
+}
 
-    public class MyList<T> : IMyList<T>
+public class MyList<T> : IMyList<T>
+{
+    T[] array;
+
+    public MyList()
     {
-        T[] array;
+        array = new T[0];
+    }
 
-        public MyList()
+    public void Add(T element)
+    {
+        T[] temp = new T[array.Length];
+        array.CopyTo(temp, 0);
+        array = new T[array.Length + 1];
+        temp.CopyTo(array, 0);
+    }
+    public int Count
+    {
+        get
         {
-            array = new T[0];
-        }
-
-        public void Add(T element)
-        {
-            T[] temp = new T[array.Length];
-            array.CopyTo(temp, 0);
-            array = new T[array.Length + 1];
-            temp.CopyTo(array, 0);
-        }
-        public int Count
-        {
-            get
-            {
-                return array.Length;
-            }
-        }
-
-        public bool Contains(T item)
-        {
-            for (int i = 0; i < array.Length; i++)
-            {
-                if ((object)array[i] == (object)item)
-                {
-                    return true;
-                }
-            }
-            return false;
-        }
-
-        public void Clear()
-        {
-            array = new T[0];
-        }
-        
+            return array.Length;
         }
     }
 
-    class CarCollection<T> : MyList<T>
+    public bool Contains(T item)
+    {
+        for (int i = 0; i < array.Length; i++)
+        {
+            if ((object)array[i] == (object)item)
+            {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    public void Clear()
+    {
+        array = new T[0];
+    }
+    public T this[int index]
+    {
+        get
+        {
+            return array[index];
+        }
+    }
+
+}
+class CarCollection<T> : MyList<T>
     {
         List<string> CarNames;
         List<int> CarYear;
@@ -110,4 +117,4 @@ namespace Task_2
 
         }
     }
-}
+
