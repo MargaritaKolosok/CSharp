@@ -24,22 +24,90 @@ namespace Task_2
 
     public class MyList<T> : IMyList<T>
     {
+        T[] array;
 
+        public MyList()
+        {
+            array = new T[0];
+        }
+
+        public void Add(T element)
+        {
+            T[] temp = new T[array.Length];
+            array.CopyTo(temp, 0);
+            array = new T[array.Length + 1];
+            temp.CopyTo(array, 0);
+        }
+        public int Count
+        {
+            get
+            {
+                return array.Length;
+            }
+        }
+
+        public bool Contains(T item)
+        {
+            for (int i = 0; i < array.Length; i++)
+            {
+                if ((object)array[i] == (object)item)
+                {
+                    return true;
+                }
+            }
+            return false;
+        }
+
+        public void Clear()
+        {
+            array = new T[0];
+        }
+        
+        }
     }
 
     class CarCollection<T> : MyList<T>
     {
-        List<string> CarNames = new List<string>();
-        List<int> CarYear = new List<int>();
-        public void Add(string Name, int Year)
+        List<string> CarNames;
+        List<int> CarYear;
+        public CarCollection()
         {
-           
+            CarNames = new List<string>();
+            CarYear = new List<int>();
         }
+       
+        public void AddCar(string Name, int Year)
+        {
+            CarNames.Add(Name);
+            CarYear.Add(Year);
+        }
+    public new string this[int index]
+    {
+        get
+        {
+            if (index < CarNames.Count)
+            {                
+                return Convert.ToString(CarNames[index] + " " + CarYear[index]);
+            }
+            return "No car with such index exists";
+        }
+    }
     }
     class Program
     {
         static void Main(string[] args)
         {
+            CarCollection<string> Park = new CarCollection<string>();
+
+            Park.AddCar("Toyota", 1992);
+            Park.AddCar("Тойота", 2000);
+            Park.AddCar("Форд", 1999);
+            Park.AddCar("Мерседес", 2003);
+
+            Console.WriteLine(Park[1]);
+            Console.ReadKey();
+
+
         }
     }
 }
