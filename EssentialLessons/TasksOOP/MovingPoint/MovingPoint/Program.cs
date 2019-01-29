@@ -4,16 +4,50 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace MovingPoint
+namespace MovingPoint 
 {
-    static class Coordinates
+    class Wall 
     {
-        public static int Top
+        public int Left { get; set; }
+        public int Top { get; set; }
+    }
+    class Walls
+    {
+        Wall[] WallsArray = new Wall[10];
+
+        public Walls()
+        {
+            CreateWalls();
+            Show();
+        }
+        void CreateWalls()
+        {
+            Random random = new Random();
+            for (int i=0; i<WallsArray.Length;i++)
+            {                
+                Wall temp = new Wall();
+                temp.Left = random.Next(1, 10);
+                temp.Top = random.Next(1, 10);
+                WallsArray[i] = temp;
+            }
+        }
+        void Show()
+        {
+            for (int i=0; i<WallsArray.Length;i++)
+            {
+                Console.SetCursorPosition(WallsArray[i].Left, WallsArray[i].Top);
+                Console.Write('X');
+            }
+        }
+    }
+    struct Coordinates
+    {
+        public int Top
         {
             get; set;
         }
 
-        public static int Left
+        public int Left
         {
             get; set;
         }
@@ -23,9 +57,12 @@ namespace MovingPoint
     {
         char point = '*';
 
+        Coordinates newPoint;
+        Coordinates oldPoint;
+
         public void StartMove()
         {
-            Console.SetCursorPosition(Coordinates.Left, Coordinates.Top);
+            Console.SetCursorPosition(newPoint.Left, newPoint.Top);
             Console.Write(point);
 
             ConsoleKeyInfo keyPressed = new ConsoleKeyInfo();
@@ -33,27 +70,28 @@ namespace MovingPoint
             do
             {
                 keyPressed = Console.ReadKey();
-
+                oldPoint = newPoint;
                 switch (keyPressed.Key)
-                {
+                {                    
                     case ConsoleKey.UpArrow:
                         {
-                            Coordinates.Top--;
+                            
+                            newPoint.Top--;
                             break;
                         }
                     case ConsoleKey.DownArrow:
                         {
-                            Coordinates.Top++;
+                            newPoint.Top++;
                             break;
                         }
                     case ConsoleKey.LeftArrow:
                         {
-                            Coordinates.Left--;
+                            newPoint.Left--;
                             break;
                         }
                     case ConsoleKey.RightArrow:
                         {
-                            Coordinates.Left++;
+                            newPoint.Left++;
                             break;
                         }
                     default:
@@ -61,19 +99,19 @@ namespace MovingPoint
                             break;
                         }
                 }
-                if (Coordinates.Top < 0)
+                if (newPoint.Top < 0)
                 {
-                    Coordinates.Top = 0;
+                    newPoint.Top = 0;
                 }
-                else if (Coordinates.Left < 0)
+                else if (newPoint.Left < 0)
                 {
-                    Coordinates.Left = 0;
+                    newPoint.Left = 0;
                 }
                 else
                 {
-                    Draw.DrawPoint(point, Coordinates.Top, Coordinates.Left);
+                    Draw.DrawPoint(point, newPoint.Top, newPoint.Left);
+                    Draw.DrawPoint(' ', oldPoint.Top, oldPoint.Left);
                 }
-
             }
             while (keyPressed.Key != ConsoleKey.Escape);
         }
@@ -81,9 +119,8 @@ namespace MovingPoint
     static class Draw
     {
         public static void DrawPoint(char point, int top, int left)
-        {
-            Console.Clear();
-            Console.SetCursorPosition(Coordinates.Left, Coordinates.Top);
+        {            
+            Console.SetCursorPosition(left, top);
             Console.Write(point);
         }
     }
@@ -92,11 +129,12 @@ namespace MovingPoint
     {
         static void Main(string[] args)
         {
+            Walls wall = new Walls();
             Point point = new Point();
             point.StartMove();
+            
 
             Console.ReadKey();
         }
-
     }
 }
