@@ -42,6 +42,11 @@ namespace Task_2_try
                 return date;
             }
         }
+
+        public void ShowInfo()
+        {
+            Console.WriteLine(Name + " " + Date);
+        }
     }
 
     class MyList<T> : IMyList<T>
@@ -68,7 +73,7 @@ namespace Task_2_try
             {
                 return CarList[index];
             }
-        }
+        }       
     }
     class Program
     {
@@ -80,8 +85,8 @@ namespace Task_2_try
             MyList<Car> myList = new MyList<Car>();
             myList.Add(car1);
             myList.Add(car2);
-
-            Console.WriteLine(myList[0].Name + " " + myList[0].Date);
+            
+            myList[0].ShowInfo();
             Console.ReadKey();
         }
     }
