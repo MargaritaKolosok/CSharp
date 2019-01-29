@@ -60,6 +60,11 @@ namespace MovingPoint
         Coordinates newPoint;
         Coordinates oldPoint;
 
+     //   bool IsBarricade()
+     //   {
+            
+    //    }
+
         public void StartMove()
         {
             Console.SetCursorPosition(newPoint.Left, newPoint.Top);
@@ -74,9 +79,8 @@ namespace MovingPoint
                 switch (keyPressed.Key)
                 {                    
                     case ConsoleKey.UpArrow:
-                        {
-                            
-                            newPoint.Top--;
+                        {                            
+                            newPoint.Top--;                            
                             break;
                         }
                     case ConsoleKey.DownArrow:
@@ -131,8 +135,7 @@ namespace MovingPoint
         {
             Walls wall = new Walls();
             Point point = new Point();
-            point.StartMove();
-            
+            point.StartMove();            
 
             Console.ReadKey();
         }
