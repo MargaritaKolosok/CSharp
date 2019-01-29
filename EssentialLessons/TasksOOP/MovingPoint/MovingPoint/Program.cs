@@ -34,11 +34,44 @@ namespace MovingPoint
 
         public void StartMove()
         {
-            ConsoleKeyInfo keyPressed;
-           
-            keyPressed = Console.ReadKey();
+            int i = 10;
 
-            Console.WriteLine("Key pressed" + keyPressed);           
+            ConsoleKeyInfo keyPressed;                        
+
+            while (i>0)
+            {
+                keyPressed = Console.ReadKey();
+                switch (keyPressed.Key)
+                {
+                    case ConsoleKey.UpArrow:
+                        {
+                            OnUp();
+                            break;
+                        }
+                    case ConsoleKey.DownArrow:
+                        {
+                            OnDown();
+                            break;
+                        }
+                    case ConsoleKey.LeftArrow:
+                        {
+                            OnLeft();
+                            break;
+                        }
+                    case ConsoleKey.RightArrow:
+                        {
+                            OnRight();
+                            break;
+                        }
+                    default:
+                        {
+                            break;
+                        }
+                }
+                i--;
+            }
+           
+                      
         }
     }
     class Program
@@ -66,12 +99,7 @@ namespace MovingPoint
             point.MoveLeft += LeftHandler;
             point.MoveRight += RightHandler;
             point.MoveUp += UpHandler;
-            point.MoveDown += DownHandler;
-
-            point.OnDown();
-            point.OnUp();
-            point.OnRight();
-            point.OnLeft();
+            point.MoveDown += DownHandler;           
 
             point.StartMove();
 
