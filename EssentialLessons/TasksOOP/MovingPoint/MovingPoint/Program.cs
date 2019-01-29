@@ -6,48 +6,42 @@ using System.Threading.Tasks;
 
 namespace MovingPoint
 {
-    class Canvas
+    static class Coordinates
     {
-        int width = 50;
-        int height = 50;
-        Point point;
+       static int left = 10;
+       static int top = 10;
 
-        public Canvas(Point point)
+        public static int Top
         {
-            this.point = point;
-            DrawCanvas();
+            get
+            {
+                return top;
+            }
+            set
+            {
+                top = value;
+            }
         }
 
-        void DrawCanvas()
+        public static int Left
         {
-            for (int i = 0; i < width; i++)
+            get
             {
-                for (int j = 0; j < height; j++)
-                {
-                    if (i == 0 || i == width - 1)
-                    {
-                        Console.Write('*');
-                    }
-                    else if (j==0 || j == height - 1)
-                    {
-                        Console.Write('*');
-                    }
-                    else
-                    {
-                        Console.Write(' ');
-                    }
-                   
-                }
-                Console.WriteLine();
+                return left;
+            }
+            set
+            {
+                left = value;
             }
         }
 
     }
-        
     class Point
     {
+        char point = '*';
+        
         public delegate void MyHandler();
-
+       
         public event MyHandler MoveLeft;
         public event MyHandler MoveRight;
         public event MyHandler MoveUp;
@@ -72,7 +66,10 @@ namespace MovingPoint
 
         public void StartMove()
         {
-            int i = 10;
+            int i = 20;
+
+            Console.SetCursorPosition(Coordinates.Left, Coordinates.Top);
+            Console.Write(point);
 
             ConsoleKeyInfo keyPressed;                        
 
@@ -107,7 +104,7 @@ namespace MovingPoint
                         }
                 }
                 i--;
-            }          
+            }         
                       
         }
     }
@@ -115,19 +112,30 @@ namespace MovingPoint
     {
         static void LeftHandler()
         {
-            Console.WriteLine("Left");
+            Coordinates.Left--;
+            DrawPoint('*', Coordinates.Left, Coordinates.Top );
+                       
         }
         static void RightHandler()
-        {
-            Console.WriteLine("Right");
+        {            
+            Coordinates.Left++;
+            DrawPoint('*', Coordinates.Left, Coordinates.Top);
         }
         static void UpHandler()
         {
-            Console.WriteLine("Up");
+            Coordinates.Top--;
+            DrawPoint('*', Coordinates.Left, Coordinates.Top);
         }
         static void DownHandler()
         {
-            Console.WriteLine("Down");
+            Coordinates.Top++;
+            DrawPoint('*', Coordinates.Left, Coordinates.Top);
+        }
+        static void DrawPoint(char point, int top, int left)
+        {
+            Console.Clear();
+            Console.SetCursorPosition(top, left);
+            Console.Write(point);
         }
 
         static void Main(string[] args)
@@ -137,9 +145,7 @@ namespace MovingPoint
             point.MoveRight += RightHandler;
             point.MoveUp += UpHandler;
             point.MoveDown += DownHandler;
-
-            Canvas canvas = new Canvas();
-
+          
             point.StartMove();
 
             Console.ReadKey();
