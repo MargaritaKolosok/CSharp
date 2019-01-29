@@ -6,6 +6,44 @@ using System.Threading.Tasks;
 
 namespace MovingPoint
 {
+    class Canvas
+    {
+        int width = 50;
+        int height = 50;
+        Point point;
+
+        public Canvas(Point point)
+        {
+            this.point = point;
+            DrawCanvas();
+        }
+
+        void DrawCanvas()
+        {
+            for (int i = 0; i < width; i++)
+            {
+                for (int j = 0; j < height; j++)
+                {
+                    if (i == 0 || i == width - 1)
+                    {
+                        Console.Write('*');
+                    }
+                    else if (j==0 || j == height - 1)
+                    {
+                        Console.Write('*');
+                    }
+                    else
+                    {
+                        Console.Write(' ');
+                    }
+                   
+                }
+                Console.WriteLine();
+            }
+        }
+
+    }
+        
     class Point
     {
         public delegate void MyHandler();
@@ -69,8 +107,7 @@ namespace MovingPoint
                         }
                 }
                 i--;
-            }
-           
+            }          
                       
         }
     }
@@ -99,7 +136,9 @@ namespace MovingPoint
             point.MoveLeft += LeftHandler;
             point.MoveRight += RightHandler;
             point.MoveUp += UpHandler;
-            point.MoveDown += DownHandler;           
+            point.MoveDown += DownHandler;
+
+            Canvas canvas = new Canvas();
 
             point.StartMove();
 
