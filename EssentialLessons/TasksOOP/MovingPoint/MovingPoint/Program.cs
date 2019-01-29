@@ -8,94 +8,52 @@ namespace MovingPoint
 {
     static class Coordinates
     {
-       static int left = 10;
-       static int top = 10;
-
         public static int Top
         {
-            get
-            {
-                return top;
-            }
-            set
-            {
-                top = value;
-            }
+            get; set;
         }
 
         public static int Left
         {
-            get
-            {
-                return left;
-            }
-            set
-            {
-                left = value;
-            }
+            get; set;
         }
-
     }
+
     class Point
     {
         char point = '*';
-        
-        public delegate void MyHandler();
-       
-        public event MyHandler MoveLeft;
-        public event MyHandler MoveRight;
-        public event MyHandler MoveUp;
-        public event MyHandler MoveDown;
-
-        public void OnLeft()
-        {
-            MoveLeft?.Invoke();
-        }
-        public void OnRight()
-        {
-            MoveRight?.Invoke();
-        }
-        public void OnUp()
-        {
-            MoveUp?.Invoke();
-        }
-        public void OnDown()
-        {
-            MoveDown?.Invoke();
-        }
 
         public void StartMove()
         {
-            int i = 20;
-
             Console.SetCursorPosition(Coordinates.Left, Coordinates.Top);
             Console.Write(point);
 
-            ConsoleKeyInfo keyPressed;                        
+            ConsoleKeyInfo keyPressed = new ConsoleKeyInfo();
 
-            while (i>0)
+            do
             {
                 keyPressed = Console.ReadKey();
+
                 switch (keyPressed.Key)
                 {
                     case ConsoleKey.UpArrow:
                         {
-                            OnUp();
+                            Coordinates.Top--;
                             break;
                         }
                     case ConsoleKey.DownArrow:
                         {
-                            OnDown();
+                            Coordinates.Top++;
                             break;
                         }
                     case ConsoleKey.LeftArrow:
                         {
-                            OnLeft();
+                            Coordinates.Left--;
                             break;
                         }
                     case ConsoleKey.RightArrow:
                         {
-                            OnRight();
+                            Coordinates.Left++;
                             break;
                         }
                     default:
@@ -103,53 +61,42 @@ namespace MovingPoint
                             break;
                         }
                 }
-                i--;
-            }         
-                      
+                if (Coordinates.Top < 0)
+                {
+                    Coordinates.Top = 0;
+                }
+                else if (Coordinates.Left < 0)
+                {
+                    Coordinates.Left = 0;
+                }
+                else
+                {
+                    Draw.DrawPoint(point, Coordinates.Top, Coordinates.Left);
+                }
+
+            }
+            while (keyPressed.Key != ConsoleKey.Escape);
         }
     }
-    class Program
+    static class Draw
     {
-        static void LeftHandler()
-        {
-            Coordinates.Left--;
-            DrawPoint('*', Coordinates.Left, Coordinates.Top );
-                       
-        }
-        static void RightHandler()
-        {            
-            Coordinates.Left++;
-            DrawPoint('*', Coordinates.Left, Coordinates.Top);
-        }
-        static void UpHandler()
-        {
-            Coordinates.Top--;
-            DrawPoint('*', Coordinates.Left, Coordinates.Top);
-        }
-        static void DownHandler()
-        {
-            Coordinates.Top++;
-            DrawPoint('*', Coordinates.Left, Coordinates.Top);
-        }
-        static void DrawPoint(char point, int top, int left)
+        public static void DrawPoint(char point, int top, int left)
         {
             Console.Clear();
-            Console.SetCursorPosition(top, left);
+            Console.SetCursorPosition(Coordinates.Left, Coordinates.Top);
             Console.Write(point);
         }
+    }
 
+    class Program
+    {
         static void Main(string[] args)
         {
             Point point = new Point();
-            point.MoveLeft += LeftHandler;
-            point.MoveRight += RightHandler;
-            point.MoveUp += UpHandler;
-            point.MoveDown += DownHandler;
-          
             point.StartMove();
 
             Console.ReadKey();
         }
-       
+
     }
 }
