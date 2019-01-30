@@ -89,20 +89,23 @@ namespace MovingPoint
             walls = new Walls(barricades);
         }
 
-        bool IsBarricade()        {         
-            ??
-            if (walls.WallsArray.Contains(newPoint.Left))
+        bool IsBarricade()
+        {
+            Wall temp = new Wall
             {
+                Left = newPoint.Left,
+                Top = newPoint.Top
+            };
+            if (walls.WallsArray.Contains(temp))
+            {                
                 return true;
             }
             else
-            {
+            {              
                 return false;
             }
-            }            
+        }       
            
-        }
-
         public void StartMove()
         {
             Console.SetCursorPosition(newPoint.Left, newPoint.Top);
@@ -148,21 +151,17 @@ namespace MovingPoint
                 else if (newPoint.Left < 0)
                 {
                     newPoint.Left = 0;
-                }
-                else
-                {
-                    if (!IsBarricade())
-                    {
-                        Draw.DrawPoint(point, newPoint.Top, newPoint.Left);
+                }              
+                else if (!IsBarricade())
+                    {                       
                         Draw.DrawPoint(' ', oldPoint.Top, oldPoint.Left);
                     }
-                    else
+                    else if(IsBarricade())
                     {
-                        newPoint = oldPoint;
-                        Draw.DrawPoint(point, newPoint.Top, newPoint.Left);
+                        newPoint = oldPoint;                        
                     }
-                    
-                }
+
+                Draw.DrawPoint(point, newPoint.Top, newPoint.Left);
             }
             while (keyPressed.Key != ConsoleKey.Escape);
         }
@@ -180,7 +179,7 @@ namespace MovingPoint
     {
         static void Main(string[] args)
         {          
-            Point point = new Point(10);
+            Point point = new Point(5);
             point.StartMove();            
 
             Console.ReadKey();
