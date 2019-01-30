@@ -13,13 +13,11 @@ namespace MovingPoint
     }
     class Walls
     {
-        public Wall[] WallsArray;
-        int barricades;
+        public Wall[] WallsArray;       
 
         public Walls(int barricades)
         {
-            WallsArray = new Wall[barricades];
-            this.barricades = barricades;
+            WallsArray = new Wall[barricades];            
             CreateWalls();
             Show();
         }
@@ -87,6 +85,7 @@ namespace MovingPoint
             {
                 keyPressed = Console.ReadKey();
                 oldPoint = newPoint;
+
                 switch (keyPressed.Key)
                 {                    
                     case ConsoleKey.UpArrow:
