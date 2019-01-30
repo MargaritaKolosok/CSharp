@@ -75,10 +75,8 @@ namespace MovingPoint
         }       
            
         public void StartMove()
-        {
-            Console.SetCursorPosition(newPoint.Left, newPoint.Top);
-            Console.Write(point);
-
+        {            
+            Draw.DrawPoint(point, newPoint.Top, newPoint.Left);
             ConsoleKeyInfo keyPressed = new ConsoleKeyInfo();
 
             do
