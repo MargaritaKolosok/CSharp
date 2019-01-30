@@ -13,7 +13,7 @@ namespace MovingPoint
     }
     class Walls
     {
-       Wall[] WallsArray;
+       public Wall[] WallsArray;
        int barricades;
 
         public Wall this[int index]
@@ -89,18 +89,17 @@ namespace MovingPoint
             walls = new Walls(barricades);
         }
 
-        bool IsBarricade()
-        {
-            bool result = false;
-
-            for (int i=0; i<walls.BarricadesCount;i++)
+        bool IsBarricade()        {         
+            ??
+            if (walls.WallsArray.Contains(newPoint.Left))
             {
-                if (newPoint.Left == walls[i].Left && newPoint.Top == walls[i].Top)
-                {
-                    result = true;
-                }                
+                return true;
             }
-            return result;
+            else
+            {
+                return false;
+            }
+            }            
            
         }
 
