@@ -21,11 +21,6 @@ namespace MovingPoint
             get { return WallsArray[index]; }
         }
 
-        public int BarricadesCount
-        {
-            get { return barricades; }
-        }
-
         public Walls(int barricades)
         {
             WallsArray = new Wall[barricades];
@@ -116,8 +111,8 @@ namespace MovingPoint
                             break;
                         }
                     case ConsoleKey.RightArrow:
-                        {
-                            newPoint.Left++;
+                        {                            
+                            newPoint.Left++;                            
                             break;
                         }
                     default:
@@ -133,13 +128,13 @@ namespace MovingPoint
                 {
                     newPoint.Left = 0;
                 }              
-                else if (!IsBarricade())
-                    {                       
-                        Draw.DrawPoint(' ', oldPoint.Top, oldPoint.Left);
+                else if (IsBarricade())
+                    {
+                        newPoint = oldPoint;
                     }
-                    else if(IsBarricade())
-                    {                   
-                        newPoint = oldPoint;                        
+                    else
+                    {
+                        Draw.DrawPoint(' ', oldPoint.Top, oldPoint.Left);
                     }
 
                 Draw.DrawPoint(point, newPoint.Top, newPoint.Left);
