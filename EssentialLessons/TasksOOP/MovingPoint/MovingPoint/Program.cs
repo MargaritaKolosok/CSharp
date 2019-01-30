@@ -91,12 +91,10 @@ namespace MovingPoint
 
         bool IsBarricade()
         {
-            Wall temp = new Wall
-            {
-                Left = newPoint.Left,
-                Top = newPoint.Top
-            };
-            if (walls.WallsArray.Contains(temp))
+            Wall temp = new Wall();
+            
+            temp = Array.Find(walls.WallsArray, element => element.Left == newPoint.Left && element.Top == newPoint.Top);
+            if (temp !=null)
             {                
                 return true;
             }
