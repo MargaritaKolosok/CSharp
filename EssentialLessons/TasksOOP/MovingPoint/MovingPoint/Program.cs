@@ -13,13 +13,8 @@ namespace MovingPoint
     }
     class Walls
     {
-       public Wall[] WallsArray;
-       int barricades;
-
-        public Wall this[int index]
-        {
-            get { return WallsArray[index]; }
-        }
+        public Wall[] WallsArray;
+        int barricades;
 
         public Walls(int barricades)
         {
@@ -45,9 +40,8 @@ namespace MovingPoint
         void Show()
         {
             for (int i=0; i<WallsArray.Length;i++)
-            {
-                Console.SetCursorPosition(WallsArray[i].Left, WallsArray[i].Top);
-                Console.Write('X');
+            {                
+                Draw.DrawPoint('X', WallsArray[i].Top, WallsArray[i].Left);
             }
         }
     }
@@ -120,6 +114,7 @@ namespace MovingPoint
                             break;
                         }
                 }
+
                 if (newPoint.Top < 0)
                 {
                     newPoint.Top = 0;
@@ -156,8 +151,7 @@ namespace MovingPoint
         static void Main(string[] args)
         {          
             Point point = new Point(5);
-            point.StartMove();            
-
+            point.StartMove();         
             Console.ReadKey();
         }
     }
