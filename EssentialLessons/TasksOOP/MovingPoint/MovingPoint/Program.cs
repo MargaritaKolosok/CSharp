@@ -18,10 +18,7 @@ namespace MovingPoint
 
         public Wall this[int index]
         {
-            get
-            {
-                return WallsArray[index];
-            }
+            get { return WallsArray[index]; }
         }
 
         public int BarricadesCount
@@ -46,6 +43,7 @@ namespace MovingPoint
                     Left = random.Next(1, 10),
                     Top = random.Next(1, 10)
                 };
+
                 WallsArray[i] = temp;
             }
         }
@@ -60,15 +58,8 @@ namespace MovingPoint
     }
     struct Coordinates
     {
-        public int Top
-        {
-            get; set;
-        }
-
-        public int Left
-        {
-            get; set;
-        }
+        public int Top { get; set; }
+        public int Left { get; set; }
     }
 
     class Point
@@ -79,10 +70,7 @@ namespace MovingPoint
         Coordinates newPoint;
         Coordinates oldPoint;
 
-        public Point()
-        {
-
-        }
+        public Point() { }
 
         public Point(int barricades)
         {
@@ -92,16 +80,11 @@ namespace MovingPoint
         bool IsBarricade()
         {
             Wall temp = new Wall();
+            bool result;
             
             temp = Array.Find(walls.WallsArray, element => element.Left == newPoint.Left && element.Top == newPoint.Top);
-            if (temp !=null)
-            {                
-                return true;
-            }
-            else
-            {              
-                return false;
-            }
+            result = (temp != null) ? true : false;
+            return result;
         }       
            
         public void StartMove()
@@ -155,7 +138,7 @@ namespace MovingPoint
                         Draw.DrawPoint(' ', oldPoint.Top, oldPoint.Left);
                     }
                     else if(IsBarricade())
-                    {
+                    {                   
                         newPoint = oldPoint;                        
                     }
 
