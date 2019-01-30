@@ -13,10 +13,26 @@ namespace MovingPoint
     }
     class Walls
     {
-        Wall[] WallsArray = new Wall[10];
+       Wall[] WallsArray;
+       int barricades;
 
-        public Walls()
+        public Wall this[int index]
         {
+            get
+            {
+                return WallsArray[index];
+            }
+        }
+
+        public int BarricadesCount
+        {
+            get { return barricades; }
+        }
+
+        public Walls(int barricades)
+        {
+            WallsArray = new Wall[barricades];
+            this.barricades = barricades;
             CreateWalls();
             Show();
         }
@@ -24,10 +40,12 @@ namespace MovingPoint
         {
             Random random = new Random();
             for (int i=0; i<WallsArray.Length;i++)
-            {                
-                Wall temp = new Wall();
-                temp.Left = random.Next(1, 10);
-                temp.Top = random.Next(1, 10);
+            {
+                Wall temp = new Wall
+                {
+                    Left = random.Next(1, 10),
+                    Top = random.Next(1, 10)
+                };
                 WallsArray[i] = temp;
             }
         }
@@ -56,14 +74,35 @@ namespace MovingPoint
     class Point
     {
         char point = '*';
+        Walls walls;
 
         Coordinates newPoint;
         Coordinates oldPoint;
 
-     //   bool IsBarricade()
-     //   {
-            
-    //    }
+        public Point()
+        {
+
+        }
+
+        public Point(int barricades)
+        {
+            walls = new Walls(barricades);
+        }
+
+        bool IsBarricade()
+        {
+            bool result = false;
+
+            for (int i=0; i<walls.BarricadesCount;i++)
+            {
+                if (newPoint.Left == walls[i].Left && newPoint.Top == walls[i].Top)
+                {
+                    result = true;
+                }                
+            }
+            return result;
+           
+        }
 
         public void StartMove()
         {
@@ -113,8 +152,17 @@ namespace MovingPoint
                 }
                 else
                 {
-                    Draw.DrawPoint(point, newPoint.Top, newPoint.Left);
-                    Draw.DrawPoint(' ', oldPoint.Top, oldPoint.Left);
+                    if (!IsBarricade())
+                    {
+                        Draw.DrawPoint(point, newPoint.Top, newPoint.Left);
+                        Draw.DrawPoint(' ', oldPoint.Top, oldPoint.Left);
+                    }
+                    else
+                    {
+                        newPoint = oldPoint;
+                        Draw.DrawPoint(point, newPoint.Top, newPoint.Left);
+                    }
+                    
                 }
             }
             while (keyPressed.Key != ConsoleKey.Escape);
@@ -132,9 +180,8 @@ namespace MovingPoint
     class Program
     {
         static void Main(string[] args)
-        {
-            Walls wall = new Walls();
-            Point point = new Point();
+        {          
+            Point point = new Point(10);
             point.StartMove();            
 
             Console.ReadKey();
