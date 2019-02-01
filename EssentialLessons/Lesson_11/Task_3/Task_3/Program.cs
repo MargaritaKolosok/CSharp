@@ -19,7 +19,18 @@ class Dictionary<TKey, TValue>
 
     public void Add(TKey key, TValue value)
     {
+        TKey[] tempKey = new TKey[KeyArray.Length];
+        TValue[] tempValue = new TValue[ValueArray.Length];
 
+        KeyArray.CopyTo(tempKey, 0);
+        ValueArray.CopyTo(tempValue, 0);
+
+        KeyArray = new TKey[tempKey.Length +1];
+        ValueArray = new TValue[tempValue.Length + 1];
+        tempKey.CopyTo(KeyArray,0);
+        tempValue.CopyTo(ValueArray,0);
+        KeyArray[KeyArray.Length - 1] = key;
+        ValueArray[ValueArray.Length - 1] = value;
     }
 }
 namespace Task_3
@@ -28,6 +39,13 @@ namespace Task_3
     {
         static void Main(string[] args)
         {
+            Dictionary<string, int> dictionary = new Dictionary<string, int>();
+            dictionary.Add("one",1);
+            dictionary.Add("two", 2);
+            dictionary.Add("three", 3);
+            dictionary.Add("four", 4);
+
+            Console.ReadKey();
         }
     }
 }
