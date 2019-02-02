@@ -35,18 +35,12 @@ class Dictionary<TKey, TValue>
 
     public int Count
     {
-        get
-        {
-            return KeyArray.Length;
-        }
-        
+        get { return KeyArray.Length; }        
     }
+
     public TKey this[int index]
     {
-        get
-        {
-            return KeyArray[index];
-        }
+        get { return KeyArray[index]; }
     }
 }
 namespace Task_3
@@ -63,7 +57,6 @@ namespace Task_3
 
             Console.WriteLine(dictionary.Count);
             Console.WriteLine(dictionary[1]);
-
             Console.ReadKey();
         }
     }
