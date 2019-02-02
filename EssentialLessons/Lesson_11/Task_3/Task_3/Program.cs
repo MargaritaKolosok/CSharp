@@ -32,6 +32,22 @@ class Dictionary<TKey, TValue>
         KeyArray[KeyArray.Length - 1] = key;
         ValueArray[ValueArray.Length - 1] = value;
     }
+
+    public int Count
+    {
+        get
+        {
+            return KeyArray.Length;
+        }
+        
+    }
+    public TKey this[int index]
+    {
+        get
+        {
+            return KeyArray[index];
+        }
+    }
 }
 namespace Task_3
 {
@@ -44,6 +60,9 @@ namespace Task_3
             dictionary.Add("two", 2);
             dictionary.Add("three", 3);
             dictionary.Add("four", 4);
+
+            Console.WriteLine(dictionary.Count);
+            Console.WriteLine(dictionary[1]);
 
             Console.ReadKey();
         }
