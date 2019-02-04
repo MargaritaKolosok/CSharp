@@ -100,6 +100,18 @@ class CarCollection<T> : MyList<T>
         }
     }
     }
+    static class Extention
+    {
+        public static T[] GetArray<T>(this MyList<T> list)
+            {
+                T[] tempArray = new T[list.Count];
+                for (int i=0; i<tempArray.Length;i++)
+                {
+                    tempArray[i] = list[i];
+                }
+        return tempArray;
+            }
+    }
     class Program
     {
         static void Main(string[] args)
