@@ -30,17 +30,11 @@ namespace Task_2_try
         }
         public string Name
         {
-            get
-            {
-                return name;
-            }
+            get { return name; }
         }
         public int Date
         {
-            get
-            {
-                return date;
-            }
+            get { return date; }
         }
 
         public void ShowInfo()
@@ -69,10 +63,7 @@ namespace Task_2_try
 
         public T this[int index]
         {
-            get
-            {
-                return CarList[index];
-            }
+            get { return CarList[index]; }
         }        
     }
 
@@ -81,7 +72,7 @@ namespace Task_2_try
         static void Main(string[] args)
         {
             Car car1 = new Car("CAR Name", new DateTime(1992,2,2));
-            Car car2 = new Car("CArAnme", new DateTime(1992,2,2));
+            Car car2 = new Car("CAR Name2", new DateTime(1992,2,2));
 
             MyList<Car> myList = new MyList<Car>();
             myList.Add(car1);
