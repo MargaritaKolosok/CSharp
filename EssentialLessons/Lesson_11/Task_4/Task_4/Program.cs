@@ -38,6 +38,11 @@ namespace Task_4
             stringList.Add("4");
             string[] array = new string[4];
             array = ExtentionMethod.GetArray(stringList);
+            for (int i=0; i<array.Length; i++)
+            {
+                Console.WriteLine(array[i]);
+            }
+            Console.ReadKey();
         }
     }
 }
