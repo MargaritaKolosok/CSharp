@@ -15,7 +15,7 @@ checksum, т.е. контрольное число (последняя цифр�
 7 разряд отвечает за век рождения и пол. Если цифра нечетная - пол мужской, четная - женский. 1,2 - девятнадцатый век, 3,4 - двадцатый, 5,6 - двадцать первый.
 8-11 разряды - заполняет орган Юстиции.
 12 разряд - контрольная цифра, которая расчитывается по определенному алгоритму
- * /
+ */
 namespace GetINN
 {
     class INN
@@ -29,14 +29,14 @@ namespace GetINN
         public double Days()
         {
             DateTime startDay = new DateTime(1900,1,1);
-            return (startDay - birth).TotalDays;
+            return (birth - startDay).TotalDays +1;
         }
     }
     class Program
     {
         static void Main(string[] args)
         {
-            DateTime birth = new DateTime(1973, 07, 19);
+            DateTime birth = new DateTime(1985, 08, 12);
             INN my = new INN(birth);
             Console.WriteLine(my.Days());
             
