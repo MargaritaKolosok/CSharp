@@ -32,13 +32,8 @@ namespace Move
     class FieldOnConsole
     {
         public int Barricades { get; set; }
-        public void CreateWalls()
-        {
-            Field field = new Field(Barricades)
-            {
-                WallsArray = new Wall[Barricades]
-            };
-        }
+      
+    
         public void SetStartCursor()
         {
 
