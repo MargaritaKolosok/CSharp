@@ -6,45 +6,30 @@ using System.Threading.Tasks;
 
 namespace Move
 {
-    class Point
+    struct Point
     {
         public int Left { get; set; }
         public int Top { get; set; }
-    }
-    class Wall
-    {
-        public int Left { get; set; }
-        public int Top { get; set; }
-    }
-    /*
-      class который хранит  состояние поля: стенки, позицию курсора.  */
-    class Field
-    {
-        int barricades;
-        public Wall[] WallsArray;
 
-        public Field(int barricades) => this.barricades = barricades;
+        public char PointSymbol { get; set; }
 
-        public Point point;
-    }
-    /*
-      класс, который отвечает за отрисовку поля на консоль. */
-    class FieldOnConsole
-    {
-        public int Barricades { get; set; }
-      
-    
-        public void SetStartCursor()
+        public void Draw()
         {
-
+            DrawPoint(PointSymbol);
         }
-            
+        void DrawPoint(char point)
+        {
+            Console.SetCursorPosition(Left, Top);
+            Console.Write(point);
+        }
     }
-    /*
-    класс который отвечает за перемещение курсора по полю.  */
-    class MoveOnField
+    class Map
     {
 
+        void Clear()
+        {
+            Console.Clear();
+        }
     }
     class Program
     {
