@@ -25,7 +25,28 @@ namespace Move
     }
     class Map
     {
-
+        int[] Border;
+        int[] Walls;
+        int width = 80, height = 44;
+        public Map()
+        {                       
+            Console.SetWindowSize(width, height);
+            Console.CursorVisible = false;
+            DrawBorder();
+        }
+        void DrawBorder()
+        {
+            for (int i = 0; i < width; i++)
+            {
+                for (int j = 0; j < height; j++)
+                {
+                    if (i == 0 || i == width - 1) Console.Write("*");
+                    else if (j == 0 || j == height - 1) Console.Write("*");
+                    else Console.Write(" ");
+                }
+                Console.WriteLine();
+            }
+        }
         void Clear()
         {
             Console.Clear();
@@ -35,6 +56,9 @@ namespace Move
     {
         static void Main(string[] args)
         {
+            Map map = new Map();
+            Console.ReadKey();
+
         }
     }
 }
