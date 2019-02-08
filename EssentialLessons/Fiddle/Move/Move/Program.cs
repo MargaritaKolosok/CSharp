@@ -105,7 +105,6 @@ namespace Move
         {
             Map map = new Map();
             Console.ReadKey();
-
         }
     }
 }
