@@ -79,11 +79,8 @@ namespace Move
                 {
                     Walls[x, y] = 'X';
                     counter++;
-                }             
-                
-            }
-           
-            
+                }           
+            }          
         }
         void DrawBorder()
         {
