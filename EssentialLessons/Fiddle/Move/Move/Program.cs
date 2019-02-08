@@ -93,19 +93,6 @@ namespace Move
                 Console.WriteLine();
             }
         }
-/*    void SetWalls()
-        {
-            Random random = new Random();
-            for (int i = 0; i < 11; i++)
-            {
-                int x = random.Next(0, 43);
-                int y = random.Next(0, 43);
-                Walls[x, y] = 'X';
-            }
-        }
-
-  */
-
 
         void Clear()
         {
