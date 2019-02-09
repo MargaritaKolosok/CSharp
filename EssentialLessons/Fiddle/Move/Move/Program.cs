@@ -10,9 +10,14 @@ namespace Move
     {
         public int Left { get; set; }
         public int Top { get; set; }
-
         public char PointSymbol { get; set; }
 
+        public Point(int left, int top, char symb)
+        {
+            Left = left;
+            Top = top;
+            PointSymbol = symb;
+        }
         public void Draw()
         {
             DrawPoint(PointSymbol);
@@ -21,6 +26,10 @@ namespace Move
         {
             Console.SetCursorPosition(Left, Top);
             Console.Write(point);
+        }
+        void Clear()
+        {
+            DrawPoint(' ');
         }
     }
     class Map
