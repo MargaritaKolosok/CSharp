@@ -6,6 +6,11 @@ using System.Threading.Tasks;
 
 namespace Move
 {
+    static class Bonus
+    {
+        static int count = 0;
+        public static int Count { get; set; }
+    }
     struct Point
     {
         public int Left { get; set; }
@@ -76,9 +81,10 @@ namespace Move
                     Walls[i, j] = (i == 0 || i == width - 1 || j == 0 || j == height - 1) ? '*' : ' ';                    
                 }
             }
-            GenerateBarricades();
+            GenerateBarricades('X');
+            GenerateBarricades('$');
         }
-        void GenerateBarricades()
+        void GenerateBarricades(char ch)
         {
             Random random = new Random();
             int counter = 0;
@@ -92,9 +98,9 @@ namespace Move
             {
                 Random();
 
-                if (Walls[x, y] != '*' && Walls[x, y] != 'X')
+                if (Walls[x, y] == ' ')
                 {
-                    Walls[x, y] = 'X';
+                    Walls[x, y] = ch;
                     counter++;
                 }           
             }          
@@ -159,10 +165,21 @@ namespace Move
             }
             while (keyPressed.Key != ConsoleKey.Escape);
         }
-
         bool IsBarricade()
         {
-            return (Walls[point.Top, point.Left] !=' ') ? true : false;            
+            if (Walls[point.Top, point.Left] == 'X' || Walls[point.Top, point.Left] == '*')
+            {
+                return true;
+            }
+            else if (Walls[point.Top, point.Left] == '$')
+            {
+                Bonus.Count++;
+                return false;
+            }
+            else
+            {
+                return false;
+            }
         }
         void Clear()
         {
@@ -174,7 +191,7 @@ namespace Move
         static void Main(string[] args)
         {
             Map map = new Map();
-            map.StartGame();
+            map.StartGame();            
             Console.ReadKey();
         }
     }
