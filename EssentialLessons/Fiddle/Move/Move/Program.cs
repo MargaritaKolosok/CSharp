@@ -31,17 +31,36 @@ namespace Move
         {
             DrawPoint(' ');
         }
+        public void MoveLeft()
+        {
+            Left--;
+        }
+        public void MoveRight()
+        {
+            Left++;
+        }
+        public void MoveTop()
+        {
+            Top--;
+        }
+        public void MoveDown()
+        {
+            Top++;
+        }
     }
     class Map
     {
         int width = 20, height = 20;
         char[,] Walls = new char[20, 20];
 
+        Point point = new Point(10, 10, '*');
+
         public Map()
         {
             Console.CursorVisible = false;
             GenerateBorder();
-            DrawBorder();           
+            DrawBorder();
+            point.Draw();
         }
         void Barricade(char point, int left, int top)
         {
