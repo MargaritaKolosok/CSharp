@@ -27,7 +27,7 @@ namespace Move
             Console.SetCursorPosition(Left, Top);
             Console.Write(point);
         }
-        void Clear()
+        public void Clear()
         {
             DrawPoint(' ');
         }
@@ -60,7 +60,7 @@ namespace Move
             Console.CursorVisible = false;
             GenerateBorder();
             DrawBorder();
-            point.Draw();
+            point.Draw();            
         }
         void Barricade(char point, int left, int top)
         {
@@ -73,18 +73,7 @@ namespace Move
             {
                 for (int j = 0; j < height; j++)
                 {
-                    if (i == 0 || i == width - 1)
-                    {
-                        Walls[i, j] = '*';                      
-                    }
-                    else if (j == 0 || j == height - 1)
-                    {
-                        Walls[i, j] = '*';                      
-                    }
-                    else
-                    {
-                        Walls[i, j] = ' ';                      
-                    }
+                    Walls[i, j] = (i == 0 || i == width - 1 || j == 0 || j == height - 1) ? '*' : ' ';                    
                 }
             }
             GenerateBarricades();
@@ -121,7 +110,60 @@ namespace Move
                 Console.WriteLine();
             }
         }
+        public void StartGame()
+        {
+            ConsoleKeyInfo keyPressed = new ConsoleKeyInfo();
+            Point oldPoint = new Point();
 
+            do
+            {
+                keyPressed = Console.ReadKey();
+                oldPoint = point;
+
+                switch (keyPressed.Key)
+                {
+                    case ConsoleKey.UpArrow:
+                        {
+                            point.MoveTop();
+                            break;
+                        }
+                    case ConsoleKey.DownArrow:
+                        {
+                            point.MoveDown();
+                            break;
+                        }
+                    case ConsoleKey.LeftArrow:
+                        {
+                            point.MoveLeft();
+                            break;
+                        }
+                    case ConsoleKey.RightArrow:
+                        {
+                            point.MoveRight();
+                            break;
+                        }
+                    default:
+                        {
+                            break;
+                        }                       
+                }
+                if (IsBarricade())
+                {
+                    point = oldPoint;
+                }
+                else
+                {
+                    oldPoint.Clear();                    
+                }                
+                point.Draw();
+            }
+            while (keyPressed.Key != ConsoleKey.Escape);
+        }
+
+        bool IsBarricade()
+        {
+            return (Walls[point.Top, point.Left] !=' ') ? true : false;            
+        }
         void Clear()
         {
             Console.Clear();
@@ -132,6 +174,7 @@ namespace Move
         static void Main(string[] args)
         {
             Map map = new Map();
+            map.StartGame();
             Console.ReadKey();
         }
     }
