@@ -174,12 +174,18 @@ namespace Move
             else if (Walls[point.Top, point.Left] == '$')
             {
                 Bonus.Count++;
+                ShowResult(Bonus.Count);
                 return false;
             }
             else
             {
                 return false;
             }
+        }
+        void ShowResult(int result)
+        {
+            Console.SetCursorPosition(0, 20);
+            Console.WriteLine("Result: " + result);
         }
         void Clear()
         {
@@ -190,7 +196,7 @@ namespace Move
     {
         static void Main(string[] args)
         {
-            Map map = new Map();
+            Map map = new Map();            
             map.StartGame();            
             Console.ReadKey();
         }
