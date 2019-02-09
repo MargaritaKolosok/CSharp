@@ -9,23 +9,21 @@ namespace Move
     class Map
     {
         int width = 20, height = 20;
-        char[,] Walls = new char[20, 20];
+        public char[,] Walls = new char[20, 20];
 
-        int WALL_PERCENTAGE = 50;
-        static char BARRICADE = 'X';
-        static char WALL = '*';
-        static char BONUS = '$';
-        static char POINT = '*';
-
-        Point point = new Point(10, 10, POINT);
+        int WALL_PERCENTAGE = 5;
+        public static char BARRICADE = 'X';
+        public static char WALL = '*';
+        public static char BONUS = '$';
+        public static char POINT = '*';        
 
         public Map()
         {
             Console.CursorVisible = false;
             GenerateBorder();
-            DrawBorder();
-            point.Draw();
+            DrawBorder();            
         }
+
         void Barricade(char point, int left, int top)
         {
             Console.SetCursorPosition(left, top);
@@ -75,80 +73,6 @@ namespace Move
                 Console.WriteLine();
             }
         }
-        public void StartGame()
-        {
-            ConsoleKeyInfo keyPressed = new ConsoleKeyInfo();
-            Point oldPoint = new Point();
-
-            do
-            {
-                keyPressed = Console.ReadKey();
-                oldPoint = point;
-
-                switch (keyPressed.Key)
-                {
-                    case ConsoleKey.UpArrow:
-                        {
-                            point.MoveTop();
-                            break;
-                        }
-                    case ConsoleKey.DownArrow:
-                        {
-                            point.MoveDown();
-                            break;
-                        }
-                    case ConsoleKey.LeftArrow:
-                        {
-                            point.MoveLeft();
-                            break;
-                        }
-                    case ConsoleKey.RightArrow:
-                        {
-                            point.MoveRight();
-                            break;
-                        }
-                    default:
-                        {
-                            break;
-                        }
-                }
-                if (IsBarricade())
-                {
-                    point = oldPoint;
-                }
-                else
-                {
-                    oldPoint.Clear();
-                }
-                point.Draw();
-            }
-            while (keyPressed.Key != ConsoleKey.Escape);
-        }
-        bool IsBarricade()
-        {
-            if (Walls[point.Top, point.Left] == BARRICADE || Walls[point.Top, point.Left] == WALL)
-            {
-                return true;
-            }
-            else if (Walls[point.Top, point.Left] == BONUS)
-            {
-                Bonus.Count++;
-                ShowResult(Bonus.Count);
-                return false;
-            }
-            else
-            {
-                return false;
-            }
-        }
-        void ShowResult(int result)
-        {
-            Console.SetCursorPosition(0, 20);
-            Console.WriteLine("Result: " + result);
-        }
-        void Clear()
-        {
-            Console.Clear();
-        }
+        
     }
 }
