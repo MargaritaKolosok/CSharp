@@ -73,6 +73,23 @@ namespace Move
                 Console.WriteLine();
             }
         }
-        
+        public bool IsBarricade(Point point)
+        {
+            if (Walls[point.Top, point.Left] == Map.BARRICADE || Walls[point.Top, point.Left] == Map.WALL)
+            {
+                return true;
+            }
+            else if (Walls[point.Top, point.Left] == Map.BONUS)
+            {
+                Bonus.Count++;
+                
+                return false;
+            }
+            else
+            {
+                return false;
+            }
+        }
+
     }
 }

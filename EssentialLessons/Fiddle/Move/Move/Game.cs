@@ -49,7 +49,7 @@ namespace Move
                             break;
                         }
                 }
-                if (IsBarricade())
+                if (map.IsBarricade(point))
                 {
                     point = oldPoint;
                 }
@@ -58,27 +58,12 @@ namespace Move
                     oldPoint.Clear();
                 }
                 point.Draw();
+                ShowResult(Bonus.Count);
             }
             while (keyPressed.Key != ConsoleKey.Escape);
         }
 
-        bool IsBarricade()
-        {
-            if (map.Walls[point.Top, point.Left] == Map.BARRICADE || map.Walls[point.Top, point.Left] == Map.WALL)
-            {
-                return true;
-            }
-            else if (map.Walls[point.Top, point.Left] == Map.BONUS)
-            {
-                Bonus.Count++;
-                ShowResult(Bonus.Count);
-                return false;
-            }
-            else
-            {
-                return false;
-            }
-        }
+        
         void ShowResult(int result)
         {
             Console.SetCursorPosition(0, 20);
