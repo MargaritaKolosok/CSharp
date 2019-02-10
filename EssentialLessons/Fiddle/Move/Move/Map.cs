@@ -8,7 +8,7 @@ namespace Move
 {
     class Map
     {
-        int width = 20, height = 20;
+        public static int width = 20, height = 20;
         public char[,] Walls = new char[20, 20];
 
         int WALL_PERCENTAGE = 5;
@@ -61,7 +61,7 @@ namespace Move
                 {
                     Walls[x, y] = ch;
                     counter++;
-                }
+                }                
             }
         }
         void DrawBorder()
