@@ -53,6 +53,17 @@ namespace Move
                 {
                     point = oldPoint;
                 }
+                else if (Bonus.Count == map.BONUS_COUNT)
+                {
+                   // map.GenerateBarricades(Map.EXIT, 1);
+                  //  map.Walls[]
+                    map.Walls[10, 10] = Map.EXIT;
+                   
+                    Point exit = new Point(10,10, Map.EXIT);
+                    exit.Draw();
+                    Bonus.Count = 0;
+                    oldPoint.Clear();
+                }
                 else
                 {
                     oldPoint.Clear();
@@ -62,7 +73,6 @@ namespace Move
             }
             while (keyPressed.Key != ConsoleKey.Escape);
         }
-
         
         void ShowResult(int result)
         {

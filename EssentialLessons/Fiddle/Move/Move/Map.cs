@@ -12,10 +12,12 @@ namespace Move
         public char[,] Walls = new char[20, 20];
 
         int WALL_PERCENTAGE = 5;
+        public int BONUS_COUNT = 10;
         public static char BARRICADE = 'X';
         public static char WALL = '*';
         public static char BONUS = '$';
-        public static char POINT = '*';        
+        public static char POINT = '*';
+        public static char EXIT = 'E';
 
         public Map()
         {
@@ -39,9 +41,9 @@ namespace Move
                 }
             }
             GenerateBarricades(BARRICADE, WALL_PERCENTAGE);
-            GenerateBarricades(BONUS, 10);
+            GenerateBarricades(BONUS, BONUS_COUNT);
         }
-        void GenerateBarricades(char ch, int barricades_count)
+       public void GenerateBarricades(char ch, int barricades_count)
         {
             Random random = new Random();
             int counter = 0;
@@ -82,13 +84,24 @@ namespace Move
             else if (Walls[point.Top, point.Left] == Map.BONUS)
             {
                 Bonus.Count++;
-                
+
+                return false;
+            }
+            else if (Walls[point.Top, point.Left] == Map.EXIT)
+            {
+                Clear();
+                Game game = new Game();
+                game.StartGame();
                 return false;
             }
             else
             {
                 return false;
             }
+        }
+        public void Clear()
+        {
+            Console.Clear();
         }
 
     }
