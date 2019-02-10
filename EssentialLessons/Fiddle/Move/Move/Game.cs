@@ -55,10 +55,8 @@ namespace Move
                 }
                 else if (Bonus.Count == map.BONUS_COUNT)
                 {
-                   // map.GenerateBarricades(Map.EXIT, 1);
-                  //  map.Walls[]
+                   // map.GenerateBarricades(Map.EXIT, 1);                  
                     map.Walls[10, 10] = Map.EXIT;
-                   
                     Point exit = new Point(10,10, Map.EXIT);
                     exit.Draw();
                     Bonus.Count = 0;

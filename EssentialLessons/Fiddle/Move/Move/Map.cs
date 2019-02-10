@@ -99,6 +99,7 @@ namespace Move
                 return false;
             }
         }
+        
         public void Clear()
         {
             Console.Clear();
