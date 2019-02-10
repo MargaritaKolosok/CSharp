@@ -38,10 +38,10 @@ namespace Move
                     Walls[i, j] = (i == 0 || i == width - 1 || j == 0 || j == height - 1) ? POINT : ' ';
                 }
             }
-            GenerateBarricades(BARRICADE);
-            GenerateBarricades(BONUS);
+            GenerateBarricades(BARRICADE, WALL_PERCENTAGE);
+            GenerateBarricades(BONUS, 10);
         }
-        void GenerateBarricades(char ch)
+        void GenerateBarricades(char ch, int barricades_count)
         {
             Random random = new Random();
             int counter = 0;
@@ -51,7 +51,7 @@ namespace Move
                 x = random.Next(0, width);
                 y = random.Next(0, width);
             }
-            while (counter < ((Walls.Length / 100) * WALL_PERCENTAGE))
+            while (counter < barricades_count)
             {
                 Random();
 
