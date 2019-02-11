@@ -21,7 +21,7 @@ namespace Move
 
             do
             {
-                keyPressed = Console.ReadKey();
+                keyPressed = Console.ReadKey(true);
                 oldPoint = point;
 
                 switch (keyPressed.Key)
