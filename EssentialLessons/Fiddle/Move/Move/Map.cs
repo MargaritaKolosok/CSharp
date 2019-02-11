@@ -23,7 +23,8 @@ namespace Move
         {
             Console.CursorVisible = false;
             GenerateBorder();
-            DrawBorder();            
+           
+           // DrawBorder();            
         }
 
         void Barricade(char point, int left, int top)
@@ -38,6 +39,8 @@ namespace Move
                 for (int j = 0; j < height; j++)
                 {
                     Walls[i, j] = (i == 0 || i == width - 1 || j == 0 || j == height - 1) ? POINT : ' ';
+                    char wallBuilder = Walls[i,j];
+                    Barricade(wallBuilder, i, j);
                 }
             }
             GenerateBarricades(BARRICADE, WALL_PERCENTAGE);
@@ -60,21 +63,25 @@ namespace Move
                 if (Walls[x, y] == ' ')
                 {
                     Walls[x, y] = ch;
+                    Barricade(ch, x, y);
                     counter++;
                 }                
             }
         }
-        void DrawBorder()
+      /*  void Border()
         {
             for (int i = 0; i < width; i++)
             {
                 for (int j = 0; j < height; j++)
                 {
                     Console.Write(Walls[i, j]);
+                  
                 }
                 Console.WriteLine();
             }
         }
+        */
+        
         public bool IsBarricade(Point point)
         {
             if (Walls[point.Top, point.Left] == Map.BARRICADE || Walls[point.Top, point.Left] == Map.WALL)
