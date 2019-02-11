@@ -15,8 +15,7 @@ namespace Move
         public void StartGame()
         {
             point.Draw();
-            Bonus.Count = 0;
-
+           
             ConsoleKeyInfo keyPressed = new ConsoleKeyInfo();
             Point oldPoint = new Point();
 
