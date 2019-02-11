@@ -77,12 +77,12 @@ namespace Move
             else if (Walls[point.Top, point.Left] == Map.BONUS)
             {
                 Bonus.Count++;
-
+                Walls[point.Top, point.Left] = ' ';
                 return false;
             }
             else if (Walls[point.Top, point.Left] == Map.EXIT)
             {
-                Clear();
+                Clear();                
                 Game game = new Game();
                 game.StartGame();
                 return false;
@@ -96,6 +96,5 @@ namespace Move
         {
             Console.Clear();
         }
-
     }
 }

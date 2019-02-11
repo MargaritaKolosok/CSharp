@@ -15,7 +15,7 @@ namespace Move
         public void StartGame()
         {
             point.Draw();
-            bonus.Count = 0;
+            Bonus.Count = 0;
 
             ConsoleKeyInfo keyPressed = new ConsoleKeyInfo();
             Point oldPoint = new Point();
@@ -56,10 +56,10 @@ namespace Move
                 {
                     point = oldPoint;
                 }
-                else if (bonus.Count == map.BONUS_COUNT)
+                else if (Bonus.Count == map.BONUS_COUNT)
                 {
                     map.GenerateBarricades(Map.EXIT, 1);
-                    bonus.Count = 0;
+                    Bonus.Count = 0;                    
                     oldPoint.Clear();
                 }
                 else
@@ -67,7 +67,7 @@ namespace Move
                     oldPoint.Clear();
                 }
                 point.Draw();
-                ShowResult(bonus.Count);
+                ShowResult(Bonus.Count);
             }
             while (keyPressed.Key != ConsoleKey.Escape);
         }
@@ -76,6 +76,6 @@ namespace Move
         {
             Console.SetCursorPosition(0, Map.width);
             Console.WriteLine("Result: " + result);
-        }
+        }        
     }
 }
