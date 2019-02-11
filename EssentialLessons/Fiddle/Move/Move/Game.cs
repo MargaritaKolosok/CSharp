@@ -10,10 +10,13 @@ namespace Move
     {        
         Point point = new Point(10, 10, Map.POINT);
         Map map = new Map();
+        Bonus bonus = new Bonus();        
 
         public void StartGame()
         {
             point.Draw();
+            bonus.Count = 0;
+
             ConsoleKeyInfo keyPressed = new ConsoleKeyInfo();
             Point oldPoint = new Point();
 
@@ -53,13 +56,10 @@ namespace Move
                 {
                     point = oldPoint;
                 }
-                else if (Bonus.Count == map.BONUS_COUNT)
+                else if (bonus.Count == map.BONUS_COUNT)
                 {
-                   // map.GenerateBarricades(Map.EXIT, 1);                  
-                    map.Walls[10, 10] = Map.EXIT;
-                    Point exit = new Point(10,10, Map.EXIT);
-                    exit.Draw();
-                    Bonus.Count = 0;
+                    map.GenerateBarricades(Map.EXIT, 1);
+                    bonus.Count = 0;
                     oldPoint.Clear();
                 }
                 else
@@ -67,14 +67,14 @@ namespace Move
                     oldPoint.Clear();
                 }
                 point.Draw();
-                ShowResult(Bonus.Count);
+                ShowResult(bonus.Count);
             }
             while (keyPressed.Key != ConsoleKey.Escape);
         }
         
         void ShowResult(int result)
         {
-            Console.SetCursorPosition(0, 20);
+            Console.SetCursorPosition(0, Map.width);
             Console.WriteLine("Result: " + result);
         }
     }

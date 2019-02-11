@@ -6,8 +6,8 @@ using System.Threading.Tasks;
 
 namespace Move
 {
-    static class Bonus
+    class Bonus
     {
-        public static int Count { get; set; }
+        public int Count { get; set; }
     }
 }

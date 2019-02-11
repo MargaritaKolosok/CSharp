@@ -23,24 +23,23 @@ namespace Move
         {
             Console.CursorVisible = false;
             GenerateBorder();
-           
-           // DrawBorder();            
         }
 
-        void Barricade(char point, int left, int top)
+        void DrawBarricade(char point, int left, int top)
         {
             Console.SetCursorPosition(left, top);
             Console.Write(point);
         }
+
         void GenerateBorder()
         {
-            for (int i = 0; i < width; i++)
+            for (int top = 0; top < width; top++)
             {
-                for (int j = 0; j < height; j++)
+                for (int left = 0; left < height; left++)
                 {
-                    Walls[i, j] = (i == 0 || i == width - 1 || j == 0 || j == height - 1) ? POINT : ' ';
-                    char wallBuilder = Walls[i,j];
-                    Barricade(wallBuilder, i, j);
+                    Walls[top, left] = (top == 0 || top == width - 1 || left == 0 || left == height - 1) ? POINT : ' ';
+                    char wallBuilder = Walls[top, left];
+                    DrawBarricade(wallBuilder, left, top);
                 }
             }
             GenerateBarricades(BARRICADE, WALL_PERCENTAGE);
@@ -50,38 +49,25 @@ namespace Move
         {
             Random random = new Random();
             int counter = 0;
-            int x, y;
+            int top, left;
             void Random()
             {
-                x = random.Next(0, width);
-                y = random.Next(0, width);
+                left = random.Next(0, width);
+                top = random.Next(0, width);                
             }
             while (counter < barricades_count)
             {
                 Random();
 
-                if (Walls[x, y] == ' ')
+                if (Walls[top, left] == ' ')
                 {
-                    Walls[x, y] = ch;
-                    Barricade(ch, x, y);
+                    Walls[top, left] = ch;
+                    DrawBarricade(ch, left, top);
                     counter++;
                 }                
             }
         }
-      /*  void Border()
-        {
-            for (int i = 0; i < width; i++)
-            {
-                for (int j = 0; j < height; j++)
-                {
-                    Console.Write(Walls[i, j]);
-                  
-                }
-                Console.WriteLine();
-            }
-        }
-        */
-        
+      
         public bool IsBarricade(Point point)
         {
             if (Walls[point.Top, point.Left] == Map.BARRICADE || Walls[point.Top, point.Left] == Map.WALL)
@@ -105,8 +91,7 @@ namespace Move
             {
                 return false;
             }
-        }
-        
+        }        
         public void Clear()
         {
             Console.Clear();
