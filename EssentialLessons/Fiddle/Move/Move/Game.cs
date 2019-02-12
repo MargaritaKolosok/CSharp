@@ -10,6 +10,7 @@ namespace Move
     {        
         Point point = new Point(10, 10, Map.POINT);
         Map map = new Map();
+        
         Bonus bonus = new Bonus();        
 
         public void StartGame()

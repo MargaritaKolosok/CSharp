@@ -11,7 +11,11 @@ namespace Move
         static void Main(string[] args)
         {
             Game game = new Game();
-            game.StartGame();            
+            game.StartGame();
+
+            Console.WriteLine();
+            MapFromFile mapp = new MapFromFile();
+            mapp.Show();
             Console.ReadKey();
         }
     }
