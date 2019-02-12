@@ -11,7 +11,7 @@ namespace Move
         public static int Count { get; set; }
         public Bonus()
             {
-             Count = 0;
+                Count = 0;
             }
     }
 }
