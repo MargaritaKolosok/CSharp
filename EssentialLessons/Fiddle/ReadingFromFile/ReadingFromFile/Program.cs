@@ -28,7 +28,7 @@ namespace ReadingFromFile
     {       
         static void Main(string[] args)
         {
-            string text = System.IO.File.ReadAllText(@"C:\TestFolder\test.txt");
+            string text = System.IO.File.ReadAllText(@"C:\TestFolder\episode1.txt");
             text.ToCharArray();
             for (int i=0; i<text.Length; i++)
             {
@@ -36,7 +36,7 @@ namespace ReadingFromFile
             }
 
             Console.WriteLine("Count:");
-            Console.WriteLine(F.CountLines(@"C:\TestFolder\test.txt"));
+            Console.WriteLine(F.CountLines(@"C:\TestFolder\episode1.txt"));
             Console.Read();
         }
     }
