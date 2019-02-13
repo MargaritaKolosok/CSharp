@@ -10,26 +10,36 @@ namespace Move
 {
     class MapFromFile
     {
-       // public int BONUS_COUNT;
+        public int BONUS_COUNT = 0;
         public static char BARRICADE = 'X';
         public static char WALL = '*';
         public static char BONUS = '$';
         public static char POINT = '*';
         public static char EXIT = 'E';
+                
+        string level;
 
-        static string exePath = System.IO.Path.GetDirectoryName(System.Reflection.Assembly.GetExecutingAssembly().Location);
-        string Level1 = System.IO.Path.Combine(exePath, "../../levels/Level1.txt");
-
-        public MapFromFile()
+        public MapFromFile(string level)
         {
-            
+            this.level = level;
         }
         public void Show()
         {
-            foreach (string line in File.ReadLines(Level1))
+            foreach (string line in File.ReadLines(level))
             {
                 Console.WriteLine(line);
             }
+        }
+       public int CountLines()
+        {
+            int count = 0;
+
+                foreach (string line in File.ReadLines(level))
+                {
+                    ++count;
+                }
+            return count;
+            
         }
     }
 }
