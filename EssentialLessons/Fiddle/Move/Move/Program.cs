@@ -21,8 +21,15 @@ namespace Move
             MapFromFile mapp = new MapFromFile(Level1);
             // mapp.Show();
             //mapp.FileToArray();
-            
-            
+            for (int i = 0; i < mapp.Walls.GetLength(0); i++)
+            {
+                for (int j = 0; j < mapp.Walls.GetLength(1); j++)
+                {
+                    Console.Write(mapp.Walls[i,j]);
+                }
+                Console.WriteLine();
+            }
+
             Console.WriteLine();
             Console.ReadKey();
         }

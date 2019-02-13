@@ -29,7 +29,7 @@ namespace Move
             CountLines();
             Walls = new char[width, height];
             ArrayFromFile();
-            DrawMap();
+           // DrawMap();
         }
         public void Show()
         {
@@ -57,12 +57,17 @@ namespace Move
             for (int i = 0; i < Walls.GetLength(0); i++)
             {
                 foreach (string line in File.ReadLines(level))
-                {
-                    string temp = line;
-                    temp.ToCharArray();
-                    for (int j = 0; j < temp.Length; j++)
+                {                   
+                    
+                    for (int j = 0; j < line.Length; j++)
                     {
-                        Walls[i, j] = temp[j];                        
+                        string temp = line;
+                        char[] tempArray = temp.ToCharArray();
+                        for (int z=0; z < tempArray.Length; z++)
+                        {
+                            Walls[i, j] = tempArray[z];
+                        }
+                                              
                     }
                 }
                 Console.WriteLine();
