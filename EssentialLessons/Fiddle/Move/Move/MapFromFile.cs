@@ -28,6 +28,8 @@ namespace Move
             this.level = level;
             CountLines();
             Walls = new char[width, height];
+            ArrayFromFile();
+            DrawMap();
         }
         public void Show()
         {
@@ -43,17 +45,16 @@ namespace Move
                 foreach (string line in File.ReadLines(level))
                 {
                 ++count;
-                width = line.Length;
+                height = line.Length;
                 }
 
-            height = count;
+            width = count;
             
         }
         
         void ArrayFromFile()
-        {
-            
-            for (int i = 0; i < Walls.Length; i++)
+        {            
+            for (int i = 0; i < Walls.GetLength(0); i++)
             {
                 foreach (string line in File.ReadLines(level))
                 {
@@ -64,6 +65,19 @@ namespace Move
                         Walls[i, j] = temp[j];                        
                     }
                 }
+                Console.WriteLine();
+            }
+        }
+
+        void DrawMap()
+        {
+            for (int i = 0; i < Walls.GetLength(0); i++)
+            {
+                for (int j=0; j < Walls.GetLength(1); j++)
+                {
+                    DrawBarricade(Walls[i, j], j, i);
+                }
+                Console.WriteLine();
             }
         }
 

@@ -17,22 +17,11 @@ namespace Move
             string Level1 = System.IO.Path.Combine(exePath, "../../levels/Level1.txt");
 
 
-            Console.WriteLine();
+           // Console.WriteLine();
             MapFromFile mapp = new MapFromFile(Level1);
             // mapp.Show();
             //mapp.FileToArray();
-
-            int rowLength = mapp.Walls.GetLength(0);
-            int colLength = mapp.Walls.GetLength(1);
-
-            for (int i=0; i< rowLength; i++)
-            {
-                for (int j =0; j<colLength; j++)
-                {
-                    Console.Write(mapp.Walls[i,j]);
-                }
-                Console.WriteLine();
-            }
+            
             
             Console.WriteLine();
             Console.ReadKey();
