@@ -29,7 +29,7 @@ namespace Move
             CountLines();
             Walls = new char[width, height];
             ArrayFromFile();
-           // DrawMap();
+            DrawMap();
         }
         public void Show()
         {
@@ -42,35 +42,36 @@ namespace Move
         {
             int count = 0;
             
-                foreach (string line in File.ReadLines(level))
-                {
+            foreach (string line in File.ReadLines(level))
+            {
                 ++count;
                 height = line.Length;
-                }
+            }
 
-            width = count;
-            
+            width = count;            
         }
         
         void ArrayFromFile()
-        {            
-            for (int i = 0; i < Walls.GetLength(0); i++)
+        {
+            string[] STRArray = new string[height];
+            List<string> STRList = new List<string>();
+
+            foreach (string line in File.ReadLines(level))
             {
-                foreach (string line in File.ReadLines(level))
-                {                   
-                    
-                    for (int j = 0; j < line.Length; j++)
-                    {
-                        string temp = line;
-                        char[] tempArray = temp.ToCharArray();
-                        for (int z=0; z < tempArray.Length; z++)
-                        {
-                            Walls[i, j] = tempArray[z];
-                        }
-                                              
-                    }
-                }
-                Console.WriteLine();
+                STRList.Add(line);
+            }
+
+            STRArray = STRList.ToArray();
+
+            for (int top = 0; top < width; top++)
+            {
+               string temp = STRArray[top];
+               char[] tempArray = temp.ToCharArray();
+
+               for (int left = 0; left < height; left++)
+               {
+                  Walls[top, left] = tempArray[left];                      
+               }                
             }
         }
 
