@@ -17,8 +17,8 @@ namespace Move
         public static char POINT = '*';
         public static char EXIT = 'E';
 
-        static string path = System.IO.Path.GetDirectoryName(System.Reflection.Assembly.GetExecutingAssembly().Location);
-        string dataPath = System.IO.Path.Combine(path, "../..//episodes/episode1.txt");
+        static string exePath = System.IO.Path.GetDirectoryName(System.Reflection.Assembly.GetExecutingAssembly().Location);
+        string Level1 = System.IO.Path.Combine(exePath, "../../levels/Level1.txt");
 
         public MapFromFile()
         {
@@ -26,7 +26,7 @@ namespace Move
         }
         public void Show()
         {
-            foreach (string line in File.ReadLines(dataPath))
+            foreach (string line in File.ReadLines(Level1))
             {
                 Console.WriteLine(line);
             }
