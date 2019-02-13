@@ -18,10 +18,16 @@ namespace Move
         public static char EXIT = 'E';
                 
         string level;
+        public char[,] Walls;
+
+        int width;
+        int height;
 
         public MapFromFile(string level)
         {
             this.level = level;
+            CountLines();
+            Walls = new char[width, height];
         }
         public void Show()
         {
@@ -30,16 +36,43 @@ namespace Move
                 Console.WriteLine(line);
             }
         }
-       public int CountLines()
+      void CountLines()
         {
             int count = 0;
-
+            
                 foreach (string line in File.ReadLines(level))
                 {
-                    ++count;
+                ++count;
+                width = line.Length;
                 }
-            return count;
+
+            height = count;
             
         }
+        
+        void ArrayFromFile()
+        {
+            
+            for (int i = 0; i < Walls.Length; i++)
+            {
+                foreach (string line in File.ReadLines(level))
+                {
+                    string temp = line;
+                    temp.ToCharArray();
+                    for (int j = 0; j < temp.Length; j++)
+                    {
+                        Walls[i, j] = temp[j];                        
+                    }
+                }
+            }
+        }
+
+        void DrawBarricade(char point, int left, int top)
+        {
+            Console.SetCursorPosition(left, top);
+            Console.Write(point);
+        }
+
+
     }
 }
