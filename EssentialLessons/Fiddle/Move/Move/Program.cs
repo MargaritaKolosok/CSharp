@@ -10,8 +10,8 @@ namespace Move
     {
         static void Main(string[] args)
         {
-            Game game = new Game();
-            game.StartGame();
+           // Game game = new Game();
+           // game.StartGame();
 
             Console.WriteLine();
             MapFromFile mapp = new MapFromFile();
