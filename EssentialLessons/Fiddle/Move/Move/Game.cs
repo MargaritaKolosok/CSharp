@@ -7,9 +7,17 @@ using System.Threading.Tasks;
 namespace Move
 {
     class Game
-    {        
-        Point point = new Point(10, 10, Map.POINT);
-        Map map = new Map();
+    {
+        static string level;
+
+        public Game(string _level)
+        {
+            level = _level;
+        }
+        Point point = new Point(10, 10, MapFromFile.POINT);
+       
+        // Map map = new Map();
+        MapFromFile map = new MapFromFile(level);
         
         Bonus bonus = new Bonus();        
 
@@ -58,7 +66,7 @@ namespace Move
                 }
                 else if (Bonus.Count == map.BONUS_COUNT)
                 {
-                    map.GenerateBarricades(Map.EXIT, 1);
+                    map.GenerateBarricades(MapFromFile.EXIT, 1);
                     Bonus.Count = 0;                    
                     oldPoint.Clear();
                 }

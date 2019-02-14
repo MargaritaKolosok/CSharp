@@ -10,13 +10,14 @@ namespace Move
 {
     class MapFromFile
     {
-        public int BONUS_COUNT = 0;
+        //int WALL_PERCENTAGE = 5;
+        public int BONUS_COUNT = 10;
         public static char BARRICADE = 'X';
         public static char WALL = '*';
         public static char BONUS = '$';
         public static char POINT = '*';
         public static char EXIT = 'E';
-                
+
         string level;
         public char[,] Walls;
 
@@ -29,15 +30,9 @@ namespace Move
             CountLines();
             Walls = new char[width, height];
             ArrayFromFile();
-            DrawMap();
+            //DrawMap();
         }
-        public void Show()
-        {
-            foreach (string line in File.ReadLines(level))
-            {
-                Console.WriteLine(line);
-            }
-        }
+       
       void CountLines()
         {
             int count = 0;
@@ -75,22 +70,60 @@ namespace Move
             }
         }
 
-        void DrawMap()
-        {
-            for (int i = 0; i < Walls.GetLength(0); i++)
-            {
-                for (int j=0; j < Walls.GetLength(1); j++)
-                {
-                    DrawBarricade(Walls[i, j], j, i);
-                }
-                Console.WriteLine();
-            }
-        }
-
         void DrawBarricade(char point, int left, int top)
         {
             Console.SetCursorPosition(left, top);
             Console.Write(point);
+        }
+        public bool IsBarricade(Point point)
+        {
+            if (Walls[point.Top, point.Left] == Map.BARRICADE || Walls[point.Top, point.Left] == Map.WALL)
+            {
+                return true;
+            }
+            else if (Walls[point.Top, point.Left] == Map.BONUS)
+            {
+                Bonus.Count++;
+                Walls[point.Top, point.Left] = ' ';
+                return false;
+            }
+            else if (Walls[point.Top, point.Left] == Map.EXIT)
+            {
+                Clear();
+                Game game = new Game(level);
+                game.StartGame();
+                return false;
+            }
+            else
+            {
+                return false;
+            }
+        }
+        public void Clear()
+        {
+            Console.Clear();
+        }
+        public void GenerateBarricades(char ch, int barricades_count)
+        {
+            Random random = new Random();
+            int counter = 0;
+            int top, left;
+            void Random()
+            {
+                left = random.Next(0, width);
+                top = random.Next(0, width);
+            }
+            while (counter < barricades_count)
+            {
+                Random();
+
+                if (Walls[top, left] == ' ')
+                {
+                    Walls[top, left] = ch;
+                    DrawBarricade(ch, left, top);
+                    counter++;
+                }
+            }
         }
 
 
