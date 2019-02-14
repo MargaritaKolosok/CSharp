@@ -10,9 +10,13 @@ namespace Move
     {
         static string level;
 
-        public Game(string _level)
+        public Game(string l)
         {
-            level = _level;
+            level = l;
+        }
+        public Game()
+        {
+
         }
         Point point = new Point(10, 10, MapFromFile.POINT);
        
