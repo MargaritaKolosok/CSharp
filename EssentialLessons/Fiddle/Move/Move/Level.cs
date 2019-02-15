@@ -13,16 +13,15 @@ namespace Move
         static string LevelsFolder = System.IO.Path.Combine(exePath, "../../levels/");
 
         public static string[] Levels;
-        
-        public string this[int index]
-        {
-            get { return Levels[index]; }            
-        }
-      public static void GetAllFiles()
+        public static int LevelsCount;
+
+        public static void GetAllFiles()
         {
             string[] myFiles = Directory.GetFiles(LevelsFolder);
             Levels = new string[myFiles.Length];
-            Levels = myFiles;            
+            Levels = myFiles;
+            LevelsCount = Levels.Length;
         }
+      
     }
 }

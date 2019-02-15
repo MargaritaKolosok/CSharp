@@ -8,13 +8,8 @@ namespace Move
 {
     class Game
     {
-       public static int LevelNum = 0;
-        
-        public Game()
-        {
-           
-        }
-                
+        public static int LevelNum = 0;  
+
         Point point = new Point(10,10, MapFromFile.POINT);
               
         MapFromFile map = new MapFromFile(Level.Levels[LevelNum]);
@@ -67,9 +62,9 @@ namespace Move
                 else if (Bonus.Count == map.BONUS_COUNT)
                 {
                     map.GenerateBarricades(MapFromFile.EXIT, 1);
-                    Bonus.Count = 0;                    
+                    Bonus.Count = 0;
                     oldPoint.Clear();
-                }
+                }                
                 else
                 {
                     oldPoint.Clear();
@@ -83,7 +78,7 @@ namespace Move
         void ShowResult(int result)
         {
             Console.SetCursorPosition(0, MapFromFile.width);
-            Console.WriteLine("Result: " + result);
+            Console.WriteLine("Result: " + result + " ");
         }        
     }
 }
