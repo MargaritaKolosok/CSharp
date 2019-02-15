@@ -10,17 +10,16 @@ using System.IO;
     static string exePath = System.IO.Path.GetDirectoryName(System.Reflection.Assembly.GetExecutingAssembly().Location);
     static string LevelsFolder = System.IO.Path.Combine(exePath, "../../levels");
 
+    public static string[] myFiles;
+
     public static void GetAllFiles()
     {
-        string[] myFiles = Directory.GetFiles(LevelsFolder);
-        //  foreach (string file in myFiles)
-        //  {
-        //      Console.WriteLine(file);
-        //  }
-        for (int i=0; i< myFiles.Length; i++)
-        {
-            Console.WriteLine(myFiles[i]);
-        }
+        myFiles = Directory.GetFiles(LevelsFolder);
+        
+      //  for (int i=0; i< myFiles.Length; i++)
+      //  {
+       //     Console.WriteLine(myFiles[i]);
+       // }
     }
     }
 
@@ -30,6 +29,7 @@ using System.IO;
         {
         //X x = new X();
         X.GetAllFiles();
+        Console.WriteLine(X.myFiles[1]);
            
 
             Console.ReadKey();

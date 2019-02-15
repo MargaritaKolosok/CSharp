@@ -11,20 +11,18 @@ namespace Move
     {
         static string exePath = System.IO.Path.GetDirectoryName(System.Reflection.Assembly.GetExecutingAssembly().Location);
         static string LevelsFolder = System.IO.Path.Combine(exePath, "../../levels/");
-        string[] Levels = new string[10];
 
-        public Level()
-        {
-            Levels = GetAllFiles();
-        }
+        public static string[] Levels;
+        
         public string this[int index]
         {
             get { return Levels[index]; }            
         }
-      public static string[] GetAllFiles()
+      public static void GetAllFiles()
         {
             string[] myFiles = Directory.GetFiles(LevelsFolder);
-            return myFiles;
+            Levels = new string[myFiles.Length];
+            Levels = myFiles;            
         }
     }
 }

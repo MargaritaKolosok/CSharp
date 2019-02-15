@@ -102,6 +102,7 @@ namespace Move
             else if (Walls[point.Top, point.Left] == MapFromFile.EXIT)
             {
                 Clear();
+                Game.LevelNum++;
                 Game game = new Game();
                 game.StartGame();
                 return false;

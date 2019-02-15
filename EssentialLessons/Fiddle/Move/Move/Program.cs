@@ -10,7 +10,8 @@ namespace Move
     {
         static void Main(string[] args)
         {
-            
+            Level level = new Level();
+            Level.GetAllFiles();
            
             Game game = new Game();
             game.StartGame();
