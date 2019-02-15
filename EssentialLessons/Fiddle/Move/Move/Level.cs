@@ -9,16 +9,28 @@ namespace Move
 {
     class Level
     {
-       List<string> LevelsCollection;
-       
+        int levelNum = 0;
+        List<string> fileEntries= new List<string>();
 
-        public void GetLevels()
+        public Level()
         {
-         //   foreach (string file in Directory.EnumerateFiles() )
-         //   {
+            GetLevels();
+            
+            Level.Path = fileEntries[levelNum];
+            levelNum++;
+        }
 
+        static string exePath = System.IO.Path.GetDirectoryName(System.Reflection.Assembly.GetExecutingAssembly().Location);
+        static string LevelsFolder = System.IO.Path.Combine(exePath, "../../levels/");
 
-        //    }
+        void GetLevels()
+        {
+            string[] files = Directory.GetFiles(LevelsFolder);
+
+            foreach(string file in files)
+            {
+                fileEntries.Add(file);
+            }           
         }
 
         public static string Path

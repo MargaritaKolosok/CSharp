@@ -8,6 +8,7 @@ namespace Move
 {
     class Game
     {
+       // Level l = new Level();
         static string level = Level.Path;
         
         Point point = new Point(10,10, MapFromFile.POINT);
