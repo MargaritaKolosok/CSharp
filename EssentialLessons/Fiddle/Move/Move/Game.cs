@@ -8,19 +8,10 @@ namespace Move
 {
     class Game
     {
-        static string level;
-
-        public Game(string l)
-        {
-            level = l;
-        }
-        public Game()
-        {
-
-        }
+        static string level = Level.Path;
+        
         Point point = new Point(10, 10, MapFromFile.POINT);
-       
-        // Map map = new Map();
+      
         MapFromFile map = new MapFromFile(level);
         
         Bonus bonus = new Bonus();        
@@ -86,7 +77,7 @@ namespace Move
         
         void ShowResult(int result)
         {
-            Console.SetCursorPosition(0, Map.width);
+            Console.SetCursorPosition(0, MapFromFile.width);
             Console.WriteLine("Result: " + result);
         }        
     }

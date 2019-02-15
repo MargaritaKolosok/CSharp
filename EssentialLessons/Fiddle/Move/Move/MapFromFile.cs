@@ -21,8 +21,7 @@ namespace Move
         string level;
         public char[,] Walls;
 
-        int width;
-        int height;
+        public static int width, height;
 
         public MapFromFile(string level)
         {
@@ -30,7 +29,7 @@ namespace Move
             CountLines();
             Walls = new char[width, height];
             ArrayFromFile();
-            //DrawMap();
+            DrawMap();
         }
        
       void CountLines()
@@ -90,7 +89,7 @@ namespace Move
             else if (Walls[point.Top, point.Left] == Map.EXIT)
             {
                 Clear();
-                Game game = new Game(level);
+                Game game = new Game();
                 game.StartGame();
                 return false;
             }
@@ -125,7 +124,16 @@ namespace Move
                 }
             }
         }
-
-
+        void DrawMap()
+        {
+            for (int top = 0; top< width; top++)
+            {
+                for (int left=0; left<height; left++)
+                {
+                    DrawBarricade(Walls[top, left], left, top );
+                }
+                Console.WriteLine();
+            }
+        }
     }
 }

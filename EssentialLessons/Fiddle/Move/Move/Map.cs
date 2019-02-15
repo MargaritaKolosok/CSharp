@@ -10,6 +10,7 @@ namespace Move
     {
         public static int width = 20, height = 20;
         public char[,] Walls = new char[20, 20];
+        string level;
 
         int WALL_PERCENTAGE = 5;
         public int BONUS_COUNT = 10;

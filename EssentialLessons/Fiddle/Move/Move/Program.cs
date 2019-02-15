@@ -11,18 +11,13 @@ namespace Move
         static void Main(string[] args)
         {
             string exePath = System.IO.Path.GetDirectoryName(System.Reflection.Assembly.GetExecutingAssembly().Location);
-            string Level1 = System.IO.Path.Combine(exePath, "../../levels/Level1.txt");
+            string l1 = System.IO.Path.Combine(exePath, "../../levels/Level1.txt");
 
-            Game game = new Game(Level1);
+            Level.Path = l1;
+            
+            Game game = new Game();
             game.StartGame();
-
-            // Console.WriteLine();
-            //MapFromFile mapp = new MapFromFile(Level1);
-            // mapp.Show();
-            //mapp.FileToArray();
-
-
-            Console.WriteLine();
+            
             Console.ReadKey();
         }
     }
