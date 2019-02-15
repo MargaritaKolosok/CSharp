@@ -139,9 +139,9 @@ namespace Move
         }
         void DrawMap()
         {
-            for (int top = 0; top< width; top++)
+            for (int top = 0; top < width; top++)
             {
-                for (int left=0; left<height; left++)
+                for (int left=0; left < height; left++)
                 {
                     DrawBarricade(Walls[top, left], left, top );
                 }

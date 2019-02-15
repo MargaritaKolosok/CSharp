@@ -8,9 +8,23 @@ namespace Move
 {
     class Game
     {
-       // Level l = new Level();
-        static string level = Level.Path;
-        
+        Level _level = new Level();
+       // static int LevelNum = 0;
+        static string level;
+        static int num = 0;
+
+        string[] Levels;
+
+        public Game()
+        {
+            Levels = Level.GetAllFiles();
+            foreach (string file in Levels)
+            {
+                Console.WriteLine(file);
+            }
+            level = Levels[num];
+        }
+                
         Point point = new Point(10,10, MapFromFile.POINT);
               
         MapFromFile map = new MapFromFile(level);
