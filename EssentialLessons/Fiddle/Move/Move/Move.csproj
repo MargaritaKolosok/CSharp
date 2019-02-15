@@ -45,7 +45,6 @@
     <Compile Include="Bonus.cs" />
     <Compile Include="Game.cs" />
     <Compile Include="Level.cs" />
-    <Compile Include="Map.cs" />
     <Compile Include="MapFromFile.cs" />
     <Compile Include="Point.cs" />
     <Compile Include="Program.cs" />

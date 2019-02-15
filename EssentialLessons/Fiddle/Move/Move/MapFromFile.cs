@@ -9,9 +9,8 @@ using System.IO;
 namespace Move
 {
     class MapFromFile
-    {
-        //int WALL_PERCENTAGE = 5;
-        public int BONUS_COUNT = 10;
+    {       
+        public int BONUS_COUNT;
         public static char BARRICADE = 'X';
         public static char WALL = '*';
         public static char BONUS = '$';
@@ -29,6 +28,7 @@ namespace Move
             CountLines();
             Walls = new char[width, height];
             ArrayFromFile();
+            BONUS_COUNT = CountBonus();
             DrawMap();
         }
        
@@ -44,7 +44,20 @@ namespace Move
 
             width = count;            
         }
-        
+
+        int CountBonus()
+        {
+            int count = 0;
+            foreach (char point in Walls)
+            {
+                if(point == BONUS)
+                {
+                    count++;
+                }
+            }
+            return count;
+        }
+
         void ArrayFromFile()
         {
             string[] STRArray = new string[height];
@@ -76,17 +89,17 @@ namespace Move
         }
         public bool IsBarricade(Point point)
         {
-            if (Walls[point.Top, point.Left] == Map.BARRICADE || Walls[point.Top, point.Left] == Map.WALL)
+            if (Walls[point.Top, point.Left] == MapFromFile.BARRICADE || Walls[point.Top, point.Left] == MapFromFile.WALL)
             {
                 return true;
             }
-            else if (Walls[point.Top, point.Left] == Map.BONUS)
+            else if (Walls[point.Top, point.Left] == MapFromFile.BONUS)
             {
                 Bonus.Count++;
                 Walls[point.Top, point.Left] = ' ';
                 return false;
             }
-            else if (Walls[point.Top, point.Left] == Map.EXIT)
+            else if (Walls[point.Top, point.Left] == MapFromFile.EXIT)
             {
                 Clear();
                 Game game = new Game();

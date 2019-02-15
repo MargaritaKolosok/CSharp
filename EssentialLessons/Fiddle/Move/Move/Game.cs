@@ -10,8 +10,8 @@ namespace Move
     {
         static string level = Level.Path;
         
-        Point point = new Point(10, 10, MapFromFile.POINT);
-      
+        Point point = new Point(10,10, MapFromFile.POINT);
+              
         MapFromFile map = new MapFromFile(level);
         
         Bonus bonus = new Bonus();        
