@@ -15,7 +15,7 @@ namespace Move
         public static char WALL = '*';
         public static char BONUS = '$';
         public static char POINT = '*';
-        public static char EXIT = 'E';
+        public static char EXIT = '\u2500';
 
         string level;
         public char[,] Walls;
