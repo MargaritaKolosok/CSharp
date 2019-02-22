@@ -29,6 +29,7 @@ namespace ThreadTask_1
                 Console.WriteLine("Main Thread");
                 Thread.Sleep(400);
             }
+
             Console.ReadLine();
         }
     }
