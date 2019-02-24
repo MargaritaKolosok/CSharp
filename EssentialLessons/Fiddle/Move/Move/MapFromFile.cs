@@ -17,8 +17,11 @@ namespace Move
         public static char POINT = '*';
         public static char EXIT = 'E';
 
+        public static char GRAFIC_BARRICADE = '\u2580';
+      
         string level;
         public char[,] Walls;
+        public char[,] GraficWalls;
 
         public static int width, height;
 
@@ -26,10 +29,12 @@ namespace Move
         {
             this.level = level;
             CountLines();
-            Walls = new char[width, height];            
+            Walls = new char[width, height];
+            GraficWalls = new char[width, height];
             ArrayFromFile();
             BONUS_COUNT = CountBonus();
-            DrawMap();
+            ConvertToGraficWalls(Walls);
+            DrawMap(GraficWalls);
         }
        
       void CountLines()
@@ -77,8 +82,22 @@ namespace Move
 
                for (int left = 0; left < height; left++)
                {
-                  Walls[top, left] = tempArray[left];                      
+                  Walls[top, left] = tempArray[left];                
                }                
+            }
+        }
+
+        void ConvertToGraficWalls(char[,] Walls)
+        {
+            for (int top = 0; top < width; top++)
+            {
+                for (int left = 0; left < height; left++)
+                {
+                    if (Walls[top, left] == BARRICADE)
+                    {
+                        GraficWalls[top, left] = GRAFIC_BARRICADE;
+                    }
+                }
             }
         }
 
@@ -116,6 +135,7 @@ namespace Move
         {
             Console.Clear();
         }
+
         public void GenerateBarricades(char ch, int barricades_count)
         {
             Random random = new Random();
@@ -138,7 +158,7 @@ namespace Move
                 }
             }
         }
-        void DrawMap()
+        void DrawMap(char[,] Walls)
         {
             for (int top = 0; top < width; top++)
             {
