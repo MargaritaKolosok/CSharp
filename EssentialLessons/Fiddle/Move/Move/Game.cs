@@ -10,7 +10,7 @@ namespace Move
     {
         public static int LevelNum = 0;  
 
-        Point point = new Point(10,10, MapFromFile.POINT);
+        Point point = new Point(10,10, Grafic.POINT);
               
         MapFromFile map = new MapFromFile(Level.Levels[LevelNum]);
         
@@ -61,7 +61,8 @@ namespace Move
                 }
                 else if (Bonus.Count == map.BONUS_COUNT)
                 {
-                    map.GenerateBarricades(MapFromFile.EXIT, 1);
+                    Grafic.GRAFIC_EXIT exit;
+                    map.GenerateBarricades(exit, 1);
                     Bonus.Count = 0;
                     oldPoint.Clear();
                 }                

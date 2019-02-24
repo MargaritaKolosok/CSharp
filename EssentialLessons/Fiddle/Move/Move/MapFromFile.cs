@@ -11,13 +11,7 @@ namespace Move
     class MapFromFile
     {
         public int BONUS_COUNT;
-        public static char BARRICADE = 'X';
-        public static char WALL = '*';
-        public static char BONUS = '$';
-        public static char POINT = '*';
-        public static char EXIT = 'E';
-
-        public static char GRAFIC_BARRICADE = '\u2580';
+        
         public Dictionary<string, string> ConsoleColor = new Dictionary<string, string>
         {
             ["WALL"] = "Green"
@@ -27,6 +21,9 @@ namespace Move
         public char[,] Walls;
         public char[,] GraficWalls;
 
+        public IGraficPoint[,] GraficArray;
+
+
         public static int width, height;
 
         public MapFromFile(string level)
@@ -35,10 +32,13 @@ namespace Move
             CountLines();
             Walls = new char[width, height];
             GraficWalls = new char[width, height];
+
+            GraficArray = new IGraficPoint[width, height];
+
             ArrayFromFile();
             BONUS_COUNT = CountBonus();
             ConvertToGraficWalls(Walls);
-            DrawMap(GraficWalls);
+            DrawMap(GraficArray);
         }
        
       void CountLines()
@@ -59,7 +59,7 @@ namespace Move
             int count = 0;
             foreach (char point in Walls)
             {
-                if(point == BONUS)
+                if(point == Grafic.BONUS)
                 {
                     count++;
                 }
@@ -97,38 +97,47 @@ namespace Move
             {
                 for (int left = 0; left < height; left++)
                 {
-                    if (Walls[top, left] == WALL)
+                    if (Walls[top, left] == Grafic.WALL)
                     {
-                        GraficWalls[top, left] = GRAFIC_BARRICADE;
+                        GraficArray[top, left] = new Grafic.GRAFIC_WALL();
                     }
-                    else if (Walls[top, left] == BARRICADE)
+                    else if (Walls[top, left] == Grafic.BARRICADE)
                     {
-                        GraficWalls[top, left] = GRAFIC_BARRICADE;
+                        GraficArray[top, left] = new Grafic.GRAFIC_BARRICADE();
+                    }
+                    else if (Walls[top, left] == Grafic.BONUS)
+                    {
+                        GraficArray[top, left] = new Grafic.GRAFIC_BONUS();
+                    }
+                    else
+                    {
+                        GraficArray[top, left] = new Grafic.GRAFIC_SPACE();
                     }
                 }
             }
         }
 
-        void DrawBarricade(char point, int left, int top)
+        void DrawBarricade(IGraficPoint point, int left, int top)
         {
             Console.SetCursorPosition(left, top);
-            
-            Console.ForegroundColor = System.ConsoleColor.Green;
-            Console.Write(point);
+           
+            Console.ForegroundColor = (ConsoleColor)point.FOREGROUND;
+            Console.BackgroundColor = (ConsoleColor)point.BACKGROUND;
+            Console.Write(point.SYMBOL);
         }
         public bool IsBarricade(Point point)
         {
-            if (Walls[point.Top, point.Left] == MapFromFile.BARRICADE || Walls[point.Top, point.Left] == MapFromFile.WALL)
+            if (Walls[point.Top, point.Left] == Grafic.BARRICADE || Walls[point.Top, point.Left] == Grafic.WALL)
             {
                 return true;
             }
-            else if (Walls[point.Top, point.Left] == MapFromFile.BONUS)
+            else if (Walls[point.Top, point.Left] == Grafic.BONUS)
             {
                 Bonus.Count++;
                 Walls[point.Top, point.Left] = ' ';
                 return false;
             }
-            else if (Walls[point.Top, point.Left] == MapFromFile.EXIT)
+            else if (Walls[point.Top, point.Left] == Grafic.EXIT)
             {                    
                Game.LevelNum++;
                Game game = new Game();
@@ -146,7 +155,7 @@ namespace Move
             Console.Clear();
         }
 
-        public void GenerateBarricades(char ch, int barricades_count)
+        public void GenerateBarricades(IGraficPoint ch, int barricades_count)
         {
             Random random = new Random();
             int counter = 0;
@@ -160,15 +169,16 @@ namespace Move
             {
                 Random();
 
-                if (Walls[top, left] == ' ')
+                if (GraficArray[top, left].SYMBOL == '.')
                 {
-                    Walls[top, left] = ch;
+                    GraficArray[top, left] = ch;
+                    Walls[top, left] = ch.SYMBOL;
                     DrawBarricade(ch, left, top);
                     counter++;
                 }
             }
         }
-        void DrawMap(char[,] Walls)
+        void DrawMap(IGraficPoint[,] Walls)
         {
             for (int top = 0; top < width; top++)
             {

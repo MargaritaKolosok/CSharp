@@ -12,24 +12,30 @@ namespace Move
         public int Top { get; set; }
         public char PointSymbol { get; set; }
 
+        Grafic.GRAFIC_POINT GraficPoint;
+
         public Point(int left, int top, char symb)
         {
             Left = left;
             Top = top;
-            PointSymbol = symb;
+            PointSymbol = GraficPoint.SYMBOL;
         }
         public void Draw()
         {
-            DrawPoint(PointSymbol);
+            DrawPoint(GraficPoint);
         }
-        void DrawPoint(char point)
+        void DrawPoint(IGraficPoint point)
         {
+            Console.OutputEncoding = System.Text.Encoding.UTF8;
             Console.SetCursorPosition(Left, Top);
-            Console.Write(point);
+            Console.ForegroundColor = (ConsoleColor)point.FOREGROUND;
+            Console.BackgroundColor = (ConsoleColor)point.BACKGROUND;
+            Console.Write(point.SYMBOL);
+            
         }
         public void Clear()
         {
-            DrawPoint(' ');
+            DrawPoint(new Grafic.GRAFIC_SPACE());
         }
         public void MoveLeft()
         {

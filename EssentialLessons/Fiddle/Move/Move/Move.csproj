@@ -44,6 +44,8 @@
   <ItemGroup>
     <Compile Include="Bonus.cs" />
     <Compile Include="Game.cs" />
+    <Compile Include="Grafic.cs" />
+    <Compile Include="IGraficPoint.cs" />
     <Compile Include="Level.cs" />
     <Compile Include="MapFromFile.cs" />
     <Compile Include="Point.cs" />
