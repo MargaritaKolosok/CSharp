@@ -9,7 +9,7 @@ using System.IO;
 namespace Move
 {
     class MapFromFile
-    {       
+    {
         public int BONUS_COUNT;
         public static char BARRICADE = 'X';
         public static char WALL = '*';
@@ -18,6 +18,10 @@ namespace Move
         public static char EXIT = 'E';
 
         public static char GRAFIC_BARRICADE = '\u2580';
+        public Dictionary<string, string> ConsoleColor = new Dictionary<string, string>
+        {
+            ["WALL"] = "Green"
+        };
       
         string level;
         public char[,] Walls;
@@ -93,7 +97,11 @@ namespace Move
             {
                 for (int left = 0; left < height; left++)
                 {
-                    if (Walls[top, left] == BARRICADE)
+                    if (Walls[top, left] == WALL)
+                    {
+                        GraficWalls[top, left] = GRAFIC_BARRICADE;
+                    }
+                    else if (Walls[top, left] == BARRICADE)
                     {
                         GraficWalls[top, left] = GRAFIC_BARRICADE;
                     }
@@ -104,6 +112,8 @@ namespace Move
         void DrawBarricade(char point, int left, int top)
         {
             Console.SetCursorPosition(left, top);
+            
+            Console.ForegroundColor = System.ConsoleColor.Green;
             Console.Write(point);
         }
         public bool IsBarricade(Point point)
