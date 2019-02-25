@@ -11,28 +11,18 @@ namespace Move
     class MapFromFile
     {
         public int BONUS_COUNT;
-        
-        public Dictionary<string, string> ConsoleColor = new Dictionary<string, string>
-        {
-            ["WALL"] = "Green"
-        };
-      
-        string level;
-        public char[,] Walls;
-        public char[,] GraficWalls;
-
-        public IGraficPoint[,] GraficArray;
-
-
         public static int width, height;
+        string level;
+
+        public char[,] Walls;
+        public IGraficPoint[,] GraficArray;
 
         public MapFromFile(string level)
         {
             this.level = level;
             CountLines();
-            Walls = new char[width, height];
-            GraficWalls = new char[width, height];
 
+            Walls = new char[width, height];       
             GraficArray = new IGraficPoint[width, height];
 
             ArrayFromFile();
@@ -155,7 +145,7 @@ namespace Move
             Console.Clear();
         }
 
-        public void GenerateBarricades(IGraficPoint ch, int barricades_count)
+        public void GenerateBarricades(IGraficPoint point, int barricades_count)
         {
             Random random = new Random();
             int counter = 0;
@@ -171,9 +161,9 @@ namespace Move
 
                 if (GraficArray[top, left].SYMBOL == '.')
                 {
-                    GraficArray[top, left] = ch;
-                    Walls[top, left] = ch.SYMBOL;
-                    DrawBarricade(ch, left, top);
+                    GraficArray[top, left] = point;
+                    Walls[top, left] = point.SYMBOL;
+                    DrawBarricade(point, left, top);
                     counter++;
                 }
             }
