@@ -20,19 +20,21 @@ namespace Move
             Top = top;
             PointSymbol = GraficPoint.SYMBOL;
         }
+
         public void Draw()
         {
             DrawPoint(GraficPoint);
         }
+
         void DrawPoint(IGraficPoint point)
         {
             Console.OutputEncoding = System.Text.Encoding.UTF8;
             Console.SetCursorPosition(Left, Top);
             Console.ForegroundColor = (ConsoleColor)point.FOREGROUND;
             Console.BackgroundColor = (ConsoleColor)point.BACKGROUND;
-            Console.Write(point.SYMBOL);
-            
+            Console.Write(point.SYMBOL);            
         }
+
         public void Clear()
         {
             DrawPoint(new Grafic.GRAFIC_SPACE());

@@ -128,10 +128,18 @@ namespace Move
                 return false;
             }
             else if (Walls[point.Top, point.Left] == Grafic.EXIT)
-            {                    
-               Game.LevelNum++;
-               Game game = new Game();
-               game.StartGame();
+            {
+                if (Game.LevelNum < Level.LevelsCount - 1)
+                {
+                    Game.LevelNum++;
+                    Game game = new Game();
+                    game.StartGame();
+                }
+                else
+                {
+                    Game.GameOver();
+                }
+               
                
                return false;
             }

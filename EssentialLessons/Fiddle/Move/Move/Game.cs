@@ -8,7 +8,8 @@ namespace Move
 {
     class Game
     {
-        public static int LevelNum = 0;  
+        public static int LevelNum = 0;
+        private static bool isGameOver = false;
 
         Point point = new Point(10,10, Grafic.POINT);
               
@@ -73,13 +74,19 @@ namespace Move
                 point.Draw();
                 ShowResult(Bonus.Count);
             }
-            while (keyPressed.Key != ConsoleKey.Escape);
+            while (keyPressed.Key != ConsoleKey.Escape || isGameOver == true);
         }
         
         void ShowResult(int result)
         {
             Console.SetCursorPosition(0, MapFromFile.width);
             Console.WriteLine("Result: " + result + " ");
-        }        
+        }
+        public static void GameOver()
+        {
+            Console.WriteLine("Game over!");
+            Console.ReadKey();
+            isGameOver = true;
+        }
     }
 }
