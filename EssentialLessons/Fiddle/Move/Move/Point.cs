@@ -26,7 +26,7 @@ namespace Move
             DrawPoint(GraficPoint);
         }
 
-        void DrawPoint(IGraficPoint point)
+        private void DrawPoint(IGraficPoint point)
         {
             Console.OutputEncoding = System.Text.Encoding.UTF8;
             Console.SetCursorPosition(Left, Top);

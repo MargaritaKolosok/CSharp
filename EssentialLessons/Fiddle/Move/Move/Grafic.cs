@@ -13,9 +13,6 @@ namespace Move
         public static char BONUS = '$';
         public static char POINT = '\u263A';
         public static char EXIT = 'E';
-
-      //  public static char GRAFIC_WALL = '\u2580';
-      //  public static char GRAFIC_BARRICADE = '\u2591';
         
         public struct GRAFIC_WALL : IGraficPoint
         {

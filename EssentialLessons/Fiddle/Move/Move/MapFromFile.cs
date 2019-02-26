@@ -31,7 +31,7 @@ namespace Move
             DrawMap(GraficArray);
         }
        
-      void CountLines()
+        private void CountLines()
         {
             int count = 0;
             
@@ -44,7 +44,7 @@ namespace Move
             width = count;            
         }
 
-        int CountBonus()
+        private int CountBonus()
         {
             int count = 0;
             foreach (char point in Walls)
@@ -57,7 +57,7 @@ namespace Move
             return count;
         }
 
-        void ArrayFromFile()
+        private void ArrayFromFile()
         {
             string[] STRArray = new string[height];
             List<string> STRList = new List<string>();
@@ -81,7 +81,7 @@ namespace Move
             }
         }
 
-        void ConvertToGraficWalls(char[,] Walls)
+        private void ConvertToGraficWalls(char[,] Walls)
         {
             for (int top = 0; top < width; top++)
             {
@@ -107,7 +107,7 @@ namespace Move
             }
         }
 
-        void DrawBarricade(IGraficPoint point, int left, int top)
+        private void DrawBarricade(IGraficPoint point, int left, int top)
         {
             Console.SetCursorPosition(left, top);
            
@@ -139,7 +139,6 @@ namespace Move
                 {
                     Game.GameOver();
                 }
-               
                
                return false;
             }
@@ -176,7 +175,7 @@ namespace Move
                 }
             }
         }
-        void DrawMap(IGraficPoint[,] Walls)
+        private void DrawMap(IGraficPoint[,] Walls)
         {
             for (int top = 0; top < width; top++)
             {

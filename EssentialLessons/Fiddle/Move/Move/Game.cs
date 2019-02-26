@@ -77,7 +77,7 @@ namespace Move
             while (keyPressed.Key != ConsoleKey.Escape || isGameOver == true);
         }
         
-        void ShowResult(int result)
+        private void ShowResult(int result)
         {
             Console.SetCursorPosition(0, MapFromFile.width);
             Console.WriteLine("Result: " + result + " ");
