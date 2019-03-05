@@ -8,10 +8,6 @@ namespace Move
 {
     class Bonus
     {
-        public static int Count { get; set; }
-        public Bonus()
-            {
-                Count = 0;
-            }
+        public static int Count { get; set; }        
     }
 }

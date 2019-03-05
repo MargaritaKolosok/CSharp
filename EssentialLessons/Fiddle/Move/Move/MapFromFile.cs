@@ -11,28 +11,18 @@ namespace Move
     class MapFromFile
     {
         public int BONUS_COUNT;
-        
-        public Dictionary<string, string> ConsoleColor = new Dictionary<string, string>
-        {
-            ["WALL"] = "Green"
-        };
-      
-        string level;
-        public char[,] Walls;
-        public char[,] GraficWalls;
-
-        public IGraficPoint[,] GraficArray;
-
-
         public static int width, height;
+        string level;
+
+        public char[,] Walls;
+        public IGraficPoint[,] GraficArray;
 
         public MapFromFile(string level)
         {
             this.level = level;
             CountLines();
-            Walls = new char[width, height];
-            GraficWalls = new char[width, height];
 
+            Walls = new char[width, height];       
             GraficArray = new IGraficPoint[width, height];
 
             ArrayFromFile();
@@ -41,7 +31,7 @@ namespace Move
             DrawMap(GraficArray);
         }
        
-      void CountLines()
+        private void CountLines()
         {
             int count = 0;
             
@@ -54,7 +44,7 @@ namespace Move
             width = count;            
         }
 
-        int CountBonus()
+        private int CountBonus()
         {
             int count = 0;
             foreach (char point in Walls)
@@ -67,7 +57,7 @@ namespace Move
             return count;
         }
 
-        void ArrayFromFile()
+        private void ArrayFromFile()
         {
             string[] STRArray = new string[height];
             List<string> STRList = new List<string>();
@@ -91,7 +81,7 @@ namespace Move
             }
         }
 
-        void ConvertToGraficWalls(char[,] Walls)
+        private void ConvertToGraficWalls(char[,] Walls)
         {
             for (int top = 0; top < width; top++)
             {
@@ -117,7 +107,7 @@ namespace Move
             }
         }
 
-        void DrawBarricade(IGraficPoint point, int left, int top)
+        private void DrawBarricade(IGraficPoint point, int left, int top)
         {
             Console.SetCursorPosition(left, top);
            
@@ -138,10 +128,17 @@ namespace Move
                 return false;
             }
             else if (Walls[point.Top, point.Left] == Grafic.EXIT)
-            {                    
-               Game.LevelNum++;
-               Game game = new Game();
-               game.StartGame();
+            {
+                if (Game.LevelNum < Level.LevelsCount - 1)
+                {
+                    Game.LevelNum++;
+                    Game game = new Game();
+                    game.StartGame();
+                }
+                else
+                {
+                    Game.GameOver();
+                }
                
                return false;
             }
@@ -155,7 +152,7 @@ namespace Move
             Console.Clear();
         }
 
-        public void GenerateBarricades(IGraficPoint ch, int barricades_count)
+        public void GenerateBarricades(IGraficPoint point, int barricades_count)
         {
             Random random = new Random();
             int counter = 0;
@@ -171,14 +168,14 @@ namespace Move
 
                 if (GraficArray[top, left].SYMBOL == '.')
                 {
-                    GraficArray[top, left] = ch;
-                    Walls[top, left] = ch.SYMBOL;
-                    DrawBarricade(ch, left, top);
+                    GraficArray[top, left] = point;
+                    Walls[top, left] = point.SYMBOL;
+                    DrawBarricade(point, left, top);
                     counter++;
                 }
             }
         }
-        void DrawMap(IGraficPoint[,] Walls)
+        private void DrawMap(IGraficPoint[,] Walls)
         {
             for (int top = 0; top < width; top++)
             {
