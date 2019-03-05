@@ -28,10 +28,14 @@ namespace Filtering2
                     new User {Name="Элис", Age=24, Languages = new List<string> {"испанский", "немецкий" }}
                 };
 
-            var selectedUsers = users.Where(u=> u.Age > 25);
-            foreach (User u in users)
+            var selectedUsers = users.SelectMany(u => u.Languages,
+                (u, l) => new { User = u, Lang = l })
+                .Where(u => u.Lang == "английский" && u.User.Age > 25)
+                .Select(u => u.User);
+
+            foreach (var u in selectedUsers)
             {
-                Console.WriteLine(u.Name + " is " + u.Age);
+                Console.WriteLine(u.Name + " is " + u.Age + " " + u.Languages.ToString());
             }
             Console.ReadKey();
         }
