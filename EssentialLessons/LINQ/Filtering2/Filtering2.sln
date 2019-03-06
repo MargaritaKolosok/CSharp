@@ -5,6 +5,8 @@ VisualStudioVersion = 15.0.27130.2036
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Filtering2", "Filtering2\Filtering2.csproj", "{358B2133-9F70-4037-88F2-4FD3817D9BB7}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Linq2", "Linq2\Linq2.csproj", "{6B70B489-9B7B-4BD2-A9DA-48C953255A6C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{358B2133-9F70-4037-88F2-4FD3817D9BB7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{358B2133-9F70-4037-88F2-4FD3817D9BB7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{358B2133-9F70-4037-88F2-4FD3817D9BB7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6B70B489-9B7B-4BD2-A9DA-48C953255A6C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6B70B489-9B7B-4BD2-A9DA-48C953255A6C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6B70B489-9B7B-4BD2-A9DA-48C953255A6C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6B70B489-9B7B-4BD2-A9DA-48C953255A6C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
