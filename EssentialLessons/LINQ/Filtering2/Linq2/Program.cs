@@ -27,7 +27,15 @@ namespace Linq2
                             FirstName = u.Name,
                             DateOfBirth = DateTime.Now.Year - u.Age
                         };
-            foreach (var n in items)
+            var names = users.Select(u => u.Name);
+            var items2 = users.Select(u =>
+             new
+             {
+                 FirstName = u.Name,
+                 DateOfBirth = DateTime.Now.Year - u.Age
+             });
+
+            foreach (var n in items2)
             {
                 Console.WriteLine("{0} - {1}", n.FirstName, n.DateOfBirth);
             }
