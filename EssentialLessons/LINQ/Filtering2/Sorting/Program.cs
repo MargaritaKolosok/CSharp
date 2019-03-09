@@ -25,6 +25,7 @@ namespace Sorting
 
             var sortedUsers = users.OrderBy(u => u.Age);
             var sortedNames = users.OrderByDescending(u => u.Name);
+            var sortedAll = users.OrderBy(u => u.Name).ThenBy(u => u.Age);
 
             foreach (var user in sortedUsers)
             {
@@ -35,6 +36,12 @@ namespace Sorting
             {
                 Console.WriteLine(user.Name);
             }
+
+            foreach (var user in sortedAll)
+            {
+                Console.WriteLine(user.Name + " " + user.Age);
+            }
+
             Console.ReadKey();
         }
     }
