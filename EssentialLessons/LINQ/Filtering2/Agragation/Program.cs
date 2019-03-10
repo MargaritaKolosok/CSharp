@@ -36,6 +36,13 @@ namespace Agragation
             Console.WriteLine(maxAge);
             Console.WriteLine(minAge);
 
+            var skipTake = numbers.Skip(3).Take(4);
+            foreach (var i in skipTake)
+            {
+                Console.WriteLine(i);
+            }
+            
+
             Console.ReadKey();
         }
     }
