@@ -41,7 +41,12 @@ namespace Agragation
             {
                 Console.WriteLine(i);
             }
-            
+            string[] teams = { "Бавария", "Боруссия", "Реал Мадрид", "Манчестер Сити", "ПСЖ", "Барселона" };
+            var takeWhile = teams.TakeWhile(x => x.StartsWith("Б"));
+            foreach (var i in takeWhile)
+            {
+                Console.WriteLine(i);
+            }
 
             Console.ReadKey();
         }
