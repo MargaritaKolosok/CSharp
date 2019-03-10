@@ -5,7 +5,12 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace Agragation
-{
+{ class User
+    {
+        public string Name;
+        public int Age;
+    }
+
     class Program
     {
         static void Main(string[] args)
@@ -17,6 +22,20 @@ namespace Agragation
 
             Console.WriteLine(size);
             Console.WriteLine(sum);
+
+            List<User> users = new List<User>()
+            {
+                new User { Name = "Tom", Age = 23 },
+                new User { Name = "Sam", Age = 43 },
+                new User { Name = "Bill", Age = 35 }
+            };
+
+            int maxAge = users.Max(u => u.Age);
+            int minAge = users.Min(u => u.Age);
+
+            Console.WriteLine(maxAge);
+            Console.WriteLine(minAge);
+
             Console.ReadKey();
         }
     }
