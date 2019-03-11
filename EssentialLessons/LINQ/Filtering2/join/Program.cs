@@ -23,7 +23,8 @@ namespace join
             List<Team> teams = new List<Team>()
             {
                 new Team { Name = "Бавария", Country ="Германия" },
-                new Team { Name = "Барселона", Country ="Испания" }
+                new Team { Name = "Барселона", Country ="Испания" },
+                new Team { Name = "Ювентус", Country ="Италия" }
             };
             List<Player> players = new List<Player>()
             {
@@ -41,6 +42,20 @@ namespace join
             foreach (var player in result )
             {
                 Console.WriteLine("{0}, {1}, {2}",player.Name, player.Team, player.Country);
+            }
+
+            var result2 = players.Zip(teams,
+                (player, team) => new
+                {
+                    Name = player.Name,
+                    Team = team.Name, Country = team.Country
+                }               
+                );
+            foreach (var player in result2)
+            {
+                Console.WriteLine();
+                Console.WriteLine("{0} - {1} ({2})", player.Name, player.Team, player.Country);
+                
             }
             Console.ReadKey();
         }
