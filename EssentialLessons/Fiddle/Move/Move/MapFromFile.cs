@@ -13,7 +13,6 @@ namespace Move
         public int BONUS_COUNT;
         public static int width, height;
         string level;
-
         public char[,] Walls;
         public IGraficPoint[,] GraficArray;
 
