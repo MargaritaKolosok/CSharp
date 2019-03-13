@@ -10,7 +10,7 @@ namespace Move
     class Level
     {
         static string exePath = System.IO.Path.GetDirectoryName(System.Reflection.Assembly.GetExecutingAssembly().Location);
-        static string LevelsFolder = System.IO.Path.Combine(exePath, "../../levels/");
+        static string LevelsFolder = System.IO.Path.Combine(exePath, "levels/");
 
         public static string[] Levels;
         public static int LevelsCount;
