@@ -50,7 +50,11 @@ namespace Move
             public int FOREGROUND { get { return 2; } }
             public int BACKGROUND { get { return 0; } }
         }
-
-
+        public struct GRAFIC_PORTAL : IGraficPoint
+        {
+            public char SYMBOL { get { return '\u256C'; } }
+            public int FOREGROUND { get { return 7; } }
+            public int BACKGROUND { get { return 0; } }
+        }
     }
 }
