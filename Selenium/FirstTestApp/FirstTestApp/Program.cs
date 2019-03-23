@@ -10,7 +10,10 @@ namespace FirstTestApp
     {
         static void Main(string[] args)
         {
-
+            Demo demo = new Demo();
+            demo.StartBrowser();
+            demo.CssDemo();
+            demo.CloseBrowser();
         }
     }
 }

@@ -45,7 +45,7 @@ namespace FirstTestApp
 
             link.Click();
             driver.Close();
-        }
+        }       
         
     }
 }
