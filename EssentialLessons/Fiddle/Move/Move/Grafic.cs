@@ -53,7 +53,7 @@ namespace Move
         }
         public struct GRAFIC_PORTAL : IGraficPoint
         {
-            public char SYMBOL { set { this.SYMBOL = value; } get { return '&'; } }
+            public char SYMBOL { set; get; }
             public int FOREGROUND { get { return 7; } }
             public int BACKGROUND { get { return 0; } }
         }

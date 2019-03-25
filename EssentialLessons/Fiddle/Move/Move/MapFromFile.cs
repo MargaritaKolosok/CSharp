@@ -107,7 +107,9 @@ namespace Move
                     }
                     else
                     {
-                        GraficArray[top, left] = new Grafic.GRAFIC_PORTAL();
+                        var point = new Grafic.GRAFIC_PORTAL();
+                        point.SYMBOL = Walls[top,left];
+                        GraficArray[top, left] = point;
                     }
                 }
             }
@@ -133,7 +135,11 @@ namespace Move
                 Walls[point.Top, point.Left] = ' ';
                 return false;
             }
-           
+            else if(Walls[point.Top, point.Left] != Grafic.BONUS && Walls[point.Top, point.Left] != Grafic.WALL && Walls[point.Top, point.Left] != Grafic.EXIT )
+            {
+                //
+                return true;
+            }
             else if (Walls[point.Top, point.Left] == Grafic.EXIT)
             {
                 if (Game.LevelNum < Level.LevelsCount - 1)
