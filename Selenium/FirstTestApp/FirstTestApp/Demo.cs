@@ -14,10 +14,13 @@ namespace FirstTestApp
     {
         IWebDriver driver;
 
+        
+
         [SetUp]
 
         public void StartBrowser()
         {
+            driver.
             driver = new ChromeDriver("C:\\Charp_git\\CSharp\\Selenium\\FirstTestApp\\packages\\Selenium.WebDriver.ChromeDriver.73.0.3683.68\\driver\\win32");
         }
             [Test]
