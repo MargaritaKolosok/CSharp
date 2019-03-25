@@ -13,7 +13,8 @@ namespace Move
         public static char BONUS = '$';
         public static char POINT = '\u263A';
         public static char EXIT = 'E';
-        
+        public static char PORTAL = '\u256C';
+
         public struct GRAFIC_WALL : IGraficPoint
         {
            public char SYMBOL { get { return '\u2580'; } }
