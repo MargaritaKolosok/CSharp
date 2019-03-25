@@ -26,7 +26,9 @@ namespace Move
 
             ArrayFromFile();
             BONUS_COUNT = CountBonus();
+            
             ConvertToGraficWalls(Walls);
+            GeneratePorts(3);
             DrawMap(GraficArray);
         }
        
@@ -173,6 +175,12 @@ namespace Move
                     counter++;
                 }
             }
+        }
+        public void GeneratePorts(int x)
+        {
+            IGraficPoint point = new Grafic.GRAFIC_PORTAL();
+
+            GenerateBarricades(point, 3);
         }
         private void DrawMap(IGraficPoint[,] Walls)
         {
