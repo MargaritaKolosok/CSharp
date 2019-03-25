@@ -100,9 +100,14 @@ namespace Move
                     {
                         GraficArray[top, left] = new Grafic.GRAFIC_BONUS();
                     }
-                    else
+
+                    else if (Walls[top, left] == ' ')
                     {
                         GraficArray[top, left] = new Grafic.GRAFIC_SPACE();
+                    }
+                    else
+                    {
+                        GraficArray[top, left] = new Grafic.GRAFIC_PORTAL();
                     }
                 }
             }
@@ -128,10 +133,7 @@ namespace Move
                 Walls[point.Top, point.Left] = ' ';
                 return false;
             }
-            else if (Walls[point.Top, point.Left] == Grafic.PORTAL)
-            {
-                return false;
-            }
+           
             else if (Walls[point.Top, point.Left] == Grafic.EXIT)
             {
                 if (Game.LevelNum < Level.LevelsCount - 1)
