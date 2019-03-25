@@ -26,7 +26,9 @@ namespace Move
 
             ArrayFromFile();
             BONUS_COUNT = CountBonus();
+            
             ConvertToGraficWalls(Walls);
+            GeneratePorts(3);
             DrawMap(GraficArray);
         }
        
@@ -98,9 +100,16 @@ namespace Move
                     {
                         GraficArray[top, left] = new Grafic.GRAFIC_BONUS();
                     }
-                    else
+
+                    else if (Walls[top, left] == ' ')
                     {
                         GraficArray[top, left] = new Grafic.GRAFIC_SPACE();
+                    }
+                    else
+                    {
+                        var point = new Grafic.GRAFIC_PORTAL();
+                        point.SYMBOL = Walls[top,left];
+                        GraficArray[top, left] = point;
                     }
                 }
             }
@@ -126,6 +135,11 @@ namespace Move
                 Walls[point.Top, point.Left] = ' ';
                 return false;
             }
+            else if(Walls[point.Top, point.Left] != Grafic.BONUS && Walls[point.Top, point.Left] != Grafic.WALL && Walls[point.Top, point.Left] != Grafic.EXIT )
+            {
+                //
+                return true;
+            }
             else if (Walls[point.Top, point.Left] == Grafic.EXIT)
             {
                 if (Game.LevelNum < Level.LevelsCount - 1)
@@ -138,8 +152,8 @@ namespace Move
                 {
                     Game.GameOver();
                 }
-               
-               return false;
+
+                return false;
             }
             else
             {
@@ -174,6 +188,12 @@ namespace Move
                 }
             }
         }
+        public void GeneratePorts(int x)
+        {
+            IGraficPoint point = new Grafic.GRAFIC_PORTAL();
+            
+            GenerateBarricades(point, 2);            
+        }
         private void DrawMap(IGraficPoint[,] Walls)
         {
             for (int top = 0; top < width; top++)
@@ -187,3 +207,10 @@ namespace Move
         }
     }
 }
+
+// Generate portal Method > Number of portals > Generate array of random PAIR points of portals, 1,1 / 2,2 / 3,3 
+// Is portal true > 
+// Get portal symbol > portal array > Search same portal
+// Get same portal coordinates
+// Draw point at the new Portal
+// Next move > Return portals back
