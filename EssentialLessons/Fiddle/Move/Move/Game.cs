@@ -12,7 +12,8 @@ namespace Move
         private static bool isGameOver = false;
 
         Point point = new Point(10,10, Grafic.POINT);
-              
+        Point PreviousPortal = new Point();
+
         MapFromFile map = new MapFromFile(Level.Levels[LevelNum]);
         
         Bonus bonus = new Bonus();        
@@ -23,11 +24,12 @@ namespace Move
            
             ConsoleKeyInfo keyPressed = new ConsoleKeyInfo();
             Point oldPoint = new Point();
+            
 
             do
             {
                 keyPressed = Console.ReadKey(true);
-                oldPoint = point;
+                oldPoint = point;                
 
                 switch (keyPressed.Key)
                 {
@@ -72,9 +74,15 @@ namespace Move
             else if (map.IsPortal(point))
             {                
                 Point _point = new Point();
-                _point = map.PortalList.Find(x => x.PointSymbol == point.PointSymbol && x.Left != point.Left && x.Top != point.Top);                
-                point.Top = _point.Top;
-                point.Left = _point.Left;
+                
+                _point = map.PortalList.Find(x => x.Left == point.Left && x.Top == point.Top);
+                Point P;
+                P = map.PortalList.Find(x => x.PointSymbol == _point.PointSymbol && x.Top != _point.Top && x.Left != _point.Left);
+                point.Top = P.Top;
+                point.Left = P.Left;
+                
+                PreviousPortal = _point;
+                PreviousPortal.PointSymbol = _point.PointSymbol;
                 oldPoint.Clear();
             }
             else if (Bonus.Count == map.BONUS_COUNT)
@@ -86,7 +94,14 @@ namespace Move
             }
             else
             {
-                oldPoint.Clear();
+                if (map.IsPortal(oldPoint))
+                {
+                    PreviousPortal.Draw();
+                }
+                else
+                {
+                    oldPoint.Clear();
+                }                
             }
         }
 
