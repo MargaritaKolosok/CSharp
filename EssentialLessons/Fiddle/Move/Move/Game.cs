@@ -78,12 +78,14 @@ namespace Move
                 _point = map.PortalList.Find(x => x.Left == point.Left && x.Top == point.Top);
                 Point P;
                 P = map.PortalList.Find(x => x.PointSymbol == _point.PointSymbol && x.Top != _point.Top && x.Left != _point.Left);
+
                 point.Top = P.Top;
                 point.Left = P.Left;
                 
                 PreviousPortal = _point;
-                PreviousPortal.PointSymbol = _point.PointSymbol;
+                PreviousPortal.PointSymbol = P.PointSymbol;
                 oldPoint.Clear();
+                oldPoint = point;
             }
             else if (Bonus.Count == map.BONUS_COUNT)
             {
