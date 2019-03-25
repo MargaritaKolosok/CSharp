@@ -16,6 +16,8 @@ namespace Move
         public char[,] Walls;
         public IGraficPoint[,] GraficArray;
 
+        public List<Point> PortalList = new List<Point>();
+
         public MapFromFile(string level)
         {
             this.level = level;
@@ -28,7 +30,7 @@ namespace Move
             BONUS_COUNT = CountBonus();
             
             ConvertToGraficWalls(Walls);
-            GeneratePorts(3);
+           // GeneratePorts(3);
             DrawMap(GraficArray);
         }
        
@@ -110,7 +112,13 @@ namespace Move
                         var point = new Grafic.GRAFIC_PORTAL();
                         point.SYMBOL = Walls[top,left];
                         GraficArray[top, left] = point;
+                        Point _point = new Point();
+                        _point.PointSymbol = point.SYMBOL;
+                        _point.Top = top;
+                        _point.Left = left;
+                        PortalList.Add(_point);
                     }
+                    
                 }
             }
         }
@@ -123,6 +131,17 @@ namespace Move
             Console.BackgroundColor = (ConsoleColor)point.BACKGROUND;
             Console.Write(point.SYMBOL);
         }
+        public bool IsPortal(Point point)
+        {
+            if (!IsBarricade(point) && Walls[point.Top, point.Left] != Grafic.BONUS && Walls[point.Top, point.Left] != Grafic.WALL && Walls[point.Top, point.Left] != Grafic.EXIT && Walls[point.Top, point.Left] != ' ')
+            {                
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
         public bool IsBarricade(Point point)
         {
             if (Walls[point.Top, point.Left] == Grafic.BARRICADE || Walls[point.Top, point.Left] == Grafic.WALL)
@@ -134,12 +153,7 @@ namespace Move
                 Bonus.Count++;
                 Walls[point.Top, point.Left] = ' ';
                 return false;
-            }
-            else if(Walls[point.Top, point.Left] != Grafic.BONUS && Walls[point.Top, point.Left] != Grafic.WALL && Walls[point.Top, point.Left] != Grafic.EXIT )
-            {
-                //
-                return true;
-            }
+            }            
             else if (Walls[point.Top, point.Left] == Grafic.EXIT)
             {
                 if (Game.LevelNum < Level.LevelsCount - 1)
@@ -188,12 +202,7 @@ namespace Move
                 }
             }
         }
-        public void GeneratePorts(int x)
-        {
-            IGraficPoint point = new Grafic.GRAFIC_PORTAL();
-            
-            GenerateBarricades(point, 2);            
-        }
+    
         private void DrawMap(IGraficPoint[,] Walls)
         {
             for (int top = 0; top < width; top++)

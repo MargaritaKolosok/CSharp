@@ -56,27 +56,40 @@ namespace Move
                             break;
                         }
                 }
-                if (map.IsBarricade(point))
-                {
-                    point = oldPoint;
-                }
-                else if (Bonus.Count == map.BONUS_COUNT)
-                {
-                    Grafic.GRAFIC_EXIT exit;
-                    map.GenerateBarricades(exit, 1);
-                    Bonus.Count = 0;
-                    oldPoint.Clear();
-                }                
-                else
-                {
-                    oldPoint.Clear();
-                }
+                NewMethod(oldPoint);
                 point.Draw();
                 ShowResult(Bonus.Count);
             }
             while (keyPressed.Key != ConsoleKey.Escape || isGameOver == true);
         }
-        
+
+        private void NewMethod(Point oldPoint)
+        {
+            if (map.IsBarricade(point))
+            {
+                point = oldPoint;
+            }
+            else if (map.IsPortal(point))
+            {                
+                Point _point = new Point();
+                _point = map.PortalList.Find(x => x.PointSymbol == point.PointSymbol && x.Left != point.Left && x.Top != point.Top);                
+                point.Top = _point.Top;
+                point.Left = _point.Left;
+                oldPoint.Clear();
+            }
+            else if (Bonus.Count == map.BONUS_COUNT)
+            {
+                Grafic.GRAFIC_EXIT exit;
+                map.GenerateBarricades(exit, 1);
+                Bonus.Count = 0;
+                oldPoint.Clear();
+            }
+            else
+            {
+                oldPoint.Clear();
+            }
+        }
+
         private void ShowResult(int result)
         {
             Console.SetCursorPosition(0, MapFromFile.width);
