@@ -24,7 +24,6 @@ namespace Move
            
             ConsoleKeyInfo keyPressed = new ConsoleKeyInfo();
             Point oldPoint = new Point();
-            
 
             do
             {
@@ -76,16 +75,17 @@ namespace Move
                 Point _point = new Point();
                 
                 _point = map.PortalList.Find(x => x.Left == point.Left && x.Top == point.Top);
-                Point P;
+
+                Point P = new Point();
                 P = map.PortalList.Find(x => x.PointSymbol == _point.PointSymbol && x.Top != _point.Top && x.Left != _point.Left);
 
                 point.Top = P.Top;
                 point.Left = P.Left;
                 
-                PreviousPortal = _point;
+                PreviousPortal = P;
                 PreviousPortal.PointSymbol = P.PointSymbol;
                 oldPoint.Clear();
-                oldPoint = point;
+                //oldPoint = P;
             }
             else if (Bonus.Count == map.BONUS_COUNT)
             {
@@ -98,7 +98,8 @@ namespace Move
             {
                 if (map.IsPortal(oldPoint))
                 {
-                    PreviousPortal.Draw();
+                      PreviousPortal.Draw();
+                      //oldPoint.Draw();
                 }
                 else
                 {
