@@ -217,9 +217,3 @@ namespace Move
     }
 }
 
-// Generate portal Method > Number of portals > Generate array of random PAIR points of portals, 1,1 / 2,2 / 3,3 
-// Is portal true > 
-// Get portal symbol > portal array > Search same portal
-// Get same portal coordinates
-// Draw point at the new Portal
-// Next move > Return portals back
