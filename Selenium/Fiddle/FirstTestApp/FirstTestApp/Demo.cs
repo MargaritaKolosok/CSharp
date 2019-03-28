@@ -20,7 +20,7 @@ namespace FirstTestApp
         public void StartBrowser()
         {
             string path = Directory.GetCurrentDirectory().ToString();
-            
+                        
             driver = new ChromeDriver(path + "../FirstTestApp\\packages\\Selenium.WebDriver.ChromeDriver.73.0.3683.68\\driver\\win32");
         }
 
@@ -30,6 +30,7 @@ namespace FirstTestApp
         {
             driver.Url = "http://www.google.co.in";
         }
+        
 
         [TearDown]
 
