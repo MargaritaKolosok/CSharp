@@ -21,6 +21,7 @@ namespace SeleniumTutorialY1
         public void Initialize()
         {
             driver.Navigate().GoToUrl("https://www.google.com");
+            Console.WriteLine("Browser opened");
         }
 
         [Test]
@@ -28,11 +29,13 @@ namespace SeleniumTutorialY1
         {         
             IWebElement element = driver.FindElement(By.Name("q"));
             element.SendKeys("Selenium");
+            Console.WriteLine("Elements found");
         }
         [TearDown]
         public void CleanUp()
         {
             driver.Close();
+            Console.WriteLine("Browser closed");
         }
     }
 }
