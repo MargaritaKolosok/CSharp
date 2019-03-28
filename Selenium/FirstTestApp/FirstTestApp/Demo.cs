@@ -7,21 +7,21 @@ using OpenQA.Selenium;
 using OpenQA.Selenium.Firefox;
 using OpenQA.Selenium.Chrome;
 using NUnit.Framework;
+using System.IO;
 
 namespace FirstTestApp
 {
     class Demo
     {
-        IWebDriver driver;
-
-        
+        IWebDriver driver;        
 
         [SetUp]
 
         public void StartBrowser()
         {
-            driver.
-            driver = new ChromeDriver("C:\\Charp_git\\CSharp\\Selenium\\FirstTestApp\\packages\\Selenium.WebDriver.ChromeDriver.73.0.3683.68\\driver\\win32");
+            string path = Directory.GetCurrentDirectory().ToString();
+            
+            driver = new ChromeDriver(path + "../FirstTestApp\\packages\\Selenium.WebDriver.ChromeDriver.73.0.3683.68\\driver\\win32");
         }
 
         [Test]
