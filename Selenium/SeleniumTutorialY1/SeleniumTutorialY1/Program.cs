@@ -20,17 +20,25 @@ namespace SeleniumTutorialY1
         [SetUp]
         public void Initialize()
         {
-            driver.Navigate().GoToUrl("https://www.google.com");
-            Console.WriteLine("Browser opened");
+            driver.Navigate().GoToUrl("http://www.executeautomation.com/demosite/index.html");
+            Console.WriteLine("URL opened");
         }
 
         [Test]
         public void ExecuteTest()
-        {         
-            IWebElement element = driver.FindElement(By.Name("q"));
-            element.SendKeys("Selenium");
-            Console.WriteLine("Elements found");
+        {
+            // Title
+            SeleniumSetMethods.SelectDropDown(driver, "TitleId", "Mr.", "Id");
+
+            // Initial
+            SeleniumSetMethods.EnterText(driver, "Initial", "Executeautomation", "Name");
+
+            // Click
+            SeleniumSetMethods.Click(driver, "Save", "Name");
+
+            Console.WriteLine("Select value in dropdown");
         }
+
         [TearDown]
         public void CleanUp()
         {
