@@ -11,7 +11,7 @@ namespace SeleniumTutorialY1
 {
     class SeleniumSetMethods
     {
-        public static void EnterText(IWebDriver driver, string element, string value, string elementType)
+        public static void EnterText(string element, string value, string elementType)
         {          
             if (elementType == "Id")
             {
@@ -23,7 +23,7 @@ namespace SeleniumTutorialY1
             }           
         }
 
-        public static void Click(IWebDriver driver, string element, string elementType)
+        public static void Click(string element, string elementType)
         {
             if (elementType == "Id")
             {
@@ -34,7 +34,7 @@ namespace SeleniumTutorialY1
                 driver.FindElement(By.Name(element)).Click(); 
             }
         }
-        public static void SelectDropDown(IWebDriver driver, string element, string value, string elementType)
+        public static void SelectDropDown(string element, string value, string elementType)
         {            
             if (elementType == "Id")
             {

@@ -1,4 +1,5 @@
-﻿using System;
+﻿
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -11,16 +12,18 @@ namespace SeleniumTutorialY1
 {
     class Program
     {
-        IWebDriver driver = new ChromeDriver();
+        
 
         static void Main(string[] args)
         {            
+            
         }
 
         [SetUp]
         public void Initialize()
         {
-            driver.Navigate().GoToUrl("http://www.executeautomation.com/demosite/index.html");
+            PropertiesCollection.driver = new ChromeDriver();
+            PropertiesCollection.driver.Navigate().GoToUrl("http://www.executeautomation.com/demosite/index.html");
             Console.WriteLine("URL opened");
         }
 
@@ -28,16 +31,16 @@ namespace SeleniumTutorialY1
         public void ExecuteTest()
         {
             // Title
-            SeleniumSetMethods.SelectDropDown(driver, "TitleId", "Mr.", "Id");
+            SeleniumSetMethods.SelectDropDown("TitleId", "Mr.", "Id");
 
             // Initial
-            SeleniumSetMethods.EnterText(driver, "Initial", "Executeautomation", "Name");
+            SeleniumSetMethods.EnterText("Initial", "Executeautomation", "Name");
 
             Console.WriteLine("The value from my Title is: " + SeleniumGetMethods.GetTextFromDDL(driver, "TitleId", "Id"));
             Console.WriteLine("The value from Initial is: " + SeleniumGetMethods.GetText(driver, "Initial", "Name"));
 
             // Click
-            SeleniumSetMethods.Click(driver, "Save", "Name");
+            SeleniumSetMethods.Click("Save", "Name");
 
             Console.WriteLine("Select value in dropdown");
         }

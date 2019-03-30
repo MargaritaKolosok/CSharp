@@ -11,7 +11,7 @@ namespace SeleniumTutorialY1
 {
     class SeleniumGetMethods
     {
-        public static string GetText(IWebDriver driver, string element, string elementType)
+        public static string GetText(string element, string elementType)
         {
             if (elementType == "Id")
             {
@@ -26,7 +26,7 @@ namespace SeleniumTutorialY1
                 return String.Empty;
             }
         }
-        public static string GetTextFromDDL(IWebDriver driver, string element, string elementType)
+        public static string GetTextFromDDL(string element, string elementType)
         {
             if (elementType == "Id")
             {
