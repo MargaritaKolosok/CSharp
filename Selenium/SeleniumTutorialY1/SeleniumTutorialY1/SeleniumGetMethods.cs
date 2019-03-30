@@ -15,11 +15,11 @@ namespace SeleniumTutorialY1
         {
             if (elementType == "Id")
             {
-                return driver.FindElement(By.Id(element)).GetAttribute("value");
+                return PropertiesCollection.driver.FindElement(By.Id(element)).GetAttribute("value");
             }
             if (elementType == "Name")
             {
-                return driver.FindElement(By.Name(element)).GetAttribute("value");
+                return PropertiesCollection.driver.FindElement(By.Name(element)).GetAttribute("value");
             }
             else
             {
@@ -30,11 +30,11 @@ namespace SeleniumTutorialY1
         {
             if (elementType == "Id")
             {
-                return new SelectElement(driver.FindElement(By.Id(element))).AllSelectedOptions.SingleOrDefault().Text;
+                return new SelectElement(PropertiesCollection.driver.FindElement(By.Id(element))).AllSelectedOptions.SingleOrDefault().Text;
             }
             if (elementType == "Name")
             {
-                return new SelectElement(driver.FindElement(By.Name(element))).AllSelectedOptions.SingleOrDefault().Text;
+                return new SelectElement(PropertiesCollection.driver.FindElement(By.Name(element))).AllSelectedOptions.SingleOrDefault().Text;
             }
             else
             {

@@ -15,11 +15,11 @@ namespace SeleniumTutorialY1
         {          
             if (elementType == "Id")
             {
-                driver.FindElement(By.Id(element)).SendKeys(value); ;
+                PropertiesCollection.driver.FindElement(By.Id(element)).SendKeys(value); ;
             }
             else if (elementType == "Name")
             {
-                driver.FindElement(By.Name(element)).SendKeys(value); ;
+                PropertiesCollection.driver.FindElement(By.Name(element)).SendKeys(value); ;
             }           
         }
 
@@ -27,22 +27,22 @@ namespace SeleniumTutorialY1
         {
             if (elementType == "Id")
             {
-                driver.FindElement(By.Id(element)).Click();
+                PropertiesCollection.driver.FindElement(By.Id(element)).Click();
             }
             else if (elementType == "Name")
             {
-                driver.FindElement(By.Name(element)).Click(); 
+                PropertiesCollection.driver.FindElement(By.Name(element)).Click(); 
             }
         }
         public static void SelectDropDown(string element, string value, string elementType)
         {            
             if (elementType == "Id")
             {
-                new SelectElement(driver.FindElement(By.Id(element))).SelectByText(value);
+                new SelectElement(PropertiesCollection.driver.FindElement(By.Id(element))).SelectByText(value);
             }
             else if (elementType == "Name")
             {
-                new SelectElement(driver.FindElement(By.Name(element))).SelectByText(value);
+                new SelectElement(PropertiesCollection.driver.FindElement(By.Name(element))).SelectByText(value);
             }
         }
     }

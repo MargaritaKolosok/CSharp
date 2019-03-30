@@ -24,6 +24,7 @@ namespace SeleniumTutorialY1
         {
             PropertiesCollection.driver = new ChromeDriver();
             PropertiesCollection.driver.Navigate().GoToUrl("http://www.executeautomation.com/demosite/index.html");
+           
             Console.WriteLine("URL opened");
         }
 
@@ -36,8 +37,8 @@ namespace SeleniumTutorialY1
             // Initial
             SeleniumSetMethods.EnterText("Initial", "Executeautomation", "Name");
 
-            Console.WriteLine("The value from my Title is: " + SeleniumGetMethods.GetTextFromDDL(driver, "TitleId", "Id"));
-            Console.WriteLine("The value from Initial is: " + SeleniumGetMethods.GetText(driver, "Initial", "Name"));
+            Console.WriteLine("The value from my Title is: " + SeleniumGetMethods.GetTextFromDDL("TitleId", "Id"));
+            Console.WriteLine("The value from Initial is: " + SeleniumGetMethods.GetText("Initial", "Name"));
 
             // Click
             SeleniumSetMethods.Click("Save", "Name");
@@ -48,7 +49,7 @@ namespace SeleniumTutorialY1
         [TearDown]
         public void CleanUp()
         {
-            driver.Close();
+            PropertiesCollection.driver.Close();
             Console.WriteLine("Browser closed");
         }
     }
