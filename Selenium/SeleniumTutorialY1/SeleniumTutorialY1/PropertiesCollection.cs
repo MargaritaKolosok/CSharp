@@ -9,8 +9,17 @@ using NUnit.Framework;
 
 namespace SeleniumTutorialY1
 {
+    enum PropertiesType
+    {
+        Id,
+        Name,
+        LinkText,
+        CssName,
+        ClassName
+    }
+
     class PropertiesCollection
     {
-        public static IWebDriver driver { get; set; }
+        public static IWebDriver driver { get; set; }        
     }
 }

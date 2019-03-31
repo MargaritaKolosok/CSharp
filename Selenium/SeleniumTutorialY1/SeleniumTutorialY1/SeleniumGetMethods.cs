@@ -11,13 +11,13 @@ namespace SeleniumTutorialY1
 {
     class SeleniumGetMethods
     {
-        public static string GetText(string element, string elementType)
+        public static string GetText(string element, PropertiesType elementType)
         {
-            if (elementType == "Id")
+            if (elementType == PropertiesType.Id)
             {
                 return PropertiesCollection.driver.FindElement(By.Id(element)).GetAttribute("value");
             }
-            if (elementType == "Name")
+            if (elementType == PropertiesType.Name)
             {
                 return PropertiesCollection.driver.FindElement(By.Name(element)).GetAttribute("value");
             }
@@ -26,7 +26,7 @@ namespace SeleniumTutorialY1
                 return String.Empty;
             }
         }
-        public static string GetTextFromDDL(string element, string elementType)
+        public static string GetTextFromDDL(string element, PropertiesType elementType)
         {
             if (elementType == "Id")
             {
