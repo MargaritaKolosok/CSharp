@@ -11,8 +11,7 @@ using NUnit.Framework;
 namespace SeleniumTutorialY1
 {
     class Program
-    {       
-
+    {      
         static void Main(string[] args)
         {            
             
