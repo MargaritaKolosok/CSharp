@@ -28,11 +28,11 @@ namespace SeleniumTutorialY1
         }
         public static string GetTextFromDDL(string element, PropertiesType elementType)
         {
-            if (elementType == "Id")
+            if (elementType == PropertiesType.Id)
             {
                 return new SelectElement(PropertiesCollection.driver.FindElement(By.Id(element))).AllSelectedOptions.SingleOrDefault().Text;
             }
-            if (elementType == "Name")
+            if (elementType == PropertiesType.Name)
             {
                 return new SelectElement(PropertiesCollection.driver.FindElement(By.Name(element))).AllSelectedOptions.SingleOrDefault().Text;
             }

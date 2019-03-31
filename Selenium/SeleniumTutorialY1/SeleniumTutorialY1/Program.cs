@@ -11,8 +11,7 @@ using NUnit.Framework;
 namespace SeleniumTutorialY1
 {
     class Program
-    {
-        
+    {       
 
         static void Main(string[] args)
         {            
@@ -32,16 +31,16 @@ namespace SeleniumTutorialY1
         public void ExecuteTest()
         {
             // Title
-            SeleniumSetMethods.SelectDropDown("TitleId", "Mr.", "Id");
+            SeleniumSetMethods.SelectDropDown("TitleId", "Mr.", PropertiesType.Id);
 
             // Initial
-            SeleniumSetMethods.EnterText("Initial", "Executeautomation", "Name");
+            SeleniumSetMethods.EnterText("Initial", "Executeautomation", PropertiesType.Name);
 
-            Console.WriteLine("The value from my Title is: " + SeleniumGetMethods.GetTextFromDDL("TitleId", "Id"));
-            Console.WriteLine("The value from Initial is: " + SeleniumGetMethods.GetText("Initial", "Name"));
+            Console.WriteLine("The value from my Title is: " + SeleniumGetMethods.GetTextFromDDL("TitleId", PropertiesType.Id));
+            Console.WriteLine("The value from Initial is: " + SeleniumGetMethods.GetText("Initial", PropertiesType.Name));
 
             // Click
-            SeleniumSetMethods.Click("Save", "Name");
+            SeleniumSetMethods.Click("Save", PropertiesType.Name);
 
             Console.WriteLine("Select value in dropdown");
         }
