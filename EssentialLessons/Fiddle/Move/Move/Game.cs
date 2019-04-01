@@ -28,8 +28,9 @@ namespace Move
             do
             {
                 keyPressed = Console.ReadKey(true);
-                oldPoint = point;                
 
+                oldPoint = point;
+                
                 switch (keyPressed.Key)
                 {
                     case ConsoleKey.UpArrow:
@@ -73,8 +74,8 @@ namespace Move
             else if (map.IsPortal(point))
             {                
                 Point _point = new Point();
-                
-                _point = map.PortalList.Find(x => x.Left == point.Left && x.Top == point.Top);
+
+                _point = map.PortalList.Find(x => x.Left == point.Left && x.Top == point.Top);               
 
                 Point P = new Point();
                 P = map.PortalList.Find(x => x.PointSymbol == _point.PointSymbol && x.Top != _point.Top && x.Left != _point.Left);
@@ -83,9 +84,8 @@ namespace Move
                 point.Left = P.Left;
                 
                 PreviousPortal = P;
-                PreviousPortal.PointSymbol = P.PointSymbol;
-                oldPoint.Clear();
-                //oldPoint = P;
+                PreviousPortal.PointSymbol = _point.PointSymbol;
+                oldPoint.Clear();                
             }
             else if (Bonus.Count == map.BONUS_COUNT)
             {
@@ -98,12 +98,13 @@ namespace Move
             {
                 if (map.IsPortal(oldPoint))
                 {
-                      PreviousPortal.Draw();
+                     // PreviousPortal.Draw();
                       //oldPoint.Draw();
                 }
                 else
                 {
                     oldPoint.Clear();
+                    PreviousPortal.PointSymbol = ' ';
                 }                
             }
         }
@@ -121,3 +122,9 @@ namespace Move
         }
     }
 }
+
+// Go to portal
+// Remember POINT (Symbol and coordinates) of the portal point set at. 
+// Next step
+// Point gets new coordinates
+// Oldpoint that is portal should be portal again

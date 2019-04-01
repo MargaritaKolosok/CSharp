@@ -7,7 +7,7 @@ using System.IO;
 
 
 namespace Move
-{
+{   
     class MapFromFile
     {
         public int BONUS_COUNT;
