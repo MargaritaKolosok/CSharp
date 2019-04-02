@@ -12,7 +12,7 @@ namespace Move
         private static bool isGameOver = false;
 
         Point point = new Point(10,10, Grafic.POINT);
-        Point PreviousPortal = new Point();
+        static Point PreviousPortal;
 
         MapFromFile map = new MapFromFile(Level.Levels[LevelNum]);
         
@@ -28,8 +28,9 @@ namespace Move
             do
             {
                 keyPressed = Console.ReadKey(true);
-
+                               
                 oldPoint = point;
+                
                 
                 switch (keyPressed.Key)
                 {
@@ -74,15 +75,17 @@ namespace Move
             else if (map.IsPortal(point))
             {                
                 Point _point = new Point();
-
-                _point = map.PortalList.Find(x => x.Left == point.Left && x.Top == point.Top);               
+               
+                _point = MapFromFile.FindInList(map.PortalList, point);
 
                 Point P = new Point();
-                P = map.PortalList.Find(x => x.PointSymbol == _point.PointSymbol && x.Top != _point.Top && x.Left != _point.Left);
+                   P = map.PortalList.Find(x => x.PointSymbol == _point.PointSymbol && x.Top != _point.Top && x.Left != _point.Left);
 
+                  
+                //P = MapFromFile.FindOtherPortalInList(map.PortalList, point);
                 point.Top = P.Top;
                 point.Left = P.Left;
-                
+
                 PreviousPortal = P;
                 PreviousPortal.PointSymbol = _point.PointSymbol;
                 oldPoint.Clear();                

@@ -18,6 +18,25 @@ namespace Move
 
         public List<Point> PortalList = new List<Point>();
 
+        public static Point FindInList(List<Point> list, Point point)
+        {
+            Point temp = new Point();
+            Point _point = new Point();
+            temp.Left = point.Left;
+            temp.Top = point.Top;
+            _point = list.Find(x => x.Left == temp.Left && x.Top == temp.Top);
+            return _point;
+        }
+        public static Point FindOtherPortalInList(List<Point> list, Point point)
+        {            
+            Point P = new Point();
+            P = list.Find(x => x.PointSymbol == point.PointSymbol && x.Top != point.Top && x.Left != point.Left);
+
+            point.Top = P.Top;
+            point.Left = P.Left;
+            return P;
+        }
+
         public MapFromFile(string level)
         {
             this.level = level;
