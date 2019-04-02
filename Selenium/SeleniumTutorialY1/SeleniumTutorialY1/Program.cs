@@ -1,4 +1,5 @@
-﻿using System;
+﻿
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -10,17 +11,18 @@ using NUnit.Framework;
 namespace SeleniumTutorialY1
 {
     class Program
-    {
-        IWebDriver driver = new ChromeDriver();
-
+    {      
         static void Main(string[] args)
         {            
+            
         }
 
         [SetUp]
         public void Initialize()
         {
-            driver.Navigate().GoToUrl("http://www.executeautomation.com/demosite/index.html");
+            PropertiesCollection.driver = new ChromeDriver();
+            PropertiesCollection.driver.Navigate().GoToUrl("http://www.executeautomation.com/demosite/index.html");
+           
             Console.WriteLine("URL opened");
         }
 
@@ -28,16 +30,16 @@ namespace SeleniumTutorialY1
         public void ExecuteTest()
         {
             // Title
-            SeleniumSetMethods.SelectDropDown(driver, "TitleId", "Mr.", "Id");
+            SeleniumSetMethods.SelectDropDown("TitleId", "Mr.", PropertiesType.Id);
 
             // Initial
-            SeleniumSetMethods.EnterText(driver, "Initial", "Executeautomation", "Name");
+            SeleniumSetMethods.EnterText("Initial", "Executeautomation", PropertiesType.Name);
 
-            Console.WriteLine("The value from my Title is: " + SeleniumGetMethods.GetTextFromDDL("TitleId", "Id"));
-            Console.WriteLine("The value from Initial is: " + SeleniumGetMethods.GetText(driver, "Initial", "Name"));
+            Console.WriteLine("The value from my Title is: " + SeleniumGetMethods.GetTextFromDDL("TitleId", PropertiesType.Id));
+            Console.WriteLine("The value from Initial is: " + SeleniumGetMethods.GetText("Initial", PropertiesType.Name));
 
             // Click
-            SeleniumSetMethods.Click(driver, "Save", "Name");
+            SeleniumSetMethods.Click("Save", PropertiesType.Name);
 
             Console.WriteLine("Select value in dropdown");
         }
@@ -45,7 +47,7 @@ namespace SeleniumTutorialY1
         [TearDown]
         public void CleanUp()
         {
-            driver.Close();
+            PropertiesCollection.driver.Close();
             Console.WriteLine("Browser closed");
         }
     }

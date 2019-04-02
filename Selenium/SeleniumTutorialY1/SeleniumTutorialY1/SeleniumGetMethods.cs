@@ -11,30 +11,30 @@ namespace SeleniumTutorialY1
 {
     class SeleniumGetMethods
     {
-        public static string GetText(IWebDriver driver, string element, string elementType)
+        public static string GetText(string element, PropertiesType elementType)
         {
-            if (elementType == "Id")
+            if (elementType == PropertiesType.Id)
             {
-                return driver.FindElement(By.Id(element)).GetAttribute("value");
+                return PropertiesCollection.driver.FindElement(By.Id(element)).GetAttribute("value");
             }
-            if (elementType == "Name")
+            if (elementType == PropertiesType.Name)
             {
-                return driver.FindElement(By.Name(element)).GetAttribute("value");
+                return PropertiesCollection.driver.FindElement(By.Name(element)).GetAttribute("value");
             }
             else
             {
                 return String.Empty;
             }
         }
-        public static string GetTextFromDDL(IWebDriver driver, string element, string elementType)
+        public static string GetTextFromDDL(string element, PropertiesType elementType)
         {
-            if (elementType == "Id")
+            if (elementType == PropertiesType.Id)
             {
-                return new SelectElement(driver.FindElement(By.Id(element))).AllSelectedOptions.SingleOrDefault().Text;
+                return new SelectElement(PropertiesCollection.driver.FindElement(By.Id(element))).AllSelectedOptions.SingleOrDefault().Text;
             }
-            if (elementType == "Name")
+            if (elementType == PropertiesType.Name)
             {
-                return new SelectElement(driver.FindElement(By.Name(element))).AllSelectedOptions.SingleOrDefault().Text;
+                return new SelectElement(PropertiesCollection.driver.FindElement(By.Name(element))).AllSelectedOptions.SingleOrDefault().Text;
             }
             else
             {
