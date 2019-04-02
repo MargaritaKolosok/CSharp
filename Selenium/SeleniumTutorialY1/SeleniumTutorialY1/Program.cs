@@ -33,7 +33,7 @@ namespace SeleniumTutorialY1
             // Initial
             SeleniumSetMethods.EnterText(driver, "Initial", "Executeautomation", "Name");
 
-            Console.WriteLine("The value from my Title is: " + SeleniumGetMethods.GetTextFromDDL(driver, "TitleId", "Id"));
+            Console.WriteLine("The value from my Title is: " + SeleniumGetMethods.GetTextFromDDL("TitleId", "Id"));
             Console.WriteLine("The value from Initial is: " + SeleniumGetMethods.GetText(driver, "Initial", "Name"));
 
             // Click
