@@ -29,6 +29,11 @@ namespace SeleniumTutorialY1
         [Test]
         public void ExecuteTest()
         {
+            EAPageObject page = new EAPageObject();
+            page.txtInitial.SendKeys("executeautomation");
+            page.btnSave.Click();
+
+            /*
             // Title
             SeleniumSetMethods.SelectDropDown("TitleId", "Mr.", PropertiesType.Id);
 
@@ -42,6 +47,7 @@ namespace SeleniumTutorialY1
             SeleniumSetMethods.Click("Save", PropertiesType.Name);
 
             Console.WriteLine("Select value in dropdown");
+            */
         }
 
         [TearDown]

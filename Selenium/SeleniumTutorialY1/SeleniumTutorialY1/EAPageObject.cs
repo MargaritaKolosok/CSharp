@@ -12,10 +12,18 @@ namespace SeleniumTutorialY1
 {
     class EAPageObject
     {
+        public EAPageObject()
+        {
+            PageFactory.InitElements(PropertiesCollection.driver, this);
+        }
+
         [FindsBy(How = How.Id, Using = "TitleId")]
-        public IWebElement TitleId { get; set; }
+        public IWebElement ddlTitleId { get; set; }
 
         [FindsBy(How = How.Name, Using = "Initial")]
         public IWebElement txtInitial { get; set; }
+
+        [FindsBy(How = How.Name, Using = "Save")]
+        public IWebElement btnSave { get; set; }
     }
 }
