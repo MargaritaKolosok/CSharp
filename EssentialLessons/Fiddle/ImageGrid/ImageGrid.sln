@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.539
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ImageGrid", "ImageGrid\ImageGrid.csproj", "{655B19C3-EB81-40C6-BCE0-3D0F0B7F6C22}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{655B19C3-EB81-40C6-BCE0-3D0F0B7F6C22}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{655B19C3-EB81-40C6-BCE0-3D0F0B7F6C22}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{655B19C3-EB81-40C6-BCE0-3D0F0B7F6C22}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{655B19C3-EB81-40C6-BCE0-3D0F0B7F6C22}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {27D3AAD0-903C-4856-92F9-6E1646D94D47}
+	EndGlobalSection
+EndGlobal
