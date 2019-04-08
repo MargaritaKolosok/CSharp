@@ -78,8 +78,7 @@ namespace Move
                
                 _point = MapFromFile.FindInList(map.PortalList, point);
 
-                Point P = new Point();
-                   P = map.PortalList.Find(x => x.PointSymbol == _point.PointSymbol && x.Top != _point.Top && x.Left != _point.Left);
+                Point P = map.PortalList.Find(x => x.PointSymbol == _point.PointSymbol && x.Top != _point.Top && x.Left != _point.Left);
 
                   
                 //P = MapFromFile.FindOtherPortalInList(map.PortalList, point);
