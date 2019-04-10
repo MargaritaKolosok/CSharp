@@ -14,8 +14,10 @@ namespace ImageGrid.Models
 {
     public class Startup
     {
+        // IConfiguration - Represents a set of key/value application configuration properties.
+
         public Startup(IConfiguration configuration)
-        {
+        {         
             Configuration = configuration;
         }
 
