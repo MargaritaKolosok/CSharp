@@ -31,23 +31,7 @@ namespace SeleniumTutorialY1
         {
             EAPageObject page = new EAPageObject();
             page.txtInitial.SendKeys("executeautomation");
-            page.btnSave.Click();
-
-            /*
-            // Title
-            SeleniumSetMethods.SelectDropDown("TitleId", "Mr.", PropertiesType.Id);
-
-            // Initial
-            SeleniumSetMethods.EnterText("Initial", "Executeautomation", PropertiesType.Name);
-
-            Console.WriteLine("The value from my Title is: " + SeleniumGetMethods.GetTextFromDDL("TitleId", PropertiesType.Id));
-            Console.WriteLine("The value from Initial is: " + SeleniumGetMethods.GetText("Initial", PropertiesType.Name));
-
-            // Click
-            SeleniumSetMethods.Click("Save", PropertiesType.Name);
-
-            Console.WriteLine("Select value in dropdown");
-            */
+            page.btnSave.Click();       
         }
 
         [TearDown]
