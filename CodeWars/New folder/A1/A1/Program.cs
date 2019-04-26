@@ -25,7 +25,7 @@ namespace A1
         public static string CreatePhoneNumber2(int[] numbers)        {
 
             string h = string.Concat(numbers).ToString();
-            return long.Parse(string.Concat(numbers)).ToString("(000) 000-0000");
+            return long.Parse(string.Concat(numbers)).ToString("(000)-000-0000");
         }
 
         static void Main(string[] args)
