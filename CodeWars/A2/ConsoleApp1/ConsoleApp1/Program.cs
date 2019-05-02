@@ -9,27 +9,19 @@ namespace ConsoleApp1
     class Program
     {
         public static int[] TwoSum(int[] numbers, int target)
-        {
-            int[] ResultArray = new int[2];
-            int num = 0;
-
+        {    
             for (int i=0; i<numbers.Length; i++)
             {
                 for (int j = 0; j < numbers.Length; j++)
                 {
-                    if (i!=j)
+                    if (numbers[i] + numbers[j] == target)
                     {
-                        if (numbers[i] + numbers[j] == target)
-                        {
-                            ResultArray[0] = numbers[i];
-                           // num++;
-                            ResultArray[1] = numbers[j];
-                        }
+                        return new int[] { i, j};
                     }
                 }
             }
 
-            return ResultArray;
+            return new int[0];
         }
 
         static void Main(string[] args)
@@ -38,7 +30,7 @@ namespace ConsoleApp1
             int[] result = TwoSum(myArray, 9);
             for(int i=0; i<result.Length; i++)
             {
-                Console.WriteLine(result[i]);
+                Console.WriteLine("Index " + result[i]);
             }
             Console.WriteLine();
             Console.ReadKey();
