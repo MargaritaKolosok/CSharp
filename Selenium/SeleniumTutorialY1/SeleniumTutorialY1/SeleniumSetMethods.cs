@@ -22,7 +22,6 @@ namespace SeleniumTutorialY1
                 PropertiesCollection.driver.FindElement(By.Name(element)).SendKeys(value); ;
             }           
         }
-
         public static void Click(string element, PropertiesType elementType)
         {
             if (elementType == PropertiesType.Id)
