@@ -47,14 +47,12 @@ namespace A1
             public Int64 PhoneNumber;
         }
 
-
-
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            Console.WriteLine("Generic collections");
+
             GenericCollection();
-            GenericCollectionWithCustomType();
-            
+            GenericCollectionWithCustomType();            
 
             Console.ReadKey();
         }
