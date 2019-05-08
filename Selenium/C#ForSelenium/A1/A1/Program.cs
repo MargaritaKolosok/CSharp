@@ -27,10 +27,35 @@ namespace A1
             }
         }
 
+        public static void GenericCollectionWithCustomType()
+        {
+            List<User> userList = new List<User>();
+            userList.Add(new User { Name = "Rita", Age = 26 });
+            userList.Add(new User { Name = "Rita", Age = 26 });
+            userList.Add(new User { Name = "Rita", Age = 26 });
+            foreach (var value in userList)
+            {
+                Console.WriteLine(value.Name + " " + value.Age);
+            }
+        }
+
+        class User
+        {
+            public string Name;
+            public int Age;
+            public string Email;
+            public Int64 PhoneNumber;
+        }
+
+
+
         static void Main(string[] args)
         {
             Console.WriteLine("Hello World!");
             GenericCollection();
+            GenericCollectionWithCustomType();
+            
+
             Console.ReadKey();
         }
     }
