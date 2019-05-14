@@ -12,6 +12,7 @@ namespace A1
             string[] user3 = new string[] { "MyName", "MyCountry", "Age" };
 
             Dictionary<int, string[]> dict = new Dictionary<int, string[]>();
+
             dict.Add(1, user1);
             dict.Add(2, user2);
             dict.Add(3, user3);
@@ -33,6 +34,7 @@ namespace A1
             userList.Add(new User { Name = "Rita", Age = 26 });
             userList.Add(new User { Name = "Rita", Age = 26 });
             userList.Add(new User { Name = "Rita", Age = 26 });
+
             foreach (var value in userList)
             {
                 Console.WriteLine(value.Name + " " + value.Age);
