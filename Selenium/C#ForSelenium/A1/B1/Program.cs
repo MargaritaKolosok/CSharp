@@ -39,7 +39,7 @@ namespace B1
         }
         static void Main(string[] args)
         {
-            WebDriver driver = new Chrome();
+            IWebDriver driver = new Chrome();
             driver.FindElement();
 
             Console.WriteLine(GetBrowserName(Browser.Firefox));

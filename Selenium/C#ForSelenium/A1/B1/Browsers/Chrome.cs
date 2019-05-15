@@ -8,7 +8,7 @@ using B1.Selenium;
 
 namespace B1.Browsers
 {
-    class Chrome : WebDriver
+    class Chrome : IWebDriver
     {
         public void FindElement()
         {
@@ -20,9 +20,9 @@ namespace B1.Browsers
             Console.WriteLine("Click the element in Chrome");
         }
 
-        public void SendKeys(string keys)
+        public void SendKeys()
         {
-            Console.WriteLine("Send keys in Chrome" + keys);
+            Console.WriteLine("Send keys in Chrome");
         }
     }
 }
