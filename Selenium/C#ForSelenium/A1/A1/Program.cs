@@ -31,6 +31,7 @@ namespace A1
         public static void GenericCollectionWithCustomType()
         {
             List<User> userList = new List<User>();
+
             userList.Add(new User { Name = "Rita", Age = 26 });
             userList.Add(new User { Name = "Rita", Age = 26 });
             userList.Add(new User { Name = "Rita", Age = 26 });
