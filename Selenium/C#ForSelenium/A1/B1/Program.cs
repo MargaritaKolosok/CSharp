@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using B1.Browsers;
+using B1.Selenium;
 
 namespace B1
 {
@@ -37,6 +39,9 @@ namespace B1
         }
         static void Main(string[] args)
         {
+            WebDriver driver = new Chrome();
+            driver.FindElement();
+
             Console.WriteLine(GetBrowserName(Browser.Firefox));
             Console.ReadKey();
         }

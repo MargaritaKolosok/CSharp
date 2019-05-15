@@ -6,7 +6,21 @@ using System.Threading.Tasks;
 
 namespace B1.Selenium
 {
-    class WebDriver
+    public class WebDriver
     {
+        public void FindElement()
+        {
+            Console.WriteLine("Finf element");
+        }
+
+        public void Click()
+        {
+            Console.WriteLine("Click the element");
+        }
+
+        public void SendKeys(string keys)
+        {
+            Console.WriteLine("Send keys" + keys);
+        }
     }
 }
