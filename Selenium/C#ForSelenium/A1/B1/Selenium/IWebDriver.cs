@@ -6,11 +6,11 @@ using System.Threading.Tasks;
 
 namespace B1.Selenium
 {
-    interface IWebDriver
+    public interface IWebDriver
     {
         void FindElement();
 
-        void SendKeys();
+        void SendKeys(string keys);
 
         void Click();
     }

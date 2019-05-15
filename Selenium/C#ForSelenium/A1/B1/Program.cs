@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using B1.Browsers;
 using B1.Selenium;
+//using B1.ExtentionMethods;
 
 namespace B1
 {
@@ -41,6 +42,8 @@ namespace B1
         {
             IWebDriver driver = new Chrome();
             driver.FindElement();
+
+            driver.SendKeysWithSplChar("execute automation", "+");
 
             Console.WriteLine(GetBrowserName(Browser.Firefox));
             Console.ReadKey();

@@ -5,7 +5,6 @@ using System.Text;
 using System.Threading.Tasks;
 using B1.Selenium;
 
-
 namespace B1.Browsers
 {
     class Chrome : IWebDriver
@@ -20,9 +19,10 @@ namespace B1.Browsers
             Console.WriteLine("Click the element in Chrome");
         }
 
-        public void SendKeys()
+        public void SendKeys(string keys)
         {
-            Console.WriteLine("Send keys in Chrome");
+            Console.WriteLine("Send keys in Chrome" + keys);
         }
+                
     }
 }

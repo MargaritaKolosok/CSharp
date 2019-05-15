@@ -19,9 +19,9 @@ namespace B1.Browsers
             Console.WriteLine("Click the element in Firefox");
         }
 
-        public void SendKeys()
+        public void SendKeys(string keys)
         {
-            Console.WriteLine("Send keys in Firefox");
+            Console.WriteLine("Send keys in Firefox" + keys);
         }
     }
 }
