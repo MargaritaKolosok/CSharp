@@ -5,7 +5,6 @@ using System.Text;
 using System.Threading.Tasks;
 using B1.Browsers;
 using B1.Selenium;
-//using B1.ExtentionMethods;
 
 namespace B1
 {
