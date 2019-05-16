@@ -21,15 +21,18 @@ namespace B1
             List<User> users = new List<User>();
 
             users.Add(new User { Name = "Rita", Age = 26 });
-            users.Add(new User { Name = "Rita", Age = 26 });
-            users.Add(new User { Name = "Rita", Age = 26 });
+            users.Add(new User { Name = "Maria", Age = 32 });
+            users.Add(new User { Name = "Jane", Age = 29 });
 
-            var usersList = from user in users
-                            select user.Name;
+            //var usersList = from user in users
+            //                where user.Age > 26
+            //                select user.Name;            
+
+            var usersList = users.Where(x => x.Age > 30).Select(x => x);
 
             foreach (var user in usersList)
-            {
-                Console.WriteLine(user);
+            {                
+                Console.WriteLine(user.Name + " " + user.Age);
             }
         }
     }
