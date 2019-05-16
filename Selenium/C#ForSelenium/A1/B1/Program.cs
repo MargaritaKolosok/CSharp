@@ -37,6 +37,7 @@ namespace B1
                 return "explorer";
             }
         }
+
         static void Main(string[] args)
         {
             IWebDriver driver = new Chrome();
@@ -45,6 +46,8 @@ namespace B1
             driver.SendKeysWithSplChar("execute automation", "+");
 
             Console.WriteLine(GetBrowserName(Browser.Firefox));
+
+            CollectionExample.GenericCollectionWithCustomType();
             Console.ReadKey();
         }
     }

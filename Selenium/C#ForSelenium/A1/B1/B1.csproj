@@ -46,6 +46,7 @@
     <Compile Include="Browsers\Chrome.cs" />
     <Compile Include="Browsers\Firefox.cs" />
     <Compile Include="Browsers\IE.cs" />
+    <Compile Include="CollectionExample.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Selenium\IWebDriver.cs" />
