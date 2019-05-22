@@ -13,8 +13,9 @@ namespace SeleniumTutorialY1
     class Program
     {      
         static void Main(string[] args)
-        {            
-            
+        {
+            ChromeDriver d = new ChromeDriver();
+            bool result = d.FindElement(By.Id("c")).Displayed;
         }
 
         [SetUp]
@@ -39,6 +40,7 @@ namespace SeleniumTutorialY1
         {
             PropertiesCollection.driver.Close();
             Console.WriteLine("Browser closed");
+            
         }
     }
 }

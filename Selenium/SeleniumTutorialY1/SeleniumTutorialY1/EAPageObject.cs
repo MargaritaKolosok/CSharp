@@ -14,7 +14,7 @@ namespace SeleniumTutorialY1
     {
         public EAPageObject()
         {
-            PageFactory.InitElements(PropertiesCollection.driver, this);
+            InitElements(PropertiesCollection.driver, this);
         }
 
         [FindsBy(How = How.Id, Using = "TitleId")]

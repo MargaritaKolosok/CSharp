@@ -30,7 +30,10 @@ namespace SeleniumTutorialY1
             }
             else if (elementType == PropertiesType.Name)
             {
-                PropertiesCollection.driver.FindElement(By.Name(element)).Click(); 
+                PropertiesCollection.driver.FindElement(By.Name(element)).Click();
+               // bool b = PropertiesCollection.driver.FindElement(By.Name(element)).Displayed;
+               // Console.WriteLine(b);
+
             }
         }
         public static void SelectDropDown(string element, string value, PropertiesType elementType)
