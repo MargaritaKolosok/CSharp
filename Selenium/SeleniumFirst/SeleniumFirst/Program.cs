@@ -8,7 +8,6 @@ using OpenQA.Selenium;
 using NUnit.Framework;
 using OpenQA.Selenium.Support.UI;
 
-
 namespace SeleniumFirst
 {
     class Program
@@ -37,6 +36,10 @@ namespace SeleniumFirst
 
             // Initial
             SeleniumSetMethods.EnterText(driver, "Initial", "executeautomation", "Name");
+
+            // Get Text from controls
+            Console.WriteLine("The value of my Title is {0}", SeleniumGetMethods.GetText(driver, "TitleId", "Id"));
+            Console.WriteLine("The value of my Initial is {0}", SeleniumGetMethods.GetText(driver, "Initial", "Name"));
 
             // Click
             SeleniumSetMethods.Click(driver, "Save", "Name");
