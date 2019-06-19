@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using OpenQA.Selenium.Chrome;
 using OpenQA.Selenium;
 using NUnit.Framework;
+using OpenQA.Selenium.Support.UI;
 
 
 namespace SeleniumFirst
@@ -24,16 +25,21 @@ namespace SeleniumFirst
         public void Initialize()
         {
             // Navigate to the google page
-            driver.Navigate().GoToUrl("http://google.com");
+            driver.Navigate().GoToUrl("http://www.executeautomation.com/demosite/index.html");
             Console.WriteLine("Opened URL");
         }
 
         [Test]
         public void ExecuteTest()
         {
-            IWebElement element = driver.FindElement(By.Name("q"));
-            element.SendKeys("Ameria AG");
-            element.SendKeys(Keys.Enter);
+            // Title
+            SeleniumSetMethods.SelectDropDown(driver, "TitleId", "Mr.", "Id");
+
+            // Initial
+            SeleniumSetMethods.EnterText(driver, "Initial", "executeautomation", "Name");
+
+            // Click
+            SeleniumSetMethods.Click(driver, "Save", "Name");
 
             Console.WriteLine("Executed test");
         }
