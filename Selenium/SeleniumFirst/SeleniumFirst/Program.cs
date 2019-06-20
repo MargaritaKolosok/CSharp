@@ -41,9 +41,8 @@ namespace SeleniumFirst
             Console.WriteLine("The value of my Title is {0}", SeleniumGetMethods.GetText(driver, "TitleId", "Id"));
             Console.WriteLine("The value of my Initial is {0}", SeleniumGetMethods.GetText(driver, "Initial", "Name"));
 
-            // Click
+            // Click 
             SeleniumSetMethods.Click(driver, "Save", "Name");
-
             Console.WriteLine("Executed test");
         }
 
@@ -51,7 +50,6 @@ namespace SeleniumFirst
         public void CleanUp()
         {
             driver.Close();
-
             Console.WriteLine("Browser closed");
         }
 
