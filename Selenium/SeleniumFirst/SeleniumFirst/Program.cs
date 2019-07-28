@@ -13,11 +13,12 @@ namespace SeleniumFirst
     class Program
     {
         // Create reference for our driver
-        IWebDriver driver = new ChromeDriver();
+        
+        IWebDriver driver = new ChromeDriver();       
 
         static void Main(string[] args)
-        {           
-
+        {
+            
         }
 
         [SetUp]
