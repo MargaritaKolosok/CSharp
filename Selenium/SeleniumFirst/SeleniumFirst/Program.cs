@@ -33,7 +33,8 @@ namespace SeleniumFirst
         public void ExecuteTest()
         {
             // Title
-            SeleniumSetMethods.SelectDropDown(driver, "TitleId", "Mr.", "Id");
+           // SeleniumSetMethods.SelectDropDown(driver, "TitleId", "Mr.", "Id");
+            SeleniumSetMethods.GetDropDownValue(driver, "TitleId", 1, "Id");
 
             // Initial
             SeleniumSetMethods.EnterText(driver, "Initial", "executeautomation", "Name");
@@ -46,6 +47,7 @@ namespace SeleniumFirst
             SeleniumSetMethods.Click(driver, "Save", "Name");
             Console.WriteLine("Executed test");
         }
+             
 
         [TearDown]
         public void CleanUp()

@@ -25,37 +25,6 @@ namespace SeleniumFirst
                 return String.Empty;
             }                
         }
-
-        // Get value from drop down
-
-        public static string GetDropDownValue(IWebDriver driver, string element, int index, string type)
-        {
-            if (type == "Id")
-            {
-                IWebElement el = driver.FindElement(By.Id(element));
-                SelectElement select = new SelectElement(el);
-                select.SelectByIndex(index);
-                return select.ToString();
-            }
-            if (type == "Name")
-            {
-                IWebElement el = driver.FindElement(By.Name(element));
-                SelectElement select = new SelectElement(el);
-                select.SelectByIndex(index);
-                return select.ToString();
-            }
-            if (type == "XPath")
-            {
-                IWebElement el = driver.FindElement(By.XPath(element));
-                SelectElement select = new SelectElement(el);
-                select.SelectByIndex(index);
-                return select.ToString(); ;
-            }
-            else
-            {
-                return String.Empty;
-            }
-
-        }
+        
     }
 }
