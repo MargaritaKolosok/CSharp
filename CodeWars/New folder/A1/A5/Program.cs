@@ -8,27 +8,15 @@ namespace A5
 {
     class Program
     {
-        public static string DoneOrNot(int[][] board)
+        public static bool XO(string input)
         {
-            for (int i = 0; i < board.GetLength(0); i++)
-            {
-               
-                for (int j = 0; j < board.GetLength(1); j++)
-                {
-                    if (board[])
-                    {
-
-                    }
-                }
-            }
-
-            bool CheckUniq(int num)
-                {
-                    string temp = board[]
-                }
+            return input.ToLower().Count(i => i == 'x') == input.ToLower().Count(i => i == 'o');
         }
+
         static void Main(string[] args)
         {
+            Console.WriteLine(XO("xxxooXXOo"));
+            Console.ReadLine();
         }
     }
 }
