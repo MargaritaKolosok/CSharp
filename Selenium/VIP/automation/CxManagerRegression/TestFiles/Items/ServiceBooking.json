@@ -1,0 +1,9 @@
+{
+  "$schema": "http://virtualpromoter.com/schemas/porsche/serviceBooking.json",
+  "lang": "en",
+  "givenName": "{0}",
+  "familyName": "{1}",
+  "email": "aa@bb.cc",
+  "mobileNumber": "+380931111111",
+  "desiredDate": "somewhen"
+}

@@ -1,0 +1,7 @@
+{
+  "$schema": "http://virtualpromoter.com/schemas/poi.json",
+  "lang": "en",
+  "title": "{0}",
+  "description": "some poi description",
+  "picture": []
+}

@@ -1,0 +1,142 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{2DF76D03-EFDB-47F2-A895-F999E5170671}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Models</RootNamespace>
+    <AssemblyName>Models</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CheckForOverflowUnderflow>true</CheckForOverflowUnderflow>
+    <LangVersion>latest</LangVersion>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <LangVersion>latest</LangVersion>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.12.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Accounts\Account.cs" />
+    <Compile Include="Accounts\Models\Model.cs" />
+    <Compile Include="Accounts\RegistrationInfo.cs" />
+    <Compile Include="Approvals\ApprovalResponse.cs" />
+    <Compile Include="Apps\ActualAppVersions\ActualAppVersionResponse.cs" />
+    <Compile Include="Apps\ActualAppVersions\ActualAppVersionRequest.cs" />
+    <Compile Include="Apps\ActualAppVersions\I18n.cs" />
+    <Compile Include="Apps\AppImport.cs" />
+    <Compile Include="Apps\AppResponse.cs" />
+    <Compile Include="Apps\AppRequest.cs" />
+    <Compile Include="Apps\AppImage.cs" />
+    <Compile Include="Approvals\ApprovalRequest.cs" />
+    <Compile Include="Apps\AppWrapper.cs" />
+    <Compile Include="Apps\MasterDataValues\MasterDataValues.cs" />
+    <Compile Include="Apps\OverwritableItems\OverwritableItems.cs" />
+    <Compile Include="Apps\Places\Place.cs" />
+    <Compile Include="Apps\Tags\Tag.cs" />
+    <Compile Include="Apps\Versions\Version.cs" />
+    <Compile Include="Apps\Assets\Asset.cs" />
+    <Compile Include="BackgroundTasks\BackgroundTaskWrapper.cs" />
+    <Compile Include="BackgroundTasks\BackgroundTask.cs" />
+    <Compile Include="ExportTenant\EntitiesListId.cs" />
+    <Compile Include="ExportTenant\EntitiesListInfo.cs" />
+    <Compile Include="Interfaces\IApprovalEntity.cs" />
+    <Compile Include="Interfaces\IEntity.cs" />
+    <Compile Include="Items\ActualAppVersions\ActualAppVersion.cs" />
+    <Compile Include="Items\ItemFromList.cs" />
+    <Compile Include="Items\Item.cs" />
+    <Compile Include="Items\LangData\LangData.cs" />
+    <Compile Include="Items\LangJsonData\LangJsonData.cs" />
+    <Compile Include="Items\MasterDataValues\MasterDataValues.cs" />
+    <Compile Include="Items\OverwritableItems\OverwritableItems.cs" />
+    <Compile Include="Items\PushableApps\PushableApp.cs" />
+    <Compile Include="Items\References\ReferenceInfo\ReferenceInfo.cs" />
+    <Compile Include="Items\References\References.cs" />
+    <Compile Include="Items\SchemaModels\SchemaModel.cs" />
+    <Compile Include="Items\Tags\Tag.cs" />
+    <Compile Include="Items\TypeModels\TypeModel.cs" />
+    <Compile Include="Items\Versions\Version.cs" />
+    <Compile Include="Notifications\BodyTemplates\BodyTemplate.cs" />
+    <Compile Include="Notifications\RegistrationIdRequest.cs" />
+    <Compile Include="Notifications\RegistrationIdResponse.cs" />
+    <Compile Include="Notifications\Tags\Tag.cs" />
+    <Compile Include="Places\PlaceImage.cs" />
+    <Compile Include="Places\Apps\App.cs" />
+    <Compile Include="Places\AppVersions\AppVersion.cs" />
+    <Compile Include="Places\Devices\Data.cs" />
+    <Compile Include="Places\Devices\DeviceChildPlace.cs" />
+    <Compile Include="Places\Devices\Device.cs" />
+    <Compile Include="Places\Devices\Place.cs" />
+    <Compile Include="Places\Items\DirectItem.cs" />
+    <Compile Include="Places\Items\JsonItem.cs" />
+    <Compile Include="Places\Items\Item.cs" />
+    <Compile Include="Places\ChildPlace.cs" />
+    <Compile Include="Places\Features\Feature.cs" />
+    <Compile Include="Places\Geolocations\Geolocation.cs" />
+    <Compile Include="Places\JsonData\JsonData.cs" />
+    <Compile Include="Places\Modules\Configuration.cs" />
+    <Compile Include="Places\Modules\ModuleFeatureI18N.cs" />
+    <Compile Include="Places\Modules\ModuleVersion.cs" />
+    <Compile Include="Places\ParametersInstances\ParametersInstance.cs" />
+    <Compile Include="Places\ParentPlace.cs" />
+    <Compile Include="Places\Place.cs" />
+    <Compile Include="Tenants\CreatedUpdatedBy\CreatedBy.cs" />
+    <Compile Include="Tenants\Tenant.cs" />
+    <Compile Include="UserDirectory\ApplicationKeyValue.cs" />
+    <Compile Include="UserDirectory\ApplicationList.cs" />
+    <Compile Include="UserDirectory\ApplicationData.cs" />
+    <Compile Include="UserDirectory\RoleList.cs" />
+    <Compile Include="UserDirectory\RoleRow.cs" />
+    <Compile Include="UserDirectory\Tenant.cs" />
+    <Compile Include="UserDirectory\UserData.cs" />
+    <Compile Include="UserDirectory\Group.cs" />
+    <Compile Include="UserDirectory\Login.cs" />
+    <Compile Include="UserDirectory\Pager.cs" />
+    <Compile Include="UserDirectory\Role.cs" />
+    <Compile Include="UserDirectory\ApplicationRow.cs" />
+    <Compile Include="UserDirectory\RoleModel.cs" />
+    <Compile Include="UserDirectory\UserModel.cs" />
+    <Compile Include="UserDirectory\UserRow.cs" />
+    <Compile Include="UserDirectory\Status.cs" />
+    <Compile Include="UserDirectory\Permission.cs" />
+    <Compile Include="UserDirectory\UserList.cs" />
+    <Compile Include="Users\Authorization.cs" />
+    <Compile Include="Places\Modules\PlaceModule.cs" />
+    <Compile Include="Places\Schedules\Schedule.cs" />
+    <Compile Include="Places\Schedules\ScheduleApp.cs" />
+    <Compile Include="Places\Schedules\ScheduleDay.cs" />
+    <Compile Include="Places\Schemas\Schema.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Users\User.cs" />
+    <Compile Include="Users\UserIdName.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

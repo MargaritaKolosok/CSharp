@@ -1,0 +1,255 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="AddAppInAppsButton" xml:space="preserve">
+    <value>vb-footer vb-band-button#band-btn-add-new[par-screen="app-list"]:visible</value>
+  </data>
+  <data name="AddAppInPlacesButton" xml:space="preserve">
+    <value>vb-footer vb-band-button#band-btn-add-app:visible</value>
+  </data>
+  <data name="AddExistingPlaceAsChildButton" xml:space="preserve">
+    <value>vb-footer vb-band-button#band-btn-add-existing-place-as-child:visible</value>
+  </data>
+  <data name="AddItemButton" xml:space="preserve">
+    <value>vb-footer vb-band-button#band-btn-add-new[par-screen="item-list"]:visible</value>
+  </data>
+  <data name="AddPlaceButton" xml:space="preserve">
+    <value>vb-footer vb-band-button#band-btn-add-new[par-screen="place-list"]:visible</value>
+  </data>
+  <data name="AddPlaceSubMenu" xml:space="preserve">
+    <value>vb-footer div#div-pl-sub-menu:visible</value>
+  </data>
+  <data name="AddPlaceSubMenuInactive" xml:space="preserve">
+    <value>vb-footer div#div-pl-sub-menu.vb-disabled:visible</value>
+  </data>
+  <data name="AddVersionButton" xml:space="preserve">
+    <value>vb-footer vb-band-button#band-btn-add-version:visible</value>
+  </data>
+  <data name="AppsOrderButton" xml:space="preserve">
+    <value>vb-footer vb-band-button#band-btn-apps-order:visible</value>
+  </data>
+  <data name="CancelButton" xml:space="preserve">
+    <value>vb-footer vb-band-button#band-btn-cancel:visible</value>
+  </data>
+  <data name="ClearSelectionButton" xml:space="preserve">
+    <value>vb-footer vb-band-button#band-btn-clear-selection:visible</value>
+  </data>
+  <data name="CloseButton" xml:space="preserve">
+    <value>vb-footer vb-band-button#band-btn-close:visible</value>
+  </data>
+  <data name="CopyUrlButton" xml:space="preserve">
+    <value>vb-footer vb-band-button#band-btn-copy-url:visible</value>
+  </data>
+  <data name="CreateNewChildPlaceButton" xml:space="preserve">
+    <value>vb-footer vb-band-button#band-btn-create-new-child-place:visible</value>
+  </data>
+  <data name="DeleteButton" xml:space="preserve">
+    <value>vb-footer vb-band-button#band-btn-delete:visible</value>
+  </data>
+  <data name="DistributeAppButton" xml:space="preserve">
+    <value>vb-footer div#div-pl-sub-menu-distr #sub-menu-app-distr:visible</value>
+  </data>
+  <data name="DistributeButton" xml:space="preserve">
+    <value>vb-footer vb-band-button#band-btn-distribute:not(.vb-disabled):visible</value>
+  </data>
+  <data name="DistributeMasterDataButton" xml:space="preserve">
+    <value>vb-footer div#div-pl-sub-menu-distr #sub-menu-master-distr:visible</value>
+  </data>
+  <data name="DistributeSubMenu" xml:space="preserve">
+    <value>vb-footer div#div-pl-sub-menu-distr:visible</value>
+  </data>
+  <data name="DownloadButton" xml:space="preserve">
+    <value>vb-footer vb-band-button#band-btn-download:visible</value>
+  </data>
+  <data name="DuplicateButton" xml:space="preserve">
+    <value>vb-footer vb-band-button#band-btn-duplicate:visible</value>
+  </data>
+  <data name="DuplicateButtonInactive" xml:space="preserve">
+    <value>vb-footer vb-band-button#band-btn-duplicate.vb-disabled</value>
+  </data>
+  <data name="EditButton" xml:space="preserve">
+    <value>vb-footer vb-band-button#band-btn-edit:visible</value>
+  </data>
+  <data name="FileAccessButton" xml:space="preserve">
+    <value>vb-footer vb-band-button#band-btn-file-access:visible</value>
+  </data>
+  <data name="FileAccessButtonInactive" xml:space="preserve">
+    <value>vb-footer vb-band-button#band-btn-file-access.vb-disabled:visible</value>
+  </data>
+  <data name="FollowButton" xml:space="preserve">
+    <value>vb-footer vb-band-button[el-id*="btn-followd"]:visible</value>
+  </data>
+  <data name="FollowButtonInactive" xml:space="preserve">
+    <value>vb-footer vb-band-button[el-id*="btn-followd"].vb-disabled:visible</value>
+  </data>
+  <data name="HideDeletedButton" xml:space="preserve">
+    <value>vb-footer vb-band-button[el-id*="btn-hide-deleted"]:visible</value>
+  </data>
+  <data name="ImportButton" xml:space="preserve">
+    <value>vb-footer vb-band-button#band-btn-import:visible</value>
+  </data>
+  <data name="ImportSubMenu" xml:space="preserve">
+    <value>vb-footer div#div-pl-sub-menu:visible</value>
+  </data>
+  <data name="LiveImagesButton" xml:space="preserve">
+    <value>vb-footer vb-band-button#band-btn-live-images:visible</value>
+  </data>
+  <data name="LiveImagesButtonInactive" xml:space="preserve">
+    <value>vb-footer vb-band-button#band-btn-live-images.vb-disabled:visible</value>
+  </data>
+  <data name="ModifySubMenu" xml:space="preserve">
+    <value>vb-footer div#band-btn-modify:visible</value>
+  </data>
+  <data name="PorscheCarButton" xml:space="preserve">
+    <value>vb-footer vb-band-button#band-btn-porsche-car:visible</value>
+  </data>
+  <data name="PropertiesOrderButton" xml:space="preserve">
+    <value>vb-footer vb-band-button#band-btn-properties-order:visible</value>
+  </data>
+  <data name="PushButton" xml:space="preserve">
+    <value>vb-footer vb-band-button#band-btn-push:visible</value>
+  </data>
+  <data name="RequestApprovalButton" xml:space="preserve">
+    <value>vb-footer vb-band-button#band-btn-request-approval:visble</value>
+  </data>
+  <data name="RestoreButton" xml:space="preserve">
+    <value>vb-footer vb-band-button#band-btn-restore:visible</value>
+  </data>
+  <data name="SelectButton" xml:space="preserve">
+    <value>vb-footer vb-band-button#band-btn-select:visible</value>
+  </data>
+  <data name="ShareSubMenu" xml:space="preserve">
+    <value>vb-footer div#band-btn-share:visible</value>
+  </data>
+  <data name="ShowDeletedButton" xml:space="preserve">
+    <value>vb-footer vb-band-button[el-id*="btn-show-deleted"]:visible</value>
+  </data>
+  <data name="SubmitButton" xml:space="preserve">
+    <value>vb-footer vb-band-button#band-btn-submit:visible</value>
+  </data>
+  <data name="UnfollowButton" xml:space="preserve">
+    <value>vb-footer vb-band-button[el-id*="btn-unfollowd"]:visible</value>
+  </data>
+  <data name="UploadButton" xml:space="preserve">
+    <value>vb-footer vb-band-button#band-btn-upload:visible</value>
+  </data>
+  <data name="UploadDayButton" xml:space="preserve">
+    <value>vb-footer vb-band-button#band-btn-upload-day:visible</value>
+  </data>
+</root>

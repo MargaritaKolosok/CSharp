@@ -1,0 +1,14 @@
+{
+  "$schema": "http://virtualpromoter.com/schemas/porsche/employee.json",
+  "lang": "en",
+  "givenName": "{0}",
+  "familyName": "{1}",
+  "email": "aa@bb.cc",
+  "jobTitle": "some job",
+  "picture": 
+	{
+		"assetId": "{2}",
+		"mimeType": "image/jpeg",
+		"title": "{3}"
+	}
+}

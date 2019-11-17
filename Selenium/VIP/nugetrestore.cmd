@@ -1,0 +1,1 @@
+tools\.nuget\NuGet.exe restore automation\CxManagerRegression\CxManagerRegression.sln

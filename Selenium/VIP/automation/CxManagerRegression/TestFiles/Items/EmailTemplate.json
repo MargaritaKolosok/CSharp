@@ -1,0 +1,7 @@
+{
+"$schema":"http://virtualpromoter.com/schemas/emailTemplate.json",
+"lang":  "en",
+"title": "{0}",
+"templateKey": "{1}",
+"useHtml": true
+}

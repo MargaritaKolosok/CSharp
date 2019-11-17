@@ -1,0 +1,8 @@
+{
+  "$schema": "http://virtualpromoter.com/schemas/porsche/profile.json",
+  "lang": "en",
+  "givenName": "{0}",
+  "familyName": "{1}",
+  "defaultPlace": "a",
+  "preferredLanguage": "en-US"
+}

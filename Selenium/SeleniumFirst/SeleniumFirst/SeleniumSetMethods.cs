@@ -51,7 +51,7 @@ namespace SeleniumFirst
         public static void SelectDropDown(IWebDriver driver, string element, string value, string type)
         {
 
-            if (type == "id")
+            if (type == "Id")
             {
                 new SelectElement(driver.FindElement(By.Id(element))).SelectByText(value);
             }
@@ -62,13 +62,13 @@ namespace SeleniumFirst
             if (type == "Name")
             {
                 new SelectElement(driver.FindElement(By.Name(element))).SelectByText(value);
-            }
+            }           
 
         }
 
         // Set value from drop down
 
-        public static string GetDropDownValue(IWebDriver driver, string element, int index, string type)
+        public static string SetDropDownValue(IWebDriver driver, string element, int index, string type)
         {
             if (type == "Id")
             {

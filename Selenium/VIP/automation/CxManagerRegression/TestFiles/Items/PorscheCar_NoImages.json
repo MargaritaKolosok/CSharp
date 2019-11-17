@@ -1,0 +1,13 @@
+{
+  "$schema": "http://virtualpromoter.com/schemas/porsche/dccCar.json",
+  "lang": "en",
+  "title": "{0}",
+  "vin": "{1}",
+  "media": {
+    "exterior": []
+  },
+  "price": {},
+  "engine": {},
+  "leasing": {},
+  "financeOffer": {} 
+}

@@ -1,0 +1,15 @@
+{
+"$schema":"http://virtualpromoter.com/schemas/porsche/usedCar.json",
+"lang": "en",
+"title": "{0}",
+"vin": "{1}",
+"media": 
+	{
+		"assetId": "{2}",
+		"mimeType": "image/jpeg",
+		"title": "{3}"
+	},
+"exteriorColor": "a",
+"vehicleData": {},
+"fuelConsumptionAndEnvironmentalData": {}
+}

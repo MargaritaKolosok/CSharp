@@ -1,0 +1,1075 @@
+{
+	"calculation": {
+		"ammountpayble": null,
+		"amountFinanced": "0,00",
+		"amountOutstanding": "140.406,35",
+		"amountPayable": "140.406,35",
+		"amountWithIDT": "117.988,53",
+		"amountWithIDTGross": "140.406,35",
+		"available": "true",
+		"BEDxTRxWServGross": "140.406,35",
+		"BEDxTRxWServNet": "117.988,53",
+		"BEDxTRxWServTax": "22.417,82",
+		"BETDRPFWServGross": "140.406,35",
+		"BETDRPWServGross": "140.406,35",
+		"BETDRWServGross": "140.406,35",
+		"BETDWServGross": "140.406,35",
+		"BETRxTaxesNxfeesDOssWServGross": "140.406,35",
+		"BETRxTaxesNxfeesDOssWServTax": "22.417,82",
+		"b_gross": "119.453,00",
+		"balance": "140.406,35",
+		"beLGross": "139.046,35",
+		"beLNet": "116.845,67",
+		"beLdSales": "117.988,53",
+		"beLdSalesRP": "117.988,53",
+		"beLdSalesRPF": "117.988,53",
+		"be_be_gross": "139.046,35",
+		"be_be_net": "116.845,67",
+		"be_gross": "139.046,35",
+		"be_net": "116.845,67",
+		"bed_gross": "140.406,35",
+		"bed_net": "117.988,53",
+		"bedt_bedt_gross": "140.406,35",
+		"bedt_bedt_net": "117.988,53",
+		"bedt_bedtp_gross": "140.406,35",
+		"bedt_bedtp_net": "117.988,53",
+		"bedxt_rx_gross": "140.406,35",
+		"bedxt_rx_net": "117.988,53",
+		"bet_gross": "139.046,35",
+		"bet_net": "116.845,67",
+		"bet_rx_gross": "139.046,35",
+		"betdsc_r_gross": "140.406,35",
+		"betdsc_r_tax": "22.417,82",
+		"discount_Others": "0,00",
+		"discount_Special_Interest": "0,00",
+		"discount_Tradein": "0,00",
+		"downpayment1": "0,00",
+		"downpayment2": "41.713,91",
+		"downpayment3": "97.332,44",
+		"equipment": "16.465,00",
+		"equipmentGross": "19.593,35",
+		"hirePurchaseAmount": "0,00",
+		"hirePurchaseClaim": "0,00",
+		"inspectionFee": "0,00",
+		"isHirePurchase": null,
+		"luxuryTaxbeGross": "0,00",
+		"luxuryTaxbeNet": "0,00",
+		"netPrice": "100.380,67",
+		"numberOfWheels": "",
+		"numberPlateFee": "0,00",
+		"otherChargesOrDeductions": null,
+		"partExchange": "0,00",
+		"partExchange_net": "0,00",
+		"prepaid": "0,00",
+		"price_sum": null,
+		"region": null,
+		"registrationAmount": null,
+		"registrationFee": "0,00",
+		"roadTax": "0,00",
+		"salesTax": "0,00",
+		"sdfc_gross": "1.360,00",
+		"second_Downpayment": "0,00",
+		"subtotal1": "117.988,53",
+		"subtotal2": "140.406,35",
+		"subtotal3": "117.988,53",
+		"subtotal4": "140.406,35",
+		"subtotal5": "140.406,35",
+		"subtotal6": "140.406,35",
+		"sumprepaid": "0,00",
+		"t_gross": "0,00",
+		"t_t_gross": "0,00",
+		"t_t_net": "0,00",
+		"taxAndFeeIncrease": "0,00",
+		"taxAndFeeReduction": "0,00",
+		"taxRate": "1,19",
+		"taxesNxfeesDOssWServGross": "1.360,00",
+		"third_Downpayment": "0,00",
+		"totalAmount": "140.406,35",
+		"totalAmount1": "140.406,35",
+		"totalAmount2": "140.406,35",
+		"totalAmount3": "140.406,35",
+		"totalAmount4": "140.406,35",
+		"totalAmountNet": "117.988,53",
+		"totalAmountPayable": null,
+		"tradeInAmount": null,
+		"tradein_prepaidliability": "0,00",
+		"tradein_prepaidrecycling": "0,00",
+		"tradein_settlement": "0,00",
+		"tradein_total": "0,00",
+		"tradein_value": "0,00",
+		"transportAmount": null,
+		"vat": "22.417,82",
+		"vatAmount1": "22.417,82",
+		"vatAmount2": "22.417,82",
+		"vatAmount3": "3.345,49",
+		"vatRate": "19,00",
+		"warrantiesGross": "0,00",
+		"warranty_extension": "0,00"
+	},
+	"car": {
+		"amountOptionsEquipment": "19.593,35",
+		"available": "true",
+		"baseprice": "100.380,67",
+		"basepricegross": "119.453,00",
+		"btyp": "991420",
+		"chassisNumber": null,
+		"commNumber": null,
+		"dealerFittedOptions": "0,00",
+		"deliveryDate": "",
+		"desiredCollectionDate": null,
+		"engineNr": null,
+		"estimatedDate": "",
+		"exteriorColorCode": "P3",
+		"exteriorColour": "racinggelb",
+		"exvat": "117.988,53",
+		"freightCharge": null,
+		"fueltype": null,
+		"installationDateIndividualFeatures": null,
+		"installationDateStandardFeatures": null,
+		"interiorColorCode": "BT",
+		"interiorColour": "Lederausstattung Bi-Color inkl. Sitze schwarz - luxorbeige",
+		"is_Automatic": "false",
+		"keyNr": null,
+		"licenceCost": "",
+		"licensePlate": "",
+		"location": "",
+		"mileage": "",
+		"modelType": "911 Carrera 4S",
+		"modelYear": "2018",
+		"otherAgreements": "",
+		"otherReduction": "-0,00",
+		"porscheCode": "https://preview.porsche.com/microsite/porsche-code/PJRCX2V5",
+		"previousOwner": null,
+		"priceDate": "28. September 2018",
+		"priceType": "brutto",
+		"productionNumber": null,
+		"reduction": "-0,00",
+		"registrationDate": "",
+		"remark1": null,
+		"remark2": null,
+		"serviceType": "",
+		"softTopColorCode": null,
+		"softTopColour": null,
+		"steering": "LHD",
+		"subtotal1": "139.046,35",
+		"subtotal2": "",
+		"subtotal3": null,
+		"subtotal4": null,
+		"teqsubtotal1": null,
+		"teqsubtotalnet": null,
+		"totalAmount": "140.406,35",
+		"transmission": null,
+		"type": "",
+		"typeNumber": "",
+		"variant": null,
+		"vat": "22.417,82",
+		"vehicleStatus": null,
+		"warrantyEnd": null
+	},
+	"commonData": {
+		"available": "true",
+		"currency": "€",
+		"documentId": null,
+		"documentName": null,
+		"electricityPrice": "",
+		"fuelPrice": "",
+		"reference": null,
+		"region": "",
+		"timestamp": "31. Dezember 1969",
+		"timestampOfPrintServer": null,
+		"vatMarket": "true",
+		"withCrest": "true"
+	},
+	"deductionVatNonTaxable": {
+		"available": "false",
+		"headline": "",
+		"optionGroups": []
+	},
+	"dfoCalculation": {
+		"additionalCosts": "",
+		"available": "true",
+		"carDiscountPercent": "",
+		"carDiscountPrice": "-",
+		"carTotalAmount": "139.046,35",
+		"carTotalAmountNew": "117.988,53",
+		"carTotalAmountNewVat": "117.988,53",
+		"conversionAmount": "",
+		"conversionText": "",
+		"equipmentDiscountPercent": null,
+		"equipmentDiscountPrice": "",
+		"equipmentPrice": "",
+		"headline": "Kalkulation Brutto",
+		"premiumAmount": "",
+		"premiumText": "",
+		"subtotal": "",
+		"vatPrice": "22.417,82",
+		"vatText": "inkl. MwSt. auf"
+	},
+	"dfoVatNonTaxable": {
+		"available": "false",
+		"headline": "Händleroptionen",
+		"optionGroups": []
+	},
+	"dfoVatTaxable": {
+		"available": "true",
+		"headline": "Händleroptionen",
+		"optionGroups": [{
+				"headline": "steuerpflichtig",
+				"optionAttributes": [{
+						"number": "",
+						"price": "1.200,00",
+						"priceGross": "1.200,00",
+						"priceNet": "1.008,40",
+						"text": "Überführungskosten"
+					}, {
+						"number": "",
+						"price": "160,00",
+						"priceGross": "160,00",
+						"priceNet": "134,45",
+						"text": "Zulassungskosten"
+					}
+				]
+			}
+		]
+	},
+	"extCam01Picture": {
+		"available": "false",
+		"picture": null
+	},
+	"extCam02Picture": {
+		"available": "false",
+		"picture": null
+	},
+	"extCam03Picture": {
+		"available": "false",
+		"picture": null
+	},
+	"extCam04Picture": {
+		"available": "false",
+		"picture": null
+	},
+	"individualOptions": {
+		"available": "true",
+		"delivery": "0",
+		"headline": "Individualisierung",
+		"headlines": ["Kategorie", "Best.-Nr.", "", "Preise*"],
+		"optionGroups": [{
+				"headline": "Außenfarben",
+				"optionAttributes": [{
+						"code": "P3",
+						"color": null,
+						"colorcode": null,
+						"comment": null,
+						"delivery": "",
+						"exclusive": "",
+						"freeText": null,
+						"optionAttributeGroup": null,
+						"partnumber": null,
+						"price": "0,00",
+						"quantity": null,
+						"text": "racinggelb"
+					}
+				]
+			}, {
+				"headline": "Innenfarben",
+				"optionAttributes": [{
+						"code": "BT",
+						"color": null,
+						"colorcode": null,
+						"comment": null,
+						"delivery": "",
+						"exclusive": "",
+						"freeText": null,
+						"optionAttributeGroup": null,
+						"partnumber": null,
+						"price": "3.974,60",
+						"quantity": null,
+						"text": "Lederausstattung Bi-Color inkl. Sitze schwarz - luxorbeige"
+					}
+				]
+			}, {
+				"headline": "Exterieur",
+				"optionAttributes": [{
+						"code": "XEY",
+						"color": null,
+						"colorcode": null,
+						"comment": null,
+						"delivery": "",
+						"exclusive": "Porsche Exclusive Manufaktur",
+						"freeText": null,
+						"optionAttributeGroup": null,
+						"partnumber": null,
+						"price": "3.207,05",
+						"quantity": null,
+						"text": "LED-Hauptscheinwerfer schwarz inkl. Porsche Dynamic Light System Plus (PDLS Plus)"
+					}, {
+						"code": "XXP",
+						"color": null,
+						"colorcode": null,
+						"comment": null,
+						"delivery": "",
+						"exclusive": "Porsche Exclusive Manufaktur",
+						"freeText": null,
+						"optionAttributeGroup": null,
+						"partnumber": null,
+						"price": "535,50",
+						"quantity": null,
+						"text": "Heckleuchten abgedunkelt"
+					}, {
+						"code": "638",
+						"color": null,
+						"colorcode": null,
+						"comment": null,
+						"delivery": "",
+						"exclusive": "",
+						"freeText": null,
+						"optionAttributeGroup": null,
+						"partnumber": null,
+						"price": "1.594,60",
+						"quantity": null,
+						"text": "ParkAssistent vorne und hinten inkl. Rückfahrkamera"
+					}, {
+						"code": "567",
+						"color": null,
+						"colorcode": null,
+						"comment": null,
+						"delivery": "",
+						"exclusive": "",
+						"freeText": null,
+						"optionAttributeGroup": null,
+						"partnumber": null,
+						"price": "113,05",
+						"quantity": null,
+						"text": "Windschutzscheibe mit Graukeil"
+					}, {
+						"code": "653",
+						"color": null,
+						"colorcode": null,
+						"comment": null,
+						"delivery": "",
+						"exclusive": "",
+						"freeText": null,
+						"optionAttributeGroup": null,
+						"partnumber": null,
+						"price": "2.249,10",
+						"quantity": null,
+						"text": "Elektrisches Schiebe-/Hubdach aus Glas"
+					}, {
+						"code": "XPL",
+						"color": null,
+						"colorcode": null,
+						"comment": null,
+						"delivery": "",
+						"exclusive": "Porsche Exclusive Manufaktur",
+						"freeText": null,
+						"optionAttributeGroup": null,
+						"partnumber": null,
+						"price": "547,40",
+						"quantity": null,
+						"text": "Privacy-Verglasung (Fondseitenscheiben und Heckscheibe)"
+					}, {
+						"code": "XAS",
+						"color": null,
+						"colorcode": null,
+						"comment": null,
+						"delivery": "",
+						"exclusive": "Porsche Exclusive Manufaktur",
+						"freeText": null,
+						"optionAttributeGroup": null,
+						"partnumber": null,
+						"price": "2.368,10",
+						"quantity": null,
+						"text": "SportDesign Bugverkleidung"
+					}, {
+						"code": "529",
+						"color": null,
+						"colorcode": null,
+						"comment": null,
+						"delivery": "",
+						"exclusive": "",
+						"freeText": null,
+						"optionAttributeGroup": null,
+						"partnumber": null,
+						"price": "535,50",
+						"quantity": null,
+						"text": "Außenspiegel SportDesign"
+					}
+				]
+			}, {
+				"headline": "Motor, Getriebe und Fahrwerk",
+				"optionAttributes": [{
+						"code": "487",
+						"color": null,
+						"colorcode": null,
+						"comment": null,
+						"delivery": "",
+						"exclusive": "",
+						"freeText": null,
+						"optionAttributeGroup": null,
+						"partnumber": null,
+						"price": "0,00",
+						"quantity": null,
+						"text": "7-Gang Schaltgetriebe"
+					}, {
+						"code": "658",
+						"color": null,
+						"colorcode": null,
+						"comment": null,
+						"delivery": "",
+						"exclusive": "",
+						"freeText": null,
+						"optionAttributeGroup": null,
+						"partnumber": null,
+						"price": "261,80",
+						"quantity": null,
+						"text": "Servolenkung Plus"
+					}
+				]
+			}, {
+				"headline": "Räder",
+				"optionAttributes": [{
+						"code": "XRD",
+						"color": null,
+						"colorcode": null,
+						"comment": null,
+						"delivery": "",
+						"exclusive": "Porsche Exclusive Manufaktur",
+						"freeText": null,
+						"optionAttributeGroup": null,
+						"partnumber": null,
+						"price": "1.231,65",
+						"quantity": null,
+						"text": "20-Zoll Carrera Sport Räder"
+					}
+				]
+			}, {
+				"headline": "Interieur",
+				"optionAttributes": [{
+						"code": "454",
+						"color": null,
+						"colorcode": null,
+						"comment": null,
+						"delivery": "",
+						"exclusive": "",
+						"freeText": null,
+						"optionAttributeGroup": null,
+						"partnumber": null,
+						"price": "321,30",
+						"quantity": null,
+						"text": "Tempostat"
+					}, {
+						"code": "P13",
+						"color": null,
+						"colorcode": null,
+						"comment": null,
+						"delivery": "",
+						"exclusive": "",
+						"freeText": null,
+						"optionAttributeGroup": null,
+						"partnumber": null,
+						"price": "547,40",
+						"quantity": null,
+						"text": "Automatisch abblendende Innen-/Außenspiegel mit integriertem Regensensor"
+					}, {
+						"code": "489",
+						"color": null,
+						"colorcode": null,
+						"comment": null,
+						"delivery": "",
+						"exclusive": "",
+						"freeText": null,
+						"optionAttributeGroup": null,
+						"partnumber": null,
+						"price": "464,10",
+						"quantity": null,
+						"text": "Multifunktion und Lenkradheizung"
+					}, {
+						"code": "P09",
+						"color": null,
+						"colorcode": null,
+						"comment": null,
+						"delivery": "",
+						"exclusive": "",
+						"freeText": null,
+						"optionAttributeGroup": null,
+						"partnumber": null,
+						"price": "0,00",
+						"quantity": null,
+						"text": "Sportsitze (4 Wege, elektrisch)"
+					}, {
+						"code": "342",
+						"color": null,
+						"colorcode": null,
+						"comment": null,
+						"delivery": "",
+						"exclusive": "",
+						"freeText": null,
+						"optionAttributeGroup": null,
+						"partnumber": null,
+						"price": "470,05",
+						"quantity": null,
+						"text": "Sitzheizung"
+					}, {
+						"code": "583",
+						"color": null,
+						"colorcode": null,
+						"comment": null,
+						"delivery": "",
+				
+						"delivery": "",
+						"exclusive": "Porsche Exclusive Manufaktur",
+						"freeText": null,
+						"optionAttributeGroup": null,
+						"partnumber": null,
+						"price": "226,10",
+						"quantity": null,
+						"text": "Porsche Wappen auf Kopfstützen"
+					}
+				]
+			}, {
+				"headline": "Interieur Aluminium",
+				"optionAttributes": [{
+						"code": "XXB",
+						"color": null,
+						"colorcode": null,
+						"comment": null,
+						"delivery": "",
+						"exclusive": "Porsche Exclusive Manufaktur",
+						"freeText": null,
+						"optionAttributeGroup": null,
+						"partnumber": null,
+						"price": "714,00",
+						"quantity": null,
+						"text": "Türeinstiegsblenden Edelstahl beleuchtet"
+					}
+				]
+			}
+		]
+	},
+	"intCam01Picture": {
+		"available": "false",
+		"picture": null
+	},
+	"intCam02Picture": {
+		"available": "false",
+		"picture": null
+	},
+	"leasing": {
+		"available": "true",
+		"calcForLessMileage": "0,00",
+		"calcForMoreMileage": "0,00",
+		"deposit": "420,17",
+		"duration": "42",
+		"effectivInterest": "4,49",
+		"finalPayment": "0,00",
+		"firstRate": "500,00",
+		"loanCost": "93.379,88",
+		"mileage": "15.000",
+		"monthlyRate": "2.211,43",
+		"nominalInterest": "4,40",
+		"residialValue": "62.570,86",
+		"totalCost": "0,00",
+		"totalPrice": "140.406,35"
+	},
+	"priceTag": {
+		"available": "true",
+		"optionsList": null,
+		"priceTagOption": [{
+				"code": "P3",
+				"price": "0,00",
+				"priceTagOptionGroup": null,
+				"text": "racinggelb"
+			}, {
+				"code": "BT",
+				"price": "3.974,60",
+				"priceTagOptionGroup": null,
+				"text": "Lederausstattung Bi-Color inkl. Sitze schwarz - luxorbeige"
+			}, {
+				"code": "XEY",
+				"price": "3.207,05",
+				"priceTagOptionGroup": null,
+				"text": "LED-Hauptscheinwerfer schwarz inkl. Porsche Dynamic Light System Plus (PDLS Plus)"
+			}, {
+				"code": "XXP",
+				"price": "535,50",
+				"priceTagOptionGroup": null,
+				"text": "Heckleuchten abgedunkelt"
+			}, {
+				"code": "638",
+				"price": "1.594,60",
+				"priceTagOptionGroup": null,
+				"text": "ParkAssistent vorne und hinten inkl. Rückfahrkamera"
+			}, {
+				"code": "567",
+				"price": "113,05",
+				"priceTagOptionGroup": null,
+				"text": "Windschutzscheibe mit Graukeil"
+			}, {
+				"code": "653",
+				"price": "2.249,10",
+				"priceTagOptionGroup": null,
+				"text": "Elektrisches Schiebe-/Hubdach aus Glas"
+			}, {
+				"code": "XPL",
+				"price": "547,40",
+				"priceTagOptionGroup": null,
+				"text": "Privacy-Verglasung (Fondseitenscheiben und Heckscheibe)"
+			}, {
+				"code": "XAS",
+				"price": "2.368,10",
+				"priceTagOptionGroup": null,
+				"text": "SportDesign Bugverkleidung"
+			}, {
+				"code": "529",
+				"price": "535,50",
+				"priceTagOptionGroup": null,
+				"text": "Außenspiegel SportDesign"
+			}, {
+				"code": "487",
+				"price": "0,00",
+				"priceTagOptionGroup": null,
+				"text": "7-Gang Schaltgetriebe"
+			}, {
+				"code": "658",
+				"price": "261,80",
+				"priceTagOptionGroup": null,
+				"text": "Servolenkung Plus"
+			}, {
+				"code": "XRD",
+				"price": "1.231,65",
+				"priceTagOptionGroup": null,
+				"text": "20-Zoll Carrera Sport Räder"
+			}, {
+				"code": "454",
+				"price": "321,30",
+				"priceTagOptionGroup": null,
+				"text": "Tempostat"
+			}, {
+				"code": "P13",
+				"price": "547,40",
+				"priceTagOptionGroup": null,
+				"text": "Automatisch abblendende Innen-/Außenspiegel mit integriertem Regensensor"
+			}, {
+				"code": "489",
+				"price": "464,10",
+				"priceTagOptionGroup": null,
+				"text": "Multifunktion und Lenkradheizung"
+			}, {
+				"code": "P09",
+				"price": "0,00",
+				"priceTagOptionGroup": null,
+				"text": "Sportsitze (4 Wege, elektrisch)"
+			}, {
+				"code": "342",
+				"price": "470,05",
+				"priceTagOptionGroup": null,
+				"text": "Sitzheizung"
+			}, {
+				"code": "583",
+				"price": "53,55",
+				"priceTagOptionGroup": null,
+				"text": "Raucherpaket"
+			}, {
+				"code": "810",
+				"price": "178,50",
+				"priceTagOptionGroup": null,
+				"text": "Fußmatten"
+			}, {
+				"code": "581",
+				"price": "0,00",
+				"priceTagOptionGroup": null,
+				"text": "Ablagenetz Beifahrerfußraum"
+			}, {
+				"code": "XSC",
+				"price": "226,10",
+				"priceTagOptionGroup": null,
+				"text": "Porsche Wappen auf Kopfstützen"
+			}, {
+				"code": "XXB",
+				"price": "714,00",
+				"priceTagOptionGroup": null,
+				"text": "Türeinstiegsblenden Edelstahl beleuchtet"
+			}
+		]
+	},
+	"serialData": {
+		"available": "true",
+		"datagroups": [{
+				"dataAttributes": ["6-Zylinder-Boxermotor mit Biturbo-Aufladung", "3,0 l Hubraum", "maximale Leistung 309 kW (420 PS)", "maximales Drehmoment 500 Nm"],
+				"headline": "Motor"
+			}, {
+				"dataAttributes": ["Motorblock und Zylinderkopf aus Aluminium", "Wasserkühlung mit Thermomanagement", "4-Ventil-Technik", "2 Abgasturbolader, 2 Ladeluftkühler", "Nockenwellenverstellung und Ventilhubschaltung VarioCam Plus", "Integrierte Trockensumpfschmierung mit bedarfsgeregelter Ölpumpe", "Benzindirekteinspritzung (Direct Fuel Injection, DFI)", "Zwei 3-Wege-Katalysatoren und On-Board-Diagnose zur Überwachung des Abgasreinigungssystems", "Expansionssauganlage", "Vierflutige Abgasanlage mit 2 Doppelendrohren aus Edelstahl", "SPORT Taste mit Aktivierung fahrdynamischer Einstellungen für Motor und Getriebe (in Verbindung mit PDK)"],
+				"headline": "Motortechnik"
+			}, {
+				"dataAttributes": ["7-Gang-Schaltgetriebe mit Zweischeibenkupplung und Zweimassenschwungrad", "Allradantrieb mit kennfeldgesteuerter Lamellenkupplung Porsche Traction Management (PTM)", "Auto Start-Stop-Funktion und Segeln (in Verbindung mit PDK)", "Porsche Torque Vectoring (PTV) inkl. mechanischer Hinterachs-Quersperre, in Verbindung mit PDK: Porsche Torque Vectoring Plus (PTV Plus) inkl. elektronisch geregelter Hinterachs-Quersperre mit vollvariabler Momentenverteilung"],
+				"headline": "Kraftübertragung"
+			}, {
+				"dataAttributes": ["20-Zoll Carrera S Räder mit Reifen 245/35 ZR 20 vorn und 305/30 ZR 20 hinten", "Reifendruckkontrollsystem (RDK)", "Reifendichtmittel mit elektrischem Kompressor", "McPherson-Vorderachse", "Mehrlenker-Hinterachse mit um 40 mm verbreiterter Spur", "Elektromechanische Servolenkung mit variabler Lenkübersetzung und Lenkimpuls", "Porsche Active Suspension Management (PASM) inkl. 10-mm-Tieferlegung", "Porsche Stability Management (PSM) inkl. ABS mit erweiterten Bremsfunktionen"],
+				"headline": "Fahrwerk"
+			}, {
+				"dataAttributes": ["6-Kolben-Aluminium-Monobloc-Festsattelbremsen vorn und 4-Kolben-Aluminium-Monobloc-Festsattelbremsen hinten, Bremsscheiben mit Durchmesser 350 mm vorn und 330 mm hinten, innenbelüftet und gelocht, Bremstöpfe vorn aus Aluminium, Bremssättel rot", "Elektrisch betätigte Parkbremse"],
+				"headline": "Bremsanlage"
+			}, {
+				"dataAttributes": ["2+2-sitziges Fahrzeugkonzept mit Heckmotor", "Seitliche Lufteinlässe vorn mit aktiven Kühlluftklappen und Airblades", "Intelligenter Leichtbau in Aluminium-Stahl-Verbundbauweise", "Vorrüstung für die Montage eines Dachtransportsystems", "Blenden der Seitenschweller in Schwarz", "Um 44 mm verbreiterte Karosserie im Heckbereich", "Automatisch ausfahrender Heckspoiler", "„PORSCHE“ Schriftzug und Modellbezeichnung auf Heckverkleidung, silberfarben (hochglanz)"],
+				"headline": "Karosserie"
+			}, {
+				"dataAttributes": ["Porsche Communication Management (PCM) inkl. Online-Navigation, Handyvorbereitung, Audio-Schnittstellen und Sprachbedienung", "Connect Plus inkl. Online-Navigation, Apple® CarPlay, LTE-Telefonmodul mit SIM-Kartenleser, Smartphone-Ablage, drahtlosem Internetzugang, Porsche Car Connect sowie zahlreichen Porsche Connect Diensten", "...Die Navigation und Infotainment Services mit u.a. Echtzeit-Verkehrsinformationen, Online Suche, Parkplatzsuche, etc. beinhalten einen kostenlosen Inklusivzeitraum von 24 Monaten...", "...Die Car Connect Services mit Remote Services, Safety Services und Security Services beinhalten teilweise (nur Remote Services) einen kostenlosen Inklusivzeitraum von 12 Monaten...", "...Darüber hinaus ist eine integrierte SIM-Karte inklusive Datenvolumen zur Nutzung der Navigation & Infotainment Services im Preis enthalten....", "...Zur Nutzung des drahtlosen Internetzugangs und für Musikstreaming über die integrierte SIM-Karte sind kostenpflichtige Datenpakete über den Porsche Connect Store erhältlich...", "...Alternativ kann eine eigene SIM-Karte zum Herstellen einer Datenverbindung verwendet werden. Weitere Informationen zu den kostenlosen Inklusivzeiträumen sowie zu Folgekosten und der Verfügbarkeit einzelner Dienste erhalten Sie online unter www.porsche.de/connect", "Sound Package Plus, 8 Lautsprecher, 150 Watt Gesamtleistung, mit integriertem Verstärker und digitalem Signalprocessing"],
+				"headline": "Elektrik"
+			}, {
+				"dataAttributes": ["Bi-Xenon-Hauptscheinwerfer mit integriertem 4-Punkt-LED-Tagfahrlicht, dynamischer Leuchtweitenregulierung und Scheinwerferreinigungsanlage", "LED-Zusatzleuchten im Bugteil mit Positionslicht, Blinker und Seitenblinkleuchten", "Dreidimensionale Heckleuchten in LED-Technik mit integrierten 4-Punkt-Bremsleuchten", "Leuchtenband am Heck mit integriertem Park- und Schlusslicht", "Fahrlichtassistent inkl. Heimleuchtautomatik", "Leseleuchten, Orientierungs-, Zündschloss- und Make-up-Spiegel-Beleuchtung in LED-Technik sowie Gepäckraum-, Fußraum-, Handschuhfach- und Ausstiegsbeleuchtung", "Außenspiegel auf der Türbrüstung, elektrisch verstell- und beheizbar, auf Fahrerseite asphärisch", "Frontscheibenwischanlage mit Aerowischerblättern und Scheibenwaschdüsen"],
+				"headline": "Lichtanlage"
+			}, {
+				"dataAttributes": ["Kombiinstrument mit zentralem Drehzahlmesser und hochauflösendem 4,6-Zoll-Farbbildschirm", "Zifferblätter Kombiinstrument schwarz inkl. Drehzahlmesser, silberfarben", "Digitale Anzeigen für Fahrgeschwindigkeit, eingelegten Gang, Gesamt- und Tageskilometer"],
+				"headline": "Instrumentierung"
+			}, {
+				"dataAttributes": ["Fullsize-Airbags für Fahrer und Beifahrer", "Porsche Side Impact Protection System (POSIP), bestehend aus Seitenaufprallschutz in den Türen, in die Seitenwangen der Vordersitze integrierten Thorax-Airbags und in die Türtafeln integrierten Kopf-Airbags für Fahrer und Beifahrer", "Aufnahmen für Kindersitzbefestigungssystem ISOFIX und Top-Tether (bei den Coupé-Modellen) auf den Rücksitzen", "Wegfahrsperre mit Zentralverriegelung und Funkfernbedienung, Alarmanlage und Radarinnenraumüberwachung"],
+				"headline": "Passive Sicherheit"
+			}, {
+				"dataAttributes": ["2-Zonen-Klimaautomatik mit getrennter Temperatureinstellung für Fahrer und Beifahrer, automatischer Umluftsteuerung inkl. Luftgütesensor", "Feinstaubfilter mit Aktivkohle", "Grün getönte Wärmeschutzverglasung", "Elektrische Fensterheber mit Tipp-Funktion und Kurzhubabsenkung", "Heckscheibenheizung"],
+				"headline": "Klimatisierung"
+			}, {
+				"dataAttributes": ["Sportsitze mit elektrischer Lehnen- und Höheneinstellung sowie manueller Längseinstellung", "Fondsitze einzeln umklappbar", "Sitzmittelbahn vorn, Seitenwangen vorn und Kopfstützen mit geprägtem Leder bezogen", "Sportlenkrad, Durchmesser 375 mm, manuell längs- und höhenverstellbar", "Lenkradkranz, Schalthebel, Türöffner, Armauflage Türverkleidung und Deckel Ablagefach Mittelkonsole mit Glattleder bezogen", "Dachhimmel sowie Verkleidung C-Säule in Alcantara®", "Steckdose (12 Volt) im Fußraum Beifahrerseite", "Türeinstiegsblenden mit Modellschriftzug"],
+				"headline": "Innenausstattung"
+			}, {
+				"dataAttributes": ["Kofferraum vorn", "Ablagefächer in den Türen", "Kleiderhaken an den Sitzrückenlehnen und an den B-Säulen (bei den Coupé-Modellen)", "2 Getränkehalter (auf Beifahrerseite hinter Zierblende Schalttafel integriert)", "Ansteigende Mittelkonsole mit einem offenen und einem geschlossenen Ablagefach"],
+				"headline": "Gepäckraum"
+			}, {
+				"dataAttributes": ["Serienfarben Exterieur-Uni: weiß, racinggelb, indischrot, schwarz", "Serienfarben Interieur: schwarz, achatgrau"],
+				"headline": "Farben"
+			}
+		],
+		"headline": "Serienausstattung"
+	},
+	"technique": {
+		"alternateFuel": null,
+		"antiBlockageSystem": null,
+		"automaticGearShift": null,
+		"automaticGearShiftAvailable": null,
+		"available": "true",
+		"brakeSystem": null,
+		"capacity": "2.981 cm³",
+		"carFinishGuarantee": null,
+		"carbonDioxideEmission": "204 g/km",
+		"consumptionInPrimaryPetrolEquivalent": null,
+		"cylinderAmount": "6",
+		"driveType": null,
+		"eecPercentageNum": null,
+		"electricConsumption": "",
+		"electricityCosts": "",
+		"energyEfficiencyClass": "F",
+		"energyEfficiencyClassPercentage": null,
+		"engineType": "1",
+		"frontAxle": null,
+		"frontWheels": null,
+		"fuelCosts": "",
+		"fueltype": "",
+		"gasolineConsumptionCombined": "8,9 l/100 km",
+		"gasolineConsumptionInsideCities": "12,4 l/100 km",
+		"gasolineConsumptionOutsideCities": "6,8 l/100 km",
+		"gearShift": null,
+		"gearType": "7-Gang Schaltgetriebe",
+		"grossVehicleWeight": "",
+		"heightCar": null,
+		"hybridSpecificRanges": null,
+		"increaseInSpeed0100": "4,2 s",
+		"increaseInSpeed0160": "9,0 s",
+		"lengthAutobody": null,
+		"mainServiceIntervalByKilometers": null,
+		"mainServiceIntervalByYears": null,
+		"manualGearShiftType": null,
+		"marketValue1": "",
+		"marketValue10": null,
+		"marketValue2": "",
+		"marketValue3": null,
+		"marketValue4": null,
+		"marketValue5": null,
+		"marketValue6": null,
+		"marketValue7": null,
+		"marketValue8": null,
+		"marketValue9": null,
+		"powerElectricHP": "",
+		"powerElectricKW": "",
+		"powerHP": "420 PS",
+		"powerKW": "309 kW",
+		"powerTotalHP": "",
+		"powerTotalKW": "",
+		"pullIncreaseOfSpeed": null,
+		"rearAxle": null,
+		"rearWheels": null,
+		"recommendedFuel": "Super Plus",
+		"roundsPerMinute": "",
+		"rustThroughGuarantee": null,
+		"speedElasticity": null,
+		"steering": null,
+		"tankCapacity": null,
+		"taxYearly": "",
+		"topSpeed": "305 km/h",
+		"torque": null,
+		"torqueAtRoundsPerMinute": null,
+		"trunkSpace": null,
+		"typificationWltp": "NEFZ_EU6",
+		"VIN": "WP000000000000003",
+		"weightEmptyDIN": null,
+		"weightEmptyEU": "1.565 kg",
+
+						"valuesGear": "6.500 r/min"
+					}, {
+						"name": "Maximales Drehmoment",
+						"valuesGear": "500 Nm"
+					}, {
+						"name": "Drehzahlbereich für Maximaldrehmoment",
+						"valuesGear": "1.700 - 5.000 r/min"
+					}
+				],
+				"disclaimers": null,
+				"headline": "Motor"
+			}, {
+				"dataAttributes": [{
+						"name": "Antriebsart",
+						"valuesGear": "Allradantrieb"
+					}, {
+						"name": "Schaltgetriebe",
+						"valuesGear": "7-Gang-Schaltgetriebe"
+					}, {
+						"name": "Automatikgetriebe  verfügbar",
+						"valuesGear": "ja"
+					}, {
+						"name": "Automatikgetriebe",
+						"valuesGear": "7-Gang Porsche Doppelkupplungsgetriebe mit manueller Betätigung am Lenkrad und am Wählhebel"
+					}
+				],
+				"disclaimers": null,
+				"headline": "Kraftübertragung"
+			}, {
+				"dataAttributes": [{
+						"name": "Kraftstoffverbrauch innerorts",
+						"valuesGear": "12,4 l/100 km"
+					}, {
+						"name": "Kraftstoffverbrauch außerorts",
+						"valuesGear": "6,8 l/100 km"
+					}, {
+						"name": "Kraftstoffverbrauch kombiniert",
+						"valuesGear": "8,9 l/100 km"
+					}, {
+						"name": "CO2-Emissionen kombiniert",
+						"valuesGear": "204 g/km"
+					}, {
+						"name": "Energieeffizienzklasse",
+						"valuesGear": "F"
+					}
+				],
+				"disclaimers": "Die angegebenen Werte wurden nach dem vorgeschriebenen Messverfahren (§ 2 Nr. 5, 6, 6 a Pkw-EnVKV in der jeweils geltenden Fassung) ermittelt. Die Angaben beziehen sich nicht auf ein einzelnes Fahrzeug und sind nicht Bestandteil des Angebots, sondern dienen allein Vergleichszwecken zwischen den verschiedenen Fahrzeugtypen. Weitere aktuelle Informationen zu den einzelnen Fahrzeugen erhalten Sie bei Ihrem Porsche Zentrum/Händler. Ermittlung des Verbrauchs auf Grundlage der Serienausstattung. Sonderausstattungen können Verbrauch und Fahrleistungen beeinflussen.\t<br>Der Kraftstoffverbrauch und die CO2-Emissionen eines Fahrzeugs hängen nicht nur von der effizienten Ausnutzung des Kraftstoffs durch das Fahrzeug ab, sondern werden auch vom Fahrverhalten und anderen nicht technischen Faktoren beeinflusst. CO2 ist das für die Erderwärmung hauptsächlich verantwortliche Treibhausgas.<br>\tWeitere Informationen zum offiziellen Kraftstoffverbrauch und den offiziellen spezifischen CO2-Emissionen neuer Personenkraftwagen können dem <a href=\"http://dat.de/leitfaden/LeitfadenCO2.pdf\" target=\"_blank\">Leitfaden</a> über den Kraftstoffverbrauch, die CO2-Emissionen und den Stromverbrauch neuer Personenkraftwagen entnommen werden, der an allen Verkaufsstellen und bei <a href=\"http://www.dat.de/company/Kontakt.page\" target=\"_blank\">DAT</a> unentgeltlich erhältlich ist.",
+				"headline": "Kraftstoffverbrauch/Emissionen"
+			}, {
+				"dataAttributes": [{
+						"name": "Vorderachse",
+						"valuesGear": "McPherson"
+					}, {
+						"name": "Hinterachse",
+						"valuesGear": "Mehrlenker"
+					}, {
+						"name": "Bremsanlage",
+						"valuesGear": "6-Kolben-Aluminium-Monobloc-Festsättel vorn, 4-Kolben-Aluminium-Monobloc-Festsättel hinten, Bremssättel rot"
+					}, {
+						"name": "Lenkung",
+						"valuesGear": "Elektromechanische Servolenkung mit variabler Lenkübersetzung und Lenkimpuls"
+					}, {
+						"name": "Stabilitätsprogramm",
+						"valuesGear": "Porsche Stability Management (PSM) inkl. ABS mit erweiterten Bremsfunktionen"
+					}, {
+						"name": "Räder vorne",
+						"valuesGear": "8,5 J x 20 ET 49"
+					}, {
+						"name": "Reifen vorne",
+						"valuesGear": "245 / 35 ZR 20"
+					}, {
+						"name": "Räder hinten",
+						"valuesGear": "11,5 J x 20 ET 56"
+					}, {
+						"name": "Reifen hinten",
+						"valuesGear": "305 / 30 ZR 20"
+					}
+				],
+				"disclaimers": null,
+				"headline": "Fahrwerk"
+			}, {
+				"dataAttributes": [{
+						"name": "Länge",
+						"valuesGear": "4.499 mm"
+					}, {
+						"name": "Breite",
+						"valuesGear": "1.852 mm"
+					}, {
+						"name": "Höhe",
+						"valuesGear": "1.298 mm"
+					}, {
+						"name": "Radstand",
+						"valuesGear": "2.450 mm"
+					}, {
+						"name": "Leergewicht nach DIN",
+						"valuesGear": "1.490 kg"
+					}, {
+						"name": "Leergewicht nach EU-Richtlinie",
+						"valuesGear": "1.565 kg"
+					}, {
+						"name": "Zul. Gesamtgewicht",
+						"valuesGear": "1.950 kg"
+					}, {
+						"name": "Zul. Zuladung",
+						"valuesGear": "460 kg"
+					}
+				],
+				"disclaimers": null,
+				"headline": "Karosserie"
+			}, {
+				"dataAttributes": [{
+						"name": "Kofferraumvolumen (VDA)",
+						"valuesGear": "125 l"
+					}, {
+						"name": "Tankinhalt (Nachfüllvolumen)",
+						"valuesGear": "68 l"
+					}
+				],
+				"disclaimers": null,
+				"headline": "Füllmengen"
+			}, {
+				"dataAttributes": [{
+						"name": "Höchstgeschwindigkeit",
+						"valuesGear": "305 km/h"
+					}, {
+						"name": "Beschleunigung 0 - 100 km/h",
+						"valuesGear": "4,2 s"
+					}, {
+						"name": "Beschleunigung 0 - 160 km/h",
+						"valuesGear": "9,0 s"
+					}, {
+						"name": "Durchzugsbeschleunigung (80-120 km/h)",
+						"valuesGear": "2,4 s"
+					}, {
+						"name": "Elastizität (80-120 km/h), 5. Gang",
+						"valuesGear": "4,9 s"
+					}
+				],
+c2d4b4c494b12bd615b3fb7e9f"],
+				"textDetail": "racinggelb"
+			}, {
+				"code": "529",
+				"detailPictures": ["https://cc.porsche.com/icc_euro/model/2018/99142/common/detail_M529_l_0.jpg?hc=66b07f4060b68ce6660bfa953eeb98c6", "https://cc.porsche.com/icc_euro/model/2018/99142/common/detail_M529_l_1.jpg?hc=b68bc9398bd7e05af2356257b67c3cea"],
+				"textDetail": "Außenspiegel im SportDesign mit V-förmigem Spiegelfuß (manuell anklappbar). Nicht in Verbindung mit der Option Elektrisch anklappbare Außenspiegel"
+			}, {
+				"code": "XRD",
+				"detailPictures": ["https://cc.porsche.com/icc_euro/model/2018/99142/common/detail_MXRD_l_0.jpg?hc=c38d6f6811157ee0999610fe2e220619", "https://cc.porsche.com/icc_euro/model/2018/99142/common/detail_MXRD_l_1.jpg?hc=e7c91807c51e2ea449530a71a8350f84"],
+				"textDetail": "Einteiliges Leichtmetallrad in markantem 5-Speichen-Design. In Platinsilber lackiert und mit Glanzdrehbereichen, inkl. Radnabenabdeckung mit farbigem Porsche Wappen.Für 911 Carrera Modelle:Vorderachse: 8,5 J x 20 (ET 49) mit Reifen 245/35 ZR 20,Hinterachse: 11,5 J x 20 (ET 76) mit Reifen 305/30 ZR 20Für 911 Carrera 4 Modelle:Vorderachse: 8,5 J x 20 (ET 49) mit Reifen 245/35 ZR 20,Hinterachse: 11,5 J x 20 (ET 56) mit Reifen 305/30 ZR 20"
+			}, {
+				"code": "P09",
+				"detailPictures": ["https://cc.porsche.com/icc_euro/model/2018/99142/common/detail_PP09_l_0.jpg?hc=179a53f33c2b0598bb34b7f8ae3e538f", "https://cc.porsche.com/icc_euro/model/2018/99142/common/detail_PP09_l_1.jpg?hc=494ff36850494a320d3b2ee16f8f8cc9"],
+				"textDetail": "Sportsitze mit elektrischer Lehnen- und Höheneinstellung sowie mechanischer Längseinstellung"
+			}, {
+				"code": "487",
+				"detailPictures": ["https://cc.porsche.com/icc_euro/model/2018/99142/common/detail_M487_l_0.jpg?hc=a7b6fd2493c6ae6f8cd11f7ab2cce9da"],
+				"textDetail": "7-Gang-Schaltgetriebe mit Zweischeibenkupplung und Zweimassenschwungrad"
+			}, {
+				"code": "BT",
+				"detailPictures": ["https://cc.porsche.com/icc_euro/model/2018/99142/common/detail_IBT_l_0.jpg?hc=ea50a8b0e524e05180d8cfcd870d66c4"],
+				"textDetail": "Kombination aus den Farbtönen schwarz und luxorbeige. Umfang analog Lederausstattung. Oberhalb Zierblenden: dunklerer Farbton (schwarz). Hinweis: Glas weist spiegelnde Eigenschaften auf. Bei dieser Interieurfarbe können abhängig vom Lichteinfall Spiegelungen auf der Frontscheibe auftreten. Bitte fragen Sie bei Ihrem Porsche Zentrum/Händler nach einer Probefahrt, um sicherzustellen, dass Sie mit Ihrer Farbauswahl zufrieden sind"
+			}, {
+				"code": "XXB",
+				"detailPictures": ["https://cc.porsche.com/icc_euro/model/2018/99142/common/detail_MXXB_l_0.jpg?hc=d11d459690771a9f05a89eb2fb1580df"],
+				"textDetail": "Türeinstiegsblenden (links/rechts) aus Edelstahl mit weiß beleuchtetem „turbo S“ Schriftzug. Hinweis: Die Vorrüstung Türeinstiegsblenden, beleuchtet (Bestell-Nr. XES), wird der Bestellung ohne Aufpreis hinzugefügt"
+			}, {
+				"code": "XSC",
+				"detailPictures": ["https://cc.porsche.com/icc_euro/model/2018/99142/common/detail_MXSC_l_0.jpg?hc=ff6672bbd5279bfc21bb1d5e2df86eb7"],
+				"textDetail": "Auf die Kopfstützen der Vordersitze geprägt"
+			}, {
+				"code": "XAS",
+				"detailPictures": ["https://cc.porsche.com/icc_euro/model/2018/99142/common/detail_MXAS_l_0.jpg?hc=a47e4d6bc5c693d026a37996050a70ba", "https://cc.porsche.com/icc_euro/model/2018/99142/common/detail_MXAS_l_1.jpg?hc=dab7034d0b60499c708e0737ebcd38fd"],
+				"textDetail": "Beinhaltet neue Bugverkleidung mit neuem Frontspoiler. Hinweis: Deutlich reduzierter Böschungswinkel"
+			}, {
+				"code": "XEY",
+				"detailPictures": ["https://cc.porsche.com/icc_euro/model/2018/99142/common/detail_MXEY_l_0.jpg?hc=4a104662ef3aeb3f1693b6ecbd025496", "https://cc.porsche.com/icc_euro/model/2018/99142/common/detail_MXEY_l_1.jpg?hc=7212c740594237636419ea55cc8e21e9", "https://cc.porsche.com/icc_euro/model/2018/99142/common/detail_MXEY_l_2.jpg?hc=e03a5ccb38128a93ddf26b07a173c246"],
+				"textDetail": "In Dunkelsilbermetallic ausgeführt: Innenbauteile und Randlackierung. Funktion und Formgebung entsprechen denen der LED-Hauptscheinwerfer inkl. Porsche Dynamic Light System Plus (PDLS Plus)"
+			}, {
+				"code": "653",
+				"detailPictures": ["https://cc.porsche.com/icc_euro/model/2018/99142/common/detail_M653_l_0.jpg?hc=4a9def3f1a2ae8a7af2ff625d47c4569", "https://cc.porsche.com/icc_euro/model/2018/99142/common/detail_M653_l_1.jpg?hc=1a175bebdc981659796dbd63ec7c0023"],
+				"textDetail": "Außenlaufendes Schiebe-/Hubdach aus getöntem Glas mit Windabweiser und Sonnenschutzrollo, Dachlackierung vor und hinter dem Glasdachmodul in Schwarz (hochglanz)"
+			}, {
+				"code": "XPL",
+				"detailPictures": ["https://cc.porsche.com/icc_euro/model/2018/99142/common/detail_MXPL_l_0.jpg?hc=a2264858e55e47779754339591c1f0e3"],
+				"textDetail": "Getönte Verglasung der Fondseitenscheiben sowie der Heckscheibe"
+			}, {
+				"code": "489",
+				"detailPictures": ["https://cc.porsche.com/icc_euro/model/2018/99142/common/detail_M489_l_0.jpg?hc=92a6d1485627029bddbfcfe75255d22b"],
+				"textDetail": "Multifunktionstasten und -walzen am Lenkrad zur komfortablen Bedienung von Audio- und Kommunikationsfunktionen sowie des Bordcomputers. Aktivierung der Lenkradheizung über Bedientaste am Lenkrad"
+			}, {
+				"code": "567",
+				"detailPictures": ["https://cc.porsche.com/icc_euro/model/2018/99142/common/detail_M567_l_0.jpg?hc=a3a990f786135c703121c760bdddfc3c"],
+				"textDetail": "Im oberen Bereich stark eingefärbt zur Reduzierung der Blendung"
+			}, {
+				"code": "810",
+				"detailPictures": ["https://cc.porsche.com/icc_euro/model/2018/99142/common/detail_M810_l_0.jpg?hc=ae4a5a2d65e5bf205d8d6ee843c0e917"],
+				"textDetail": "In Interieurfarbe, mit eingesticktem \"PORSCHE\" Schriftzug vorn (vierteiliger Satz). Bei Bi-Color-Ausstattung in der jeweils dunkleren Interieurfarbe ausgeführt"
+			}, {
+				"code": "658",
+				"detailPictures": ["https://cc.porsche.com/icc_euro/model/2018/99142/common/detail_option_l.jpg?hc=dd5cc296f24bd6a01f7048356e8e4b10"],
+				"textDetail": "Servolenkung mit zusätzlicher Verringerung der Lenkkräfte bei niedrigen Geschwindigkeiten wie z. B. beim Rangieren und Einparken"
+			}, {
+				"code": "638",
+				"detailPictures": ["https://cc.porsche.com/icc_euro/model/2018/99142/common/detail_M638_l_0.jpg?hc=37f2fcc218752bcf21f7300ce8498884", "https://cc.porsche.com/icc_euro/model/2018/99142/common/detail_M638_l_1.jpg?hc=e28e97ff7241870368960dff9e9a6718", "https://cc.porsche.com/icc_euro/model/2018/99142/common/detail_M638_l_2.jpg?hc=c33a89aab4042b83a1b6edec83fb7514"],
+				"textDetail": "Einparkhilfe mit integrierten Ultraschallsensoren in der Bug- und Heckverkleidung sowie Rückfahrkamera über dem hinteren Kennzeichen. Akustisches Anzeigen des Abstands vor und hinter dem Fahrzeug. Grafische Abstandsanzeige und farbiges Kamerabild mit dynamischen Leitlinien im Bildschirm des PCM"
+			}
+		]
+	},
+	"tequipmentsAdditionalDetails": {
+		"additionalDetails": []
+	},
+	"individualOptionsCategoryMapping": {
+		"mappings": [{
+				"headline": "Außenfarben",
+				"category": "IAF"
+			}, {
+				"headline": "Innenfarben",
+				"category": "IIF"
+			}, {
+				"headline": "Exterieur",
+				"category": "IEX"
+			}, {
+				"headline": "Motor, Getriebe und Fahrwerk",
+				"category": "IMG"
+			}, {
+				"headline": "Räder",
+				"category": "IRA"
+			}, {
+				"headline": "Räderzubehör",
+				"category": "IRZ"
+			}, {
+				"headline": "Interieur",
+				"category": "IIN"
+			}, {
+				"headline": "Interieur Leder",
+				"category": "IIL"
+			}, {
+				"headline": "Interieur Alcantara",
+				"category": "IAL"
+			}, {
+				"headline": "Interieur Holz",
+				"category": "IIH"
+			}, {
+				"headline": "Interieur Carbon",
+				"category": "IIC"
+		
+	},
+	"dfoAgreements": {
+		"available": "false",
+		"comment": null,
+		"deliveryDate": null,
+		"descriptions": [],
+		"headline": "Zubehör"
+	},
+	"tequipments": {
+		"available": "false",
+		"delivery": "0",
+		"headline": "Individualisierung",
+		"headlines": ["Kategorie", "Best.-Nr.", "", "Preise*"],
+		"optionGroups": []
+	}
+}

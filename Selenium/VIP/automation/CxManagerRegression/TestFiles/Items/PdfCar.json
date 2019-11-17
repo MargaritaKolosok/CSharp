@@ -1,0 +1,11 @@
+{
+  "$schema": "http://virtualpromoter.com/schemas/porsche/pdfCar.json",
+  "lang": "en",
+  "title": "{0}",
+  "vin": "{1}",
+  "pdfAsset": {
+    "assetId": "{2}",
+    "mimeType": "application/pdf",
+    "title": "{3}"
+  }
+}

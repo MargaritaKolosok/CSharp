@@ -1,0 +1,1104 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="AssetsSection" xml:space="preserve">
+    <value>vb-arr-simple-prop[type="assetref"]:visible</value>
+  </data>
+  <data name="AssetsSectionAddButton" xml:space="preserve">
+    <value>vb-arr-simple-prop[type="assetref"] #btn-add span:visible</value>
+  </data>
+  <data name="AssetsSectionImage" xml:space="preserve">
+    <value>vb-arr-simple-prop[type="assetref"] vb-uploader.vb-uploader div.img-holder img:visible</value>
+  </data>
+  <data name="AssetsSectionImageDeleteButton" xml:space="preserve">
+    <value>vb-button.vb-arr-simple-btn-del:visible</value>
+  </data>
+  <data name="AssetsSectionImageDeleteLastButton" xml:space="preserve">
+    <value>vb-button.vb-arr-simple-btn-del:last</value>
+  </data>
+  <data name="AssetsSectionImagePreview" xml:space="preserve">
+    <value>vb-arr-simple-prop[type="assetref"] vb-uploader.vb-uploader div.img-holder.vb-uploader-preview img</value>
+  </data>
+  <data name="AssetsSectionImageUploadButton" xml:space="preserve">
+    <value>vb-uploader vb-button.vb-upload-btn:visible</value>
+  </data>
+  <data name="AssetsSectionImageUploadLastButton" xml:space="preserve">
+    <value>vb-uploader vb-button.vb-upload-btn:last</value>
+  </data>
+  <data name="AssetsSectionNoImage" xml:space="preserve">
+    <value>vb-arr-simple-prop[type="assetref"] vb-uploader.vb-uploader div.img-holder:has(img:not(:visible))</value>
+  </data>
+  <data name="AssignedPlacesAddButton" xml:space="preserve">
+    <value>div.vb-single-prop-arr #btn-add:visible</value>
+  </data>
+  <data name="AssignedPlacesDeleteButton" xml:space="preserve">
+    <value>div.vb-single-prop-arr div.vb-single-prop vb-button.vb-arr-simple-btn-del:visible</value>
+  </data>
+  <data name="AssignedPlacesDeleteLastButton" xml:space="preserve">
+    <value>div.vb-single-prop-arr div.vb-single-prop vb-button.vb-arr-simple-btn-del:last:visible</value>
+  </data>
+  <data name="AssignedPlacesPlaceDropDown" xml:space="preserve">
+    <value>div.vb-single-prop-arr vb-dropdown span.selection:visible</value>
+  </data>
+  <data name="AssignedPlacesPlaceLastDropDown" xml:space="preserve">
+    <value>div.vb-single-prop-arr vb-dropdown span.selection:visible:last</value>
+  </data>
+  <data name="AssignedPlacesPlaceReadOnly" xml:space="preserve">
+    <value>div.vb-single-prop-arr vb-dropdown div[title]</value>
+  </data>
+  <data name="AttendCheckBox" xml:space="preserve">
+    <value>#ch-box-attend div.vb-checkbox-btn</value>
+  </data>
+  <data name="Body" xml:space="preserve">
+    <value>#inp-body textarea</value>
+  </data>
+  <data name="BodyReadOnly" xml:space="preserve">
+    <value>#inp-body div[title]</value>
+  </data>
+  <data name="CallMeBackCheckBox" xml:space="preserve">
+    <value>#ch-box-call-me-back div.vb-checkbox-btn</value>
+  </data>
+  <data name="CancelButton" xml:space="preserve">
+    <value>vb-modal:not([hidden]) #band-btn-cancel</value>
+  </data>
+  <data name="CarsOfInterestAddButton" xml:space="preserve">
+    <value>#s-prop-carsofinterest vb-button#btn-add:visible</value>
+  </data>
+  <data name="CarsOfInterestCarModel" xml:space="preserve">
+    <value>#s-prop-carsofinterest vb-single-prop.vb-single-prop input</value>
+  </data>
+  <data name="CarsOfInterestCarModelReadOnly" xml:space="preserve">
+    <value>#s-prop-carsofinterest vb-single-prop.vb-single-prop div[title]</value>
+  </data>
+  <data name="CarsOfInterestDeleteButton" xml:space="preserve">
+    <value>#s-prop-carsofinterest vb-single-prop.vb-single-prop vb-button.vb-arr-simple-btn-del:visible</value>
+  </data>
+  <data name="ClearSelectionButton" xml:space="preserve">
+    <value>vb-band-button#band-btn-clear-selection</value>
+  </data>
+  <data name="ContactByEmailCheckBox" xml:space="preserve">
+    <value>#ch-box-contact-by-email div.vb-checkbox-btn</value>
+  </data>
+  <data name="ContactByPhoneCheckBox" xml:space="preserve">
+    <value>#ch-box-contact-by-phone div.vb-checkbox-btn</value>
+  </data>
+  <data name="CopyUrlButton" xml:space="preserve">
+    <value>vb-band-button#band-btn-copy-url</value>
+  </data>
+  <data name="CreatedColumn" xml:space="preserve">
+    <value>th:contains("Created")</value>
+  </data>
+  <data name="DeleteButton" xml:space="preserve">
+    <value>vb-modal:not([hidden]) #band-btn-delete</value>
+  </data>
+  <data name="DeleteConfirmationDialog" xml:space="preserve">
+    <value>vb-modal .vb-modal-content:contains("you want to delete")</value>
+  </data>
+  <data name="Description" xml:space="preserve">
+    <value>#inp-description textarea</value>
+  </data>
+  <data name="DesiredDate" xml:space="preserve">
+    <value>#inp-desired-date textarea</value>
+  </data>
+  <data name="DesiredDateReadOnly" xml:space="preserve">
+    <value>#inp-desired-date div[title]</value>
+  </data>
+  <data name="DownloadButton" xml:space="preserve">
+    <value>vb-band-button#band-btn-download</value>
+  </data>
+  <data name="DoYouWantToPushDialog" xml:space="preserve">
+    <value>vb-modal div.vb-modal-content:contains("want to push")</value>
+  </data>
+  <data name="EmailAddress" xml:space="preserve">
+    <value>#inp-email-address input</value>
+  </data>
+  <data name="EmailAddressReadOnly" xml:space="preserve">
+    <value>#inp-email-address div[title]</value>
+  </data>
+  <data name="ErrorAssetDoesNotSatisfyDefinedConstraintDialog" xml:space="preserve">
+    <value>vb-modal .vb-modal-content:contains("Asset does not satisfy defined constraint")</value>
+  </data>
+  <data name="ErrorChangesWillBeDiscardedDialog" xml:space="preserve">
+    <value>vb-modal .vb-modal-content:contains("changes will be discarded")</value>
+  </data>
+  <data name="ErrorDoesNotMatchExpectedPattern" xml:space="preserve">
+    <value>div.vb-validation-msg:contains("does not match the expected pattern"):visible</value>
+  </data>
+  <data name="ErrorFamilyNameRequired" xml:space="preserve">
+    <value>div.vb-validation-msg:contains("Family name required"):visible</value>
+  </data>
+  <data name="ErrorFormatIsNotSupportedDialog" xml:space="preserve">
+    <value>vb-modal .vb-modal-content:contains("format is not supported"):visible</value>
+  </data>
+  <data name="ErrorGivenNameRequired" xml:space="preserve">
+    <value>div.vb-validation-msg:contains("Given name required"):visible</value>
+  </data>
+  <data name="ErrorHomeShowroomRequired" xml:space="preserve">
+    <value>div.vb-validation-msg:contains("Home showroom required"):visible</value>
+  </data>
+  <data name="ErrorItemAlreadyExistsDialog" xml:space="preserve">
+    <value>vb-modal .vb-modal-content:contains("already exist")</value>
+  </data>
+  <data name="ErrorMustHaveAtLeastFiveChars" xml:space="preserve">
+    <value>div.vb-validation-msg:contains("must have at least 5 characters"):visible</value>
+  </data>
+  <data name="ErrorMustHaveAtLeastOneChar" xml:space="preserve">
+    <value>div.vb-validation-msg:contains("must have at least one character"):visible</value>
+  </data>
+  <data name="ErrorMustHaveAtLeastTwoChars" xml:space="preserve">
+    <value>div.vb-validation-msg:contains("must have at least 2 characters"):visible</value>
+  </data>
+  <data name="ErrorPictureRequired" xml:space="preserve">
+    <value>div.vb-validation-msg:contains("Picture required"):visible</value>
+  </data>
+  <data name="ErrorPlaceholder" xml:space="preserve">
+    <value>div.vb-validation-msg:visible</value>
+  </data>
+  <data name="ErrorPreferredLanguageRequired" xml:space="preserve">
+    <value>div.vb-validation-msg:contains("Preferred language required"):visible</value>
+  </data>
+  <data name="ErrorThisIsInvalidAsset" xml:space="preserve">
+    <value>div.vb-validation-msg:contains("This is an invalid asset"):visible</value>
+  </data>
+  <data name="FamilyName" xml:space="preserve">
+    <value>#inp-family-name input:visible</value>
+  </data>
+  <data name="FamilyNameReadOnly" xml:space="preserve">
+    <value>#inp-family-name div[title]</value>
+  </data>
+  <data name="GivenName" xml:space="preserve">
+    <value>#inp-given-name input:visible</value>
+  </data>
+  <data name="GivenNameReadOnly" xml:space="preserve">
+    <value>#inp-given-name div[title]</value>
+  </data>
+  <data name="HomeShowroom" xml:space="preserve">
+    <value>#inp-home-showroom input:visible</value>
+  </data>
+  <data name="HomeShowroomReadOnly" xml:space="preserve">
+    <value>#inp-home-showroom div[title]</value>
+  </data>
+  <data name="Image" xml:space="preserve">
+    <value>div.vb-item-img-preview img</value>
+  </data>
+  <data name="ImagePlaceholder" xml:space="preserve">
+    <value>div.vb-item-img-preview a.inactiveLink img</value>
+  </data>
+  <data name="JobTitle" xml:space="preserve">
+    <value>#inp-job-title input:visible</value>
+  </data>
+  <data name="JobTitleReadOnly" xml:space="preserve">
+    <value>#inp-job-title div[title]</value>
+  </data>
+  <data name="Key" xml:space="preserve">
+    <value>#inp-key input:visible</value>
+  </data>
+  <data name="KeyReadOnly" xml:space="preserve">
+    <value>#inp-key div[title]</value>
+  </data>
+  <data name="LanguageAddButton" xml:space="preserve">
+    <value>vb-lang-bar span[class~="vb-band-label"] span.vb-lang-btn-add:visible</value>
+  </data>
+  <data name="LanguageArButton" xml:space="preserve">
+    <value>vb-lang-bar span[class~="vb-band-label"] span:contains("ar"):visible</value>
+  </data>
+  <data name="LanguageArButtonActive" xml:space="preserve">
+    <value>vb-lang-bar span.vb-band-label.active:contains("ar")</value>
+  </data>
+  <data name="LanguageArButtonActiveInMenu" xml:space="preserve">
+    <value>vb-lang-bar span.vb-band-label.menu-active span:contains("ar")</value>
+  </data>
+  <data name="LanguageBar" xml:space="preserve">
+    <value>vb-lang-bar:visible</value>
+  </data>
+  <data name="LanguageDeButton" xml:space="preserve">
+    <value>vb-lang-bar span[class!="vb-band-label vb-lang-btn"]:contains("de"):visible</value>
+  </data>
+  <data name="LanguageDeButtonActive" xml:space="preserve">
+    <value>vb-lang-bar span.vb-band-label.active span:contains("de")</value>
+  </data>
+  <data name="LanguageDeButtonActiveInMenu" xml:space="preserve">
+    <value>vb-lang-bar span.vb-band-label.menu-active span:contains("de")</value>
+  </data>
+  <data name="LanguageDeButtonInvalid" xml:space="preserve">
+    <value>vb-lang-bar span.vb-band-label.invalid:contains("de")</value>
+  </data>
+  <data name="LanguageDeleteButton" xml:space="preserve">
+    <value>vb-lang-bar span.vb-lang-btn-del:visible span:visible</value>
+  </data>
+  <data name="LanguageDeleteConfirmationDialog" xml:space="preserve">
+    <value>div[class~="vb-modal-content"]:contains("delete this language")</value>
+  </data>
+  <data name="LanguageEnButton" xml:space="preserve">
+    <value>vb-lang-bar span[class!="vb-band-label vb-lang-btn"]:contains("en"):visible</value>
+  </data>
+  <data name="LanguageEnButtonActive" xml:space="preserve">
+    <value>vb-lang-bar span.vb-band-label.active:contains("en")</value>
+  </data>
+  <data name="LanguageEnButtonActiveInMenu" xml:space="preserve">
+    <value>vb-lang-bar span.vb-band-label.menu-active span:contains("en")</value>
+  </data>
+  <data name="LanguageEnButtonInvalid" xml:space="preserve">
+    <value>vb-lang-bar span.vb-band-label.invalid:contains("en")</value>
+  </data>
+  <data name="MessageForPush" xml:space="preserve">
+    <value>#inp-message-for-push textarea</value>
+  </data>
+  <data name="MessageForPushReadOnly" xml:space="preserve">
+    <value>#inp-message-for-push div[title]</value>
+  </data>
+  <data name="MobileAppId" xml:space="preserve">
+    <value>#inp-mobile-app-id input</value>
+  </data>
+  <data name="MobileAppIdReadOnly" xml:space="preserve">
+    <value>#inp-mobile-app-id div[title]</value>
+  </data>
+  <data name="MobileDevice" xml:space="preserve">
+    <value>#inp-mobile-device input</value>
+  </data>
+  <data name="MobileDeviceReadOnly" xml:space="preserve">
+    <value>#inp-mobile-device div[title]</value>
+  </data>
+  <data name="MobilePhone" xml:space="preserve">
+    <value>#inp-mobile-phone input</value>
+  </data>
+  <data name="MobilePhoneReadOnly" xml:space="preserve">
+    <value>#inp-mobile-phone div[title]</value>
+  </data>
+  <data name="ModifiedColumn" xml:space="preserve">
+    <value>th:contains("Modified")</value>
+  </data>
+  <data name="OkButton" xml:space="preserve">
+    <value>#band-btn-ok</value>
+  </data>
+  <data name="PictureColumn" xml:space="preserve">
+    <value>th:contains("Picture")</value>
+  </data>
+  <data name="PictureEmpty" xml:space="preserve">
+    <value>#s-prop-picture div.img-holder:has(img:not(:visible))</value>
+  </data>
+  <data name="PictureImage" xml:space="preserve">
+    <value>#s-prop-picture div.img-holder:has(img:visible)</value>
+  </data>
+  <data name="PictureSectionAddButton" xml:space="preserve">
+    <value>#s-prop-picture #btn-add span:visible</value>
+  </data>
+  <data name="PictureSectionImage" xml:space="preserve">
+    <value>#s-prop-picture vb-uploader.vb-uploader div.img-holder img:visible</value>
+  </data>
+  <data name="PictureSectionImageDeleteButton" xml:space="preserve">
+    <value>#s-prop-picture vb-button.vb-arr-simple-btn-del:visible</value>
+  </data>
+  <data name="PictureSectionImageDeleteLastButton" xml:space="preserve">
+    <value>#s-prop-picture vb-button.vb-arr-simple-btn-del:last</value>
+  </data>
+  <data name="PictureSectionImagePreview" xml:space="preserve">
+    <value>#s-prop-picture vb-uploader.vb-uploader div.img-holder.vb-uploader-preview img</value>
+  </data>
+  <data name="PictureSectionImageUploadButton" xml:space="preserve">
+    <value>#s-prop-picture vb-uploader vb-button.vb-upload-btn:visible</value>
+  </data>
+  <data name="PictureSectionImageUploadLastButton" xml:space="preserve">
+    <value>#s-prop-picture vb-uploader vb-button.vb-upload-btn:last</value>
+  </data>
+  <data name="PictureSectionNoImage" xml:space="preserve">
+    <value>#s-prop-picture vb-uploader.vb-uploader div.img-holder:has(img:not(:visible))</value>
+  </data>
+  <data name="PictureUploadButton" xml:space="preserve">
+    <value>#s-prop-picture vb-button.vb-upload-btn</value>
+  </data>
+  <data name="PreferredLanguage" xml:space="preserve">
+    <value>#inp-preferred-language input</value>
+  </data>
+  <data name="PreferredLanguageReadOnly" xml:space="preserve">
+    <value>#inp-preferred-language div[title]</value>
+  </data>
+  <data name="RejectCheckBox" xml:space="preserve">
+    <value>#ch-box-reject div.vb-checkbox-btn</value>
+  </data>
+  <data name="RequestSalesAppointmentCheckBox" xml:space="preserve">
+    <value>#ch-box-request-sales-appointment div.vb-checkbox-btn</value>
+  </data>
+  <data name="Salutation" xml:space="preserve">
+    <value>#inp-salutation input</value>
+  </data>
+  <data name="SenderAddress" xml:space="preserve">
+    <value>#inp-sender-address input</value>
+  </data>
+  <data name="SenderName" xml:space="preserve">
+    <value>#inp-sender-name input</value>
+  </data>
+  <data name="SendMeMoreDetailsCheckBox" xml:space="preserve">
+    <value>#ch-box-send-me-more-details div.vb-checkbox-btn</value>
+  </data>
+  <data name="Status" xml:space="preserve">
+    <value>#txt-status div:not([class]) span</value>
+  </data>
+  <data name="StatusColumn" xml:space="preserve">
+    <value>th:contains("Status")</value>
+  </data>
+  <data name="Subject" xml:space="preserve">
+    <value>#inp-subject textarea</value>
+  </data>
+  <data name="SubmitButton" xml:space="preserve">
+    <value>vb-modal #band-btn-submit</value>
+  </data>
+  <data name="TableEmpty" xml:space="preserve">
+    <value>tr:has(td.dataTables_empty)</value>
+  </data>
+  <data name="TableRowByStatus" xml:space="preserve">
+    <value>td.vb-cell-status span:contains("{0}"):visible</value>
+  </data>
+  <data name="TableRowByText" xml:space="preserve">
+    <value>tr:has(td:contains("{0}")):visible</value>
+  </data>
+  <data name="TableRowByTitle" xml:space="preserve">
+    <value>td[class*="title"]:contains("{0}"):visible</value>
+  </data>
+  <data name="TableRowByType" xml:space="preserve">
+    <value>td.vb-cell-type:contains("{0}"):visible</value>
+  </data>
+  <data name="TableRowCreated" xml:space="preserve">
+    <value>td.vb-item-create-date:visible</value>
+  </data>
+  <data name="TableRowModified" xml:space="preserve">
+    <value>td.vb-item-update-date:visible</value>
+  </data>
+  <data name="TableRowStatus" xml:space="preserve">
+    <value>td.vb-cell-status:visible</value>
+  </data>
+  <data name="TableRowTitle" xml:space="preserve">
+    <value>td[class*="title"]:visible</value>
+  </data>
+  <data name="TableRowType" xml:space="preserve">
+    <value>td.vb-cell-type:visible</value>
+  </data>
+  <data name="Title" xml:space="preserve">
+    <value>#inp-title input:not([readonly])</value>
+  </data>
+  <data name="TitleColumn" xml:space="preserve">
+    <value>th:contains("Title")</value>
+  </data>
+  <data name="TitleForPush" xml:space="preserve">
+    <value>#inp-title-for-push input</value>
+  </data>
+  <data name="TitleForPushReadOnly" xml:space="preserve">
+    <value>#inp-title-for-push div[title]</value>
+  </data>
+  <data name="TitlePositionDropDown" xml:space="preserve">
+    <value>#drop-title-position span.selection:visible</value>
+  </data>
+  <data name="TitlePositionReadOnly" xml:space="preserve">
+    <value>#drop-title-position div.vb-form-input[title]</value>
+  </data>
+  <data name="TitleReadOnly" xml:space="preserve">
+    <value>#inp-title div[title]</value>
+  </data>
+  <data name="TypeColumn" xml:space="preserve">
+    <value>th:contains("Type")</value>
+  </data>
+  <data name="TypeDropDown" xml:space="preserve">
+    <value>#drop-type span.selection:visible</value>
+  </data>
+  <data name="TypeReadOnly" xml:space="preserve">
+    <value>#drop-type div.vb-form-input[title]</value>
+  </data>
+  <data name="UploadButton" xml:space="preserve">
+    <value>vb-band-button#band-btn-upload:not(.btn-upload-toolbar)</value>
+  </data>
+  <data name="UseHtmlCheckBox" xml:space="preserve">
+    <value>#ch-box-use-html div.vb-checkbox-btn</value>
+  </data>
+  <data name="UseHtmlCheckBoxReadOnly" xml:space="preserve">
+    <value>#ch-box-use-html div.vb-readonly div.vb-checkbox-btn</value>
+  </data>
+  <data name="Video" xml:space="preserve">
+    <value>#s-prop-video div.img-holder img:visible</value>
+  </data>
+  <data name="VideoDeleteButton" xml:space="preserve">
+    <value>#s-prop-video vb-uploader vb-button.vb-upload-btn:visible</value>
+  </data>
+  <data name="VideoEmpty" xml:space="preserve">
+    <value>#s-prop-video vb-uploader.vb-uploader div.img-holder:has(img:not(:visible))</value>
+  </data>
+  <data name="VideoPreview" xml:space="preserve">
+    <value>#s-prop-video vb-uploader.vb-uploader div.img-holder.vb-uploader-preview img</value>
+  </data>
+  <data name="VideoUploadButton" xml:space="preserve">
+    <value>#s-prop-video vb-uploader vb-button.vb-upload-btn:visible</value>
+  </data>
+  <data name="VideoUrl" xml:space="preserve">
+    <value>#inp-video-url textarea</value>
+  </data>
+  <data name="VideoUrlReadOnly" xml:space="preserve">
+    <value>#inp-video-url div[title]</value>
+  </data>
+  <data name="Vin" xml:space="preserve">
+    <value>#inp-vin input</value>
+  </data>
+  <data name="ItemIsReferencedDialog" xml:space="preserve">
+    <value>div.vb-modal-content:contains("item is referenced")</value>
+  </data>
+  <data name="ReferencesSectionPlaceByTitle" xml:space="preserve">
+    <value>div.vb-item-refs div.vb-app-list-ver span.vb-app-ver:contains("{0}")</value>
+  </data>
+  <data name="ReferencesSectionPlaces" xml:space="preserve">
+    <value>div.vb-item-refs div.vb-app-list-ver:visible</value>
+  </data>
+  <data name="PdfEmpty" xml:space="preserve">
+    <value>#s-prop-pdfasset div.img-holder:has(img:not(:visible))</value>
+  </data>
+  <data name="PdfImage" xml:space="preserve">
+    <value>#s-prop-pdfasset div.img-holder:has(img:visible)</value>
+  </data>
+  <data name="PdfUploadButton" xml:space="preserve">
+    <value>#s-prop-pdfasset vb-button.vb-upload-btn</value>
+  </data>
+  <data name="ExteriorColor" xml:space="preserve">
+    <value>#inp-exterior-color input:visible</value>
+  </data>
+  <data name="ExteriorColorReadOnly" xml:space="preserve">
+    <value>#inp-exterior-color div[title]</value>
+  </data>
+  <data name="VinReadOnly" xml:space="preserve">
+    <value>#inp-vin div[title]</value>
+  </data>
+  <data name="PdfImageThumbnail" xml:space="preserve">
+    <value>#s-prop-pdfasset div.img-holder img:visible</value>
+  </data>
+  <data name="TableRow" xml:space="preserve">
+    <value>tbody tr:visible</value>
+  </data>
+  <data name="PicturesSectionAddButton" xml:space="preserve">
+    <value>#s-prop-media #btn-add:visible</value>
+  </data>
+  <data name="PicturesSectionUploadButton" xml:space="preserve">
+    <value>#s-prop-media vb-button.vb-upload-btn</value>
+  </data>
+  <data name="EnergyEfficiencyClass" xml:space="preserve">
+    <value>#inp-energy-efficiency-class input</value>
+  </data>
+  <data name="Equipment" xml:space="preserve">
+    <value>#s-prop-equipment vb-single-prop input</value>
+  </data>
+  <data name="EquipmentSectionAddButton" xml:space="preserve">
+    <value>#s-prop-equipment #btn-add span:visible</value>
+  </data>
+  <data name="ErrorImportDialog" xml:space="preserve">
+    <value>div:contains("An error occurred while parsing an item"):visible</value>
+  </data>
+  <data name="ErrorPicturesRequired" xml:space="preserve">
+    <value>div.vb-validation-msg:contains("Pictures required"):visible</value>
+  </data>
+  <data name="FuelConsumptionDataButton" xml:space="preserve">
+    <value>#btn-fuel-consumption-data</value>
+  </data>
+  <data name="ImportButton" xml:space="preserve">
+    <value>vb-modal #band-btn-import</value>
+  </data>
+  <data name="ImportUrlInput" xml:space="preserve">
+    <value>div.vb-modal-content input:visible</value>
+  </data>
+  <data name="TeaserCheckBox" xml:space="preserve">
+    <value>#ch-box-teaser div.vb-checkbox-btn</value>
+  </data>
+  <data name="VehicleDataButton" xml:space="preserve">
+    <value>#btn-vehicle-data</value>
+  </data>
+  <data name="PicturesSectionImage" xml:space="preserve">
+    <value>[ng-reflect-label="Pictures"] vb-uploader.vb-uploader div.img-holder img:visible</value>
+  </data>
+  <data name="PicturesSectionImagePreview" xml:space="preserve">
+    <value>[ng-reflect-label="Pictures"] vb-uploader.vb-uploader div.img-holder.vb-uploader-preview img</value>
+  </data>
+  <data name="ErrorNotMore10Chars" xml:space="preserve">
+    <value>div.vb-validation-msg:contains("Not more than 10 characters"):visible</value>
+  </data>
+  <data name="YesButton" xml:space="preserve">
+    <value>#band-btn-yes</value>
+  </data>
+  <data name="AssetsSectionNoImages" xml:space="preserve">
+    <value>vb-arr-simple-prop[type="assetref"]:not(:has(vb-single-prop:visible))</value>
+  </data>
+  <data name="NoButton" xml:space="preserve">
+    <value>#band-btn-no</value>
+  </data>
+  <data name="Btyp" xml:space="preserve">
+    <value>#inp-btyp input</value>
+  </data>
+  <data name="BtypReadOnly" xml:space="preserve">
+    <value>#inp-btyp div[title]</value>
+  </data>
+  <data name="CapacityReadOnly" xml:space="preserve">
+    <value>#inp-capacity div[title]</value>
+  </data>
+  <data name="TechnicalDataSectionRow9CategoryReadOnly" xml:space="preserve">
+    <value>#arr-container-technicaldata #arr-details-technicaldata-9 #inp-category div[title]</value>
+  </data>
+  <data name="CodeReadOnly" xml:space="preserve">
+    <value>#inp-code div[title]</value>
+  </data>
+  <data name="DisclaimerReadOnly" xml:space="preserve">
+    <value>#inp-disclaimer div[title]</value>
+  </data>
+  <data name="EngineButton" xml:space="preserve">
+    <value>#btn-engine:visible</value>
+  </data>
+  <data name="ExclusiveManufakturOnly" xml:space="preserve">
+    <value>#inp-exclusive-manufaktur div[title]</value>
+  </data>
+  <data name="FinanceOfferButton" xml:space="preserve">
+    <value>#btn-finance-offer:visible</value>
+  </data>
+  <data name="IndOptionsSectionExteriorRow6EntriesTableRows" xml:space="preserve">
+    <value>#arr-details-individualoptions-4 #arr-details-entries-6 div.vb-arr-row:visible</value>
+  </data>
+  <data name="IndOptionsSectionExteriorSectionRow6" xml:space="preserve">
+    <value>#arr-details-individualoptions-4 #arr-row-entries-6:visible</value>
+  </data>
+  <data name="IndOptionsSectionRow4" xml:space="preserve">
+    <value>#arr-row-individualoptions-4:visible</value>
+  </data>
+  <data name="LeasingButton" xml:space="preserve">
+    <value>#btn-leasing:visible</value>
+  </data>
+  <data name="MonthlyRateReadOnly" xml:space="preserve">
+    <value>#inp-monthly-rate div[title]</value>
+  </data>
+  <data name="PicturesButton" xml:space="preserve">
+    <value>#btn-pictures:visible</value>
+  </data>
+  <data name="PicturesSectionExteriorFirstPicture" xml:space="preserve">
+    <value>#obj-prop-pictures #s-prop-exterior div.img-holder img:first:visible</value>
+  </data>
+  <data name="PicturesSectionExteriorPictures" xml:space="preserve">
+    <value>#obj-prop-pictures #s-prop-exterior div.img-holder img:visible</value>
+  </data>
+  <data name="PicturesSectionInteriorPictures" xml:space="preserve">
+    <value>#obj-prop-pictures #s-prop-exterior div.img-holder img:visible</value>
+  </data>
+  <data name="PriceButton" xml:space="preserve">
+    <value>#btn-price:visible</value>
+  </data>
+  <data name="PriceReadOnly" xml:space="preserve">
+    <value>#inp-price div[title]</value>
+  </data>
+  <data name="PriceSectionLeasingButton" xml:space="preserve">
+    <value>#obj-prop-price #btn-leasing:visible</value>
+  </data>
+  <data name="PriceSectionLeasingSectionMonthlyRate" xml:space="preserve">
+    <value>#obj-prop-price #obj-prop-leasing #inp-monthly-rate div[title]</value>
+  </data>
+  <data name="SerialDataSectionHeader" xml:space="preserve">
+    <value>#arr-container-serialdata &gt; div.vb-arr-row:first-child</value>
+  </data>
+  <data name="SerialDataSectionRow6" xml:space="preserve">
+    <value>#arr-container-serialdata #arr-row-serialdata-6</value>
+  </data>
+  <data name="SerialDataSectionRow6LastField" xml:space="preserve">
+    <value>#arr-container-serialdata #arr-details-serialdata-6 vb-single-prop:last div[title]</value>
+  </data>
+  <data name="TechnicalDataSectionRow9" xml:space="preserve">
+    <value>#arr-container-technicaldata #arr-row-technicaldata-9</value>
+  </data>
+  <data name="TextReadOnly" xml:space="preserve">
+    <value>#inp-text div[title]</value>
+  </data>
+  <data name="TotalCarPriceReadOnly" xml:space="preserve">
+    <value>#inp-total-car-price div[title]</value>
+  </data>
+  <data name="IndOptionsSectionRow1" xml:space="preserve">
+    <value>#arr-row-individualoptions-1:visible</value>
+  </data>
+  <data name="IndOptionsSectionExteriorColourHeadlineReadOnly" xml:space="preserve">
+    <value>#arr-details-individualoptions-1 #inp-headline:visible div[title]</value>
+  </data>
+  <data name="IndOptionsSectionExteriorColourRow1" xml:space="preserve">
+    <value>#arr-details-individualoptions-1 #arr-row-entries-1</value>
+  </data>
+  <data name="IndOptionsSectionExteriorColourRow1Text" xml:space="preserve">
+    <value>#arr-details-individualoptions-1 #arr-details-entries-1 #inp-text input</value>
+  </data>
+  <data name="IndOptionsSectionExteriorColourRow1TextReadOnly" xml:space="preserve">
+    <value>#arr-details-individualoptions-1 #arr-details-entries-1 #inp-text div[title]</value>
+  </data>
+  <data name="ImageEmpty" xml:space="preserve">
+    <value>div.vb-item-img-preview img[src*="resourcefiles"]</value>
+  </data>
+  <data name="LanguageZhButton" xml:space="preserve">
+    <value>vb-lang-bar span[class!="vb-band-label vb-lang-btn"]:contains("zh"):visible</value>
+  </data>
+  <data name="ErrorsDuringImportReadOnly" xml:space="preserve">
+    <value>#inp-errors-during-import div[title]</value>
+  </data>
+  <data name="DescriptionReadOnly" xml:space="preserve">
+    <value>#inp-description div[title]</value>
+  </data>
+  <data name="SubjectReadOnly" xml:space="preserve">
+    <value>#inp-subject div[title]</value>
+  </data>
+  <data name="LanguageZhButtonActive" xml:space="preserve">
+    <value>vb-lang-bar span.vb-band-label.active span:contains("zh")</value>
+  </data>
+  <data name="IndOptionsSectionAddButton" xml:space="preserve">
+    <value>#arr-container-individualoptions #btn-add:visible</value>
+  </data>
+  <data name="ErrorEntriesRequired" xml:space="preserve">
+    <value>div.vb-validation-msg:contains("Entries required"):visible</value>
+  </data>
+  <data name="IndOptionsSectionRow1Headline" xml:space="preserve">
+    <value>#arr-details-individualoptions-1 #inp-headline:visible input</value>
+  </data>
+  <data name="PicturesSectionExteriorPicturesSection" xml:space="preserve">
+    <value>#obj-prop-pictures span:contains("Exterior pictures"):visible</value>
+  </data>
+  <data name="PicturesSectionExteriorPicturesSectionAddButton" xml:space="preserve">
+    <value>vb-arr-simple-prop[ng-reflect-label="Exterior pictures"] div.vb-single-prop:not([hidden]) #btn-add</value>
+  </data>
+  <data name="PicturesSectionInteriorPicturesSection" xml:space="preserve">
+    <value>#obj-prop-pictures span:contains("Interior pictures"):visible</value>
+  </data>
+  <data name="PicturesSectionInteriorPicturesSectionAddButton" xml:space="preserve">
+    <value>vb-arr-simple-prop[ng-reflect-label="Interior pictures"] div.vb-single-prop:not([hidden]) #btn-add</value>
+  </data>
+  <data name="ErrorConfigurationIsNotValid" xml:space="preserve">
+    <value>div.vb-validation-msg:contains("Configuration is not valid"):visible</value>
+  </data>
+  <data name="PicturesSectionCloseButton" xml:space="preserve">
+    <value>#obj-prop-pictures div.vb-object-title div</value>
+  </data>
+  <data name="PicturesSectionExteriorPicturesSectionUploadButton" xml:space="preserve">
+    <value>vb-arr-simple-prop[ng-reflect-label="Exterior pictures"] vb-button.vb-upload-btn:visible</value>
+  </data>
+  <data name="PicturesSectionInteriorPicturesSectionPicture" xml:space="preserve">
+    <value>vb-arr-simple-prop[ng-reflect-label="Interior pictures"] vb-uploader img:visible</value>
+  </data>
+  <data name="PicturesSectionInteriorPicturesSectionUploadButton" xml:space="preserve">
+    <value>vb-arr-simple-prop[ng-reflect-label="Interior pictures"] vb-button.vb-upload-btn:visible</value>
+  </data>
+  <data name="PicturesSectionInteriorPicturesSectionPictureEmpty" xml:space="preserve">
+    <value>vb-arr-simple-prop[ng-reflect-label="Interior pictures"] vb-uploader div.img-holder:has(img:not(:visible))</value>
+  </data>
+  <data name="PicturesSectionExteriorPicturesSectionPicture" xml:space="preserve">
+    <value>vb-arr-simple-prop[ng-reflect-label="Exterior pictures"] vb-uploader img:visible</value>
+  </data>
+  <data name="PicturesSectionExteriorPicturesSectionPictureEmpty" xml:space="preserve">
+    <value>vb-arr-simple-prop[ng-reflect-label="Exterior pictures"] vb-uploader div.img-holder:has(img:not(:visible))</value>
+  </data>
+  <data name="PicturesSectionExteriorPicturesSectionUploadLastButton" xml:space="preserve">
+    <value>vb-arr-simple-prop[ng-reflect-label="Exterior pictures"] vb-button.vb-upload-btn:visible:last</value>
+  </data>
+  <data name="PicturesSectionExteriorPicturesSectionDeleteFirstButton" xml:space="preserve">
+    <value>vb-arr-simple-prop[ng-reflect-label="Exterior pictures"] vb-button.vb-arr-simple-btn-del:visible:first</value>
+  </data>
+  <data name="Transmission" xml:space="preserve">
+    <value>#inp-transmission input</value>
+  </data>
+  <data name="PriceSectionCurrency" xml:space="preserve">
+    <value>#obj-prop-price #inp-currency input:visible</value>
+  </data>
+  <data name="PicturesSectionExteriorPicturesSectionPreview" xml:space="preserve">
+    <value>vb-arr-simple-prop[ng-reflect-label="Exterior pictures"] vb-uploader div.img-holder.vb-uploader-preview img:visible</value>
+  </data>
+  <data name="ErrorMustHaveAtLeastEightChars" xml:space="preserve">
+    <value>div.vb-validation-msg:contains("must have at least 8 characters"):visible</value>
+  </data>
+  <data name="ImportPageTableColumnByName" xml:space="preserve">
+    <value>#arr-container-items div.vb-arr-row:first:visible div:contains("{0}")</value>
+  </data>
+  <data name="ImportPageTableHeader" xml:space="preserve">
+    <value>#arr-container-items div.vb-arr-row:first:visible</value>
+  </data>
+  <data name="ImportPageTableRows" xml:space="preserve">
+    <value>#arr-container-items div.vb-arr-row[id]:visible</value>
+  </data>
+  <data name="ErrorMustHaveAtLeastSeventeenChars" xml:space="preserve">
+    <value>div.vb-validation-msg:contains("must have at least 17 characters"):visible</value>
+  </data>
+  <data name="ImportTableAddButton" xml:space="preserve">
+    <value>#arr-container-items #btn-add:visible</value>
+  </data>
+  <data name="ImportTableRow1DetailsCode" xml:space="preserve">
+    <value>#arr-details-items-1 #inp-code input:visible</value>
+  </data>
+  <data name="ImportTableRow1DetailsTotalCarPrice" xml:space="preserve">
+    <value>#arr-details-items-1 #inp-total-car-price input:visible</value>
+  </data>
+  <data name="ImportTableRow1DetailsVin" xml:space="preserve">
+    <value>#arr-details-items-1 #inp-vin input:visible</value>
+  </data>
+  <data name="ImportTableRow2DetailsCode" xml:space="preserve">
+    <value>#arr-details-items-2 #inp-code input:visible</value>
+  </data>
+  <data name="ImportTableRow1" xml:space="preserve">
+    <value>#arr-container-items #arr-row-items-1:visible</value>
+  </data>
+  <data name="ImportTableRow1DeleteButton" xml:space="preserve">
+    <value>#arr-container-items #arr-row-items-1 vb-button[el-id="arr-prop-del-1"]:visible</value>
+  </data>
+  <data name="ImportTableRow2" xml:space="preserve">
+    <value>#arr-container-items #arr-row-items-2:visible</value>
+  </data>
+  <data name="ImportTableRow2DeleteButton" xml:space="preserve">
+    <value>#arr-container-items #arr-row-items-2 vb-button[el-id="arr-prop-del-2"]:visible</value>
+  </data>
+  <data name="Created" xml:space="preserve">
+    <value>#txt-created div:not([class])</value>
+  </data>
+  <data name="Modified" xml:space="preserve">
+    <value>#txt-modified div:not([class])</value>
+  </data>
+  <data name="Since" xml:space="preserve">
+    <value>#txt-since div:not([class])</value>
+  </data>
+  <data name="NoAppropriateTenantToDistributeDialog" xml:space="preserve">
+    <value>vb-modal div.vb-modal-content:contains("no appropriate tenant to distribute")</value>
+  </data>
+  <data name="ErrorFinanceOfferDisclaimerRequired" xml:space="preserve">
+    <value>#obj-prop-finance-offer #inp-disclaimer .vb-validation-msg:contains("required"):visible</value>
+  </data>
+  <data name="ErrorFinanceOfferMonthlyRateRequired" xml:space="preserve">
+    <value>#obj-prop-finance-offer #inp-monthly-rate .vb-validation-msg:contains("required"):visible</value>
+  </data>
+  <data name="ErrorFinanceOfferOptionRequired" xml:space="preserve">
+    <value>#obj-prop-finance-offer #drop-option .vb-validation-msg:contains("required"):visible</value>
+  </data>
+  <data name="ErrorFinanceOfferPrepaymentRequired" xml:space="preserve">
+    <value>#obj-prop-finance-offer #inp-prepayment .vb-validation-msg:contains("required"):visible</value>
+  </data>
+  <data name="ErrorFinanceOfferTermRequired" xml:space="preserve">
+    <value>#obj-prop-finance-offer #inp-term .vb-validation-msg:contains("required"):visible</value>
+  </data>
+  <data name="FinanceOfferDisclaimer" xml:space="preserve">
+    <value>#obj-prop-finance-offer #inp-disclaimer textarea:visible</value>
+  </data>
+  <data name="FinanceOfferLoanAmount" xml:space="preserve">
+    <value>#obj-prop-finance-offer #inp-loan-amount input:visible</value>
+  </data>
+  <data name="FinanceOfferMonthlyRate" xml:space="preserve">
+    <value>#obj-prop-finance-offer #inp-monthly-rate input:visible</value>
+  </data>
+  <data name="FinanceOfferOptionDropDown" xml:space="preserve">
+    <value>#obj-prop-finance-offer #drop-option span.selection:visible</value>
+  </data>
+  <data name="FinanceOfferPrepayment" xml:space="preserve">
+    <value>#obj-prop-finance-offer #inp-prepayment input:visible</value>
+  </data>
+  <data name="FinanceOfferTerm" xml:space="preserve">
+    <value>#obj-prop-finance-offer #inp-term input:visible</value>
+  </data>
+  <data name="ChangeOrderDialog" xml:space="preserve">
+    <value>vb-modal vb-reorder-props:contains("change order")</value>
+  </data>
+  <data name="DoneButton" xml:space="preserve">
+    <value>vb-modal #band-btn-done</value>
+  </data>
+  <data name="ErrorsDuringImport" xml:space="preserve">
+    <value>#inp-errors-during-import input:visible</value>
+  </data>
+  <data name="Story" xml:space="preserve">
+    <value>#inp-story textarea</value>
+  </data>
+  <data name="TablePropertyByText" xml:space="preserve">
+    <value>vb-modal vb-reorder-props div.vb-arr-row:contains("{0}"):visible</value>
+  </data>
+  <data name="TablePropertyCollapsedByText" xml:space="preserve">
+    <value>vb-modal vb-reorder-props div.vb-arr-row:has([class="vb-item-parent"]) div:contains("{0}"):visible</value>
+  </data>
+  <data name="ExtraUrbanInL100Km" xml:space="preserve">
+    <value>#inp-extra-urban-in-l-100-km input:visible</value>
+  </data>
+  <data name="IndOptionsSection" xml:space="preserve">
+    <value>#s-prop-individualoptions:visible</value>
+  </data>
+  <data name="TEquipmentSection" xml:space="preserve">
+    <value>#s-prop-tequipment:visible</value>
+  </data>
+  <data name="SerialDataSectionAddButton" xml:space="preserve">
+    <value>#arr-container-serialdata div.vb-arr-row-btn #btn-add:visible</value>
+  </data>
+  <data name="SerialDataSectionCancelButton" xml:space="preserve">
+    <value>#arr-container-serialdata #btn-cancel:visible</value>
+  </data>
+  <data name="SerialDataSectionChangeOrderButton" xml:space="preserve">
+    <value>#arr-container-serialdata #btn-change-order:visible</value>
+  </data>
+  <data name="SerialDataSectionDoneButton" xml:space="preserve">
+    <value>#arr-container-serialdata #btn-done:visible</value>
+  </data>
+  <data name="SerialDataSectionEntriesSectionAddButton" xml:space="preserve">
+    <value>#arr-container-serialdata #arr-simple-container-entries #btn-add:visible</value>
+  </data>
+  <data name="SerialDataSectionEntriesSectionEntry" xml:space="preserve">
+    <value>#arr-container-serialdata #arr-simple-container-entries vb-single-prop input:visible</value>
+  </data>
+  <data name="SerialDataSectionHighlightedRow" xml:space="preserve">
+    <value>#arr-container-serialdata div.vb-arr-row.vb-selected:visible</value>
+  </data>
+  <data name="SerialDataSectionRow1" xml:space="preserve">
+    <value>#arr-container-serialdata #arr-row-serialdata-1</value>
+  </data>
+  <data name="SerialDataSectionRow2" xml:space="preserve">
+    <value>#arr-container-serialdata #arr-row-serialdata-2</value>
+  </data>
+  <data name="SerialDataSectionRow3" xml:space="preserve">
+    <value>#arr-container-serialdata #arr-row-serialdata-3</value>
+  </data>
+  <data name="SerialDataSectionRowHeadline" xml:space="preserve">
+    <value>#arr-container-serialdata #inp-headline input:visible</value>
+  </data>
+  <data name="TechnicalDataSectionAddButton" xml:space="preserve">
+    <value>#arr-container-technicaldata div.vb-arr-row-btn #btn-add:last:visible</value>
+  </data>
+  <data name="TechnicalDataSectionCancelButton" xml:space="preserve">
+    <value>#arr-container-technicaldata #btn-cancel:visible</value>
+  </data>
+  <data name="TechnicalDataSectionChangeOrderButton" xml:space="preserve">
+    <value>#arr-container-technicaldata #btn-change-order:visible</value>
+  </data>
+  <data name="TechnicalDataSectionDoneButton" xml:space="preserve">
+    <value>#arr-container-technicaldata #btn-done:visible</value>
+  </data>
+  <data name="TechnicalDataSectionHighlightedRow" xml:space="preserve">
+    <value>#arr-container-technicaldata div.vb-arr-row.vb-selected:visible</value>
+  </data>
+  <data name="TechnicalDataSectionRow1" xml:space="preserve">
+    <value>#arr-container-technicaldata #arr-row-technicaldata-1</value>
+  </data>
+  <data name="TechnicalDataSectionRow2" xml:space="preserve">
+    <value>#arr-container-technicaldata #arr-row-technicaldata-2</value>
+  </data>
+  <data name="TechnicalDataSectionRowHeadline" xml:space="preserve">
+    <value>#arr-container-technicaldata #inp-headline input:visible</value>
+  </data>
+  <data name="TechnicalDataSectionRow2DeleteButton" xml:space="preserve">
+    <value>#arr-container-technicaldata #arr-row-technicaldata-2 [el-id="arr-prop-del-2"]:visible</value>
+  </data>
+  <data name="SerialDataSectionEntriesSectionCancelButton" xml:space="preserve">
+    <value>#arr-container-serialdata #arr-simple-container-entries #btn-cancel:visible</value>
+  </data>
+  <data name="SerialDataSectionEntriesSectionChangeOrderButton" xml:space="preserve">
+    <value>#arr-container-serialdata #arr-simple-container-entries #btn-change-order:visible</value>
+  </data>
+  <data name="SerialDataSectionEntriesSectionDoneButton" xml:space="preserve">
+    <value>#arr-container-serialdata #arr-simple-container-entries #btn-done:visible</value>
+  </data>
+  <data name="SerialDataSectionEntriesSectionEntryLast" xml:space="preserve">
+    <value>#arr-container-serialdata #arr-simple-container-entries vb-single-prop:last input:visible</value>
+  </data>
+  <data name="SerialDataSectionEntriesSectionHighlightedEntry" xml:space="preserve">
+    <value>#arr-container-serialdata #arr-simple-container-entries vb-single-prop.vb-selected:visible</value>
+  </data>
+  <data name="SerialDataSectionEntriesSectionEntryLastDeleteButton" xml:space="preserve">
+    <value>#arr-container-serialdata #arr-simple-container-entries vb-single-prop vb-button.vb-arr-simple-btn-del:last:visible</value>
+  </data>
+  <data name="SerialDataSectionEntriesSectionEntryReadOnly" xml:space="preserve">
+    <value>#arr-container-serialdata #arr-simple-container-entries vb-single-prop div[title]</value>
+  </data>
+  <data name="SerialDataSectionRowHeadlineReadOnly" xml:space="preserve">
+    <value>#arr-container-serialdata #inp-headline div[title]</value>
+  </data>
+  <data name="PicturesSectionInteriorPicturesSectionUploadLastButton" xml:space="preserve">
+    <value>vb-arr-simple-prop[ng-reflect-label="Interior pictures"] vb-button.vb-upload-btn:visible:last</value>
+  </data>
+  <data name="PicturesSectionExteriorPicturesSectionCancelButton" xml:space="preserve">
+    <value>vb-arr-simple-prop[ng-reflect-label="Exterior pictures"] div.vb-single-prop:not([hidden]) #btn-cancel</value>
+  </data>
+  <data name="PicturesSectionExteriorPicturesSectionChangeOrderButton" xml:space="preserve">
+    <value>vb-arr-simple-prop[ng-reflect-label="Exterior pictures"] div.vb-single-prop:not([hidden]) #btn-change-order</value>
+  </data>
+  <data name="PicturesSectionExteriorPicturesSectionDoneButton" xml:space="preserve">
+    <value>vb-arr-simple-prop[ng-reflect-label="Exterior pictures"] div.vb-single-prop:not([hidden]) #btn-done</value>
+  </data>
+  <data name="PicturesSectionExteriorPicturesSectionPictureControl" xml:space="preserve">
+    <value>vb-arr-simple-prop[ng-reflect-label="Exterior pictures"] vb-single-prop:not([hidden]):visible</value>
+  </data>
+  <data name="PicturesSectionExteriorPicturesSectionPictureControlHighlighted" xml:space="preserve">
+    <value>vb-arr-simple-prop[ng-reflect-label="Exterior pictures"] vb-single-prop.vb-selected:not([hidden]):visible</value>
+  </data>
+  <data name="PicturesSectionExteriorPicturesSectionPictureControlLast" xml:space="preserve">
+    <value>vb-arr-simple-prop[ng-reflect-label="Exterior pictures"] vb-single-prop:not([hidden]):last:visible</value>
+  </data>
+  <data name="PicturesSectionInteriorPicturesSectionCancelButton" xml:space="preserve">
+    <value>vb-arr-simple-prop[ng-reflect-label="Interior pictures"] div.vb-single-prop:not([hidden]) #btn-cancel</value>
+  </data>
+  <data name="PicturesSectionInteriorPicturesSectionChangeOrderButton" xml:space="preserve">
+    <value>vb-arr-simple-prop[ng-reflect-label="Interior pictures"] div.vb-single-prop:not([hidden]) #btn-change-order</value>
+  </data>
+  <data name="PicturesSectionInteriorPicturesSectionDoneButton" xml:space="preserve">
+    <value>vb-arr-simple-prop[ng-reflect-label="Interior pictures"] div.vb-single-prop:not([hidden]) #btn-done</value>
+  </data>
+  <data name="PicturesSectionInteriorPicturesSectionPictureControl" xml:space="preserve">
+    <value>vb-arr-simple-prop[ng-reflect-label="Interior pictures"] vb-single-prop:not([hidden]):visible</value>
+  </data>
+  <data name="PicturesSectionInteriorPicturesSectionPictureControlHighlighted" xml:space="preserve">
+    <value>vb-arr-simple-prop[ng-reflect-label="Interior pictures"] vb-single-prop.vb-selected:not([hidden]):visible</value>
+  </data>
+  <data name="PicturesSectionInteriorPicturesSectionPictureControlLast" xml:space="preserve">
+    <value>vb-arr-simple-prop[ng-reflect-label="Interior pictures"] vb-single-prop:not([hidden]):last:visible</value>
+  </data>
+  <data name="PicturesSectionExteriorPicturesSectionPictureLast" xml:space="preserve">
+    <value>vb-arr-simple-prop[ng-reflect-label="Exterior pictures"] vb-uploader:last img:visible</value>
+  </data>
+  <data name="PicturesSectionInteriorPicturesSectionDeleteFirstButton" xml:space="preserve">
+    <value>vb-arr-simple-prop[ng-reflect-label="Interior pictures"] vb-button.vb-arr-simple-btn-del:visible:first</value>
+  </data>
+  <data name="PicturesSectionInteriorPicturesSectionDeleteLastButton" xml:space="preserve">
+    <value>vb-arr-simple-prop[ng-reflect-label="Interior pictures"] vb-button.vb-arr-simple-btn-del:visible:last</value>
+  </data>
+  <data name="PicturesSectionInteriorPicturesSectionPictureLast" xml:space="preserve">
+    <value>vb-arr-simple-prop[ng-reflect-label="Interior pictures"] vb-uploader:last img:visible</value>
+  </data>
+  <data name="SerialDataSectionRow2DeleteButton" xml:space="preserve">
+    <value>#arr-container-serialdata #arr-row-serialdata-2 [el-id="arr-prop-del-2"]:visible</value>
+  </data>
+  <data name="PicturesSectionImageEmpty" xml:space="preserve">
+    <value>[ng-reflect-label="Pictures"] vb-uploader.vb-uploader div.img-holder:has(img:hidden)</value>
+  </data>
+  <data name="AddButton" xml:space="preserve">
+    <value>vb-modal:not([hidden]) #band-btn-add[ng-reflect-disabled!="true"]</value>
+  </data>
+  <data name="AddButtonDisabled" xml:space="preserve">
+    <value>vb-modal:not([hidden]) #band-btn-add[ng-reflect-disabled="true"]</value>
+  </data>
+  <data name="ModifiedColumnModal" xml:space="preserve">
+    <value>vb-modal:not([hidden]) th:contains("Modified")</value>
+  </data>
+  <data name="SelectAllButton" xml:space="preserve">
+    <value>vb-modal:not([hidden]) #band-btn-select-all[ng-reflect-disabled!="true"]</value>
+  </data>
+  <data name="StatusColumnModal" xml:space="preserve">
+    <value>vb-modal:not([hidden]) th:contains("Status")</value>
+  </data>
+  <data name="TableRowSelected" xml:space="preserve">
+    <value>vb-modal:not([hidden]) vb-item-list tbody tr:has(td.vb-row-selected):visible</value>
+  </data>
+  <data name="TableRowStatusByTitle" xml:space="preserve">
+    <value>tr:has(span.td-title:contains("{0}")) td.vb-cell-status span:visible</value>
+  </data>
+  <data name="TableRowUnselected" xml:space="preserve">
+    <value>vb-modal:not([hidden]) vb-item-list tbody tr:not(:has(td.vb-row-selected)):visible</value>
+  </data>
+  <data name="TitleColumnModal" xml:space="preserve">
+    <value>vb-modal:not([hidden]) th:contains("Title")</value>
+  </data>
+  <data name="ActionButtonsButton" xml:space="preserve">
+    <value>vb-button#btn-action-buttons:visible</value>
+  </data>
+</root>

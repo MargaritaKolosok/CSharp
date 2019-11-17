@@ -10,18 +10,19 @@ using OpenQA.Selenium.Support.UI;
 
 namespace SeleniumFirst
 {
+    [TestFixture]
+    
     class Program
     {
-        // Create reference for our driver
-        
-        IWebDriver driver = new ChromeDriver();       
-
         static void Main(string[] args)
         {
-            
-        }
 
-        [SetUp]
+        }
+        // Create reference for our driver
+
+        IWebDriver driver = new ChromeDriver();    
+
+        [OneTimeSetUp]
         public void Initialize()
         {
             // Navigate to the google page
@@ -34,7 +35,7 @@ namespace SeleniumFirst
         {
             // Title
            // SeleniumSetMethods.SelectDropDown(driver, "TitleId", "Mr.", "Id");
-            SeleniumSetMethods.GetDropDownValue(driver, "TitleId", 1, "Id");
+            SeleniumSetMethods.SetDropDownValue(driver, "TitleId", 1, "Id");
 
             // Initial
             SeleniumSetMethods.EnterText(driver, "Initial", "executeautomation", "Name");
@@ -44,12 +45,18 @@ namespace SeleniumFirst
             Console.WriteLine("The value of my Initial is {0}", SeleniumGetMethods.GetText(driver, "Initial", "Name"));
 
             // Click 
+          //  SeleniumSetMethods.Click(driver, "Save", "Name");
+            //Console.WriteLine("Executed test");
+        }
+        [Test]
+        public void OtherTest()
+        {         
+            // Click 
             SeleniumSetMethods.Click(driver, "Save", "Name");
             Console.WriteLine("Executed test");
         }
-             
 
-        [TearDown]
+        [OneTimeTearDown]
         public void CleanUp()
         {
             driver.Close();

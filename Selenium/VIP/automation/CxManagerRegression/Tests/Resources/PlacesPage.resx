@@ -1,0 +1,1338 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="AllowedBlackErrorMinutesDropDown" xml:space="preserve">
+    <value>#interv-allowed-black-error #interv-sel-m span.selection:visible</value>
+  </data>
+  <data name="AllowedBlackErrorSecondsDropDown" xml:space="preserve">
+    <value>#interv-allowed-black-error #interv-sel-s span.selection:visible</value>
+  </data>
+  <data name="AllowedBlackWarningMinutesDropDown" xml:space="preserve">
+    <value>#interv-allowed-black-warning #interv-sel-m span.selection:visible</value>
+  </data>
+  <data name="AllowedBlackWarningSecondsDropDown" xml:space="preserve">
+    <value>#interv-allowed-black-warning #interv-sel-s span.selection:visible</value>
+  </data>
+  <data name="AppsSectionTableHeader" xml:space="preserve">
+    <value>#app-row-header:visible</value>
+  </data>
+  <data name="AppsSectionTableRow1" xml:space="preserve">
+    <value>div#app-row-1:visible</value>
+  </data>
+  <data name="AppsSectionTableRow1AppPackageCell" xml:space="preserve">
+    <value>#app-row-1 div:nth-child(4)</value>
+  </data>
+  <data name="AppsSectionTableRow1DeleteButton" xml:space="preserve">
+    <value>vb-button[el-id="app-prop-del-1"]:visible</value>
+  </data>
+  <data name="AppsSectionTableRow1TitleCell" xml:space="preserve">
+    <value>#app-row-1 div:nth-child(3)</value>
+  </data>
+  <data name="AppsSectionTableRow1VersionCell" xml:space="preserve">
+    <value>#app-row-1 div:nth-child(5)</value>
+  </data>
+  <data name="AppsSectionTableRowDetails" xml:space="preserve">
+    <value>#arr-details-1:visible</value>
+  </data>
+  <data name="AppsSectionTableRowDetailsAppTitleReadOnly" xml:space="preserve">
+    <value>#arr-details-1 #s-prop-player div[title]</value>
+  </data>
+  <data name="AppsSectionTableRowDetailsCar" xml:space="preserve">
+    <value>#arr-details-1 #s-prop-item span.selection:visible</value>
+  </data>
+  <data name="AppsSectionTableRowDetailsCarDetailsButton" xml:space="preserve">
+    <value>#arr-details-1 #s-prop-item span.vb-icon</value>
+  </data>
+  <data name="AppsSectionTableRowDetailsCarReadOnly" xml:space="preserve">
+    <value>#arr-details-1 #s-prop-item div[title]</value>
+  </data>
+  <data name="AppsSectionTableRowDetailsImage" xml:space="preserve">
+    <value>#arr-details-1 img</value>
+  </data>
+  <data name="AppsSectionTableRowDetailsPoiDropDown" xml:space="preserve">
+    <value>#arr-details-1 #s-prop-poi span.selection:visible</value>
+  </data>
+  <data name="AppsSectionTableRowDetailsPoiDetailsButton" xml:space="preserve">
+    <value>#arr-details-1 #s-prop-poi span.vb-icon:visible</value>
+  </data>
+  <data name="AppsSectionTableRowDetailsPoiReadOnly" xml:space="preserve">
+    <value>#arr-details-1 #s-prop-poi div[title]</value>
+  </data>
+  <data name="AppsSectionTableRowDetailsVersionReadOnly" xml:space="preserve">
+    <value>#arr-details-1 #s-prop-version div[title]</value>
+  </data>
+  <data name="AppSwitcherGestureDropDown" xml:space="preserve">
+    <value>#drop-app-switcher-gesture span.selection:visible</value>
+  </data>
+  <data name="CancelButton" xml:space="preserve">
+    <value>vb-modal:not([hidden]) #band-btn-cancel</value>
+  </data>
+  <data name="ChangesWillBeDiscardedDialog" xml:space="preserve">
+    <value>vb-modal div:contains("your changes will be discarded")</value>
+  </data>
+  <data name="ChildPlacesSectionTableHeader" xml:space="preserve">
+    <value>div#pl-child-row-header:visible</value>
+  </data>
+  <data name="ChildPlacesSectionTableRow1" xml:space="preserve">
+    <value>div#pl-child-row-1</value>
+  </data>
+  <data name="ChildPlacesSectionTitle" xml:space="preserve">
+    <value>div.vb-child-places-title</value>
+  </data>
+  <data name="ClearSelectionButton" xml:space="preserve">
+    <value>vb-modal:not([hidden]) #band-btn-clear-selection</value>
+  </data>
+  <data name="DeleteButton" xml:space="preserve">
+    <value>vb-modal:not([hidden]) #band-btn-delete</value>
+  </data>
+  <data name="DeleteDialog" xml:space="preserve">
+    <value>vb-modal .vb-modal-content:contains("want to delete")</value>
+  </data>
+  <data name="DeviceTypeDropDown" xml:space="preserve">
+    <value>#drop-device-type span.selection:visible</value>
+  </data>
+  <data name="DeviceTypeReadOnly" xml:space="preserve">
+    <value>#drop-device-type div.vb-form-input[title]</value>
+  </data>
+  <data name="DialogPlaceholder" xml:space="preserve">
+    <value>vb-modal .vb-modal-content:visible</value>
+  </data>
+  <data name="ErrorEnabledCheckBox" xml:space="preserve">
+    <value>#ch-box-error-enabled div.vb-checkbox-btn</value>
+  </data>
+  <data name="ErrorPositionLatLongNotValid" xml:space="preserve">
+    <value>#inp-position .vb-validation-msg:contains("Latitude and/or longitude values are not valid"):visible</value>
+  </data>
+  <data name="ErrorTimezoneIsRequired" xml:space="preserve">
+    <value>#drop-timezone .vb-validation-msg:contains("This field is required"):visible</value>
+  </data>
+  <data name="ErrorTitleIsRequired" xml:space="preserve">
+    <value>#inp-title .vb-validation-msg:contains("This field is required"):visible</value>
+  </data>
+  <data name="ErrorToleranceRadiusMustBeZeroOrGreater" xml:space="preserve">
+    <value>#num-inp-tolerance-radius .vb-validation-msg:contains("This must be 0 or greater"):visible</value>
+  </data>
+  <data name="ErrorToleranceRadiusPlaceholder" xml:space="preserve">
+    <value>#num-inp-tolerance-radius .vb-validation-msg:visible</value>
+  </data>
+  <data name="FaceApiKey" xml:space="preserve">
+    <value>#inp-face-api-key input:not([readonly])</value>
+  </data>
+  <data name="GlobeButton" xml:space="preserve">
+    <value>#info-picker-position span.vb-icon:not(.vb-readonly):visible</value>
+  </data>
+  <data name="GlobeButtonReadOnly" xml:space="preserve">
+    <value>#info-picker-position span.vb-icon.vb-readonly:visible</value>
+  </data>
+  <data name="DropDownBlackListItem" xml:space="preserve">
+    <value>li.select2-results__option:contains("{0}"):has(div:not([class]):visible)</value>
+  </data>
+  <data name="IbeaconDetailsButton" xml:space="preserve">
+    <value>#info-picker-device span.vb-icon:visible:has(img:visible)</value>
+  </data>
+  <data name="DropDownGrayListItem" xml:space="preserve">
+    <value>li.select2-results__option:contains("{0}"):has(div.vb-gray-item:visible)</value>
+  </data>
+  <data name="DropDownGreenListItem" xml:space="preserve">
+    <value>li.select2-results__option:contains("{0}"):has(div.vb-green-item:visible)</value>
+  </data>
+  <data name="ImageReplaceButton" xml:space="preserve">
+    <value>vb-band-button#band-btn-replace</value>
+  </data>
+  <data name="ImageUploadButton" xml:space="preserve">
+    <value>vb-band-button#band-btn-upload</value>
+  </data>
+  <data name="KillTimeoutMinutesDropDown" xml:space="preserve">
+    <value>#interv-kill-timeout #interv-sel-m span.selection:visible</value>
+  </data>
+  <data name="KillTimeoutSecondsDropDown" xml:space="preserve">
+    <value>#interv-kill-timeout #interv-sel-s span.selection:visible</value>
+  </data>
+  <data name="Map" xml:space="preserve">
+    <value>div#map:has(img.leaflet-tile-loaded:visible):visible</value>
+  </data>
+  <data name="MapMarker" xml:space="preserve">
+    <value>img.leaflet-marker-icon:visible</value>
+  </data>
+  <data name="MapSearch" xml:space="preserve">
+    <value>div#map div.leaflet-control-container input:visible</value>
+  </data>
+  <data name="MaxOfflineTimeHoursDropDown" xml:space="preserve">
+    <value>#interv-max-offline-time #interv-sel-h span.selection:visible</value>
+  </data>
+  <data name="MaxOfflineTimeMinutesDropDown" xml:space="preserve">
+    <value>#interv-max-offline-time #interv-sel-m span.selection:visible</value>
+  </data>
+  <data name="MaxValidPixels" xml:space="preserve">
+    <value>#sl-max-valid-pixels input:not([readonly]):visible</value>
+  </data>
+  <data name="MinimumBrightness" xml:space="preserve">
+    <value>#num-inp-minimum-brightness input:not([readonly])</value>
+  </data>
+  <data name="MonitoringCheckBox" xml:space="preserve">
+    <value>#ch-box-monitoring div.vb-checkbox-btn</value>
+  </data>
+  <data name="NoAppsToBeAddedDialog" xml:space="preserve">
+    <value>vb-modal div:contains("no apps to be added")</value>
+  </data>
+  <data name="NoItemsToBeAddedDialog" xml:space="preserve">
+    <value>vb-modal div:contains("no items to be added")</value>
+  </data>
+  <data name="OkButton" xml:space="preserve">
+    <value>vb-modal:not([hidden]) #band-btn-ok</value>
+  </data>
+  <data name="PingIntervalMinutesDropDown" xml:space="preserve">
+    <value>#interv-ping-interval #interv-sel-m span.selection:visible</value>
+  </data>
+  <data name="PingIntervalSecondsDropDown" xml:space="preserve">
+    <value>#interv-ping-interval #interv-sel-s span.selection:visible</value>
+  </data>
+  <data name="PlaceAlreadyExistsDialog" xml:space="preserve">
+    <value>vb-modal .vb-modal-content:contains("already exists")</value>
+  </data>
+  <data name="PlaceMapWithMap" xml:space="preserve">
+    <value>#place-map div.img-holder img:visible</value>
+  </data>
+  <data name="PlaceName" xml:space="preserve">
+    <value>h1.vb-title div</value>
+  </data>
+  <data name="PlaceWidthReadOnly" xml:space="preserve">
+    <value>#num-inp-place-width div.vb-form-input[title]</value>
+  </data>
+  <data name="Position" xml:space="preserve">
+    <value>#inp-position input:not([readonly])</value>
+  </data>
+  <data name="PositionReadOnly" xml:space="preserve">
+    <value>#inp-position div[title]</value>
+  </data>
+  <data name="RebootIntervalDropDown" xml:space="preserve">
+    <value>#drop-reboot-interval span.selection:visible</value>
+  </data>
+  <data name="RestoreButton" xml:space="preserve">
+    <value>vb-modal #band-btn-restore</value>
+  </data>
+  <data name="ScreenButton" xml:space="preserve">
+    <value>vb-button#btn-screen</value>
+  </data>
+  <data name="ScreenHeight" xml:space="preserve">
+    <value>vb-numeric-input#num-inp-screen-height input:visible</value>
+  </data>
+  <data name="ScreenHeightError" xml:space="preserve">
+    <value>vb-numeric-input#num-inp-screen-height div.vb-validation-msg:visible</value>
+  </data>
+  <data name="ScreenWidth" xml:space="preserve">
+    <value>vb-numeric-input#num-inp-screen-width input:visible</value>
+  </data>
+  <data name="ScreenWidthError" xml:space="preserve">
+    <value>vb-numeric-input#num-inp-screen-width div.vb-validation-msg:visible</value>
+  </data>
+  <data name="SelectAppDialog" xml:space="preserve">
+    <value>vb-modal h1:contains("Apps"):visible</value>
+  </data>
+  <data name="SelectItemDialog" xml:space="preserve">
+    <value>vb-modal h1:contains("Items"):visible</value>
+  </data>
+  <data name="ShowAppTitlesCheckBox" xml:space="preserve">
+    <value>#ch-box-show-app-titles div.vb-checkbox-btn</value>
+  </data>
+  <data name="Status" xml:space="preserve">
+    <value>#txt-status div:not([class]):visible</value>
+  </data>
+  <data name="SubmitButton" xml:space="preserve">
+    <value>vb-modal:not([hidden]) #band-btn-submit</value>
+  </data>
+  <data name="TableHeader" xml:space="preserve">
+    <value>th.vb-cell-hierarchy-title:visible</value>
+  </data>
+  <data name="TableRowEmpty" xml:space="preserve">
+    <value>td.dataTables_empty</value>
+  </data>
+  <data name="TableRowByTitle" xml:space="preserve">
+    <value>tr:has(td:contains("{0}")):visible</value>
+  </data>
+  <data name="TableSelectAppTitle" xml:space="preserve">
+    <value>vb-modal tbody td.vb-cell-title:contains("{0}"):visible</value>
+  </data>
+  <data name="TableSelectAppTitleColumnValues" xml:space="preserve">
+    <value>vb-modal tbody td.vb-cell-title:visible</value>
+  </data>
+  <data name="TableSelectItemTitle" xml:space="preserve">
+    <value>vb-modal tbody td.vb-cell-title:contains("{0}"):visible</value>
+  </data>
+  <data name="TableSelectItemTitleColumnValues" xml:space="preserve">
+    <value>vb-modal tbody td.vb-cell-title:visible</value>
+  </data>
+  <data name="TimezoneDropDown" xml:space="preserve">
+    <value>#drop-timezone span.selection:visible</value>
+  </data>
+  <data name="TimezoneListItemActive" xml:space="preserve">
+    <value>li.select2-results__option--highlighted</value>
+  </data>
+  <data name="TimezoneReadOnly" xml:space="preserve">
+    <value>#inp-timezone div.vb-form-input[title]:visible</value>
+  </data>
+  <data name="Title" xml:space="preserve">
+    <value>#inp-title input:visible</value>
+  </data>
+  <data name="TitleReadOnly" xml:space="preserve">
+    <value>#inp-title div[title]</value>
+  </data>
+  <data name="ToleranceRadius" xml:space="preserve">
+    <value>#num-inp-tolerance-radius input:visible</value>
+  </data>
+  <data name="ToleranceRadiusDecreaseButton" xml:space="preserve">
+    <value>#num-inp-tolerance-radius span:contains("-")</value>
+  </data>
+  <data name="ToleranceRadiusIncreaseButton" xml:space="preserve">
+    <value>#num-inp-tolerance-radius span:contains("+")</value>
+  </data>
+  <data name="ToleranceRadiusReadOnly" xml:space="preserve">
+    <value>#num-inp-tolerance-radius div[title]</value>
+  </data>
+  <data name="WindowsWorkstationFieldName" xml:space="preserve">
+    <value>#info-picker-device div.vb-control-label</value>
+  </data>
+  <data name="WarningEnabledCheckBox" xml:space="preserve">
+    <value>#ch-box-warning-enabled div.vb-checkbox-btn</value>
+  </data>
+  <data name="AppSwitcherButton" xml:space="preserve">
+    <value>#btn-app-switcher:visible</value>
+  </data>
+  <data name="MonitoringButton" xml:space="preserve">
+    <value>#btn-monitoring</value>
+  </data>
+  <data name="PingIntervalMinutesReadOnly" xml:space="preserve">
+    <value>#interv-ping-interval #interv-text-m</value>
+  </data>
+  <data name="PingIntervalSecondsReadOnly" xml:space="preserve">
+    <value>#interv-ping-interval #interv-text-s</value>
+  </data>
+  <data name="ScreenWidthReadOnly" xml:space="preserve">
+    <value>vb-numeric-input#num-inp-screen-width div[title]</value>
+  </data>
+  <data name="UpdateButton" xml:space="preserve">
+    <value>#btn-update</value>
+  </data>
+  <data name="UploadButton" xml:space="preserve">
+    <value>vb-band-button#band-btn-upload:not(.btn-upload-toolbar)</value>
+  </data>
+  <data name="WindowsWorkstation" xml:space="preserve">
+    <value>#info-picker-device div[title]</value>
+  </data>
+  <data name="WindowsWorkstationDetailsButton" xml:space="preserve">
+    <value>#info-picker-device span.vb-icon:not(.vb-readonly):visible:has(img:visible)</value>
+  </data>
+  <data name="AppsSectionTableRowDetailsAppPackageDropDown" xml:space="preserve">
+    <value>#arr-details-1 #s-prop-player_resource span.selection:visible</value>
+  </data>
+  <data name="AppsSectionTableRowDetailsAppPackageReadOnly" xml:space="preserve">
+    <value>#arr-details-1 #s-prop-player_resource div[title]</value>
+  </data>
+  <data name="LivePreviewCheckBox" xml:space="preserve">
+    <value>#arr-details-1 #s-prop-player_livepreviewmode div.vb-checkbox-btn</value>
+  </data>
+  <data name="DiagnosticsButton" xml:space="preserve">
+    <value>div.vb-text-title:contains("Configuration")+vb-obj-prop vb-button#btn-diagnostics:visible</value>
+  </data>
+  <data name="DownloadButton" xml:space="preserve">
+    <value>div.vb-text-title:contains("Configuration")+vb-obj-prop vb-button#btn-download:visible</value>
+  </data>
+  <data name="InteractionButton" xml:space="preserve">
+    <value>div.vb-text-title:contains("Configuration")+vb-obj-prop vb-button#btn-interaction:visible</value>
+  </data>
+  <data name="EnabledCheckBox" xml:space="preserve">
+    <value>#ch-box-enabled:visible div.vb-checkbox-btn</value>
+  </data>
+  <data name="ExternalPowerOffWithUpsCheckBox" xml:space="preserve">
+    <value>#ch-box-external-power-off-with-ups div.vb-checkbox-btn</value>
+  </data>
+  <data name="IdleTimeoutMinutesDropDown" xml:space="preserve">
+    <value>#s-prop-idle_timeout #interv-sel-m span.selection:visible</value>
+  </data>
+  <data name="IdleTimeoutMinutesReadOnly" xml:space="preserve">
+    <value>#s-prop-idle_timeout #interv-text-m span</value>
+  </data>
+  <data name="IdleTimeoutSecondsDropDown" xml:space="preserve">
+    <value>#s-prop-idle_timeout #interv-sel-s span.selection:visible</value>
+  </data>
+  <data name="IdleTimeoutSecondsReadOnly" xml:space="preserve">
+    <value>#s-prop-idle_timeout #interv-text-s span</value>
+  </data>
+  <data name="AppsSectionTableRow2" xml:space="preserve">
+    <value>div#app-row-2:visible</value>
+  </data>
+  <data name="AppsSectionTableRow2Details" xml:space="preserve">
+    <value>#arr-details-2:visible</value>
+  </data>
+  <data name="AppsSectionTableRow2DetailsAppPackageDropDown" xml:space="preserve">
+    <value>#arr-details-2 #s-prop-player_resource span.selection:visible</value>
+  </data>
+  <data name="ErrorAppPackageRow2Required" xml:space="preserve">
+    <value>#arr-details-2 #s-prop-player_resource .vb-validation-msg:contains("required"):visible</value>
+  </data>
+  <data name="AppsSectionTableRow2DetailsAppPackageReadOnly" xml:space="preserve">
+    <value>#arr-details-2 #s-prop-player_resource div[title]</value>
+  </data>
+  <data name="AppsSectionTableRow2DetailsImage" xml:space="preserve">
+    <value>#arr-details-2 img</value>
+  </data>
+  <data name="AppsSectionTableRow2DeleteButton" xml:space="preserve">
+    <value>vb-button[el-id="app-prop-del-2"]:visible</value>
+  </data>
+  <data name="AppsSectionTableRow2TitleCell" xml:space="preserve">
+    <value>#app-row-2 div:nth-child(3)</value>
+  </data>
+  <data name="AppsSectionTableRow3" xml:space="preserve">
+    <value>div#app-row-3:visible</value>
+  </data>
+  <data name="AppsSectionTableRowDetailsPlayerReadOnly" xml:space="preserve">
+    <value>#arr-details-1 #s-prop-player div[title]</value>
+  </data>
+  <data name="AppsSectionTableRowsColumnTitle" xml:space="preserve">
+    <value>div[id^="app-row"] div:nth-child(3):visible</value>
+  </data>
+  <data name="ChangeOrderOfAppsDialog" xml:space="preserve">
+    <value>vb-modal div:contains("change order of apps")</value>
+  </data>
+  <data name="ChangeOrderOfAppsDialogTableColumnTitle" xml:space="preserve">
+    <value>vb-modal tbody td.vb-cell-title</value>
+  </data>
+  <data name="ChangeOrderOfAppsDialogTableRowFirst" xml:space="preserve">
+    <value>vb-modal tbody td:first</value>
+  </data>
+  <data name="ChangeOrderOfAppsDialogTableRowLast" xml:space="preserve">
+    <value>vb-modal tbody td:last</value>
+  </data>
+  <data name="DoneButton" xml:space="preserve">
+    <value>vb-modal #band-btn-done</value>
+  </data>
+  <data name="ChildPlacesSectionTableRow2" xml:space="preserve">
+    <value>div#pl-child-row-2</value>
+  </data>
+  <data name="ChildPlacesSectionTableRow3" xml:space="preserve">
+    <value>div#pl-child-row-3</value>
+  </data>
+  <data name="ChildPlacesSectionTableRowsColumnTitle" xml:space="preserve">
+    <value>div[id^="pl-child-row"] div:nth-child(2)</value>
+  </data>
+  <data name="ChildPlacesSectionTableRowsDeleteButton" xml:space="preserve">
+    <value>vb-button.vb-btn-del-row:visible</value>
+  </data>
+  <data name="SelectPlaceDialog" xml:space="preserve">
+    <value>vb-modal h1:contains("Places"):visible</value>
+  </data>
+  <data name="ChildPlacesSectionTableRow2DeleteButton" xml:space="preserve">
+    <value>div#pl-child-row-2 vb-button.vb-btn-del-row:visible</value>
+  </data>
+  <data name="ChildPlacesSectionTableRow2TitleCell" xml:space="preserve">
+    <value>div#pl-child-row-2 div:nth-child(2)</value>
+  </data>
+  <data name="ChildPlacesSectionTableRowsColumnTitleValue" xml:space="preserve">
+    <value>div[id^="pl-child-row"] div:nth-child(2):contains("{0}")</value>
+  </data>
+  <data name="ScheduleSectionDetailsAddUpButton" xml:space="preserve">
+    <value>#sc-app-1 vb-button[data-action="sc-add-app-up"]:visible</value>
+  </data>
+  <data name="ScheduleSectionDetailsAppDropDown" xml:space="preserve">
+    <value>#sc-app-1 #s-prop-app span.selection:visible</value>
+  </data>
+  <data name="ScheduleSectionDetailsAppReadOnly" xml:space="preserve">
+    <value>#s-prop-app div[title]:visible</value>
+  </data>
+  <data name="ScheduleSectionDetailsDayReadOnly" xml:space="preserve">
+    <value>#s-prop-day div[title]:visible</value>
+  </data>
+  <data name="ScheduleSectionDetailsTimeStart1HoursDropDown" xml:space="preserve">
+    <value>#sc-app-1 #s-prop-start:visible #interv-sel-h span.selection:visible</value>
+  </data>
+  <data name="ScheduleSectionDetailsTimeStart1HoursReadOnly" xml:space="preserve">
+    <value>#sc-app-1 #s-prop-start:visible #interv-text-h</value>
+  </data>
+  <data name="ScheduleSectionDetailsTimeStart1MinutesDropDown" xml:space="preserve">
+    <value>#sc-app-1 #s-prop-start:visible #interv-sel-m span.selection:visible</value>
+  </data>
+  <data name="ScheduleSectionDetailsTimeStart1MinutesReadOnly" xml:space="preserve">
+    <value>#sc-app-1 #s-prop-start:visible #interv-text-m</value>
+  </data>
+  <data name="ScheduleSectionDetailsTimeStart2HoursDropDown" xml:space="preserve">
+    <value>#sc-app-2 #s-prop-start:visible #interv-sel-h span.selection:visible</value>
+  </data>
+  <data name="ScheduleSectionDetailsTimeStart2HoursReadOnly" xml:space="preserve">
+    <value>#sc-app-2 #s-prop-start:visible #interv-text-h</value>
+  </data>
+  <data name="ScheduleSectionDetailsTimeStart2MinutesDropDown" xml:space="preserve">
+    <value>#sc-app-2 #s-prop-start:visible #interv-sel-m span.selection:visible</value>
+  </data>
+  <data name="ScheduleSectionDetailsTimeStart2MinutesReadOnly" xml:space="preserve">
+    <value>#sc-app-2 #s-prop-start:visible #interv-text-m</value>
+  </data>
+  <data name="ScheduleSectionRow1" xml:space="preserve">
+    <value>#sc-row-1:visible</value>
+  </data>
+  <data name="DeleteChildPlacesButton" xml:space="preserve">
+    <value>#band-btn-delete-child-places</value>
+  </data>
+  <data name="KeepChildPlacesButton" xml:space="preserve">
+    <value>#band-btn-keep-child-places</value>
+  </data>
+  <data name="ChildPlacesSectionShowDeletedButton" xml:space="preserve">
+    <value>div.vb-child-places-title div img[title="Show deleted"]</value>
+  </data>
+  <data name="ChildPlacesSectionHideDeletedButton" xml:space="preserve">
+    <value>div.vb-child-places-title div img[title="Hide deleted"]</value>
+  </data>
+  <data name="ChildPlacesSectionTableRow3TitleCell" xml:space="preserve">
+    <value>div#pl-child-row-3 div:nth-child(2)</value>
+  </data>
+  <data name="ChildPlacesSectionTableRow3DeleteButton" xml:space="preserve">
+    <value>div#pl-child-row-3 vb-button.vb-btn-del-row:visible</value>
+  </data>
+  <data name="PlaceMapImageInline" xml:space="preserve">
+    <value>#uploader-pl-map div[class="img-holder"][class!="vb-uploader-preview"]:visible img</value>
+  </data>
+  <data name="PlaceMapReadOnly" xml:space="preserve">
+    <value>#uploader-pl-map div.vb-readonly</value>
+  </data>
+  <data name="PlaceMapUploadButton" xml:space="preserve">
+    <value>#uploader-pl-map vb-button.vb-upload-btn:visible</value>
+  </data>
+  <data name="ChildPlacesSectionMapWithItemsButton" xml:space="preserve">
+    <value>div.vb-child-places-title div img[title="Map with items"]:visible</value>
+  </data>
+  <data name="ChildPlacesSectionMapWithPlacesButton" xml:space="preserve">
+    <value>div.vb-child-places-title div img[title="Map with places"]:visible</value>
+  </data>
+  <data name="ChildPlacesSectionTableViewButton" xml:space="preserve">
+    <value>div.vb-child-places-title div img[title="Table view"]</value>
+  </data>
+  <data name="ErrorPlaceWidthIsNotValid" xml:space="preserve">
+    <value>#num-inp-place-width div.vb-validation-msg:contains("Place width is not valid"):visible</value>
+  </data>
+  <data name="PlaceWidth" xml:space="preserve">
+    <value>#num-inp-place-width input:not([readonly])</value>
+  </data>
+  <data name="PlaceMapImagePreview" xml:space="preserve">
+    <value>#uploader-pl-map div[class*="img-holder"][class*="vb-uploader-preview"]:visible img</value>
+  </data>
+  <data name="PlaceMapImageEmpty" xml:space="preserve">
+    <value>#uploader-pl-map div.img-holder:has(:not(img:visible))</value>
+  </data>
+  <data name="ChildPlacesSectionMap" xml:space="preserve">
+    <value>vb-place-map div.vb-sidebar-map img:visible</value>
+  </data>
+  <data name="ChildPlacesSectionPlaceMarkerOnMap" xml:space="preserve">
+    <value>vb-place-map div.vb-sidebar-map div.vb-dot-inner:not([style*="cursor: pointer"]):contains("{0}"):visible</value>
+  </data>
+  <data name="ChildPlacesSectionPlaceMarkerOnMapNonDraggable" xml:space="preserve">
+    <value>vb-place-map div.vb-sidebar-map div.vb-dot-inner[style*="cursor: pointer"]:contains("{0}"):visible</value>
+  </data>
+  <data name="ChildPlacesSectionSidebarChildPlaceCloseButton" xml:space="preserve">
+    <value>vb-place-map div.vb-child-sidebar-btn:visible</value>
+  </data>
+  <data name="ChildPlacesSectionSidebarChildPlaceContent" xml:space="preserve">
+    <value>vb-place-map div.vb-child-sidebar-content:contains("{0}"):visible</value>
+  </data>
+  <data name="ChildPlacesSectionSidebarChildPlaceDetachButton" xml:space="preserve">
+    <value>vb-place-map div.vb-child-sidebar-footer div:contains("Detach"):visible</value>
+  </data>
+  <data name="ChildPlacesSectionSidebarChildPlaceTitle" xml:space="preserve">
+    <value>vb-place-map div.vb-child-sidebar-title:contains("{0}"):visible</value>
+  </data>
+  <data name="ChildPlacesSectionSidebarChildPlaceViewButton" xml:space="preserve">
+    <value>vb-place-map div.vb-child-sidebar-footer div:contains("View"):visible</value>
+  </data>
+  <data name="ChildPlacesSectionSidebarChildPlaceImagePlaceholder" xml:space="preserve">
+    <value>vb-place-map div.vb-child-sidebar-content img[src*="resourcefiles"]:visible</value>
+  </data>
+  <data name="ChildPlacesSectionSidebarChildPlaceNormalImage" xml:space="preserve">
+    <value>vb-place-map div.vb-child-sidebar-content img[src*="asset"]:visible</value>
+  </data>
+  <data name="ChildPlacesSectionPlaceMarkerOnMapOuter" xml:space="preserve">
+    <value>vb-place-map div.vb-sidebar-map div.vb-dot-inner:contains("{0}") div.vb-dot-outer:visible</value>
+  </data>
+  <data name="ChildPlacesSectionSidebarChildPlacePlaceholder" xml:space="preserve">
+    <value>vb-place-map div.vb-child-sidebar-content div.vb-child-item:contains("{0}"):visible</value>
+  </data>
+  <data name="AssetConstraintDialog" xml:space="preserve">
+    <value>vb-modal .vb-modal-content:contains("Asset does not satisfy defined constraint")</value>
+  </data>
+  <data name="ChildPlacesSectionPlaceMarkerOnMapEmpty" xml:space="preserve">
+    <value>vb-place-map div.vb-sidebar-map div.vb-dot-inner span:empty</value>
+  </data>
+  <data name="ChildPlacesSectionPlaceMarkerOnMapEmptyOuter" xml:space="preserve">
+    <value>vb-place-map div.vb-sidebar-map div.vb-dot-inner:has(span:empty) div.vb-dot-outer</value>
+  </data>
+  <data name="AssetFormatDialog" xml:space="preserve">
+    <value>vb-modal .vb-modal-content:contains("File format is not supported")</value>
+  </data>
+  <data name="TimezoneListItemsWindow" xml:space="preserve">
+    <value>span.select2-results:visible</value>
+  </data>
+  <data name="DeviceHasBeenUpdatedDialog" xml:space="preserve">
+    <value>vb-modal .vb-modal-content:contains("has been updated by another user")</value>
+  </data>
+  <data name="FaceApiKeyReadOnly" xml:space="preserve">
+    <value>#inp-face-api-key input[readonly]</value>
+  </data>
+  <data name="ChildPlacesSectionTableRow1TitleCell" xml:space="preserve">
+    <value>div#pl-child-row-1 div:nth-child(2)</value>
+  </data>
+  <data name="Created" xml:space="preserve">
+    <value>#txt-created div:not([class])</value>
+  </data>
+  <data name="Modified" xml:space="preserve">
+    <value>#txt-modified div:not([class])</value>
+  </data>
+  <data name="Since" xml:space="preserve">
+    <value>#txt-since div:not([class])</value>
+  </data>
+  <data name="AppsSectionTableRow2AppPackageCell" xml:space="preserve">
+    <value>#app-row-2 div:nth-child(4)</value>
+  </data>
+  <data name="DeviceColumn" xml:space="preserve">
+    <value>th:contains("Device")</value>
+  </data>
+  <data name="ModifiedColumn" xml:space="preserve">
+    <value>th:contains("Modified")</value>
+  </data>
+  <data name="PictureColumn" xml:space="preserve">
+    <value>th:contains("Picture")</value>
+  </data>
+  <data name="StatusColumn" xml:space="preserve">
+    <value>th:contains("Status")</value>
+  </data>
+  <data name="TitleColumn" xml:space="preserve">
+    <value>th:contains("Title")</value>
+  </data>
+  <data name="ItemsColumn" xml:space="preserve">
+    <value>th:contains("Items")</value>
+  </data>
+  <data name="TableRowDevice" xml:space="preserve">
+    <value>td.vb-cell-device</value>
+  </data>
+  <data name="TableRowStatus" xml:space="preserve">
+    <value>td.vb-cell-status span:visible</value>
+  </data>
+  <data name="TableRowTitle" xml:space="preserve">
+    <value>td.vb-cell-hierarchy-title span.td-title:visible</value>
+  </data>
+  <data name="TableRowByTitleExpanded" xml:space="preserve">
+    <value>tr:not([class*="hide-children"]) td.vb-cell-hierarchy-title span.td-title:contains("{0}")</value>
+  </data>
+  <data name="TableRowByTitleCollapseExpandButton" xml:space="preserve">
+    <value>td.vb-cell-hierarchy-title:has(span.td-title:contains("{0}")) div.ident-parent:visible</value>
+  </data>
+  <data name="TableRowByTitleCollapsed" xml:space="preserve">
+    <value>tr.hide-children td.vb-cell-hierarchy-title span.td-title:contains("{0}")</value>
+  </data>
+  <data name="TableRowByParentTitle" xml:space="preserve">
+    <value>td.vb-cell-hierarchy-title span.td-title[parent-title="{0}"]</value>
+  </data>
+  <data name="TableRowDeviceByParentTitle" xml:space="preserve">
+    <value>tr:has(span.td-title[parent-title="{0}"]) td.vb-cell-device</value>
+  </data>
+  <data name="TableRowStatusByParentTitle" xml:space="preserve">
+    <value>tr:has(span.td-title[parent-title="{0}"]) td.vb-cell-status span:visible</value>
+  </data>
+  <data name="TableRowStatusByTitle" xml:space="preserve">
+    <value>tr:has(span.td-title:contains("{0}")) td.vb-cell-status span:visible</value>
+  </data>
+  <data name="TableRowImage" xml:space="preserve">
+    <value>td.vb-pict-container img[src^="https"]</value>
+  </data>
+  <data name="TableRowByStatus" xml:space="preserve">
+    <value>td.vb-cell-status span:contains("{0}")</value>
+  </data>
+  <data name="TableRowItems" xml:space="preserve">
+    <value>div.vb-cell-items:visible</value>
+  </data>
+  <data name="TableRowModified" xml:space="preserve">
+    <value>td:has(span:not(:visible)) span</value>
+  </data>
+  <data name="DoYouWantToUnassignDialog" xml:space="preserve">
+    <value>vb-modal div.vb-modal-content:contains("want to unassign this item")</value>
+  </data>
+  <data name="ItemsSectionItemByTitle" xml:space="preserve">
+    <value>div.vb-place-item li p:contains("{0}")</value>
+  </data>
+  <data name="ItemsSectionItemByTitleUnassignButton" xml:space="preserve">
+    <value>div.vb-place-item li:has(p:contains("{0}")) div.vb-deleted-st-title:contains("Unassign"):visible</value>
+  </data>
+  <data name="UnassignButton" xml:space="preserve">
+    <value>vb-modal #band-btn-unassign</value>
+  </data>
+  <data name="AppsSectionTableRow3AppPackageCell" xml:space="preserve">
+    <value>#app-row-3 div:nth-child(4)</value>
+  </data>
+  <data name="AppsSectionTableRow3DeleteButton" xml:space="preserve">
+    <value>vb-button[el-id="app-prop-del-1"]:visible</value>
+  </data>
+  <data name="AppsSectionTableRow3TitleCell" xml:space="preserve">
+    <value>#app-row-3 div:nth-child(3)</value>
+  </data>
+  <data name="AppsSectionTableRow3VersionCell" xml:space="preserve">
+    <value>#app-row-3 div:nth-child(5)</value>
+  </data>
+  <data name="AppsSectionTableRow3DetailsPlayerReadOnly" xml:space="preserve">
+    <value>#arr-details-3 #s-prop-player div[title]</value>
+  </data>
+  <data name="AppsSectionTableRow3DetailsAppPackageDropDown" xml:space="preserve">
+    <value>#arr-details-3 #s-prop-player_resource span.selection:visible</value>
+  </data>
+  <data name="AppsSectionTableRow3DetailsTitle" xml:space="preserve">
+    <value>#arr-details-3 #s-prop-title input:visible</value>
+  </data>
+  <data name="AppsSectionTableRow3DetailsTitleReadOnly" xml:space="preserve">
+    <value>#arr-details-3 #s-prop-title div[title]</value>
+  </data>
+  <data name="AppsSectionTableRow3DetailsVersion" xml:space="preserve">
+    <value>#arr-details-3 #s-prop-version div[title]</value>
+  </data>
+  <data name="AppsSectionTableRow3DetailsVersionDropDown" xml:space="preserve">
+    <value>#arr-details-3 #s-prop-version span.selection:visible</value>
+  </data>
+  <data name="AppsSectionTableRowDetailsTitle" xml:space="preserve">
+    <value>#arr-details-1 #s-prop-title input:not([readonly])</value>
+  </data>
+  <data name="AppsSectionTableRowDetailsTitleReadOnly" xml:space="preserve">
+    <value>#arr-details-1 #s-prop-title div[title]</value>
+  </data>
+  <data name="AppsSectionTableRowDetailsVersion" xml:space="preserve">
+    <value>#arr-details-1 #s-prop-version div[title]</value>
+  </data>
+  <data name="AppsSectionTableRowDetailsVersionDropDown" xml:space="preserve">
+    <value>#arr-details-1 #s-prop-version span.selection:visible</value>
+  </data>
+  <data name="DropDownGreenListItems" xml:space="preserve">
+    <value>li.select2-results__option:has(div.vb-green-item:visible)</value>
+  </data>
+  <data name="ChildPlacesSectionPlaceMarkerOnMap1" xml:space="preserve">
+    <value>vb-place-map div.vb-sidebar-map div.vb-dot-inner:not([style*="cursor: pointer"]):visible</value>
+  </data>
+  <data name="ChildPlacesSectionPlaceMarkerOnMapNonDraggable1" xml:space="preserve">
+    <value>vb-place-map div.vb-sidebar-map div.vb-dot-inner[style*="cursor: pointer"]:visible</value>
+  </data>
+  <data name="ChildPlacesSectionTableRowDeleteByTitleButton" xml:space="preserve">
+    <value>div[id^="pl-child-row"]:has(div:nth-child(2):contains("{0}")) vb-button.vb-btn-del-row:visible</value>
+  </data>
+  <data name="TableRowStatusForParents" xml:space="preserve">
+    <value>tr:not(:has(.ident)) td.vb-cell-status span:visible</value>
+  </data>
+  <data name="ChildPlacesSectionPlaceMarkerOnMapCoordinates" xml:space="preserve">
+    <value>div.vb-cp-dot:has(vb-place-map div.vb-sidebar-map div.vb-dot-inner:not([style*="cursor: pointer"])):visible</value>
+  </data>
+  <data name="ConfigurationSectionTitle" xml:space="preserve">
+    <value>div.vb-text-title:contains("Configuration")</value>
+  </data>
+  <data name="UploadGroupButton" xml:space="preserve">
+    <value>#btn-upload</value>
+  </data>
+  <data name="AvailabilityButton" xml:space="preserve">
+    <value>#btn-availability</value>
+  </data>
+  <data name="DepthImageButton" xml:space="preserve">
+    <value>#btn-depth-image</value>
+  </data>
+  <data name="EventLogButton" xml:space="preserve">
+    <value>#btn-event-log</value>
+  </data>
+  <data name="EventLogConfigurationsAddButton" xml:space="preserve">
+    <value>#s-prop-eventlogconfigurations #btn-add:visible</value>
+  </data>
+  <data name="EventLogConfigurationsRow1" xml:space="preserve">
+    <value>#s-prop-eventlogconfigurations #arr-row-eventlogconfigurations-1:visible</value>
+  </data>
+  <data name="HardwareButton" xml:space="preserve">
+    <value>#btn-hardware</value>
+  </data>
+  <data name="HardwareMonitorConfigurationAddButton" xml:space="preserve">
+    <value>#s-prop-monitorconfigurations #btn-add:visible</value>
+  </data>
+  <data name="HardwareMonitorConfigurationRow1" xml:space="preserve">
+    <value>#s-prop-monitorconfigurations #arr-row-monitorconfigurations-1</value>
+  </data>
+  <data name="IntervalInSecondsMinutesDropDown" xml:space="preserve">
+    <value>#interv-interval-in-seconds #interv-sel-m span.selection:visible</value>
+  </data>
+  <data name="IntervalInSecondsMinutesReadOnly" xml:space="preserve">
+    <value>#interv-interval-in-seconds #interv-text-m:visible</value>
+  </data>
+  <data name="IntervalInSecondsSecondsDropDown" xml:space="preserve">
+    <value>#interv-interval-in-seconds #interv-sel-s span.selection:visible</value>
+  </data>
+  <data name="IntervalInSecondsSecondsReadOnly" xml:space="preserve">
+    <value>#interv-interval-in-seconds #interv-text-s:visible</value>
+  </data>
+  <data name="LiveImagesButton" xml:space="preserve">
+    <value>#btn-live-images</value>
+  </data>
+  <data name="AgentUpdateDropDown" xml:space="preserve">
+    <value>#drop-agent-update span.selection:visible</value>
+  </data>
+  <data name="FileUploadConfigurationsAddButton" xml:space="preserve">
+    <value>#obj-prop-upload #btn-add:visible</value>
+  </data>
+  <data name="OverlappingButton" xml:space="preserve">
+    <value>div.vb-text-title:contains("Configuration")+vb-obj-prop #btn-overlapping:visible</value>
+  </data>
+  <data name="OverlappingForProjectorsCheckBox" xml:space="preserve">
+    <value>#ch-box-overlapping-for-projectors:visible div.vb-checkbox-btn</value>
+  </data>
+  <data name="AppsSectionTableRowDetailsSinglePropFields" xml:space="preserve">
+    <value>#arr-details-1 div.vb-container .vb-single-prop:visible</value>
+  </data>
+  <data name="AppsSectionTableRowDetailsMasterVolume" xml:space="preserve">
+    <value>#arr-details-1 #sl-master-volume input:not([readonly])</value>
+  </data>
+  <data name="AppsSectionTableRowDetailsMasterVolumeReadOnly" xml:space="preserve">
+    <value>#arr-details-1 #sl-master-volume input[readonly]</value>
+  </data>
+  <data name="FocusAreaButton" xml:space="preserve">
+    <value>#btn-focus-area:visible</value>
+  </data>
+  <data name="AppsSectionTableRowDetailsAgeGenderBasedContentCheckBox" xml:space="preserve">
+    <value>#arr-details-1 #s-prop-agegenderenabled div.vb-checkbox-btn</value>
+  </data>
+  <data name="AppsSectionTableRowDetailsAppWidth" xml:space="preserve">
+    <value>#arr-details-1 #num-inp-app-width input:not([readonly])</value>
+  </data>
+  <data name="AppsSectionTableRowDetailsAppWidthReadOnly" xml:space="preserve">
+    <value>#arr-details-1 #num-inp-app-width input[readonly]</value>
+  </data>
+  <data name="AppsSectionTableRowDetailsComposerFileUrlDropDown" xml:space="preserve">
+    <value>#arr-details-1 #drop-composer-file-url span.selection:visible</value>
+  </data>
+  <data name="AppsSectionTableRowDetailsComposerFileUrlReadOnly" xml:space="preserve">
+    <value>#arr-details-1 #drop-composer-file-url div.vb-form-input[title]</value>
+  </data>
+  <data name="AppsSectionTableRowDetailsComposerServiceUrlDropDown" xml:space="preserve">
+    <value>#arr-details-1 #drop-composer-service-url span.selection:visible</value>
+  </data>
+  <data name="AppsSectionTableRowDetailsComposerServiceUrlReadOnly" xml:space="preserve">
+    <value>#arr-details-1 #drop-composer-service-url div.vb-form-input[title]</value>
+  </data>
+  <data name="AppsSectionTableRowDetailsFocusAreaDepth" xml:space="preserve">
+    <value>#arr-details-1 #sl-focus-area-depth input:not([readonly])</value>
+  </data>
+  <data name="AppsSectionTableRowDetailsFocusAreaDepthReadOnly" xml:space="preserve">
+    <value>#arr-details-1 #sl-focus-area-depth input[readonly]</value>
+  </data>
+  <data name="AppsSectionTableRowDetailsGenderAgeTrackingDropDown" xml:space="preserve">
+    <value>#arr-details-1 #s-prop-biometricspolicy span.selection:visible</value>
+  </data>
+  <data name="AppsSectionTableRowDetailsGenderAgeTrackingReadOnly" xml:space="preserve">
+    <value>#arr-details-1 #s-prop-biometricspolicy div.vb-form-input[title]</value>
+  </data>
+  <data name="AppsSectionTableRowDetailsLivePreviewCheckBox" xml:space="preserve">
+    <value>#arr-details-1 #ch-box-live-preview div.vb-checkbox-btn</value>
+  </data>
+  <data name="AppsSectionTableRowDetailsLogoLocationDropDown" xml:space="preserve">
+    <value>#arr-details-1 #drop-logo-location span.selection:visible</value>
+  </data>
+  <data name="AppsSectionTableRowDetailsLogoLocationReadOnly" xml:space="preserve">
+    <value>#arr-details-1 #drop-logo-location div.vb-form-input[title]</value>
+  </data>
+  <data name="AppsSectionTableRowDetailsRecordingQualityDropDown" xml:space="preserve">
+    <value>#arr-details-1 #drop-recording-quality span.selection:visible</value>
+  </data>
+  <data name="AppsSectionTableRowDetailsRecordingQualityReadOnly" xml:space="preserve">
+    <value>#arr-details-1 #drop-recording-quality div.vb-form-input[title]</value>
+  </data>
+  <data name="AppsSectionTableRowDetailsTempMediaDeletionDropDown" xml:space="preserve">
+    <value>#arr-details-1 #drop-temp-media-deletion span.selection:visible</value>
+  </data>
+  <data name="AppsSectionTableRowDetailsTempMediaDeletionReadOnly" xml:space="preserve">
+    <value>#arr-details-1 #drop-temp-media-deletion div.vb-form-input[title]</value>
+  </data>
+  <data name="ScheduleSectionDetailsAddDayButton" xml:space="preserve">
+    <value>#btn-add-day:visible</value>
+  </data>
+  <data name="ScheduleSectionDetailsAddDownButton" xml:space="preserve">
+    <value>#sc-app-1 vb-button[data-action="sc-add-app-down"]:visible</value>
+  </data>
+  <data name="TopMostCheckBox" xml:space="preserve">
+    <value>#arr-details-1 #ch-box-top-most div.vb-checkbox-btn</value>
+  </data>
+  <data name="UserRecordingButton" xml:space="preserve">
+    <value>#btn-user-recording:visible</value>
+  </data>
+  <data name="ScheduleSectionDetailsDayDropDown" xml:space="preserve">
+    <value>#s-prop-day span.selection:visible</value>
+  </data>
+  <data name="AppsSectionTableRowDetailsAutoPackageUpdateDropDown" xml:space="preserve">
+    <value>#arr-details-1 #drop-auto-package-update span.selection:visible</value>
+  </data>
+  <data name="AllowSwitchingScheduledAppCheckBox" xml:space="preserve">
+    <value>#ch-box-allow-switching-scheduled-app div.vb-checkbox-btn</value>
+  </data>
+  <data name="EventLogConfigurationsRow" xml:space="preserve">
+    <value>#s-prop-eventlogconfigurations #arr-row-eventlogconfigurations-{0}:visible</value>
+  </data>
+  <data name="EventLogConfigurationsRow1DetailsAlertErrorMessage" xml:space="preserve">
+    <value>#s-prop-eventlogconfigurations #arr-details-eventlogconfigurations-1 #inp-alert-error-message input:visible</value>
+  </data>
+  <data name="EventLogConfigurationsRow1DetailsAlertLevelDropDown" xml:space="preserve">
+    <value>#s-prop-eventlogconfigurations #arr-details-eventlogconfigurations-1 #drop-alert-level span.selection:visible</value>
+  </data>
+  <data name="EventLogConfigurationsRow1DetailsErrorMessagePattern" xml:space="preserve">
+    <value>#s-prop-eventlogconfigurations #arr-details-eventlogconfigurations-1 #inp-event-message-pattern input:visible</value>
+  </data>
+  <data name="EventLogConfigurationsRow1DetailsEventLogDropDown" xml:space="preserve">
+    <value>#s-prop-eventlogconfigurations #arr-details-eventlogconfigurations-1 #drop-event-log span.selection:visible</value>
+  </data>
+  <data name="EventLogConfigurationsRow1DetailsMinEventLogLevelDropDown" xml:space="preserve">
+    <value>#s-prop-eventlogconfigurations #arr-details-eventlogconfigurations-1 #drop-min-event-log-level span.selection:visible</value>
+  </data>
+  <data name="HardwareMonitorConfigurationRow" xml:space="preserve">
+    <value>#s-prop-monitorconfigurations #arr-row-monitorconfigurations-{0}</value>
+  </data>
+  <data name="EventLogConfigurationsRow1DetailsAlertErrorCode" xml:space="preserve">
+    <value>#s-prop-eventlogconfigurations #arr-details-eventlogconfigurations-1 #inp-alert-error-code input:visible</value>
+  </data>
+  <data name="EventLogConfigurationsRow1DetailsSource" xml:space="preserve">
+    <value>#s-prop-eventlogconfigurations #arr-details-eventlogconfigurations-1 #inp-source input:visible</value>
+  </data>
+  <data name="HardwareRow1DetailsAlertErrorCode" xml:space="preserve">
+    <value>#s-prop-monitorconfigurations #arr-details-monitorconfigurations-1 #inp-alert-error-code input:visible</value>
+  </data>
+  <data name="HardwareRow3AllowedExceedingSecondsMinutesDropDown" xml:space="preserve">
+    <value>#s-prop-monitorconfigurations #arr-details-monitorconfigurations-3 #interv-allowed-exceeding-seconds #interv-sel-m span.selection:visible</value>
+  </data>
+  <data name="HardwareRow3AllowedExceedingSecondsSecondsDropDown" xml:space="preserve">
+    <value>#s-prop-monitorconfigurations #arr-details-monitorconfigurations-3 #interv-allowed-exceeding-seconds #interv-sel-s span.selection:visible</value>
+  </data>
+  <data name="HardwareRow3DetailsAlertErrorCode" xml:space="preserve">
+    <value>#s-prop-monitorconfigurations #arr-details-monitorconfigurations-3 #inp-alert-error-code input:visible</value>
+  </data>
+  <data name="HardwareRow3DetailsAlertErrorMessage" xml:space="preserve">
+    <value>#s-prop-monitorconfigurations #arr-details-monitorconfigurations-3 #inp-alert-error-message input:visible</value>
+  </data>
+  <data name="HardwareRow3DetailsAlertLevelDropDown" xml:space="preserve">
+    <value>#s-prop-monitorconfigurations #arr-details-monitorconfigurations-3 #drop-alert-level span.selection:visible</value>
+  </data>
+  <data name="HardwareRow3DetailsSensorDropDown" xml:space="preserve">
+    <value>#s-prop-monitorconfigurations #arr-details-monitorconfigurations-3 #drop-sensor span.selection:visible</value>
+  </data>
+  <data name="HardwareRow3MaxAllowedValue" xml:space="preserve">
+    <value>#s-prop-monitorconfigurations #arr-details-monitorconfigurations-3 #num-inp-max-allowed-value input:visible</value>
+  </data>
+  <data name="HardwareRow3MinAllowedValue" xml:space="preserve">
+    <value>#s-prop-monitorconfigurations #arr-details-monitorconfigurations-3 #num-inp-min-allowed-value input:visible</value>
+  </data>
+  <data name="LiveImagesCompressionQuality" xml:space="preserve">
+    <value>#obj-prop-live-images #sl-compression-quality input:visible</value>
+  </data>
+  <data name="LiveImagesEnableCheckBox" xml:space="preserve">
+    <value>#obj-prop-live-images #ch-box-enable:visible div.vb-checkbox-btn</value>
+  </data>
+  <data name="LiveImagesFrameIntervalMinutesDropDown" xml:space="preserve">
+    <value>#obj-prop-live-images #interv-frame-interval #interv-sel-m span.selection:visible</value>
+  </data>
+  <data name="LiveImagesFrameIntervalSecondsDropDown" xml:space="preserve">
+    <value>#obj-prop-live-images #interv-frame-interval #interv-sel-s span.selection:visible</value>
+  </data>
+  <data name="LiveImagesScale" xml:space="preserve">
+    <value>#obj-prop-live-images #sl-scale input:visible</value>
+  </data>
+  <data name="LiveImagesStartOfDeletionDropDown" xml:space="preserve">
+    <value>#obj-prop-live-images #drop-start-of-deletion span.selection:visible</value>
+  </data>
+  <data name="OverlappingHeight" xml:space="preserve">
+    <value>#num-inp-overlapping-height input:visible</value>
+  </data>
+  <data name="OverlappingGridCheckBox" xml:space="preserve">
+    <value>#ch-box-overlapping-grid div.vb-checkbox-btn</value>
+  </data>
+  <data name="UploadFileUploadConfigurationRow1" xml:space="preserve">
+    <value>#obj-prop-upload #arr-row-configurations-1</value>
+  </data>
+  <data name="DistributionButton" xml:space="preserve">
+    <value>#btn-distribution:visible</value>
+  </data>
+  <data name="DistributionInternetGateway" xml:space="preserve">
+    <value>#obj-prop-distribution #inp-internet-gateway input:visible</value>
+  </data>
+  <data name="DistributionLocalDistributionPort" xml:space="preserve">
+    <value>#obj-prop-distribution #num-inp-local-distribution-port input:visible</value>
+  </data>
+  <data name="DistributionLocalDistributionThresholdDropDown" xml:space="preserve">
+    <value>#obj-prop-distribution #drop-local-distribution-threshold span.selection:visible</value>
+  </data>
+  <data name="ErrorLocalDistributionPortLower" xml:space="preserve">
+    <value>#num-inp-local-distribution-port .vb-validation-msg:contains("This must be"):visible</value>
+  </data>
+  <data name="ErrorMaxValidPixelsLower" xml:space="preserve">
+    <value>#sl-max-valid-pixels .vb-validation-msg:contains("This must be 5% or lower"):visible</value>
+  </data>
+  <data name="EventLogConfigurationsRow1DeleteButton" xml:space="preserve">
+    <value>#s-prop-eventlogconfigurations #arr-row-eventlogconfigurations-1 vb-button[el-id="arr-prop-del-1"]:visible</value>
+  </data>
+  <data name="EventLogConfigurationsRow2" xml:space="preserve">
+    <value>#s-prop-eventlogconfigurations #arr-row-eventlogconfigurations-2:visible</value>
+  </data>
+  <data name="EventLogConfigurationsRow2DeleteButton" xml:space="preserve">
+    <value>#s-prop-eventlogconfigurations #arr-row-eventlogconfigurations-2 vb-button[el-id="arr-prop-del-2"]:visible</value>
+  </data>
+  <data name="EventLogConfigurationsRow2DetailsAlertErrorCode" xml:space="preserve">
+    <value>#s-prop-eventlogconfigurations #arr-details-eventlogconfigurations-2 #inp-alert-error-code input:visible</value>
+  </data>
+  <data name="EventLogConfigurationsRow4" xml:space="preserve">
+    <value>#s-prop-eventlogconfigurations #arr-row-eventlogconfigurations-4:visible</value>
+  </data>
+  <data name="ErrorAlertErrorCodeOneChar" xml:space="preserve">
+    <value>#inp-alert-error-code .vb-validation-msg:contains("at least one character"):visible</value>
+  </data>
+  <data name="ErrorAlertErrorMessageOneChar" xml:space="preserve">
+    <value>#inp-alert-error-message .vb-validation-msg:contains("at least one character"):visible</value>
+  </data>
+  <data name="AppsSectionRow1DetailsFocusAreaButton" xml:space="preserve">
+    <value>#arr-details-1 vb-button#btn-focus-area:visible</value>
+  </data>
+  <data name="AppsSectionRow1DetailsFocusAreaDistance" xml:space="preserve">
+    <value>#arr-details-1 #sl-focus-area-distance input:visible</value>
+  </data>
+  <data name="AppsSectionRow1DetailsIdleTimeoutMinutesDropDown" xml:space="preserve">
+    <value>#arr-details-1 #interv-idle-timeout #interv-sel-m span.selection:visible</value>
+  </data>
+  <data name="AppsSectionRow1DetailsIdleTimeoutSecondsDropDown" xml:space="preserve">
+    <value>#arr-details-1 #interv-idle-timeout #interv-sel-s span.selection:visible</value>
+  </data>
+  <data name="AppsSectionRow1DetailsInteractionButton" xml:space="preserve">
+    <value>#arr-details-1 vb-button#btn-interaction:visible</value>
+  </data>
+  <data name="AppsSectionRow2DetailsFocusAreaButton" xml:space="preserve">
+    <value>#arr-details-2 vb-button#btn-focus-area:visible</value>
+  </data>
+  <data name="AppsSectionRow2DetailsFocusAreaDistance" xml:space="preserve">
+    <value>#arr-details-2 #sl-focus-area-distance input:visible</value>
+  </data>
+  <data name="AppsSectionRow2DetailsIdleTimeoutMinutesDropDown" xml:space="preserve">
+    <value>#arr-details-2 #interv-idle-timeout #interv-sel-m span.selection:visible</value>
+  </data>
+  <data name="AppsSectionRow2DetailsIdleTimeoutSecondsDropDown" xml:space="preserve">
+    <value>#arr-details-2 #interv-idle-timeout #interv-sel-s span.selection:visible</value>
+  </data>
+  <data name="AppsSectionRow2DetailsInteractionButton" xml:space="preserve">
+    <value>#arr-details-2 vb-button#btn-interaction:visible</value>
+  </data>
+  <data name="ConfigurationSectionAgeGenderBasedContentDropDown" xml:space="preserve">
+    <value>div.vb-text-title:contains("Configuration")+vb-obj-prop #ch-box-age--gender-based-content div.vb-checkbox-btn</value>
+  </data>
+  <data name="ConfigurationSectionComposerFileUrlDropDown" xml:space="preserve">
+    <value>div.vb-text-title:contains("Configuration")+vb-obj-prop #drop-composer-file-url span.selection:visible</value>
+  </data>
+  <data name="ConfigurationSectionComposerServiceUrlDropDown" xml:space="preserve">
+    <value>div.vb-text-title:contains("Configuration")+vb-obj-prop #drop-composer-service-url span.selection:visible</value>
+  </data>
+  <data name="ConfigurationSectionGenderAgeTrackingDropDown" xml:space="preserve">
+    <value>div.vb-text-title:contains("Configuration")+vb-obj-prop #drop-gender-age-tracking span.selection:visible</value>
+  </data>
+  <data name="ConfigurationSectionLivePreviewCheckBox" xml:space="preserve">
+    <value>div.vb-text-title:contains("Configuration")+vb-obj-prop #ch-box-live-preview div.vb-checkbox-btn</value>
+  </data>
+  <data name="ConfigurationSectionMasterVolume" xml:space="preserve">
+    <value>div.vb-text-title:contains("Configuration")+vb-obj-prop #sl-master-volume input:visible</value>
+  </data>
+  <data name="ConfigurationSectionRecordingQualityDropDown" xml:space="preserve">
+    <value>div.vb-text-title:contains("Configuration")+vb-obj-prop #drop-recording-quality span.selection:visible</value>
+  </data>
+  <data name="ConfigurationSectionScreenButton" xml:space="preserve">
+    <value>div.vb-text-title:contains("Configuration")+vb-obj-prop #btn-screen:visible</value>
+  </data>
+  <data name="DiagnosticsSectionCaptureMovieCheckBox" xml:space="preserve">
+    <value>#obj-prop-diagnostics #ch-box-capture-movie div.vb-checkbox-btn</value>
+  </data>
+  <data name="DiagnosticsSectionDebugModeCheckBox" xml:space="preserve">
+    <value>#obj-prop-diagnostics #ch-box-debug-mode div.vb-checkbox-btn</value>
+  </data>
+  <data name="DiagnosticsSectionShowBlackScreenCheckBox" xml:space="preserve">
+    <value>#obj-prop-diagnostics #ch-box-show-black-screen div.vb-checkbox-btn</value>
+  </data>
+  <data name="DiagnosticsSectionShowFrameworkCursorCheckBox" xml:space="preserve">
+    <value>#obj-prop-diagnostics #ch-box-show-framework-cursor div.vb-checkbox-btn</value>
+  </data>
+  <data name="DiagnosticsSectionShowSensorStreamsCheckBox" xml:space="preserve">
+    <value>#obj-prop-diagnostics #ch-box-show-sensor-streams div.vb-checkbox-btn</value>
+  </data>
+  <data name="DiagnosticsSectionTopMostCheckBox" xml:space="preserve">
+    <value>#obj-prop-diagnostics #ch-box-top-most div.vb-checkbox-btn</value>
+  </data>
+  <data name="ErrorScaleLower" xml:space="preserve">
+    <value>#obj-prop-live-images #sl-scale .vb-validation-msg:contains("This must be 1 or lower"):visible</value>
+  </data>
+  <data name="EventLogConfigurationsRow4DetailsAlertErrorCode" xml:space="preserve">
+    <value>#s-prop-eventlogconfigurations #arr-details-eventlogconfigurations-4 #inp-alert-error-code input:visible</value>
+  </data>
+  <data name="EventLogConfigurationsRow4DetailsAlertErrorMessage" xml:space="preserve">
+    <value>#s-prop-eventlogconfigurations #arr-details-eventlogconfigurations-4 #inp-alert-error-message input:visible</value>
+  </data>
+  <data name="FocusAreaSectionFocusAreaDistance" xml:space="preserve">
+    <value>#obj-prop-focus-area #sl-focus-area-distance input:visible</value>
+  </data>
+  <data name="InteractionSectionIdleTimeoutMinutesDropDown" xml:space="preserve">
+    <value>#obj-prop-interaction #interv-idle-timeout #interv-sel-m span.selection:visible</value>
+  </data>
+  <data name="InteractionSectionIdleTimeoutSecondsDropDown" xml:space="preserve">
+    <value>#obj-prop-interaction #interv-idle-timeout #interv-sel-s span.selection:visible</value>
+  </data>
+  <data name="LiveImagesScaleSlider" xml:space="preserve">
+    <value>#obj-prop-live-images #sl-scale div.vb-slider-thumb:visible</value>
+  </data>
+  <data name="ScreenSectionLogoHorizontalOffset" xml:space="preserve">
+    <value>#obj-prop-screen #num-inp-logo-horizontal-offset input:visible</value>
+  </data>
+  <data name="ScreenSectionLogoLocationDropDown" xml:space="preserve">
+    <value>#obj-prop-screen #drop-logo-location span.selection:visible</value>
+  </data>
+  <data name="ScreenSectionLogoOpacity" xml:space="preserve">
+    <value>#obj-prop-screen #sl-logo-opacity input:visible</value>
+  </data>
+  <data name="ScreenSectionLogoScale" xml:space="preserve">
+    <value>#obj-prop-screen #sl-logo-scale input:visible</value>
+  </data>
+  <data name="ScreenSectionLogoVerticalOffset" xml:space="preserve">
+    <value>#obj-prop-screen #num-inp-logo-vertical-offset input:visible</value>
+  </data>
+  <data name="AppsSectionRow1DetailsDiagnosticsButton" xml:space="preserve">
+    <value>#arr-details-1 vb-button#btn-diagnostics:visible</value>
+  </data>
+  <data name="AppsSectionRow1DetailsMasterVolume" xml:space="preserve">
+    <value>#arr-details-1 #sl-master-volume input:visible</value>
+  </data>
+  <data name="AppsSectionRow2DetailsDiagnosticsButton" xml:space="preserve">
+    <value>#arr-details-2 vb-button#btn-diagnostics:visible</value>
+  </data>
+  <data name="AppsSectionRow2DetailsMasterVolume" xml:space="preserve">
+    <value>#arr-details-2 #sl-master-volume input:visible</value>
+  </data>
+  <data name="AppsSectionRow2DetailsTopMostCheckBox" xml:space="preserve">
+    <value>#arr-details-2 #ch-box-top-most div.vb-checkbox-btn</value>
+  </data>
+  <data name="AppsSectionRow3DetailsMasterVolume" xml:space="preserve">
+    <value>#arr-details-3 #sl-master-volume input:visible</value>
+  </data>
+  <data name="AppsSectionTableRow2DetailsVersionDropDown" xml:space="preserve">
+    <value>#arr-details-2 #s-prop-version span.selection:visible</value>
+  </data>
+  <data name="DiagnosticsSectionControls" xml:space="preserve">
+    <value>#obj-prop-diagnostics vb-single-prop</value>
+  </data>
+  <data name="AppsSectionRow1DetailsDownloadButton" xml:space="preserve">
+    <value>#arr-details-1 vb-button#btn-download:visible</value>
+  </data>
+  <data name="AppsSectionRow1DetailsScreenButton" xml:space="preserve">
+    <value>#arr-details-1 vb-button#btn-screen:visible</value>
+  </data>
+  <data name="TableRowHierarchyByTitle" xml:space="preserve">
+    <value>tr td.vb-cell-hierarchy-title span.td-title:contains("{0}")</value>
+  </data>
+  <data name="AppsSectionRow1DetailsCars" xml:space="preserve">
+    <value>#arr-details-1 #s-prop-cars:visible</value>
+  </data>
+  <data name="AppsSectionRow1DetailsCarsAddButton" xml:space="preserve">
+    <value>#arr-details-1 #s-prop-cars #btn-add:visible</value>
+  </data>
+  <data name="AppsSectionRow1DetailsCarsRow1" xml:space="preserve">
+    <value>#arr-details-1 #s-prop-cars:visible #arr-row-cars-1:visible</value>
+  </data>
+  <data name="AppsSectionRow1DetailsCarsRow1DetailsAppPackageUpdateDropDown" xml:space="preserve">
+    <value>#arr-details-1 #s-prop-cars:visible #arr-details-cars-1 #drop-auto-package-update span.selection:visible</value>
+  </data>
+  <data name="AppsSectionRow1DetailsCarsRow1DetailsCarDropDown" xml:space="preserve">
+    <value>#arr-details-1 #s-prop-cars:visible #arr-details-cars-1 #drop-car span.selection:visible</value>
+  </data>
+  <data name="AppsSectionRow1DetailsScenes" xml:space="preserve">
+    <value>#arr-details-1 #s-prop-scenes:visible</value>
+  </data>
+  <data name="AppsSectionRow1DetailsScenesAddButton" xml:space="preserve">
+    <value>#arr-details-1 #s-prop-scenes #btn-add:visible</value>
+  </data>
+  <data name="AppsSectionRow1DetailsScenesRow1" xml:space="preserve">
+    <value>#arr-details-1 #s-prop-scenes:visible #arr-row-scenes-1:visible</value>
+  </data>
+  <data name="AppsSectionRow1DetailsScenesRow1DetailsAppPackageUpdateDropDown" xml:space="preserve">
+    <value>#arr-details-1 #s-prop-scenes:visible #arr-details-scenes-1 #drop-auto-package-update span.selection:visible</value>
+  </data>
+  <data name="AppsSectionRow1DetailsScenesRow1DetailsSceneDropDown" xml:space="preserve">
+    <value>#arr-details-1 #s-prop-scenes:visible #arr-details-scenes-1 #drop-scene span.selection:visible</value>
+  </data>
+  <data name="ErrorAppsSectionRow1DetailsCarsRequired" xml:space="preserve">
+    <value>#arr-details-1 #s-prop-cars div.vb-validation-msg:contains("Cars required"):visible</value>
+  </data>
+  <data name="ErrorAppsSectionRow1DetailsCarsRow1DetailsCarRequired" xml:space="preserve">
+    <value>#arr-details-1 #s-prop-cars:visible #arr-details-cars-1 #drop-car div.vb-validation-msg:contains("Car is required"):visible</value>
+  </data>
+  <data name="ErrorAppsSectionRow1DetailsScenesRequired" xml:space="preserve">
+    <value>#arr-details-1 #s-prop-scenes div.vb-validation-msg:contains("Scenes required"):visible</value>
+  </data>
+  <data name="ErrorAppsSectionRow1DetailsScenesRow1DetailsSceneRequired" xml:space="preserve">
+    <value>#arr-details-1 #s-prop-scenes:visible #arr-details-scenes-1 #drop-scene div.vb-validation-msg:contains("Scene is required"):visible</value>
+  </data>
+  <data name="Description" xml:space="preserve">
+    <value>#inp-description textarea:visible</value>
+  </data>
+  <data name="ErrorAppNotSavedDialog" xml:space="preserve">
+    <value>vb-modal div.vb-modal-content:contains("you leave to save it, current changes will be discarded"):visible</value>
+  </data>
+  <data name="TableRow" xml:space="preserve">
+    <value>tbody tr:visible</value>
+  </data>
+  <data name="DialogHeader" xml:space="preserve">
+    <value>vb-modal h1:visible</value>
+  </data>
+  <data name="Ibeacon" xml:space="preserve">
+    <value>#info-picker-device div[title]</value>
+  </data>
+  <data name="ThereIsNoPlayerDialog" xml:space="preserve">
+    <value>vb-modal div.vb-modal-content:contains("There is no player"):visible</value>
+  </data>
+  <data name="WindowsWorkstationDetailsButtonDisabled" xml:space="preserve">
+    <value>#info-picker-device span.vb-icon.vb-readonly:visible:has(img:visible)</value>
+  </data>
+  <data name="AddButton" xml:space="preserve">
+    <value>vb-modal:not([hidden]) #band-btn-add[ng-reflect-disabled!="true"]</value>
+  </data>
+  <data name="AddButtonDisabled" xml:space="preserve">
+    <value>vb-modal:not([hidden]) #band-btn-add[ng-reflect-disabled="true"]</value>
+  </data>
+  <data name="SelectAllButton" xml:space="preserve">
+    <value>vb-modal:not([hidden]) #band-btn-select-all</value>
+  </data>
+  <data name="ModifiedColumnModal" xml:space="preserve">
+    <value>vb-modal:not([hidden]) th:contains("Modified")</value>
+  </data>
+  <data name="StatusColumnModal" xml:space="preserve">
+    <value>vb-modal:not([hidden]) th:contains("Status")</value>
+  </data>
+  <data name="TableRowSelected" xml:space="preserve">
+    <value>vb-modal:not([hidden]) vb-place-list tbody tr:has(td.vb-row-selected):visible</value>
+  </data>
+  <data name="TableRowUnselected" xml:space="preserve">
+    <value>vb-modal:not([hidden]) vb-place-list tbody tr:not(:has(td.vb-row-selected)):visible</value>
+  </data>
+  <data name="TitleColumnModal" xml:space="preserve">
+    <value>vb-modal:not([hidden]) th:contains("Title")</value>
+  </data>
+  <data name="AppsSectionRow1DetailsScenesRowDeleteButton" xml:space="preserve">
+    <value>#arr-details-1 #s-prop-scenes:visible #arr-row-scenes-1 vb-button[el-id="arr-prop-del-1"]:visible</value>
+  </data>
+  <data name="TableRowByTitleCollapseExpandButtonModal" xml:space="preserve">
+    <value>vb-modal td.vb-cell-hierarchy-title:has(span.td-title:contains("{0}")) div.ident-parent:visible</value>
+  </data>
+</root>

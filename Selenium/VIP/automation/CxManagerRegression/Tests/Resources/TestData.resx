@@ -1,0 +1,779 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="ComposerHq1ParameterInstance" xml:space="preserve">
+    <value>{"player_resource":{"id":"HQ-player_resource_professional-1278","version":"1.0.0"},"player_livepreviewmode":false,"player_debugmode":false,"topMost":true,"MainVolume":0.3,"player_recording_quality":"low","sampling_percentage":0,"min_session_duration":10,"expected_session_gestures":3,"begin_recording_delay":5,"assetsKeepTime":"twoWeeks","co_api_url":"https://co-api.azurewebsites.net/","co_sto_url":"https://costoprd.blob.core.windows.net/assets/","idle_timeout":10,"distanceToFineArea":1.2,"fineAreaWidth":0.8,"fineAreaDepth":0.8,"motion_enabled":false,"calibration_offset":300,"show_kinektview":false,"color_rec_enabled":false,"color_rec_fps":2,"color_rec_width":70,"depth_rec_enabled":false,"depth_rec_fps":10,"depth_rec_width":256,"skeleton_rec_enabled":true,"skeleton_rec_fps":25,"app_rec_enabled":false,"app_rec_fps":15,"app_rec_width":256,"cursorSmoothingType":"avg","cursorSmoothingAmount":5,"blackScreen":false,"captureMovie":false,"showFrameworkCursor":false,"logoLocation":"bottomLeft","logoHOffset":0,"logoVOffset":0,"logoOpacity":1,"logoScale":1,"biometricsPolicy":"disabled","ageGenderEnabled":true}</value>
+  </data>
+  <data name="ComposerHq2ParameterInstance" xml:space="preserve">
+    <value>{"player_resource":{"id":"HQ-player_resource_professional-1314","version":"1.0.0"},"player_livepreviewmode":false,"player_debugmode":false,"topMost":true,"MainVolume":0.3,"player_recording_quality":"low","sampling_percentage":0,"min_session_duration":10,"expected_session_gestures":3,"begin_recording_delay":5,"assetsKeepTime":"twoWeeks","co_api_url":"https://co-api.azurewebsites.net/","co_sto_url":"https://costoprd.blob.core.windows.net/assets/","idle_timeout":10,"distanceToFineArea":1.2,"fineAreaWidth":0.8,"fineAreaDepth":0.8,"motion_enabled":false,"calibration_offset":300,"show_kinektview":false,"color_rec_enabled":false,"color_rec_fps":2,"color_rec_width":70,"depth_rec_enabled":false,"depth_rec_fps":10,"depth_rec_width":256,"skeleton_rec_enabled":true,"skeleton_rec_fps":25,"app_rec_enabled":false,"app_rec_fps":15,"app_rec_width":256,"cursorSmoothingType":"avg","cursorSmoothingAmount":5,"blackScreen":false,"captureMovie":false,"showFrameworkCursor":false,"logoLocation":"bottomLeft","logoHOffset":0,"logoVOffset":0,"logoOpacity":1,"logoScale":1,"biometricsPolicy":"disabled","ageGenderEnabled":true}</value>
+  </data>
+  <data name="DeviceAppUuidAndroid" xml:space="preserve">
+    <value>002ebf12-a125-5ddf-a739-67c3c5d20177</value>
+  </data>
+  <data name="DeviceAppUuidIphone" xml:space="preserve">
+    <value>5311839E985FA01B56E7AD74334C0137F7D6AF71A22745D0FB50DED665E0E882</value>
+  </data>
+  <data name="DptMasterDataValuesDe" xml:space="preserve">
+    <value>{"interiorColorDisclaimer":"","imprintUrl":"http://www.porsche.com/germany/legal-notice/","imprintClass":"b-standard-content-wrapper","primaryCopyrightClass":"m-03-copyright","costOfAdditionalMileageOfLeasing":"qwerty1","costOfLessMileageOfLeasing":"qwerty2","unitForMileageOfLeasing":"km","currencyFormatting":"currencyFirst","pinCode":"1234","market":"QQ","stateResetTimer":300,"displayBrightness":1}</value>
+  </data>
+  <data name="DptMasterDataValuesEn" xml:space="preserve">
+    <value>{"interiorColorDisclaimer":"","imprintUrl":"http://www.porsche.com/germany/legal-notice/","imprintClass":"b-standard-content-wrapper","primaryCopyrightClass":"m-03-copyright","costOfAdditionalMileageOfLeasing":"qwerty1","costOfLessMileageOfLeasing":"qwerty2","unitForMileageOfLeasing":"miles","currencyFormatting":"currencyFirst","pinCode":"1234","market":"QQ","stateResetTimer":300,"displayBrightness":1}</value>
+  </data>
+  <data name="IbeaconApiKey" xml:space="preserve">
+    <value>B426BC453CAC4F89BEA579DAB6C25564</value>
+  </data>
+  <data name="IbeaconAppId" xml:space="preserve">
+    <value>porsche.beacon.mobileapp</value>
+  </data>
+  <data name="IbeaconMasterData" xml:space="preserve">
+    <value>{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "id": "http://virtualpromoter.com/schemas/porsche/beaconMasterData.json#",
+  "type": "object",
+  "properties": {
+    "information": {
+      "type": "object",
+      "properties": {
+        "salutationWithProfile": {
+          "type": "string",
+          "maxLength": 200
+        },
+        "salutationWithoutProfile": {
+          "type": "string",
+          "maxLength": 50
+        },
+        "description": {
+          "type": "string",
+          "markup": "textile",
+          "maxLength": 10000
+        },
+        "wifiName": {
+          "type": "string",
+          "maxLength": 32,
+          "lang": "cross"
+        },
+        "wifiPassword": {
+          "type": "string",
+          "maxLength": 20,
+          "lang": "cross"
+        },
+        "picture": {
+          "constraints": {
+            "mime": "image/jpeg",
+            "minAspectRatio": 1.5,
+            "maxAspectRatio": 3,
+            "minWidth": 600
+          },
+          "$ref": "http://virtualpromoter.com/schemas/libraryPackage-0.1.0.json#/definitions/imageAsset",
+          "lang": "cross"
+        },
+        "addresses": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": [
+              "title",
+              "address1"
+            ],
+            "properties": {
+              "title": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 100,
+                "lang": "master"
+              },
+              "address1": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 10000,
+                "markup": "textile",
+                "lang": "master"
+              },
+              "phone": {
+                "type": "string",
+                "pattern": "^[0-9+()][0-9- ()+]{5,}$",
+                "maxLength": 50,
+                "lang": "master"
+              },
+              "fax": {
+                "type": "string",
+                "pattern": "^[0-9+()][0-9- ()+]{5,}$",
+                "maxLength": 50,
+                "lang": "master"
+              },
+              "email": {
+                "type": "string",
+                "maxLength": 30,
+                "pattern": "^(([^&lt;&gt;()\\[\\]\\\\.,;:\\s@\"]+(\\.[^&lt;&gt;()\\[\\]\\\\.,;:\\s@\"]+)*)|(\".+\"))@((\\[[0-9]{1,3}\\.[0-9]{1,3}\\.[0-9]{1,3}\\.[0-9]{1,3}])|(([a-zA-Z\\-0-9]+\\.)+[a-zA-Z]{2,}))$",
+                "lang": "master"
+              }
+            }
+          },
+          "minItems": 1,
+          "lang": "master"
+        },
+        "workingHours": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": [
+              "description"
+            ],
+            "properties": {
+              "title": {
+                "type": "string",
+                "maxLength": 300,
+                "lang": "master"
+              },
+              "description": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 500,
+                "lang": "master"
+              }
+            }
+          },
+          "minItems": 1,
+          "lang": "cross"
+        },
+        "employees": {
+          "type": "array",
+          "lang": "cross",
+          "items": {
+            "$ref": "#/definitions/employeeRef"
+          }
+        }
+      }
+    },
+    "market": {
+      "type": "object",
+      "required": [
+        "market",
+        "defaultCurrency",
+        "currencyFormatting"
+      ],
+      "properties": {
+        "market": {
+          "lang": "cross",
+          "type": "string",
+          "minLength": 2,
+          "maxLength": 5,
+          "pattern": "^[A-Z]+$",
+          "distributable": true
+        },
+        "defaultCurrency": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 3,
+          "lang": "cross",
+          "distributable": true
+        },
+        "currencyFormatting": {
+          "lang": "cross",
+          "type": "string",
+          "default": "amountFirst",
+          "oneOf": [
+            {
+              "enum": [
+                "amountFirst"
+              ]
+            },
+            {
+              "enum": [
+                "currencyFirst"
+              ]
+            }
+          ],
+          "distributable": true
+        },
+        "carConfiguratorUrl": {
+          "type": "string",
+          "maxLength": 100,
+          "lang": "cross",
+          "format": "uri",
+          "distributable": true
+        }
+      }
+    },
+    "texts": {
+      "type": "object",
+      "required": [
+        "imprint",
+        "sharingTemplatesNew",
+        "sharingTemplatesUsed",
+        "goodByeMessage",
+        "emails"
+      ],
+      "properties": {
+        "imprint": {
+          "type": "object",
+          "required": [
+            "imprintUrl",
+            "imprintClass"
+          ],
+          "properties": {
+            "imprintUrl": {
+              "lang": "master",
+              "type": "string",
+              "maxLength": 100,
+              "minLength": 13,
+              "format": "uri",
+              "pattern": "^http.+$",
+              "default": "http://www.porsche.com/germany/legal-notice/"
+            },
+            "imprintClass": {
+              "lang": "master",
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 50,
+              "pattern": "^[a-zA-Z0-9\\-]+$",
+              "default": "b-standard-content-wrapper"
+            },
+            "primaryCopyrightClass": {
+              "lang": "master",
+              "type": "string",
+              "maxLength": 50,
+              "pattern": "^[a-zA-Z0-9\\-]+$",
+              "default": "m-03-copyright"
+            }
+          }
+        },
+        "interiorColorDisclaimer": {
+          "type": "string",
+          "maxLength": 500
+        },
+        "termsAndConditions1": {
+          "type": "string",
+          "maxLength": 500000,
+          "markup": "textile",
+          "lang": "master"
+        },
+        "termsAndConditions2": {
+          "type": "string",
+          "maxLength": 500000,
+          "markup": "textile",
+          "lang": "master"
+        },
+        "priceDisclaimer": {
+          "type": "string",
+          "maxLength": 2000
+        },
+        "legalNoticePrivacyPolicy": {
+          "type": "string",
+          "maxLength": 500000,
+          "markup": "textile"
+        },
+        "goodByeMessage": {
+          "type": "object",
+          "required": [
+            "description",
+            "enable"
+          ],
+          "properties": {
+            "title": {
+              "type": "string",
+              "maxLength": 50
+            },
+            "description": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 200
+            },
+            "enable": {
+              "type": "boolean",
+              "lang": "cross",
+              "distributable": true
+            }
+          }
+        },
+        "sharingTemplatesNew": {
+          "type": "object",
+          "required": [
+            "emailSubject",
+            "emailBody",
+            "twitter",
+            "messenger"
+          ],
+          "properties": {
+            "emailSubject": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 100
+            },
+            "emailBody": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 1000
+            },
+            "twitter": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 240
+            },
+            "messenger": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 500
+            }
+          }
+        },
+        "sharingTemplatesUsed": {
+          "type": "object",
+          "required": [
+            "emailSubject",
+            "emailBody",
+            "twitter",
+            "messenger"
+          ],
+          "properties": {
+            "emailSubject": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 100
+            },
+            "emailBody": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 1000
+            },
+            "twitter": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 240
+            },
+            "messenger": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 500
+            }
+          }
+        },
+        "emails": {
+          "type": "object",
+          "properties": {
+            "welcomeEmailTemplate": {
+              "$ref": "#/definitions/emailTemplateRef"
+            },
+            "itemsFollowReportTemplate": {
+              "lang": "cross",
+              "$ref": "#/definitions/emailTemplateRef"
+            },
+            "serviceBookingRecipients": {
+              "type": "array",
+              "lang": "cross",
+              "items": {
+                "$ref": "#/definitions/email"
+              }
+            },
+            "serviceBookingTemplate": {
+              "lang": "cross",
+              "$ref": "#/definitions/emailTemplateRef"
+            },
+            "salesAppointmentRecipients": {
+              "type": "array",
+              "lang": "cross",
+              "items": {
+                "$ref": "#/definitions/email"
+              }
+            },
+            "salesAppointmentTemplate": {
+              "lang": "cross",
+              "$ref": "#/definitions/emailTemplateRef"
+            },
+            "testDriveRecipients": {
+              "type": "array",
+              "lang": "cross",
+              "items": {
+                "$ref": "#/definitions/email"
+              }
+            },
+            "testDriveTemplate": {
+              "lang": "cross",
+              "$ref": "#/definitions/emailTemplateRef"
+            },
+            "carActionButtonsRecipients": {
+              "type": "array",
+              "lang": "cross",
+              "items": {
+                "$ref": "#/definitions/email"
+              }
+            },
+            "carActionButtonsTemplate": {
+              "$ref": "#/definitions/emailTemplateRef"
+            }
+          }
+        }
+      }
+    },
+    "beacon": {
+      "type": "object",
+      "properties": {
+        "accuracy": {
+          "type": "number",
+          "lang": "cross",
+          "distributable": true,
+          "minimum": 0,
+          "default": 5.25,
+          "postfix": "m",
+          "typeClass": "vipComposer.DistanceType"
+        },
+        "showingDelay": {
+          "type": "number",
+          "lang": "cross",
+          "distributable": true,
+          "minimum": 0,
+          "default": 0,
+          "postfix": "s",
+          "typeClass": "vipComposer.DistanceType"
+        },
+        "hidingDelay": {
+          "type": "number",
+          "lang": "cross",
+          "distributable": true,
+          "minimum": 0,
+          "default": 3,
+          "postfix": "s",
+          "typeClass": "vipComposer.DistanceType"
+        }
+      },
+      "required": [
+        "accuracy",
+        "showingDelay",
+        "hidingDelay"
+      ]
+    },
+    "featureAccessibility": {
+      "type": "object",
+      "properties": {
+        "car": {
+          "type": "object",
+          "lang": "cross",
+          "properties": {
+            "share": {
+              "type": "boolean",
+              "default": true,
+              "lang": "cross",
+              "distributable": true
+            },
+            "video": {
+              "type": "boolean",
+              "default": true,
+              "lang": "cross",
+              "distributable": true
+            },
+            "web": {
+              "type": "boolean",
+              "default": true,
+              "lang": "cross",
+              "distributable": true
+            },
+            "ICC": {
+              "type": "boolean",
+              "default": true,
+              "lang": "cross",
+              "distributable": true
+            },
+            "tequipment": {
+              "type": "boolean",
+              "default": true,
+              "lang": "cross",
+              "distributable": true
+            }
+          },
+          "required": [
+            "share",
+            "video",
+            "web",
+            "ICC",
+            "tequipment"
+          ]
+        },
+        "poi": {
+          "type": "object",
+          "lang": "cross",
+          "properties": {
+            "video": {
+              "type": "boolean",
+              "default": true,
+              "lang": "cross",
+              "distributable": true
+            },
+            "more": {
+              "type": "boolean",
+              "default": true,
+              "lang": "cross",
+              "distributable": true
+            }
+          },
+          "required": [
+            "video",
+            "more"
+          ]
+        },
+        "news": {
+          "type": "object",
+          "lang": "cross",
+          "properties": {
+            "enabled": {
+              "type": "boolean",
+              "default": true,
+              "lang": "cross",
+              "distributable": true
+            },
+            "callback": {
+              "type": "boolean",
+              "default": true,
+              "lang": "cross",
+              "distributable": true
+            },
+            "reject": {
+              "type": "boolean",
+              "default": true,
+              "lang": "cross",
+              "distributable": true
+            },
+            "customAction": {
+              "type": "boolean",
+              "default": true,
+              "lang": "cross",
+              "distributable": true
+            },
+            "more": {
+              "type": "boolean",
+              "default": true,
+              "lang": "cross",
+              "distributable": true
+            }
+          },
+          "required": [
+            "enabled",
+            "callback",
+            "reject",
+            "more"
+          ]
+        },
+        "serviceBooking": {
+          "type": "boolean",
+          "default": true,
+          "lang": "cross",
+          "distributable": true
+        },
+        "requestAssistance": {
+          "type": "boolean",
+          "default": true,
+          "lang": "cross",
+          "distributable": true
+        },
+        "salesConsultants": {
+          "type": "boolean",
+          "default": true,
+          "lang": "cross",
+          "distributable": true
+        },
+        "location": {
+          "type": "object",
+          "lang": "cross",
+          "properties": {
+            "details": {
+              "type": "boolean",
+              "default": true,
+              "lang": "cross",
+              "distributable": true
+            },
+            "gps": {
+              "type": "boolean",
+              "default": true,
+              "lang": "cross",
+              "distributable": true
+            },
+            "map": {
+              "type": "boolean",
+              "default": true,
+              "lang": "cross",
+              "distributable": true
+            }
+          },
+          "required": [
+            "details",
+            "gps",
+            "map"
+          ]
+        }
+      },
+      "required": [
+        "car",
+        "poi",
+        "news",
+        "serviceBooking",
+        "requestAssistance",
+        "salesConsultants",
+        "location"
+      ]
+    }
+  },
+  "required": [
+    "information",
+    "market",
+    "texts",
+    "beacon",
+    "featureAccessibility"
+  ],
+  "definitions": {
+    "employeeRef": {
+      "type": "string",
+      "allOf": [
+        {
+          "$ref": "http://virtualpromoter.com/schemas/libraryPackage-0.1.0.json#/definitions/itemRef"
+        },
+        {
+          "type": "string",
+          "refType": "http://virtualpromoter.com/schemas/porsche/employee.json"
+        }
+      ]
+    },
+    "emailTemplateRef": {
+      "type": "string",
+      "allOf": [
+        {
+          "$ref": "http://virtualpromoter.com/schemas/libraryPackage-0.1.0.json#/definitions/itemRef"
+        },
+        {
+          "type": "string",
+          "refType": "http://virtualpromoter.com/schemas/emailTemplate.json"
+        }
+      ]
+    },
+    "email": {
+      "type": "string",
+      "maxLength": 60,
+      "pattern": "^(([^&lt;&gt;()\\[\\]\\\\.,;:\\s@\"]+(\\.[^&lt;&gt;()\\[\\]\\\\.,;:\\s@\"]+)*)|(\".+\"))@((\\[[0-9]{1,3}\\.[0-9]{1,3}\\.[0-9]{1,3}\\.[0-9]{1,3}])|(([a-zA-Z\\-0-9]+\\.)+[a-zA-Z]{2,}))$"
+    }
+  }
+}</value>
+  </data>
+  <data name="IbeaconMasterDataValuesDe" xml:space="preserve">
+    <value>{"information":{"salutationWithProfile":"DE TEST SALUTATION","picture":{"assetId":"3","mimeType":"image/jpeg","width":200,"height":150},"addresses":[{"title":"address title","address1":"TEST DE ADDRESS"}],"workingHours":[{"title":"title","description":"description"}],"employees":[]},"market":{"market":"AA","defaultCurrency":"EUR","currencyFormatting":"amountFirst"},"texts":{"imprint":{"imprintUrl":"http://www.porsche.com/germany/legal-notice/","imprintClass":"b-standard-content-wrapper"},"goodByeMessage":{"description":"a","enable":false},"sharingTemplatesNew":{"emailSubject":"a","emailBody":"a","twitter":"a","messenger":"a"},"sharingTemplatesUsed":{"emailSubject":"a","emailBody":"a","twitter":"a","messenger":"a"},"emails":{"serviceBookingRecipients":[],"carActionButtonsRecipients":[]}},"beacon":{"accuracy":5.25,"showingDelay":0,"hidingDelay":3}}</value>
+  </data>
+  <data name="IbeaconMasterDataValuesEn" xml:space="preserve">
+    <value>{"information":{"salutationWithProfile":"EN TEST SALUTATION","picture":{"assetId":"3","mimeType":"image/jpeg","width":200,"height":150},"addresses":[{"title":"address title","address1":"TEST EN ADDRESS"}],"workingHours":[{"title":"title","description":"description"}],"employees":[]},"market":{"market":"AA","defaultCurrency":"EUR","currencyFormatting":"amountFirst"},"texts":{"imprint":{"imprintUrl":"http://www.porsche.com/germany/legal-notice/","imprintClass":"b-standard-content-wrapper"},"goodByeMessage":{"description":"a","enable":false},"sharingTemplatesNew":{"emailSubject":"a","emailBody":"a","twitter":"a","messenger":"a"},"sharingTemplatesUsed":{"emailSubject":"a","emailBody":"a","twitter":"a","messenger":"a"},"emails":{"serviceBookingRecipients":[],"carActionButtonsRecipients":[]}},"beacon":{"accuracy":5.25,"showingDelay":0,"hidingDelay":3}}</value>
+  </data>
+  <data name="IbeaconMobileApplicationId" xml:space="preserve">
+    <value>E4DE3311-3EE5-4FA0-B410-BF2DCF29C210</value>
+  </data>
+</root>

@@ -1,0 +1,17 @@
+{
+"$schema":"http://virtualpromoter.com/schemas/porsche/announcement.json",
+"lang": "en",
+"title": "{0}",
+"titlePosition": "bottom",
+"description": "some description",
+"picture": 
+	{
+		"assetId": "{1}",
+		"mimeType": "image/jpeg",
+		"title": "{2}"
+	},
+"pushTitle": "a",
+"pushMessage": "a",
+"actions": {}
+}
+

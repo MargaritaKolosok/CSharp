@@ -1,0 +1,6 @@
+{
+"$schema":"http://virtualpromoter.com/schemas/car.json",
+"lang": "en",
+"title": "{0}",
+"vin": "{1}"
+}
