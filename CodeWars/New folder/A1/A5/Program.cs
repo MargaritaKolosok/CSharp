@@ -6,6 +6,17 @@ using System.Threading.Tasks;
 
 namespace A5
 {
+    public class Fighter
+    {
+        public string Name;
+        public int Health, DamagePerAttack;
+        public Fighter(string name, int health, int damagePerAttack)
+        {
+            this.Name = name;
+            this.Health = health;
+            this.DamagePerAttack = damagePerAttack;
+        }
+    }
     class Program
     {
         public static bool XO(string input)
@@ -40,6 +51,24 @@ namespace A5
             return (array.Sum() % 2 == 0) ? "even" : "odd";            
         }
 
+        //    Write a function that takes a single
+        //    string (word) as argument.
+        //    The function must return an ordered list containing the indexes of all
+        //    capital letters in the string.
+
+        public static int[] Capitals(string word)
+        {            
+            return word
+                .Select((c, i) =>
+                Char.IsUpper(c) ? i : -1)
+                .Where(i => i >= 0).ToArray();
+        }
+        public static string IsSortedAndHow(int[] array)
+        {
+            if (array.OrderBy(a => a).SequenceEqual(array)) return "yes accending";
+            if (array.OrderByDescending(a => a).SequenceEqual(array)) return "Yes descending";
+            else return "no";
+        }
         static void Main(string[] args)
         {
             Console.WriteLine(XO("xxxooXXOo"));
