@@ -119,17 +119,17 @@ namespace A5
         }
         public static int CountLettersAndDigits(string input)
         {
-            int result = 0;
-            int result = 0;
-            foreach (char x in input)
-            {
-                if (Char.IsDigit(x) || Char.IsLetter(x))
-                {
-                    result++;
-                }
-            }
+            //int result = 0;
+            //int result = 0;
+            //foreach (char x in input)
+            //{
+            //    if (Char.IsDigit(x) || Char.IsLetter(x))
+            //    {
+            //        result++;
+            //    }
+            //}
 
-            return result;
+            return input.Count(c => Char.IsDigit(c) || Char.IsLetter(c));
         }
         static void Main(string[] args)
         {
