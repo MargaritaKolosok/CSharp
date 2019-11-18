@@ -117,6 +117,20 @@ namespace A5
             numbers.Remove(numbers.DefaultIfEmpty().Min());
             return numbers;
         }
+        public static int CountLettersAndDigits(string input)
+        {
+            int result = 0;
+            int result = 0;
+            foreach (char x in input)
+            {
+                if (Char.IsDigit(x) || Char.IsLetter(x))
+                {
+                    result++;
+                }
+            }
+
+            return result;
+        }
         static void Main(string[] args)
         {
             Console.WriteLine(XO("xxxooXXOo"));
