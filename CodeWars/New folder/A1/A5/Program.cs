@@ -89,6 +89,23 @@ namespace A5
             Array.Sort(temp);
             return temp.SequenceEqual(b);
         }
+        public static int GetSum(int a, int b)
+        {
+            int A, B;
+           
+            if (a > b)
+            {
+                A = a;
+                B = b;
+            } else 
+            {
+                A = b;
+                B = a;
+            } 
+            IEnumerable<int> query = Enumerable.Range(B, A).Select(x => x);
+            //Good Luck!
+            return (a != b) ? query.ToArray().Sum() : a;
+        }
         static void Main(string[] args)
         {
             Console.WriteLine(XO("xxxooXXOo"));
@@ -101,6 +118,7 @@ namespace A5
             int[] oddOrEvenArray = { 1, 2, 3, 4, 5, 6, 7, 8, 99, 3,4,4,5,5,5 };
             Console.WriteLine(OddOrEven(oddOrEvenArray));
             Console.WriteLine(DuplicateEncode("abca"));
+            Console.WriteLine(GetSum(1,-1));
             Console.ReadLine();
         }
     }
