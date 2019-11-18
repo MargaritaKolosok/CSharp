@@ -69,6 +69,26 @@ namespace A5
             if (array.OrderByDescending(a => a).SequenceEqual(array)) return "Yes descending";
             else return "no";
         }
+
+        public static string DuplicateEncode(string word)
+        {
+            string retval = "";
+            word = word.ToLower();
+            for (int i = 0; i < word.Length; i++)
+                retval += (word.Split(word[i]).Length - 1 > 1 ? ')' : '(');
+            return retval;
+        }
+        public static bool IsSquare(int n)
+        {
+            return Math.Sqrt(n) % 1 == 0;
+        }
+        public static bool comp(int[] a, int[] b)
+        {
+            int[] temp = a.Select(x => x * x).ToArray();
+            Array.Sort(b);
+            Array.Sort(temp);
+            return temp.SequenceEqual(b);
+        }
         static void Main(string[] args)
         {
             Console.WriteLine(XO("xxxooXXOo"));
@@ -80,7 +100,7 @@ namespace A5
 
             int[] oddOrEvenArray = { 1, 2, 3, 4, 5, 6, 7, 8, 99, 3,4,4,5,5,5 };
             Console.WriteLine(OddOrEven(oddOrEvenArray));
-
+            Console.WriteLine(DuplicateEncode("abca"));
             Console.ReadLine();
         }
     }
