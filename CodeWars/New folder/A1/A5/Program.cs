@@ -106,6 +106,11 @@ namespace A5
             //Good Luck!
             return (a != b) ? query.ToArray().Sum() : a;
         }
+
+        public static long FindNextSquare(long num)
+        {
+            return ((Math.Sqrt(num) % 1 == 0)) ? (long)Math.Pow(Math.Sqrt(num) + 1, 2) : -1;            
+        }
         static void Main(string[] args)
         {
             Console.WriteLine(XO("xxxooXXOo"));
