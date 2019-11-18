@@ -111,6 +111,12 @@ namespace A5
         {
             return ((Math.Sqrt(num) % 1 == 0)) ? (long)Math.Pow(Math.Sqrt(num) + 1, 2) : -1;            
         }
+
+        public static List<int> RemoveSmallest(List<int> numbers)
+        {
+            numbers.Remove(numbers.DefaultIfEmpty().Min());
+            return numbers;
+        }
         static void Main(string[] args)
         {
             Console.WriteLine(XO("xxxooXXOo"));
