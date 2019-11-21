@@ -131,6 +131,57 @@ namespace A5
 
             return input.Count(c => Char.IsDigit(c) || Char.IsLetter(c));
         }
+        public static string AlphabetPosition(string text)
+        {
+            //text.Select(x => x = text.Replace());
+            ////Replace(text.Select(x => x), (char)alphabet.IndexOf((char)text.Select(x => x)));
+            string alphabet = "abcdefghijklmnopqrstuvwxyz";
+            
+            foreach(char x in text)
+            {
+                text.Replace(x, Convert.ToChar(alphabet.IndexOf(x)));
+            }
+            return text;
+        }
+        public static string Rot13(string message)
+        {
+            string alphabet = "abcdefghijklmnopqrstuvwxyz";
+
+            string result = "";
+
+            foreach (char c in message)
+            {
+                if(Char.IsUpper(c))
+                {
+                    Char.ToLower(c);
+                    if (alphabet.IndexOf(c) < alphabet.Length - 13)
+                    {
+                        result += Char.ToUpper(alphabet.ElementAt(alphabet.IndexOf(c) + 13));
+                    }
+                    else if(alphabet.IndexOf(c) >= alphabet.Length - 13)
+                    {
+                        int x = alphabet.Length - alphabet.IndexOf(c);
+                        int left = 13 - x;
+                        result += Char.ToUpper(alphabet.ElementAt(left));
+                    }
+                }
+                else
+                {
+                    if (alphabet.IndexOf(c) < alphabet.Length - 13)
+                    {
+                        result += alphabet.ElementAt(alphabet.IndexOf(c) + 13);
+                    }
+                    else
+                    {
+                        int x = alphabet.Length - alphabet.IndexOf(c);
+                        int left = 13 - x;
+                        result += alphabet.ElementAt(left);
+                    }
+                }
+                
+            }
+            return result;
+        }
         static void Main(string[] args)
         {
             Console.WriteLine(XO("xxxooXXOo"));
@@ -144,6 +195,9 @@ namespace A5
             Console.WriteLine(OddOrEven(oddOrEvenArray));
             Console.WriteLine(DuplicateEncode("abca"));
             Console.WriteLine(GetSum(1,-1));
+
+            Console.WriteLine(Rot13("test"));
+            Console.WriteLine(Rot13("Test"));
             Console.ReadLine();
         }
     }
