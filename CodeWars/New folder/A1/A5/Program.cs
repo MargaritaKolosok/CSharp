@@ -182,6 +182,28 @@ namespace A5
             }
             return result;
         }
+        public static string Order(string words)
+        {
+            
+            string[] wordsArray = words.Split(new char[] { ' ' });
+            string[] list = new string[wordsArray.Length];
+            foreach(string s in wordsArray)
+            {
+                
+                foreach(char c in s)
+                {
+                    if(Char.IsDigit(c))
+                    {
+                        
+                        int x = (int)Char.GetNumericValue(c);
+                        Console.WriteLine(x);                        
+                        list[x-1] = s;
+                    }
+                }
+            }
+
+            return String.Join(" ", list);
+        }
         static void Main(string[] args)
         {
             Console.WriteLine(XO("xxxooXXOo"));
@@ -198,6 +220,10 @@ namespace A5
 
             Console.WriteLine(Rot13("test"));
             Console.WriteLine(Rot13("Test"));
+
+
+            // "is2 Thi1s T4est 3a"
+            Console.WriteLine(Order("is2 Thi1s T4est 3a"));
             Console.ReadLine();
         }
     }
