@@ -36,10 +36,32 @@ namespace A4
             }
             
         }
+
+        public static int RoundToNext5(int n)
+        {
+            string NumStr = n.ToString();
+            if(Char.GetNumericValue(NumStr.ElementAt(NumStr.Length)) > 5)
+            {
+               int result = Convert.ToInt32(NumStr);
+                while(result % 10 == 0)
+                {
+                    result++;
+                }
+                return result;
+            }
+            else
+            {
+                NumStr.Replace(NumStr.ElementAt(NumStr.Length), '5');
+                int result = Convert.ToInt32(NumStr);
+                return result;
+            }
+            
+           //return n.ToString().ElementAt(n.ToString().Length)
+        }
         static void Main(string[] args)
         {
             string h = "(((((())))))";
-            Console.WriteLine(ValidParentheses(h));
+            Console.WriteLine(RoundToNext5(134));
             Console.ReadKey();
         }
     }

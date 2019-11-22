@@ -194,9 +194,7 @@ namespace A5
                 {
                     if(Char.IsDigit(c))
                     {
-                        
                         int x = (int)Char.GetNumericValue(c);
-                        Console.WriteLine(x);                        
                         list[x-1] = s;
                     }
                 }
