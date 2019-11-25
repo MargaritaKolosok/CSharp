@@ -39,8 +39,9 @@ namespace A4
 
         public static int RoundToNext5(int n)
         {
-            return (n % 5 == 0) ? n : RoundToNext5(n + 1);            
+            return (n % 5 == 0) ? n : RoundToNext5(n+1);            
         }
+        
         static void Main(string[] args)
         {
             string h = "(((((())))))";

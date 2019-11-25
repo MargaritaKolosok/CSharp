@@ -202,6 +202,10 @@ namespace A5
 
             return String.Join(" ", list);
         }
+        public static bool Solution(string str, string ending)
+        {
+            return str.EndsWith(ending);
+        }
         static void Main(string[] args)
         {
             Console.WriteLine(XO("xxxooXXOo"));
