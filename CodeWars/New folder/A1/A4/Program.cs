@@ -39,29 +39,15 @@ namespace A4
 
         public static int RoundToNext5(int n)
         {
-            string NumStr = n.ToString();
-            if(Char.GetNumericValue(NumStr.ElementAt(NumStr.Length)) > 5)
-            {
-               int result = Convert.ToInt32(NumStr);
-                while(result % 10 == 0)
-                {
-                    result++;
-                }
-                return result;
-            }
-            else
-            {
-                NumStr.Replace(NumStr.ElementAt(NumStr.Length), '5');
-                int result = Convert.ToInt32(NumStr);
-                return result;
-            }
-            
-           //return n.ToString().ElementAt(n.ToString().Length)
+            return (n % 5 == 0) ? n : RoundToNext5(n + 1);            
         }
         static void Main(string[] args)
         {
             string h = "(((((())))))";
             Console.WriteLine(RoundToNext5(134));
+            Console.WriteLine(RoundToNext5(-2));
+            Console.WriteLine(RoundToNext5(12));
+
             Console.ReadKey();
         }
     }
