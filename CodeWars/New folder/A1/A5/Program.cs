@@ -206,6 +206,14 @@ namespace A5
         {
             return str.EndsWith(ending);
         }
+        public static int DuplicateCount(string str)
+        {
+            return str.Count(x => str.Contains(x));
+        }
+        public static IEnumerable<string> FriendOrFoe(string[] names)
+        {
+            return names.Where(x => x.Length == 4);            
+        }
         static void Main(string[] args)
         {
             Console.WriteLine(XO("xxxooXXOo"));
@@ -223,6 +231,7 @@ namespace A5
             Console.WriteLine(Rot13("test"));
             Console.WriteLine(Rot13("Test"));
 
+            Console.WriteLine(DuplicateCount("aabbcd"));
 
             // "is2 Thi1s T4est 3a"
             Console.WriteLine(Order("is2 Thi1s T4est 3a"));
