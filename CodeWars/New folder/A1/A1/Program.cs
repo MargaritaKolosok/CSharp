@@ -33,6 +33,13 @@ namespace A1
             int[] num = new int[] { 1,2,3,4,5,6,7,8,9,0};
             Console.WriteLine(CreatePhoneNumber(num));
             Console.WriteLine(CreatePhoneNumber2(num));
+
+            int[,] mas = { { 1, 2, 3 }, { 4, 5, 6 }, { 7, 8, 9 }, { 10, 11, 12 } };
+            int rows = mas.GetUpperBound(0) + 1;
+            int columns = mas.Length / rows;
+            Console.WriteLine( rows + " " + columns );
+            Console.WriteLine();
+            
             Console.ReadKey();
         }
     }
