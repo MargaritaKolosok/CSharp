@@ -6,8 +6,44 @@ using System.Threading.Tasks;
 
 namespace A1
 {
-    class Program
+    class MyClass
     {
+        private string name;
+        public string Name
+        {
+            set { name = value; }
+
+            get
+            {
+                if (name == String.Empty || name == null)
+                {
+                    return "Name is not defined";
+                }
+                else
+                {
+                    return name;
+                } 
+            }
+        }
+    }
+
+    enum MyEnum : int
+    {
+        one = 1,
+        two = 2
+    }
+    class Program
+    { 
+        class Test
+        {
+            
+            struct Test2
+            {
+                public int z;
+            }
+        }
+
+        
         public static string CreatePhoneNumber(int[] numbers)
         {
             string number = "";
@@ -38,8 +74,13 @@ namespace A1
             int rows = mas.GetUpperBound(0) + 1;
             int columns = mas.Length / rows;
             Console.WriteLine( rows + " " + columns );
+           
+            Console.WriteLine(MyEnum.one);
             Console.WriteLine();
-            
+
+            MyClass instance = new MyClass();
+            //instance.Name;
+            Console.WriteLine(instance.Name);
             Console.ReadKey();
         }
     }
