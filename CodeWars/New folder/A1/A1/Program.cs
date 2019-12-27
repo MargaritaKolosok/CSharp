@@ -15,7 +15,7 @@ namespace A1
 
             get
             {
-                if (name == String.Empty || name == null)
+                if (String.IsNullOrEmpty(name))
                 {
                     return "Name is not defined";
                 }
@@ -81,6 +81,12 @@ namespace A1
             MyClass instance = new MyClass();
             //instance.Name;
             Console.WriteLine(instance.Name);
+
+
+
+
+
+
             Console.ReadKey();
         }
     }

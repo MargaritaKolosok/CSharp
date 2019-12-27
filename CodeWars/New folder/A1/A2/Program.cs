@@ -48,7 +48,6 @@ namespace A2
             // ITVDN
 
 
-
             // ITVDN
             Console.WriteLine(Arithmetic(5,7, "add"));
             Console.ReadKey();
