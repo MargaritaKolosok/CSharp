@@ -10,6 +10,15 @@ using System.Text.Json;
 
 namespace RestSharpDemo
 {
+    public class Country
+    {
+        public string Name { get; set; }
+        public string Code { get; set; }
+        public bool EU { get; set; }
+        public double Factor { get; set; }
+
+    }
+
     [TestClass]
     public class UnitTest1
     {
@@ -25,10 +34,23 @@ namespace RestSharpDemo
             {
                 throw new Exception("Could not get resource from REST service.");
             }
-            
+
+            List<Country> Countries = new List<Country>();
             var deserializer = new JsonDeserializer();
-            deserializer.Deserialize<List<InventoryItem>>(response);
-            Console.WriteLine(deserializer.ToString());
+            Countries = deserializer.Deserialize<List<Country>>(response);
+            foreach(var country in Countries)
+            {
+                if (country.Name != "" && country.Code != "")
+                {
+                    Console.WriteLine(country.Name);
+                }
+                
+                else
+                {
+                    Console.WriteLine("--- " + country.Name );
+                }
+
+            }
         }
     }
 }
