@@ -47,7 +47,7 @@ namespace RestSharpDemo
                 
                 else
                 {
-                    Console.WriteLine("--- " + country.Name );
+                    throw new Exception("Empty Country Name or Code value");
                 }
 
             }
