@@ -6,7 +6,7 @@ using System;
 using System.Collections.Generic;
 using System.Net;
 using System.Text.Json;
-
+using Newtonsoft.Json.Linq;
 
 namespace RestSharpDemo
 {
@@ -35,22 +35,24 @@ namespace RestSharpDemo
                 throw new Exception("Could not get resource from REST service.");
             }
 
-            List<Country> Countries = new List<Country>();
             var deserializer = new JsonDeserializer();
+            List<Country> Countries = new List<Country>();
             Countries = deserializer.Deserialize<List<Country>>(response);
-            foreach(var country in Countries)
+
+            foreach (var country in Countries)
             {
                 if (country.Name != "" && country.Code != "")
                 {
                     Console.WriteLine(country.Name);
                 }
-                
+
                 else
                 {
                     throw new Exception("Empty Country Name or Code value");
                 }
 
             }
+
         }
     }
 }
