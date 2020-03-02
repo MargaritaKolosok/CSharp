@@ -16,15 +16,18 @@ namespace SingletonWebDriverProject
         [SetUp]
         public void SetUp()
         {
+            IWebDriver webdriver = new ChromeDriver();
             Driver.StartBrowser();
             LoginPage loginPage = new LoginPage();
             loginPage.Navigate();
         }
-        [TestCase("email", "Password")]
+        [TestCase("rita.kolosok@gmail.com", "Password")]
         [Test]
         public void Test1(string email, string password)
         {
             LoginPage.Instance.MakeLogin(email, password);
+            //TestPage.MakeLogin(email, password);
+            //TestPage.loginInput.SendKeys("");
             
             Assert.AreEqual("https://github.com/sessions/two-factor", Driver.GetCurrentURL());
         }

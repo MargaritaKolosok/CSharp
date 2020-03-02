@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29728.190
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DockerSeleniumGridTestApplication", "DockerSeleniumGridTestApplication\DockerSeleniumGridTestApplication.csproj", "{646219B5-92BE-4AF4-A19D-CB573A32048F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{646219B5-92BE-4AF4-A19D-CB573A32048F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{646219B5-92BE-4AF4-A19D-CB573A32048F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{646219B5-92BE-4AF4-A19D-CB573A32048F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{646219B5-92BE-4AF4-A19D-CB573A32048F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {F657D046-06C1-4682-A367-18CCAA0F5967}
+	EndGlobalSection
+EndGlobal

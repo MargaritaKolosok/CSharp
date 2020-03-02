@@ -7,6 +7,7 @@ using System.Collections.Generic;
 using System.Net;
 using System.Text.Json;
 using Newtonsoft.Json.Linq;
+using RestSharpDemo.Methods;
 
 namespace RestSharpDemo
 {
@@ -23,14 +24,14 @@ namespace RestSharpDemo
     public class UnitTest1
     {
         [TestMethod]
-        public void TestMethod1()
+        public void CheckCountryListProto()
         {
             var client = new RestClient("http://prototypedb-test.materialise.net/");
             var request = new RestRequest("NewPricing/api/Country", Method.GET);
 
             var response = client.Execute(request);
 
-            if(response.StatusCode != HttpStatusCode.OK)
+            if (response.StatusCode != HttpStatusCode.OK)
             {
                 throw new Exception("Could not get resource from REST service.");
             }
@@ -52,7 +53,14 @@ namespace RestSharpDemo
                 }
 
             }
+        }
+            
+        [TestMethod]
+        public void CheckPrice()
+        {
 
         }
+
     }
+        
 }

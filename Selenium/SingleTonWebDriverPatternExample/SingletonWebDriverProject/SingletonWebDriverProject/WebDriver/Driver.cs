@@ -46,7 +46,7 @@ namespace SingletonWebDriverProject.WebDriver
                 case BrowserType.InternetExplorer:
                     break;
                 case BrowserType.Chrome:
-                    Browser = new ChromeDriver(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location));
+                    Browser = new ChromeDriver();
                     break;
                 default:
                     throw new ArgumentException("You need to set a valid browser type.");
