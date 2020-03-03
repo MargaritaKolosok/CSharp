@@ -17,7 +17,6 @@ namespace DockerSeleniumGridTestApplication
             
         }
 
-
         [Test]
         public void ChromeGoogleTest()
         {
