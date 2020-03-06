@@ -34,12 +34,16 @@ namespace DockerSeleniumGridTestApplication
             if (browserType == BrowserType.Chrome)
             {
                 var caps = new ChromeOptions();
-                Driver = new RemoteWebDriver(new Uri("http://localhost:4545/wd/hub"), caps);
+                Driver = new RemoteWebDriver(new Uri("http://localhost:4444/wd/hub"), caps);
+                /* var capabilities = new DesiredCapabilities("UNKNOWN", "", new Platform(PlatformType.Any));
+                 var driver = new RemoteWebDriver(new Uri("http://selenoid-uri:4444/wd/hub"), capabilities);
+
+                  */
             }
             else if (browserType == BrowserType.FireFox)
             {
                 var caps = new FirefoxOptions();
-                Driver = new RemoteWebDriver(new Uri("http://localhost:4545/wd/hub"), caps);
+                Driver = new RemoteWebDriver(new Uri("http://localhost:4444/wd/hub"), caps);
             }
         }
 
